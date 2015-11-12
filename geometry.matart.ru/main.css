@@ -1,0 +1,16 @@
+.item {width: 50%; height: 100%; float: left;}
+.one {background: #e9e5dc;}
+.two {background: #2f2f2e;}
+
+.item a {
+text-align: center;
+display: block;
+max-width: 600px;
+margin: 0 auto;
+margin-top: -230px;
+top: 50%;
+position: relative;
+}
+.item a img {max-width: 600px;}
+html {height: 100%;}
+body {height: 100%; margin: 0px;}
