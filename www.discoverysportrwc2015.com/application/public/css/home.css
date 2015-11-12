@@ -1,0 +1,133 @@
+@media (max-width: 1024px) {
+	#slider {
+		margin: 0 auto 0 auto;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+		height: 700px  !important;
+		z-index: 0;
+		background-color: #0d131d;
+		text-align: center !important;
+	}
+	.slider-innerWrapper{
+		height: 340px  !important;
+	}
+	
+	.control-links {
+	    top: 49% !important;
+	    text-align: center !important;
+	    width: 90% !important;
+	    min-width: 90% !important;
+	}
+	.cc-htmlwrapper{
+		margin-top: 210px !important;
+		height: 590px !important;
+	}
+	#slidehtml1 .tracos, #slidehtml2 .tracos, #slidehtml3 .tracos, #slidehtml4 .tracos, #slidehtml5 .tracos, #slidehtml6 .tracos, #slidehtml7 .tracos, #slidehtml8 .tracos{
+		border-width: 0 !important;
+		margin: 150px 0 0 30px !important;
+		width: 100% !important;
+	}
+	#slidehtml1 a, #slidehtml2 a, #slidehtml3 a, #slidehtml4 a, #slidehtml5 a, #slidehtml6 a, #slidehtml7 a, #slidehtml8 a{
+		margin: 2% auto !important;
+	}
+	#slidehtml1 h3, #slidehtml2 h3, #slidehtml3 h3, #slidehtml4 h3, #slidehtml5 h3, #slidehtml6 h3, #slidehtml7 h3, #slidehtml8 h3{
+		width: 80% !important;
+	}
+	#slidehtml1 p, #slidehtml2 p, #slidehtml3 p, #slidehtml4 p, #slidehtml5 p, #slidehtml6 p, #slidehtml7 p, #slidehtml8 p {
+		width: 80% !important;
+	}
+}
+@media (min-width: 1024px) and (max-width: 1400px) {
+	#slider {
+		margin: 0 auto 0 auto;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+		height: 620px !important;
+		z-index: 0;
+	}
+	.slider-innerWrapper{
+		height: 620px !important;
+	}
+}
+@media (min-width: 1400px) and (max-width: 1700px) {
+	#slider {
+		margin: 0 auto 0 auto;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+		height: 739px !important;
+		z-index: 0;
+	}
+	.slider-innerWrapper{
+		height: 739px !important;
+	}
+}
+@media (min-width: 1700px) {
+	#slider {
+		margin: 0 auto 0 auto;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+		height: 1050px !important;
+		width: 100% !important;
+		z-index: 0;
+	}
+	.slider-innerWrapper{
+		height: 1050px !important;
+		width: 100% !important;
+	}
+	.slider-innerWrapper img{
+		width: 100% !important;
+		height: 1050px !important;
+	}
+}
+
+		
+#slidehtml1 h3, #slidehtml2 h3, #slidehtml3 h3, #slidehtml4 h3, #slidehtml5 h3, #slidehtml6 h3, #slidehtml7 h3, #slidehtml8 h3{
+	font: bold 48px 'LandRover Demi';
+	color: #FFF;
+	text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+	margin: 7% 0 1% 4.5%; /* 60px 0 20px 40px */
+	width: 700px;
+	text-transform: uppercase;
+}
+
+#slidehtml1 p, #slidehtml2 p, #slidehtml3 p, #slidehtml4 p, #slidehtml5 p, #slidehtml6 p, #slidehtml7 p, #slidehtml8 p {
+	font: 24px 'LandRover Demi';
+	color: #fff;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	width: 700px;
+	margin: 0 0 1.5% 4.5%;  /* 0 0 10px 40px */
+}
+#slidehtml1 .tracos, #slidehtml2 .tracos, #slidehtml3 .tracos, #slidehtml4 .tracos, #slidehtml5 .tracos, #slidehtml6 .tracos, #slidehtml7 .tracos, #slidehtml8 .tracos {
+	width: 50px;
+	border: 2px solid #FFF;
+	border-width: 2px 0;
+	position: relative;
+	margin: 150px 0 0 60px;
+}
+#slidehtml1 a, #slidehtml2 a, #slidehtml3 a, #slidehtml4 a, #slidehtml5 a, #slidehtml6 a, #slidehtml7 a, #slidehtml8 a {
+	display: block;
+	width: 140px;
+	height: 50px;
+	line-height: 50px !important;
+	color: #000;
+	border: 1px solid #aaa;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#FFF)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #FFF, #FFF); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #FFF, #FFF); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #FFF, #FFF); /* IE10 */
+	background-image:      -o-linear-gradient(top, #FFF, #FFF); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #FFF, #FFF);
+	font: 16px/30px 'LandRover Demi';
+	text-align: center;
+	margin: 2% 0 0 4.5%;  /* 20px 0 0 40px */
+	cursor: pointer;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#demo-description {
+	max-width: 900px;
+	width: 90%;
+	margin: 60px auto;
+	color: #fff;
+	font: 20px "PT Sans", Georgia, Times, serif;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}

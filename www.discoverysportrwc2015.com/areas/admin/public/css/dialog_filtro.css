@@ -1,0 +1,75 @@
+.filtros{
+	
+}
+
+.filtros .box_filtro_left{
+	display: table;
+    float: left;
+    height: auto;
+    width: 100%%;
+}
+
+.filtros .box_filtro_left .box1{
+	display: table;
+    height: auto;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.filtros .box_filtro_left .box1 h2{
+	margin: 5px 0px 5px 10px;
+}
+
+.filtros .box_filtro_left .box1 .box2{
+	display: table;
+    float: left;
+    height: 20px;
+    width: auto;
+}
+
+.filtros .box_filtro_left .box1 .salario{
+	width: 190px;
+}
+
+.filtros .box_filtro_left .box1 .salario input{
+	width: 170px;
+	text-align: left !important;
+}
+
+.filtros .box_filtro_left .box1 .data_f{
+	width: 190px;
+}
+
+.filtros .box_filtro_left .box1 .data_f input{
+	width: 170px;
+}
+.filtros .box_filtro_left .box1 .box2 .check{
+	height: 20px;
+    margin: 10px 5px 0 10px;
+    width: 15px;
+    display: table;
+    float: left;
+}
+.filtros .box_filtro_left .box1 .salva{
+	width: 190px;
+}
+.filtros .box_filtro_left .box1 .salva2{
+    margin: 10px 0px;
+}
+.filtros .box_filtro_left .box1 .filtra{
+    float: right;
+    margin: 10px 20px 0px 0px;
+}
+.filtros .box_filtro_left .box1 .box2 label{
+    margin-top: 7px;
+    display: table;
+    float: left;
+}
+
+
+.filtros .box_filtro_right{
+	display: table;
+    float: left;
+    height: auto;
+    width: 100%;
+}
