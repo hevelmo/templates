@@ -1,0 +1,13 @@
+# robots.txt http://www.landrover.co.uk/
+
+User-agent: *
+Disallow: /system/
+Disallow: /*?configUrl=
+Disallow: /*compare/?
+Disallow: /fc/
+Disallow: /resources/
+Allow: /resources/public/
+Disallow: /layout/
+Disallow: /vehicles/range-rover-evoque/evoque-convertible/index
+
+Sitemap: http://www.landrover.co.uk/sitemap.xml
