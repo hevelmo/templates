@@ -1,0 +1,142 @@
+<mobile-warning></mobile-warning>
+
+<header class="l-header js-header">
+  <a href="../../index.html" class="m-mobile-logo">
+    <img src="assets/images/logos/nueva_vitara_logo.html" alt="Logo" class="m-mobile-logo__image">
+  </a>
+  <div class="m-header-menu js-header-menu">
+    <ul class="m-header-menu__first-part">
+      <li class="m-header-menu__first-part-item js-header-menu-item">
+        <a href="../../testdrive.html" onclick="ga('send', 'event', 'Prueba de manejo', 'clic_button', 'Header');" class="m-header-menu__first-part-link">
+          <span class="m-header-menu__first-part-label m-header-menu__first-part-label--drive">Manéjala<img src="assets/images/icons/general/drive_aqua.html" class="m-header-menu__first-part-link-icon"></span>
+        </a>
+      </li>
+      <!--<li class="m-header-menu__first-part-item js-header-menu-item">
+        <a href="#" class="m-header-menu__first-part-link">
+          <span class="m-header-menu__first-part-label">Cotízala<img src="assets/images/icons/general/price_aqua.svg" class="m-header-menu__first-part-link-icon"></img></span>
+        </a>
+      </li>-->
+    </ul>
+      <ul class="m-header-menu__second-part">
+        <li class="m-header-menu__second-part-item m-header-menu__features js-header-menu-item">
+          <a class="m-header-menu__second-part-link js-menu-features" ng-click="custom.toggleMenuFeatures()">Features</a>
+          <ul class="m-header-menu__sublist">
+            <li class="m-header-menu__sublist-item">
+              <a href="../../features/diseno.html" class="m-header-menu__sublist-link">Diseño</a>
+            </li>
+            <li class="m-header-menu__sublist-item">
+              <a href="../../features/equipo.html" class="m-header-menu__sublist-link">Equipo</a>
+            </li>
+            <li class="m-header-menu__sublist-item">
+              <a href="../../features/accesorios.html" class="m-header-menu__sublist-link">Accesorios</a>
+            </li>
+            <li class="m-header-menu__sublist-item">
+              <a href="../../features/seguridad.html" class="m-header-menu__sublist-link">Seguridad</a>
+            </li>
+            <li class="m-header-menu__sublist-item">
+              <a href="../../features/motor.html" class="m-header-menu__sublist-link">Motor</a>
+            </li>
+          </ul>
+        </li>
+        <li class="m-header-menu__second-part-item js-header-menu-item">
+          <a href="../../personalizacion.html" class="m-header-menu__second-part-link">Personalización</a>
+        </li>
+        <li class="m-header-menu__second-part-item js-header-menu-item">
+          <a href="../../galeria.html" class="m-header-menu__second-part-link">Galería</a>
+        </li>
+        <li class="m-header-menu__second-part-item js-header-menu-item">
+          <a href="../../versiones.html" class="m-header-menu__second-part-link">Versiones y precios</a>
+        </li>
+    </ul>
+  </div>
+  <a class="m-mobile-menu-button js-open-menu" ng-click="custom.openMenu($event)"></a>
+  <a class="m-mobile-close-menu js-close-menu" ng-click="custom.closeMenu($event)"></a>
+</header>
+
+<div class="l-fullwidth l-fullwidth--custom">
+  <div class="l-fullwidth-container l-fullwidth-container--custom">
+    <div class="m-fullwidth-intro m-fullwidth-intro--custom">
+      <p class="m-fullwidth-intro__title m-fullwidth-intro__title">
+        Nueva Vitara, hecha exactamente a tu medida
+      </p>
+    </div>
+    <div class="l-grid-wrapper l-grid-wrapper--nogutter">
+      <div class="l-grid">
+        <div ng-repeat="custom_item in custom.customs" class="l-grid__item one-whole tablet-one-half desktop-one-quarter">
+          <div class="m-custom-box js-custom-box" ng-click="custom.openCustom($index)">
+            <div class="m-content-image">
+              <img ng-if="custom.mobile" class="m-content-image__image" src="%7b%7bcustom_item.menu_image.html" alt="{{custom_item.name}}">
+              <img ng-if="!custom.mobile" class="m-content-image__image" src="%7b%7bcustom_item.menu_image-2.html" alt="{{custom_item.name}}">
+            </div>
+            <div class="m-custom-box__overlay"></div>
+            <h4 class="m-custom-box__title">{{custom_item.name}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div ng-if="custom.customs_selected">
+      <div class="m-spec-main m-spec-main__feature clearfix">
+        <div class="m-spec-main__image m-content-image m-content-image__image--spec">
+          <img ng-if="custom.mobile" class="m-content-image__image " src="%7b%7bcustom.customs_selected.left_image.html" alt="{{custom.customs_selected.name}}">
+          <img ng-if="!custom.mobile" class="m-content-image__image" src="%7b%7bcustom.customs_selected.left_image-2.html" alt="{{custom.customs_selected.name}}">
+        </div>
+        <div class="m-spec-main__title m-spec-main__title--spect">
+          <a class="m-close m-close--in-custom" ng-click="custom.closeCustom()"></a>
+          <p class="m-spec-main__title-desc m-spec-main__title-desc--custom">
+            <span class="m-spec-main__title-desc__title">{{custom.customs_selected.name}}</span>
+            {{custom.customs_selected.subtitle}}
+            <br><br>
+            {{custom.customs_selected.description}}
+          </p>
+        </div>
+      </div>
+      <div class="l-grid-wrapper l-grid-wrapper--nogutter">
+        <div class="l-grid">
+          <div ng-repeat="custom_part in custom.customs_selected.custom_parts" class="l-grid__item one-whole tablet-one-half desktop-one-third">
+            <div class="m-spec-item">
+              <div class="m-spec-item__image m-content-image">
+                <img ng-if="custom.mobile" class="m-content-image__image" src="%7b%7bcustom_part.image.html" alt="Personalización">
+                <img ng-if="!custom.mobile" class="m-content-image__image" src="%7b%7bcustom_part.image-2.html" alt="Personalización">
+              </div>
+              <h4 class="m-spec-item__title">{{custom_part.title}}</h4>
+              <p class="m-spec-item__description">{{custom_part.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="m-footer">
+  <a href="http://www.suzuki.com.mx/" onclick="ga('send', 'event', 'Footer', 'outbound_clic', 'Suzuki_home');" class="m-footer__suzuki-logo"><img src="assets/images/logos/suzuki.html" alt="Suzuki"></a>
+  <p class="m-footer__copyright">Todos los derechos reservados Suzuki 2015</p>
+  <ul class="m-footer__legals">
+    <li class="m-footer__legals-item">
+        <a href="../../legales.html" class="m-footer__legals-link">Términos legales</a>
+    </li>
+    <li class="m-footer__legals-item">
+        <a href="../../aviso_privacidad.html" class="m-footer__legals-link">Aviso de privacidad</a>
+    </li>
+    <li class="m-footer__legals-item">
+      <a href="http://www.globalsuzuki.com/" onclick="ga('send', 'event', 'Footer', 'outbound_clic', 'Suzuki_global');" target="_blank" class="m-footer__legals-link">Suzuki global</a>
+    </li>
+  </ul>
+  <ul class="m-footer__social">
+    <li class="m-footer__social-item">
+      <a href="https://www.facebook.com/SuzukiAutosMexico" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Facebook');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/facebook.html" alt="Facebook" class="m-footer__social-icon">
+      </a>
+    </li>
+    <li class="m-footer__social-item">
+      <a href="https://twitter.com/suzuki_mex" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Twitter');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/twitter.html" alt="Twitter" class="m-footer__social-icon">
+      </a>
+    </li>
+    <li class="m-footer__social-item">
+      <a href="http://instagram.com/suzuki_mex" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Instagram');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/instagram.html" alt="Instagram" class="m-footer__social-icon">
+      </a>
+    </li>
+  </ul>
+</footer>

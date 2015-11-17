@@ -1,0 +1,308 @@
+<mobile-warning></mobile-warning>
+
+<header class="l-header js-header">
+  <a href="../../index.html" class="m-mobile-logo">
+    <img src="assets/images/logos/nueva_vitara_logo.html" alt="Logo" class="m-mobile-logo__image">
+  </a>
+  <div class="m-header-menu js-header-menu">
+    <ul class="m-header-menu__first-part">
+      <li class="m-header-menu__first-part-item js-header-menu-item">
+        <a href="../../testdrive.html" onclick="ga('send', 'event', 'Prueba de manejo', 'clic_button', 'Header');" class="m-header-menu__first-part-link">
+          <span class="m-header-menu__first-part-label m-header-menu__first-part-label--drive">Manéjala<img src="assets/images/icons/general/drive_aqua.html" class="m-header-menu__first-part-link-icon"></span>
+        </a>
+      </li>
+      <!--<li class="m-header-menu__first-part-item js-header-menu-item">
+        <a href="#" class="m-header-menu__first-part-link">
+          <span class="m-header-menu__first-part-label">Cotízala<img src="assets/images/icons/general/price_aqua.svg" class="m-header-menu__first-part-link-icon"></img></span>
+        </a>
+      </li>-->
+    </ul>
+    <ul class="m-header-menu__second-part">
+      <li class="m-header-menu__second-part-item m-header-menu__features js-header-menu-item">
+        <a class="m-header-menu__second-part-link js-menu-features" ng-click="financing.toggleMenuFeatures()">Features</a>
+        <ul class="m-header-menu__sublist">
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/diseno.html" class="m-header-menu__sublist-link">Diseño</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/equipo.html" class="m-header-menu__sublist-link">Equipo</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/accesorios.html" class="m-header-menu__sublist-link">Accesorios</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/seguridad.html" class="m-header-menu__sublist-link">Seguridad</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/motor.html" class="m-header-menu__sublist-link">Motor</a>
+          </li>
+        </ul>
+      </li>
+      <li class="m-header-menu__second-part-item js-header-menu-item">
+        <a href="../../personalizacion.html" class="m-header-menu__second-part-link">Personalización</a>
+      </li>
+      <li class="m-header-menu__second-part-item js-header-menu-item">
+        <a href="../../galeria.html" class="m-header-menu__second-part-link">Galería</a>
+      </li>
+      <li class="m-header-menu__second-part-item js-header-menu-item">
+        <a href="../../versiones.html" class="m-header-menu__second-part-link">Versiones y precios</a>
+      </li>
+    </ul>
+  </div>
+  <a class="m-mobile-menu-button js-open-menu" ng-click="financing.openMenu($event)"></a>
+  <a class="m-mobile-close-menu js-close-menu" ng-click="financing.closeMenu($event)"></a>
+</header>
+
+<div class="l-form-container js-full-content">
+  <div class="l-form__bg">
+    <div class="l-form__bg-content l-form__bg-content--financing">
+      <h1 ng-if="financing.version_name" class="l-form__bg-title l-form__bg-title--financing">
+        <span class="l-form__bg-label">Versión</span>
+        {{financing.version_name}}
+      </h1>
+      <span picture-fill class="l-form__bg-image" data-alt="Camioneta">
+        <span pf-src="{{financing.financing_feeling_selected.want_image.desktop}}"></span>
+        <span pf-src="{{financing.financing_feeling_selected.want_image.mobile}}" data-media="(min-width: 1px)"></span>
+        <span pf-src="{{financing.financing_feeling_selected.want_image.desktop}}" data-media="(min-width: 640px)"></span>
+      </span>
+    </div>
+  </div>
+  <div class="l-form l-form--financing js-full-content">
+    <div class="l-form__content">
+      <h1 class="m-form-title">Cotízala</h1>
+      <div class="js-financing-step-1">
+        <form id="form-financing-step-1" class="m-form js-financing-step-1">
+          <p class="m-form-textblock">
+            ¿A poco no la nueva Vitara 2016 está bien chula? Más chula se va a ver en tu garaje o engalanando la entrada de tu casa. Porque su nuevo estilo va contigo, llévatela ya a tu casa con un excelente plan de financiamiento.
+          </p>
+          <p class="m-form-error-message js-form-error-message">Algunos de los datos que ingresaste son incorrectos.</p>
+          <div class="l-form--financing__row">
+            <div class="l-form--financing__column">
+              <fieldset class="m-fieldset">
+                <label class="m-label">Dónde te localizas</label>
+                <select ng-model="financing_state" ng-options="state.name for state in financing.states track by state.key" ng-change="financing.SelectConcessionaire(financing_state.key)" required class="m-input m-input--select js-financing-state">
+                <option value="">Estado</option>
+                </select>
+              </fieldset>
+            </div>
+            <div class="l-form--financing__column">
+              <fieldset class="m-fieldset">
+                <label class="m-label">Elige una concesionaria</label>
+                <select ng-model="financing_concessionaire" ng-options="concessionaire.name for concessionaire in financing.concessionaires track by concessionaire.id" required class="m-input m-input--select js-financing-concessionaire">
+                  <option value="">Concesionaria</option>
+                </select>
+              </fieldset>
+            </div>
+          </div>
+          <div class="l-form--financing__row">
+            <div class="l-form--financing__column">
+              <fieldset class="m-fieldset">
+                <label class="m-label">Modelo</label>
+                <select class="m-input m-input--select js-financing-model" required>
+                  <option value="new-vitara">Nueva Vitara</option>
+                </select>
+              </fieldset>
+            </div>
+            <div class="l-form--financing__column">
+              <fieldset class="m-fieldset">
+                <label class="m-label">Año</label>
+                <select class="m-input m-input--select js-financing-year" required>
+                  <option value="2016">2016</option>
+                </select>
+              </fieldset>
+            </div>
+          </div>
+          <div class="l-form--financing__row">
+            <div class="l-form--financing__column">
+              <fieldset class="m-fieldset">
+                <label class="m-label">Versión</label>
+                <select ng-model="financing_version" ng-options="version.name for version in financing.versions track by version.key" ng-change="financing.getVersionPrice(financing_version)" required class="m-input m-input--select js-financing-version">
+                  <option value="">Versión</option>
+                </select>
+              </fieldset>
+            </div>
+            <div class="l-form--financing__column">
+              <fieldset class="m-fieldset">
+                <label class="m-label m-label--price">Precio</label>
+                <p class="m-form-price">{{financing.version_price | currency:$:2}}</p>
+              </fieldset>
+            </div>
+          </div>
+          <hr class="m-form-divider">
+          <div class="l-form--financing__row">
+            <div class="l-form--financing__column">
+              <fieldset class="m-fieldset">
+                <label class="m-label m-label--price">Enganche {{financing.deposit_percent}}</label>
+                <div class="m-form-slider">
+                  <rzslider rz-slider-model="financing.deposit_value" rz-slider-floor="10" rz-slider-ceil="90" rz-slider-disabled="financing.disable_slider" rz-slider-on-change="financing.changeDeposit()"></rzslider>
+                  <span class="m-form-slider__percent m-form-slider__percent--left">10%</span>
+                  <span class="m-form-slider__percent m-form-slider__percent--right">90%</span>
+                </div>
+              </fieldset>
+            </div>
+            <div class="l-form--financing__column">
+              <fieldset class="m-fieldset">
+                <p class="m-form-price m-form-price--in-deposit">{{financing.price_with_deposit | currency:$:2}}</p>
+              </fieldset>
+            </div>
+          </div>
+          <hr class="m-form-divider">
+          <a class="m-button m-button--in-form" ng-click="financing.doStepOne()">Continuar</a>
+        </form>
+      </div>
+      <div class="js-financing-step-2 hide">
+        <form id="form-financing-step-2" class="m-form js-financing-step-2">
+          <p class="m-form-textblock">
+            Por favor, llena los campos solicitados para continuar con tu cotización y enviarla a tu correo.
+          </p>
+          <p class="m-form-error-message js-form-error-message">Algunos de los datos que ingresaste son incorrectos.</p>
+          <div class="l-form--financing__row">
+            <div class="l-form--financing__column">
+              <p class="m-form-textblock m-form-textblock--medium">Condiciones del crédito</p>
+              <div class="m-form-textblock m-form-textblock--financing-credit">
+                <p class="m-form-textblock--financing-credit__item">
+                  <span class="m-form-textblock--financing-credit__label">Modelo</span>
+                  Nueva Vitara
+                </p>
+                <p class="m-form-textblock--financing-credit__item">
+                  <span class="m-form-textblock--financing-credit__label">Versión</span>
+                  {{financing.version_name}}
+                </p>
+                <p class="m-form-textblock--financing-credit__item">
+                  <span class="m-form-textblock--financing-credit__label">Año</span>
+                  2016
+                </p>
+                <p class="m-form-textblock--financing-credit__item">
+                  <span class="m-form-textblock--financing-credit__label">Precio</span>
+                  {{financing.version_price | currency:$:2}}
+                </p>
+                <p class="m-form-textblock--financing-credit__item">
+                  <span class="m-form-textblock--financing-credit__label">Enganche</span>
+                  {{financing.total_deposit | currency:$:2}}
+                </p>
+                <p class="m-form-textblock--financing-credit__item">
+                  <span class="m-form-textblock--financing-credit__label">Crédito</span>
+                  {{financing.price_with_deposit | currency:$:2}}
+                </p>
+              </div>
+              <a class="m-form-link m-form-link--back" ng-click="financing.backToStepOne()">
+                <span>
+                  Editar condiciones
+                  <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                      <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                          <g id="img/web/14_Manejala_03" sketch:type="MSArtboardGroup" transform="translate(-1010.000000, -429.000000)" stroke="#17C8D4">
+                              <g id="Formulario" sketch:type="MSLayerGroup" transform="translate(727.000000, 1.000000)">
+                                  <g id="Cambiar-concecionari-+-Path-1575-+-Oval-245" transform="translate(284.000000, 426.000000)" sketch:type="MSShapeGroup">
+                                      <g id="Path-1575-+-Oval-245" transform="translate(0.000000, 3.000000)">
+                                          <path d="M9.18819706,4.12918236 L5.53965337,7.77772605 L9.18819706,11.4262697" id="Path-1575"></path>
+                                          <circle id="Oval-245" cx="8" cy="8" r="8"></circle>
+                                      </g>
+                                  </g>
+                              </g>
+                          </g>
+                      </g>
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div class="l-form--financing__column">
+              <fieldset class="m-fieldset">
+                <label class="m-label">Nombre(s)</label>
+                <input type="text" class="m-input js-financing-name" required data-parsley-pattern="^[a-zA-Z ñáéíóú]+$" value="" placeholder="Ej. Guillermo David">
+              </fieldset>
+              <fieldset class="m-fieldset">
+                <label class="m-label">Apellido(s)</label>
+                <input type="text" class="m-input js-financing-lastname" required data-parsley-pattern="^[a-zA-Z ñáéíóú]+$" value="" placeholder="Ej. López">
+              </fieldset>
+              <fieldset class="m-fieldset">
+                <label class="m-label">Teléfono</label>
+                <input type="number" class="m-input js-financing-phone" required data-parsley-type="digits" data-parsley-minlength="10" data-parsley-maxlength="10" value="" placeholder="Ej. 55 5880 7321">
+              </fieldset>
+              <fieldset class="m-fieldset">
+                <label class="m-label">Correo electrónico</label>
+                <input type="email" class="m-input js-financing-email" required data-parsley-type="email" value="" placeholder="Ej. micorreo@mail.com">
+              </fieldset>
+            </div>
+          </div>
+          <hr class="m-form-divider">
+          <p class="m-form-textblock m-form-textblock--small">
+            Tus datos están a salvo. Para mayor información revisa nuestro <a href="http://www.suzuki.com.mx/autos/aviso_privacidad" target="_blank">Aviso de privacidad</a>
+          </p>
+          <fieldset class="m-fieldset m-fieldset--radio m-fieldset--radio--in-financing">
+            <input ng-model="financing.drive_checkbox" class="m-input m-input--radio js-financing-drive" type="checkbox" name="financing-drive" ng-change="financing.toggleDate()">
+            <div class="m-input--radio__check">
+              <img src="assets/images/icons/general/check.html">
+            </div>
+            <label class="m-label m-label--radio">Te gustaría manejarla</label>
+            <input type="text" id="financing-datepicker" class="m-input m-input--financing-date js-datepicker js-financing-date hide" data-parsley-required="{{financing.testdrive_date_is_required}}" value="" placeholder="AA / MM / DD">
+          </fieldset>
+          <fieldset class="m-fieldset m-fieldset--radio m-fieldset--radio--in-financing">
+            <input class="m-input m-input--radio js-financing-news" type="checkbox" name="financing-news">
+            <div class="m-input--radio__check">
+              <img src="assets/images/icons/general/check.html">
+            </div>
+            <label class="m-label m-label--radio">Deseo recibir noticias y promociones</label>
+          </fieldset>
+          <p ng-if="financing.service_status" class="m-form-textblock">{{financing.service_status}}</p>
+          <a class="m-button m-button--in-form" ng-click="financing.doStepTwo($event)">Cotizar</a>
+        </form>
+      </div>
+      <div class="js-financing-step-3 hide">
+        <p class="m-form-textblock">
+          Aquí te mostramos los diversos planes de financiamiento correspondiente al número de meses cotizados y el tipo de seguro (seguro de auto y seguro de vida) según la empresa que desees contratar.
+        </p>
+        <table class="m-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th ng-repeat="month in financing.bnp_result">{{month[0].Opciones[$index].Plazo}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="company in financing.bnp_result">
+              <td class="m-table__label">{{company[0].Nombre}}</td>
+              <td ng-repeat="option in company[0].Opciones" data-column="{{option.Plazo}}">{{option.Importe | currency:$:2}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="m-form-textblock">
+          Para tu comodidad te hemos enviado esta información a tu correo electrónico.
+        </p>
+        <a href="../../index.html" class="m-button m-button--in-form">Terminar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="m-footer">
+  <a href="http://www.suzuki.com.mx/" onclick="ga('send', 'event', 'Footer', 'outbound_clic', 'Suzuki_home');" class="m-footer__suzuki-logo"><img src="assets/images/logos/suzuki.html" alt="Suzuki"></a>
+  <p class="m-footer__copyright">Todos los derechos reservados Suzuki 2015</p>
+  <ul class="m-footer__legals">
+    <li class="m-footer__legals-item">
+        <a href="../../legales.html" class="m-footer__legals-link">Términos legales</a>
+    </li>
+    <li class="m-footer__legals-item">
+        <a href="../../aviso_privacidad.html" class="m-footer__legals-link">Aviso de privacidad</a>
+    </li>
+    <li class="m-footer__legals-item">
+      <a href="http://www.globalsuzuki.com/" onclick="ga('send', 'event', 'Footer', 'outbound_clic', 'Suzuki_global');" target="_blank" class="m-footer__legals-link">Suzuki global</a>
+    </li>
+  </ul>
+  <ul class="m-footer__social">
+    <li class="m-footer__social-item">
+      <a href="https://www.facebook.com/SuzukiAutosMexico" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Facebook');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/facebook.html" alt="Facebook" class="m-footer__social-icon">
+      </a>
+    </li>
+    <li class="m-footer__social-item">
+      <a href="https://twitter.com/suzuki_mex" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Twitter');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/twitter.html" alt="Twitter" class="m-footer__social-icon">
+      </a>
+    </li>
+    <li class="m-footer__social-item">
+      <a href="http://instagram.com/suzuki_mex" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Instagram');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/instagram.html" alt="Instagram" class="m-footer__social-icon">
+      </a>
+    </li>
+  </ul>
+</footer>

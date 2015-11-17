@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="112px" height="112px" viewBox="0 0 112 112" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15588) - http://www.bohemiancoding.com/sketch -->
+    <title>Button call</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.7 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="img/mobile/Accesorios_01" sketch:type="MSArtboardGroup" transform="translate(-104.000000, -367.000000)" stroke="#FFFFFF">
+            <g id="Button-call" sketch:type="MSLayerGroup" transform="translate(105.000000, 368.000000)">
+                <circle id="Oval-87-Copy" stroke-width="5" fill-opacity="0" fill="#52E1EB" filter="url(#filter-1)" sketch:type="MSShapeGroup" cx="55.55" cy="55.55" r="28.05"></circle>
+                <ellipse id="Oval-87-Copy-2" stroke-width="2" opacity="0.5" sketch:type="MSShapeGroup" cx="55.55" cy="55" rx="41.25" ry="41.8"></ellipse>
+                <circle id="Oval-87-Copy-3" opacity="0.265275187" sketch:type="MSShapeGroup" cx="55" cy="55" r="55"></circle>
+                <g id="arrow-icon-" transform="translate(49.500000, 44.000000)" stroke-width="3" stroke-linecap="round" sketch:type="MSShapeGroup">
+                    <path d="M6.05,0.264870468 L6.05,21.1228536" id="Line"></path>
+                    <path d="M11.6714729,17.1192555 L5.94853465,21.6081747 L0.428527066,17.1192555" id="Path-1183-Copy-2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

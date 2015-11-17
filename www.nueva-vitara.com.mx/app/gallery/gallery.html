@@ -1,0 +1,207 @@
+<mobile-warning show-for="portrait"></mobile-warning>
+
+<header class="l-header js-header">
+  <a href="../../index.html" class="m-mobile-logo">
+    <img src="assets/images/logos/nueva_vitara_logo.html" alt="Logo" class="m-mobile-logo__image">
+  </a>
+  <div class="m-header-menu js-header-menu">
+    <ul class="m-header-menu__first-part">
+      <li class="m-header-menu__first-part-item js-header-menu-item">
+        <a href="../../testdrive.html" onclick="ga('send', 'event', 'Prueba de manejo', 'clic_button', 'Header');" class="m-header-menu__first-part-link">
+          <span class="m-header-menu__first-part-label m-header-menu__first-part-label--drive">Manéjala<img src="assets/images/icons/general/drive_aqua.html" class="m-header-menu__first-part-link-icon"></span>
+        </a>
+      </li>
+      <!-- <li class="m-header-menu__first-part-item js-header-menu-item">
+        <a href="#" class="m-header-menu__first-part-link">
+          <span class="m-header-menu__first-part-label">Cotízala<img src="assets/images/icons/general/price_aqua.svg" class="m-header-menu__first-part-link-icon"></img></span>
+        </a>
+      </li> -->
+    </ul>
+    <ul class="m-header-menu__second-part">
+      <li class="m-header-menu__second-part-item m-header-menu__features js-header-menu-item">
+        <a class="m-header-menu__second-part-link js-menu-features" ng-click="gallery.toggleMenuFeatures()">Features</a>
+        <ul class="m-header-menu__sublist">
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/diseno.html" class="m-header-menu__sublist-link">Diseño</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/equipo.html" class="m-header-menu__sublist-link">Equipo</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/accesorios.html" class="m-header-menu__sublist-link">Accesorios</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/seguridad.html" class="m-header-menu__sublist-link">Seguridad</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/motor.html" class="m-header-menu__sublist-link">Motor</a>
+          </li>
+        </ul>
+      </li>
+      <li class="m-header-menu__second-part-item js-header-menu-item">
+        <a href="../../personalizacion.html" class="m-header-menu__second-part-link">Personalización</a>
+      </li>
+      <li class="m-header-menu__second-part-item js-header-menu-item">
+        <a href="../../galeria.html" class="m-header-menu__second-part-link">Galería</a>
+      </li>
+      <li class="m-header-menu__second-part-item js-header-menu-item">
+      <a href="../../versiones.html" class="m-header-menu__second-part-link">Versiones y precios</a>
+      </li>
+    </ul>
+  </div>
+  <a class="m-mobile-menu-button js-open-menu" ng-click="gallery.openMenu($event)"></a>
+  <a class="m-mobile-close-menu js-close-menu" ng-click="gallery.closeMenu($event)"></a>
+</header>
+
+<div class="l-fullwidth-container l-fullwidth-container--gallery">
+  <div class="m-fullwidth-intro m-gallery-intro">
+    <p class="m-fullwidth-intro__title">Perfección y belleza en cada detalle</p>
+    <p class="m-fullwidth-intro__text">
+      Colores radiantes que cautivan. Desempeño, agilidad y poder hechos para conquistar cualquier camino. La fusión entre estilo, elegancia y desempeño está en la Nueva Vitara. Déjate seducir por ella.
+    </p>
+  </div>
+
+  <div class="l-product-gallery">
+    <div class="m-product-gallery">
+      <div class="m-product-gallery__item m-product-gallery-item" ng-repeat="item in gallery.items">
+        <a href="#" ng-click="gallery.lightboxShow($index)" class="m-product-gallery__link">
+          <span class="m-product-gallery__overlay" ng-if="item.type === 'video'">
+            <span class="m-product-gallery__overlay-wrapper">
+              <span class="m-product-gallery__overlay-center">
+                <img src="assets/images/icons/general/video.html">
+              </span>
+            </span>
+          </span>
+          <span class="m-product-gallery__overlay" ng-if="item.type === '360'">
+            <span class="m-product-gallery__overlay-wrapper">
+              <span class="m-product-gallery__overlay-center">
+                <img src="assets/images/icons/general/360.html">
+              </span>
+            </span>
+          </span>
+          <span picture-fill class="pf">
+            <span pf-src="{{item.thumb.desktop}}"></span>
+            <span pf-src="{{item.thumb.mobile}}" data-media="(min-width: 1px)"></span>
+            <span pf-src="{{item.thumb.desktop}}" data-media="(min-width: 640px)"></span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="l-product-lightbox">
+    <div class="m-product-lightbox">
+      <div class="m-product-lightbox-slider" slickSlider>
+        <div class="m-product-lightbox-slider__slide m-product-lightbox-slide" ng-repeat="item in gallery.items">
+          <div class="m-product-lightbox-image-slide" ng-if="item.type === 'image'">
+            <div class="m-product-lightbox-slide__wrapper">
+              <div class="m-product-lightbox-slide__image">
+                <span picture-fill class="pf">
+                  <span pf-src="{{item.full.desktop}}"></span>
+                  <span pf-src="{{item.full.mobile}}" data-media="(min-width: 1px)"></span>
+                  <span pf-src="{{item.full.desktop}}" data-media="(min-width: 640px)"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="m-product-lightbox-iframe-slide" ng-if="item.type === 'video' || item.type === '360'">
+            <div class="m-product-lightbox-slide__wrapper">
+              <div class="m-product-lightbox-slide__youtube" ng-if="item.type === 'video'">
+                <iframe-youtube videoid="{{item.videoid}}"></iframe-youtube>
+              </div>
+              <div class="m-product-lightbox-slide__360" ng-if="item.type === '360'">
+                <iframe-360 srcurl="{{item.srcurl}}"></iframe-360>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="m-product-lightbox-sidebar">
+      <div class="m-product-lightbox-sidebar__wrapper">
+        <div class="m-product-lightbox-sidebar__indicator">
+          <div class="m-product-lightbox-sidebar__current">{{gallery.currentSlide}}</div>
+          <div class="m-product-lightbox-sidebar__total">{{gallery.totalSlides}}</div>
+        </div>
+        <a href="#" ng-click="gallery.lightboxClose()" class="m-product-lightbox-sidebar__button m-product-lightbox-sidebar__button--close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewbox="0 0 19 19" version="1.1">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g transform="translate(-1411.000000, -483.000000)" fill="#FFFFFF">
+                <g transform="translate(1400.000000, 66.000000)">
+                  <g transform="translate(0.000000, 340.000000)">
+                    <g transform="translate(11.000000, 77.000000)">
+                      <path d="M17.2 0.7L17.6 0.3 18.5 1.1 18 1.5 10.2 9.2 18 17 18.5 17.4 17.6 18.2 17.2 17.8 9.4 10.1 1.3 18 0.9 18.5 0 17.6 0.4 17.2 8.6 9.2 0.4 1.3 1.3 0.4 9.4 8.4 17.2 0.7Z"></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </a>
+        <a href="#" ng-click="gallery.lightboxNext()" class="m-product-lightbox-sidebar__button m-product-lightbox-sidebar__button--next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="21" viewbox="0 0 15 21" version="1.1">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g transform="translate(-1413.000000, -531.000000)" fill="#FFFFFF">
+                <g transform="translate(1400.000000, 66.000000)">
+                  <g transform="translate(0.000000, 340.000000)">
+                    <g transform="translate(10.000000, 125.000000)">
+                      <path d="M16.8 11C17.1 10.7 17.1 10.3 16.8 10L5.3 0.2C5-0.1 4.5-0.1 4.2 0.2 3.9 0.5 3.9 0.9 4.2 1.1L15.7 11 15.7 10 4.2 19.9C3.9 20.1 3.9 20.5 4.2 20.8 4.5 21.1 5 21.1 5.3 20.8L16.8 11Z"></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </a>
+        <a href="#" ng-click="gallery.lightboxPrev()" class="m-product-lightbox-sidebar__button m-product-lightbox-sidebar__button--prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="21" viewbox="0 0 15 21" version="1.1">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g transform="translate(-1413.000000, -582.000000)" fill="#FFFFFF">
+                <g transform="translate(1400.000000, 66.000000)">
+                  <g transform="translate(0.000000, 340.000000)">
+                    <g transform="translate(20.500000, 186.500000) rotate(-180.000000) translate(-20.500000, -186.500000) translate(10.000000, 176.000000)">
+                      <path d="M16.8 11C17.1 10.7 17.1 10.3 16.8 10L5.3 0.2C5-0.1 4.5-0.1 4.2 0.2 3.9 0.5 3.9 0.9 4.2 1.1L15.7 11 15.7 10 4.2 19.9C3.9 20.1 3.9 20.5 4.2 20.8 4.5 21.1 5 21.1 5.3 20.8L16.8 11Z"></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="m-footer">
+  <a href="http://www.suzuki.com.mx/" onclick="ga('send', 'event', 'Footer', 'outbound_clic', 'Suzuki_home');" class="m-footer__suzuki-logo"><img src="assets/images/logos/suzuki.html" alt="Suzuki"></a>
+  <p class="m-footer__copyright">Todos los derechos reservados Suzuki 2015</p>
+  <ul class="m-footer__legals">
+    <li class="m-footer__legals-item">
+        <a href="../../legales.html" class="m-footer__legals-link">Términos legales</a>
+    </li>
+    <li class="m-footer__legals-item">
+        <a href="../../aviso_privacidad.html" class="m-footer__legals-link">Aviso de privacidad</a>
+    </li>
+    <li class="m-footer__legals-item">
+      <a href="http://www.globalsuzuki.com/" onclick="ga('send', 'event', 'Footer', 'outbound_clic', 'Suzuki_global');" target="_blank" class="m-footer__legals-link">Suzuki global</a>
+    </li>
+  </ul>
+  <ul class="m-footer__social">
+    <li class="m-footer__social-item">
+      <a href="https://www.facebook.com/SuzukiAutosMexico" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Facebook');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/facebook.html" alt="Facebook" class="m-footer__social-icon">
+      </a>
+    </li>
+    <li class="m-footer__social-item">
+      <a href="https://twitter.com/suzuki_mex" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Twitter');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/twitter.html" alt="Twitter" class="m-footer__social-icon">
+      </a>
+    </li>
+    <li class="m-footer__social-item">
+      <a href="http://instagram.com/suzuki_mex" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Instagram');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/instagram.html" alt="Instagram" class="m-footer__social-icon">
+      </a>
+    </li>
+  </ul>
+</footer>

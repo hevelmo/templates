@@ -1,0 +1,317 @@
+<mobile-warning></mobile-warning>
+
+<div class="m-loader js-loader">
+  <div class="m-loader__center-content">
+    <div class="m-loader__logo-nueva-vitara"></div>
+  </div>
+  <p class="m-loader__percent">
+    <span class="m-loader__percent-value js-loader-percent">0</span>
+    <span class="m-loader__percent-symbol">%</span>
+  </p>
+  <div class="m-loader__logo-suzuki"></div>
+</div>
+
+<div class="m-prehome js-prehome" ng-click="main.startApp()"></div>
+
+<header class="l-header js-header invisible">
+  <a href="../../index.html" class="m-mobile-logo">
+    <img src="assets/images/logos/nueva_vitara_logo.html" alt="Logo" class="m-mobile-logo__image">
+  </a>
+  <div class="m-header-menu js-header-menu">
+    <ul class="m-header-menu__first-part">
+      <li class="m-header-menu__first-part-item js-header-menu-item">
+        <a href="../../testdrive%7b%7bmain.feeling_selected.html" onclick="ga('send', 'event', 'Prueba de manejo', 'clic_button', 'Header');" class="m-header-menu__first-part-link">
+          <span class="m-header-menu__first-part-label m-header-menu__first-part-label--drive">Manéjala<img src="assets/images/icons/general/drive_aqua.html" class="m-header-menu__first-part-link-icon"></span>
+        </a>
+      </li>
+      <!-- <li class="m-header-menu__first-part-item js-header-menu-item">
+        <a href="#" class="m-header-menu__first-part-link">
+          <span class="m-header-menu__first-part-label">Cotízala<img src="assets/images/icons/general/price_aqua.svg" class="m-header-menu__first-part-link-icon"></img></span>
+        </a>
+      </li> -->
+    </ul>
+    <ul class="m-header-menu__second-part">
+      <li class="m-header-menu__second-part-item m-header-menu__features js-header-menu-item">
+        <a class="m-header-menu__second-part-link js-menu-features" ng-click="main.toggleMenuFeatures()">Features</a>
+        <ul class="m-header-menu__sublist">
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/diseno%7b%7bmain.feeling_selected.html" class="m-header-menu__sublist-link">Diseño</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/equipo%7b%7bmain.feeling_selected.html" class="m-header-menu__sublist-link">Equipo</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/accesorios%7b%7bmain.feeling_selected.html" class="m-header-menu__sublist-link">Accesorios</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/seguridad%7b%7bmain.feeling_selected.html" class="m-header-menu__sublist-link">Seguridad</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/motor%7b%7bmain.feeling_selected.html" class="m-header-menu__sublist-link">Motor</a>
+          </li>
+        </ul>
+      </li>
+      <li class="m-header-menu__second-part-item js-header-menu-item">
+        <a href="../../personalizacion.html" class="m-header-menu__second-part-link">Personalización</a>
+      </li>
+      <li class="m-header-menu__second-part-item js-header-menu-item">
+        <a href="../../galeria.html" class="m-header-menu__second-part-link">Galería</a>
+      </li>
+      <li class="m-header-menu__second-part-item js-header-menu-item">
+        <a href="../../versiones.html" class="m-header-menu__second-part-link">Versiones y precios</a>
+      </li>
+    </ul>
+  </div>
+  <a class="m-mobile-menu-button js-open-menu" ng-click="main.openMenu($event)"></a>
+  <a class="m-mobile-close-menu js-close-menu" ng-click="main.closeMenu($event)"></a>
+</header>
+
+<div class="l-full-content js-full-content invisible">
+  <ul class="m-feelings-slider js-feelings-slider">
+    <li class="m-feelings-slide js-feelings-slide js-full-content" ng-repeat="feeling in main.feelings">
+      <div class="m-feeling-cover js-feeling-cover">
+        <div class="m-feeling-cover__bg m-feeling-cover__bg-{{feeling.id}} {{feeling.cover_disabled}}"></div>
+        <div class="m-feeling-cover__content js-feeling-cover-content">
+          <p class="m-feeling-cover__title">{{feeling.title}}</p>
+          <p class="m-feeling-cover__description">{{feeling.description}}</p>
+          <a ng-if="feeling.enabled" class="m-button m-feeling-cover__button js-feeling-go" ng-click="main.goToFeeling(feeling.id)">Conócela</a>
+        </div>
+      </div>
+      <div class="m-feeling-cover__dot js-feeling-cover-dot" style="background-color: {{feeling.base_color}};"></div>
+      <div class="l-feeling-content js-feeling-content">
+        <div class="m-feeling-menu-container js-feeling-menu-container">
+          <ul class="m-feeling-menu js-feeling-menu">
+            <li class="m-feeling-menu__item">
+              <a class="m-feeling-menu__link active" ng-click="main.goToFeelingSlide(0, $event)"><span class="m-feeling-menu__label">Diseño</span><img src="assets/images/icons/features/design.html" alt="Spec"></a>
+            </li>
+            <li class="m-feeling-menu__item">
+              <a class="m-feeling-menu__link" ng-click="main.goToFeelingSlide(1, $event)"><span class="m-feeling-menu__label">Equipo</span><img src="assets/images/icons/features/equipment.html" alt="Spec"></a>
+            </li>
+            <li class="m-feeling-menu__item">
+              <a class="m-feeling-menu__link" ng-click="main.goToFeelingSlide(2, $event)"><span class="m-feeling-menu__label">Accesorios</span><img src="assets/images/icons/features/accesories.html" alt="Spec"></a>
+            </li>
+            <li class="m-feeling-menu__item">
+              <a class="m-feeling-menu__link" ng-click="main.goToFeelingSlide(3, $event)"><span class="m-feeling-menu__label">Motor</span><img src="assets/images/icons/features/engine.html" alt="Spec"></a>
+            </li>
+            <li class="m-feeling-menu__item">
+              <a class="m-feeling-menu__link" ng-click="main.goToFeelingSlide(4, $event)"><span class="m-feeling-menu__label">Seguridad</span><img src="assets/images/icons/features/secutiry.html" alt="Spec"></a>
+            </li>
+            <li class="m-feeling-menu__item">
+              <a class="m-feeling-menu__link" ng-click="main.goToFeelingSlide(5, $event)"><span class="m-feeling-menu__label">Lo quiero</span><img src="assets/images/icons/features/iwant.html" alt="Spec"></a>
+            </li>
+          </ul>
+        </div>
+        <ul class="m-feeling-slider m-feeling-slider-{{feeling.id}} js-feeling-slider">
+          <li ng-repeat="index in main.feeling_sections_indexes" class="m-feeling-slide js-feeling-slide js-full-content">
+            <div id="drag-feeling-{{feeling.id}}-{{$index}}" class="m-drag js-drag js-full-content">
+              <div class="m-drag__back js-drag-back"></div>
+              <div class="m-drag__front js-drag-front">
+                <img src="assets/images/icons/drag/drag_icon.html" alt="Drag" class="m-drag__control-icon">
+                <img src="%7b%7bfeeling.html" alt="Icon" class="m-drag__back-icon">
+                <img src="%7b%7bfeeling-2.html" alt="Icon" class="m-drag__front-icon">
+              </div>
+              <div class="m-drag__control handle js-drag-control"></div>
+              <div class="m-drag__content-center">
+                <span picture-fill class="m-drag__shadow-back js-drag-shadow-back" data-alt="Sombra">
+                  <span pf-src="{{feeling.sections[$index].left_person.desktop}}"></span>
+                  <span pf-src="{{feeling.sections[$index].left_person.mobile}}" data-media="(min-width: 1px)"></span>
+                  <span pf-src="{{feeling.sections[$index].left_person.desktop}}" data-media="(min-width: 640px)"></span>
+                </span>
+                <h2 class="m-drag__title">{{feeling.sections[$index].name}}</h2>
+                <span picture-fill class="m-drag__car-image" data-alt="Camioneta">
+                  <span pf-src="{{feeling.sections[$index].car_image.desktop}}"></span>
+                  <span pf-src="{{feeling.sections[$index].car_image.mobile}}" data-media="(min-width: 1px)"></span>
+                  <span pf-src="{{feeling.sections[$index].car_image.desktop}}" data-media="(min-width: 640px)"></span>
+                </span>
+                <span picture-fill class="m-drag__shadow-front js-drag-shadow-front" data-alt="Sombra">
+                  <span pf-src="{{feeling.sections[$index].right_person.desktop}}"></span>
+                  <span pf-src="{{feeling.sections[$index].right_person.mobile}}" data-media="(min-width: 1px)"></span>
+                  <span pf-src="{{feeling.sections[$index].right_person.desktop}}" data-media="(min-width: 640px)"></span>
+                </span>
+                <a class="m-drag__pulse js-drag-specs-button pulse" data-side="" data-section="{{$index}}" ng-click="main.openSpecs($event)"></a>
+              </div>
+              <p class="m-drag__description js-drag-description">
+                  Arrastra el indicador y descubre todos los detalles que hacen que la Vitara combine contigo en cualquier situación.
+                </p>
+            </div>
+            <div class="l-specs-container js-specs-container">
+              <div class="l-specs-container__content l-specs-container__content-{{$index}}">
+                <a class="m-close m-close--in-specs js-close-specs" ng-click="main.closeSpecs($event)">
+                  <svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                      <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                          <g id="img/mobile/10_Características_01" sketch:type="MSArtboardGroup" transform="translate(-272.000000, -216.000000)" stroke="#FFFFFF" stroke-width="2">
+                              <g id="Caracteristicas" sketch:type="MSLayerGroup" transform="translate(0.000000, 186.000000)">
+                                  <g id="Cerrar-Copy" transform="translate(273.000000, 31.000000)" sketch:type="MSShapeGroup">
+                                      <path d="M9.33333333,19.2911806 L19.2911806,9.33333333" id="Path-934"></path>
+                                      <path d="M9.33333333,9.33333333 L19.2911806,19.2911806" id="Path-934-Copy"></path>
+                                      <circle id="Oval-120" cx="14" cy="14" r="14"></circle>
+                                  </g>
+                              </g>
+                          </g>
+                      </g>
+                  </svg>
+                </a>
+                <div class="m-spec-header m-spec-header-{{$index}}">
+                  <h4 class="m-spec-header__title">{{main.features_selected.sections[$index].name}}</h4>
+                  <p ng-if="main.features_selected.sections[$index].description" class="m-spec-header__description">{{main.features_selected.sections[$index].description}}</p>
+                </div>
+                <div class="m-spec-main">
+                  <div class="m-spec-main__image m-content-image">
+                    <img ng-if="main.mobile" class="m-content-image__image" src="%7b%7bmain.features_selected.sections%5b%24index%5d.feature_bg.html" alt="Feature">
+                    <img ng-if="!main.mobile" class="m-content-image__image" src="%7b%7bmain.features_selected.sections%5b%24index%5d.feature_bg-2.html" alt="Feature">
+                  </div>
+                  <div class="m-spec-main__title" style="background-color: {{feeling.base_color}};">
+                    <img ng-if="main.mobile" class="m-spec-main__title-image" src="%7b%7bmain.features_selected.sections%5b%24index%5d.feature_image.html" alt="Feature">
+                    <img ng-if="!main.mobile" class="m-spec-main__title-image" src="%7b%7bmain.features_selected.sections%5b%24index%5d.feature_image-2.html" alt="Feature">
+                  </div>
+                </div>
+                <div class="l-grid-wrapper l-grid-wrapper--nogutter">
+                  <div class="l-grid">
+                    <div ng-repeat="feature in main.features_side_selected" class="l-grid__item one-whole tablet-one-half desktop-one-third">
+                      <div class="m-spec-item">
+                        <div class="m-spec-item__image m-content-image">
+                          <img ng-if="main.mobile" class="m-content-image__image" src="%7b%7bfeature.spec_image.html" alt="Feature">
+                          <img ng-if="!main.mobile" class="m-content-image__image" src="%7b%7bfeature.spec_image-2.html" alt="Feature">
+                        </div>
+                          <h4 class="m-spec-item__title">{{feature.spec_title}}</h4>
+                          <p class="m-spec-item__description">{{feature.spec_description}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="m-feeling-slide js-feeling-slide js-full-content" style="background-color: {{feeling.base_color}};">
+            <div class="m-want js-want">
+              <div class="m-drag-want__content">
+                <h2 class="m-drag-want__title">La quiero</h2>
+                <div class="m-drag-want__image-container">
+                  <span picture-fill class="m-drag-want__image" data-alt="Camioneta">
+                    <span pf-src="{{feeling.want_image.desktop}}"></span>
+                    <span pf-src="{{feeling.want_image.mobile}}" data-media="(min-width: 1px)"></span>
+                    <span pf-src="{{feeling.want_image.desktop}}" data-media="(min-width: 640px)"></span>
+                  </span>
+                  <a href="../../testdrive.html" onclick="ga('send', 'event', 'Prueba de manejo', 'clic_button', 'Interno');" class="m-drag-want__link m-drag-want__link--left pulse">
+                    <img src="assets/images/dummy/pulse.html" alt="Manéjala">
+                    <span>Manéjala</span>
+                  </a>
+                  <a href="#" class="m-drag-want__link m-drag-want__link--right pulse">
+                    <img src="assets/images/dummy/pulse.html" alt="Cotízala">
+                    <span>Cotízala</span>
+                  </a>
+                </div>
+                <p class="m-drag-want__description">
+                  Convéncete de estrenar una Vitara. Consulta precios, planes de financiamiento y agenda tu prueba de manejo hoy. ¡No te quedes con las ganas!
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  <div class="m-colorpicker js-colorpicker" ng-click="main.openColorPicker()">
+    <div class="m-colorpicker__bar" ng-repeat="feeling in main.feelings" style="background-color: {{feeling.base_color}};"></div>
+  </div>
+  <div class="l-select-color js-select-color">
+    <?xml version="1.0"?>
+    <svg width="0" height="0" viewPort="0 0 0 0" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="clipCircle">
+          <circle cx="50%" cy="50%" r="100%"/>
+        </clipPath>
+      </defs>
+    </svg>
+    <div class="l-select-color__mask l-select-color__mask-{{main.feeling_selected.id}}">
+      <a class="l-select-color__close" ng-click="main.closeColorPicker()">
+        <span class="l-select-color__close-label">Cerrar</span>
+      </a>
+      <div class="l-select-color__content">
+        <div class="m-select-color">
+          <h2 class="m-select-color__title">{{main.feeling_selected.name_color}}</h2>
+          <div class="m-select-color__car-container">
+            <div class="m-select-color__car js-select-color-car">
+              <div ng-repeat="feeling in main.feelings" class="m-select-color__car-bar m-select-color__car-bar-{{feeling.id}}" ng-click="main.chooseColor($index)">
+                <a class="m-select-color__more">Ver</a>
+              </div>
+            </div>
+          </div>
+          <p class="m-select-color__instruction">
+            ¡Selecciona el color que más te guste!<br>
+            Hay para escoger porque la Vitara tiene algo para todos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="l-instructions js-instructions">
+    <ul class="l-instructions__slider js-instructions-slider">
+      <li class="l-instructions__slide js-instructions-slide js-full-content">
+        <div class="m-instruction">
+          <div class="m-instruction__content">
+            <p class="m-instruction__title">Descubre</p>
+            <p class="m-instruction__description">
+              Arrastra el marcador para que vayas conociendo a fondo cada uno de los aspectos que la Vitara tiene para ti.
+            </p>
+            <span picture-fill class="m-instruction__image" data-alt="Instrucción">
+              <span pf-src="assets/images/desktop/instructions/01.html"></span>
+              <span pf-src="assets/images/mobile/instructions/01.png" data-media="(min-width: 1px)"></span>
+              <span pf-src="assets/images/desktop/instructions/01.png" data-media="(min-width: 640px)"></span>
+            </span>
+          </div>
+          <a class="m-button m-instruction__button" ng-click="main.nextInstruction()">Siguiente</a>
+        </div>
+      </li>
+      <li class="l-instructions__slide js-instructions-slide js-full-content">
+        <div class="m-instruction">
+          <div class="m-instruction__content">
+            <p class="m-instruction__title">Navega</p>
+            <p class="m-instruction__description">
+              Consulta cada una de las características de la nueva Vitara y enamórate de todos los detalles que fueron hechos pensando en ti.
+            </p>
+            <span picture-fill class="m-instruction__image" data-alt="Instrucción">
+              <span pf-src="assets/images/desktop/instructions/02.html"></span>
+              <span pf-src="assets/images/mobile/instructions/02.png" data-media="(min-width: 1px)"></span>
+              <span pf-src="assets/images/desktop/instructions/02.png" data-media="(min-width: 640px)"></span>
+            </span>
+          </div>
+          <a class="m-button m-instruction__button" ng-click="main.finishInstructions()">Siguiente</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<footer class="m-footer invisible">
+  <a href="http://www.suzuki.com.mx/" onclick="ga('send', 'event', 'Footer', 'outbound_clic', 'Suzuki_home');" class="m-footer__suzuki-logo"><img src="assets/images/logos/suzuki.html" alt="Suzuki"></a>
+  <p class="m-footer__copyright">Todos los derechos reservados Suzuki 2015</p>
+  <ul class="m-footer__legals">
+    <li class="m-footer__legals-item">
+        <a href="../../legales.html" class="m-footer__legals-link">Términos legales</a>
+    </li>
+    <li class="m-footer__legals-item">
+        <a href="../../aviso_privacidad.html" class="m-footer__legals-link">Aviso de privacidad</a>
+    </li>
+    <li class="m-footer__legals-item">
+      <a href="http://www.globalsuzuki.com/" onclick="ga('send', 'event', 'Footer', 'outbound_clic', 'Suzuki_global');" target="_blank" class="m-footer__legals-link">Suzuki global</a>
+    </li>
+  </ul>
+  <ul class="m-footer__social">
+    <li class="m-footer__social-item">
+      <a href="https://www.facebook.com/SuzukiAutosMexico" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Facebook');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/facebook.html" alt="Facebook" class="m-footer__social-icon">
+      </a>
+    </li>
+    <li class="m-footer__social-item">
+      <a href="https://twitter.com/suzuki_mex" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Twitter');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/twitter.html" alt="Twitter" class="m-footer__social-icon">
+      </a>
+    </li>
+    <li class="m-footer__social-item">
+      <a href="http://instagram.com/suzuki_mex" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Instagram');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/instagram.html" alt="Instagram" class="m-footer__social-icon">
+      </a>
+    </li>
+  </ul>
+</footer>

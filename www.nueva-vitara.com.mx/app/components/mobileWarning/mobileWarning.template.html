@@ -1,0 +1,8 @@
+<!-- TODO: See app/components/mobileWarning/mobileWarning.directive.js -->
+<div class="l-mobile-warning" ng-class="{'l-mobile-warning--show': warning.showWarning}">
+  <div class="m-mobile-warning">
+    <p class="m-mobile-warning__text m-mobile-warning--show-portrait" ng-show="warning.showFor === 'portrait'">Para más felicidad, gira tu móvil horizontalmente</p>
+    <p class="m-mobile-warning__text m-mobile-warning--show-landscape" ng-show="warning.showFor === 'landscape'">Para más felicidad, gira tu móvil verticalmente</p>
+    <img src="assets/images/icons/general/phone.html" class="m-mobile-warning__image">
+  </div>
+</div>

@@ -1,0 +1,120 @@
+<mobile-warning></mobile-warning>
+
+<header class="l-header js-header">
+  <a href="../../index.html" class="m-mobile-logo">
+    <img src="assets/images/logos/nueva_vitara_logo.html" alt="Logo" class="m-mobile-logo__image">
+  </a>
+  <div class="m-header-menu js-header-menu">
+    <ul class="m-header-menu__first-part">
+      <li class="m-header-menu__first-part-item js-header-menu-item">
+        <a href="../../testdrive.html" onclick="ga('send', 'event', 'Prueba de manejo', 'clic_button', 'Header');" class="m-header-menu__first-part-link">
+          <span class="m-header-menu__first-part-label m-header-menu__first-part-label--drive">Manéjala<img src="assets/images/icons/general/drive_aqua.html" class="m-header-menu__first-part-link-icon"></span>
+        </a>
+      </li>
+      <!-- <li class="m-header-menu__first-part-item js-header-menu-item">
+        <a href="#" class="m-header-menu__first-part-link">
+          <span class="m-header-menu__first-part-label">Cotízala<img src="assets/images/icons/general/price_aqua.svg" class="m-header-menu__first-part-link-icon"></img></span>
+        </a>
+      </li> -->
+    </ul>
+    <ul class="m-header-menu__second-part">
+      <li class="m-header-menu__second-part-item m-header-menu__features js-header-menu-item">
+        <a class="m-header-menu__second-part-link js-menu-features" ng-click="versions.toggleMenuFeatures()">Features</a>
+        <ul class="m-header-menu__sublist">
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/diseno.html" class="m-header-menu__sublist-link">Diseño</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/equipo.html" class="m-header-menu__sublist-link">Equipo</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/accesorios.html" class="m-header-menu__sublist-link">Accesorios</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/seguridad.html" class="m-header-menu__sublist-link">Seguridad</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/motor.html" class="m-header-menu__sublist-link">Motor</a>
+          </li>
+        </ul>
+      </li>
+      <li class="m-header-menu__second-part-item js-header-menu-item">
+        <a href="../../personalizacion.html" class="m-header-menu__second-part-link">Personalización</a>
+      </li>
+      <li class="m-header-menu__second-part-item js-header-menu-item">
+        <a href="../../galeria.html" class="m-header-menu__second-part-link">Galería</a>
+      </li>
+      <li class="m-header-menu__second-part-item js-header-menu-item">
+      <a href="../../versiones.html" class="m-header-menu__second-part-link">Versiones y precios</a>
+      </li>
+    </ul>
+  </div>
+  <a class="m-mobile-menu-button js-open-menu" ng-click="versions.openMenu($event)"></a>
+  <a class="m-mobile-close-menu js-close-menu" ng-click="versions.closeMenu($event)"></a>
+</header>
+
+<div class="l-fullwidth-container l-fullwidth-container--versions">
+  <div class="m-fullwidth-intro m-versions-intro">
+    <p class="m-fullwidth-intro__title">Única en cualquier versión</p>
+    <p class="m-fullwidth-intro__text">La nueva Vitara 2016 fue inspirada en ti, con un diseño que combina y se adapta a tu estilo de vida. Es momento de expresarte al máximo con más de 60 elementos disponibles para que la personalices como tú quieras, creados para satisfacer tus caprichos y necesidades. Es hora de que tú pongas las reglas del juego.</p>
+    <p class="m-fullwidth-intro__text">La nueva Vitara 2016 es el concepto más versátil, equipado, seguro y divertido hecho por Suzuki hasta ahora. Hazla tu cómplice, tu compañera de escapadas los fines de semana y una inseparable aliada en tu día a día en cualquiera de sus versiones.</p>
+  </div>
+  <div class="m-versions-details">
+    <p class="m-versions-details__title">Versiones y precios sugeridos</p>
+    <p class="m-versions-details__subtitle">Detalles que hacen de un auto una experiencia</p>
+  </div>
+  <div class="m-versions-slider" slickSlider>
+    <div class="m-versions-slider__slide m-versions-slide m-versions-features" ng-repeat="version in versions.versions">
+      <div class="m-versions-features__header">
+        <p class="m-versions-features__title">{{version.name}}</p>
+        <span picture-fill>
+          <span pf-src="{{version.images.desktop}}">
+          <span pf-src="{{version.images.mobile}}" data-media="(min-width: 1px)">
+          <span pf-src="{{version.images.desktop}}" data-media="(min-width: 640px)">
+        </span>
+        <div ng-repeat="price in version.prices">
+          <p class="m-versions-features__price">{{price.price | currency:$:2}}</p>
+          <p class="m-versions-features__price-help">{{price.label}}</p>
+        </div>
+        <p class="m-versions-features__desc">{{version.description}}</p>
+      </div>
+      <div class="m-versions-features__feature" ng-repeat="feature in version.features">
+        <p>{{feature}}</p>
+      </div>
+      <!-- <a href="{{version.pdf_link}}" class="m-versions-features__download" target="_blank"><img src="../assets/images/icons/general/link_arrow.svg"> Descargar ficha técnica</a> -->
+    </div>
+  </div>
+</div>
+
+<footer class="m-footer">
+  <a href="http://www.suzuki.com.mx/" onclick="ga('send', 'event', 'Footer', 'outbound_clic', 'Suzuki_home');" class="m-footer__suzuki-logo"><img src="assets/images/logos/suzuki.html" alt="Suzuki"></a>
+  <p class="m-footer__copyright">Todos los derechos reservados Suzuki 2015</p>
+  <ul class="m-footer__legals">
+    <li class="m-footer__legals-item">
+        <a href="../../legales.html" class="m-footer__legals-link">Términos legales</a>
+    </li>
+    <li class="m-footer__legals-item">
+        <a href="../../aviso_privacidad.html" class="m-footer__legals-link">Aviso de privacidad</a>
+    </li>
+    <li class="m-footer__legals-item">
+      <a href="http://www.globalsuzuki.com/" onclick="ga('send', 'event', 'Footer', 'outbound_clic', 'Suzuki_global');" target="_blank" class="m-footer__legals-link">Suzuki global</a>
+    </li>
+  </ul>
+  <ul class="m-footer__social">
+    <li class="m-footer__social-item">
+      <a href="https://www.facebook.com/SuzukiAutosMexico" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Facebook');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/facebook.html" alt="Facebook" class="m-footer__social-icon">
+      </a>
+    </li>
+    <li class="m-footer__social-item">
+      <a href="https://twitter.com/suzuki_mex" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Twitter');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/twitter.html" alt="Twitter" class="m-footer__social-icon">
+      </a>
+    </li>
+    <li class="m-footer__social-item">
+      <a href="http://instagram.com/suzuki_mex" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Instagram');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/instagram.html" alt="Instagram" class="m-footer__social-icon">
+      </a>
+    </li>
+  </ul>
+</footer>

@@ -1,0 +1,219 @@
+<mobile-warning></mobile-warning>
+
+<header class="l-header js-header">
+  <a href="../../index.html" class="m-mobile-logo">
+    <img src="assets/images/logos/nueva_vitara_logo.html" alt="Logo" class="m-mobile-logo__image">
+  </a>
+  <div class="m-header-menu js-header-menu">
+    <ul class="m-header-menu__first-part">
+      <li class="m-header-menu__first-part-item js-header-menu-item">
+        <a href="../../testdrive.html" onclick="ga('send', 'event', 'Prueba de manejo', 'clic_button', 'Header');" class="m-header-menu__first-part-link">
+          <span class="m-header-menu__first-part-label m-header-menu__first-part-label--drive">Manéjala<img src="assets/images/icons/general/drive_aqua.html" class="m-header-menu__first-part-link-icon"></span>
+        </a>
+      </li>
+      <!--<li class="m-header-menu__first-part-item js-header-menu-item">
+        <a href="#" class="m-header-menu__first-part-link">
+          <span class="m-header-menu__first-part-label">Cotízala<img src="assets/images/icons/general/price_aqua.svg" class="m-header-menu__first-part-link-icon"></img></span>
+        </a>
+      </li>-->
+    </ul>
+    <ul class="m-header-menu__second-part">
+      <li class="m-header-menu__second-part-item m-header-menu__features js-header-menu-item">
+        <a class="m-header-menu__second-part-link js-menu-features" ng-click="testdrive.toggleMenuFeatures()">Features</a>
+        <ul class="m-header-menu__sublist">
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/diseno.html" class="m-header-menu__sublist-link">Diseño</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/equipo.html" class="m-header-menu__sublist-link">Equipo</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/accesorios.html" class="m-header-menu__sublist-link">Accesorios</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/seguridad.html" class="m-header-menu__sublist-link">Seguridad</a>
+          </li>
+          <li class="m-header-menu__sublist-item">
+            <a href="../../features/motor.html" class="m-header-menu__sublist-link">Motor</a>
+          </li>
+        </ul>
+      </li>
+      <li class="m-header-menu__second-part-item js-header-menu-item">
+        <a href="../../personalizacion.html" class="m-header-menu__second-part-link">Personalización</a>
+      </li>
+      <li class="m-header-menu__second-part-item js-header-menu-item">
+        <a href="../../galeria.html" class="m-header-menu__second-part-link">Galería</a>
+      </li>
+      <li class="m-header-menu__second-part-item js-header-menu-item">
+        <a href="../../versiones.html" class="m-header-menu__second-part-link">Versiones y precios</a>
+      </li>
+    </ul>
+  </div>
+  <a class="m-mobile-menu-button js-open-menu" ng-click="testdrive.openMenu($event)"></a>
+  <a class="m-mobile-close-menu js-close-menu" ng-click="testdrive.closeMenu($event)"></a>
+</header>
+
+<div class="l-form-container js-full-content">
+  <div class="l-form__bg">
+    <div class="l-form__bg-content">
+      <h1 class="l-form__bg-title">Manéjala</h1>
+      <span picture-fill class="l-form__bg-image" data-alt="Camioneta">
+        <span pf-src="{{testdrive.testdrive_feeling_selected.want_image.desktop}}"></span>
+        <span pf-src="{{testdrive.testdrive_feeling_selected.want_image.mobile}}" data-media="(min-width: 1px)"></span>
+        <span pf-src="{{testdrive.testdrive_feeling_selected.want_image.desktop}}" data-media="(min-width: 640px)"></span>
+      </span>
+    </div>
+  </div>
+  <div class="l-form l-form--testdrive js-full-content">
+    <div class="l-form__content">
+      <h1 class="m-form-title">Manéjala</h1>
+      <p class="m-form-textblock">
+        Agenda tu prueba de manejo y vive tu experiencia Suzuki
+      </p>
+      <div class="js-testdrive-step-1">
+        <form id="form-testdrive-step-1" class="m-form js-testdrive-step-1">
+          <p class="m-form-error-message js-form-error-message">El campo es obligatorio.</p>
+          <fieldset class="m-fieldset">
+            <label class="m-label">Escribe tu dirección</label>
+            <input type="text" id="user-place" class="m-input js-user-place" value="" required placeholder="Ej. Col Roma D.F">
+          </fieldset>
+          <a class="m-button m-button--in-form" ng-click="testdrive.doStepOne()">Continuar</a>
+        </form>
+      </div>
+      <div class="hide js-testdrive-step-2">
+        <a class="m-form-link m-form-link--back" ng-click="testdrive.backToStepOne()">
+          <span>
+            Cambiar dirección
+            <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <g id="img/web/14_Manejala_03" sketch:type="MSArtboardGroup" transform="translate(-1010.000000, -429.000000)" stroke="#17C8D4">
+                        <g id="Formulario" sketch:type="MSLayerGroup" transform="translate(727.000000, 1.000000)">
+                            <g id="Cambiar-concecionari-+-Path-1575-+-Oval-245" transform="translate(284.000000, 426.000000)" sketch:type="MSShapeGroup">
+                                <g id="Path-1575-+-Oval-245" transform="translate(0.000000, 3.000000)">
+                                    <path d="M9.18819706,4.12918236 L5.53965337,7.77772605 L9.18819706,11.4262697" id="Path-1575"></path>
+                                    <circle id="Oval-245" cx="8" cy="8" r="8"></circle>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+          </span>
+        </a>
+        <ul class="m-places-list">
+          <li class="m-places-list__item" ng-repeat="concessionaire in testdrive.near_concessionaires" ng-click="testdrive.doStepTwo(concessionaire)">
+            <p class="m-places-list__title">{{concessionaire.name}}</p>
+            <p class="m-places-list__description">{{concessionaire.address}} C.P. {{concessionaire.zip_code}}</p>
+          </li>
+        </ul>
+      </div>
+      <div class="l-form--testdrive hide js-testdrive-step-3">
+        <form id="form-testdrive-step-3" class="m-form js-testdrive-step-3">
+          <hr class="m-form-divider">
+          <p class="m-form-error-message js-form-error-message">Algunos de los datos que ingresaste son incorrectos.</p>
+          <div class="l-form--testdrive__address">
+            <p class="m-form-textblock m-form-textblock--medium">{{testdrive.concessionaire_selected.name}}</p>
+            <p class="m-form-textblock">{{testdrive.concessionaire_selected.address}}</p>
+            <a class="m-form-link m-form-link--back" ng-click="testdrive.backToStepTwo()">
+              <span>
+                Cambiar concesionaria
+                <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                        <g id="img/web/14_Manejala_03" sketch:type="MSArtboardGroup" transform="translate(-1010.000000, -429.000000)" stroke="#17C8D4">
+                            <g id="Formulario" sketch:type="MSLayerGroup" transform="translate(727.000000, 1.000000)">
+                                <g id="Cambiar-concecionari-+-Path-1575-+-Oval-245" transform="translate(284.000000, 426.000000)" sketch:type="MSShapeGroup">
+                                    <g id="Path-1575-+-Oval-245" transform="translate(0.000000, 3.000000)">
+                                        <path d="M9.18819706,4.12918236 L5.53965337,7.77772605 L9.18819706,11.4262697" id="Path-1575"></path>
+                                        <circle id="Oval-245" cx="8" cy="8" r="8"></circle>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div class="l-form--testdrive__register">
+            <fieldset class="m-fieldset">
+              <label class="m-label">Día de la prueba</label>
+              <input type="text" id="testdrive-datepicker" class="m-input js-datepicker js-testdrive-date" required value="" placeholder="AA / MM / DD">
+            </fieldset>
+            <fieldset class="m-fieldset">
+              <label class="m-label">Nombre(s)</label>
+              <input type="text" class="m-input js-testdrive-name" required data-parsley-pattern="^[a-zA-Z ñáéíóú]+$" value="" placeholder="Ej. Guillermo David">
+            </fieldset>
+            <fieldset class="m-fieldset">
+              <label class="m-label">Apellido(s)</label>
+              <input type="text" class="m-input js-testdrive-lastname" required data-parsley-pattern="^[a-zA-Z ñáéíóú]+$" value="" placeholder="Ej. López">
+            </fieldset>
+            <fieldset class="m-fieldset">
+              <label class="m-label">Teléfono</label>
+              <input type="number" class="m-input js-testdrive-phone" required data-parsley-type="digits" data-parsley-minlength="10" data-parsley-maxlength="10" value="" placeholder="Ej. 55 5880 7321">
+            </fieldset>
+            <fieldset class="m-fieldset">
+              <label class="m-label">Correo electrónico</label>
+              <input type="email" class="m-input js-testdrive-email" required data-parsley-type="email" value="" placeholder="Ej. micorreo@mail.com">
+            </fieldset>
+          </div>
+          <hr class="m-form-divider">
+          <p class="m-form-textblock m-form-textblock--small">
+            Tus datos están a salvo. Para mayor información revisa nuestro <a href="http://www.suzuki.com.mx/autos/aviso_privacidad" target="_blank">Aviso de privacidad</a>
+          </p>
+          <fieldset class="m-fieldset m-fieldset--radio m-fieldset--radio--in-testdrive">
+            <input class="m-input m-input--radio js-testdrive-news" type="checkbox" name="testdrive-news">
+            <div class="m-input--radio__check">
+              <img src="assets/images/icons/general/check.html">
+            </div>
+            <label class="m-label m-label--radio">Deseo recibir noticias y promociones</label>
+          </fieldset>
+          <a class="m-button m-button--in-form" ng-click="testdrive.doRegister($event)">Agendar</a>
+        </form>
+      </div>
+      <div class="hide js-testdrive-step-4">
+        <h1 class="m-form-title">¡Felicidades!</h1>
+        <img src="assets/images/icons/general/happy.html" class="m-form-textblock--happy" alt="Happy">
+        <p class="m-form-textblock">
+          Tu prueba de manejo ha sido agendada. Pronto recibirás confirmación en tu correo electrónico: <a class="m-form-textblock__contrast">{{testdrive.user_info.email}}</a>
+        </p>
+        <p class="m-form-textblock">
+          Te hemos asignado un asesor de la concesionaria <a class="m-form-textblock__contrast">{{testdrive.concessionaire_selected.name}}</a>, quien se pondrá en contacto contigo para confirmar tus datos y resolver cualquier duda que puedas tener
+        </p>
+        <a href="../../index.html" class="m-button m-button--in-form">Finalizar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="m-footer">
+  <a href="http://www.suzuki.com.mx/" onclick="ga('send', 'event', 'Footer', 'outbound_clic', 'Suzuki_home');" class="m-footer__suzuki-logo"><img src="assets/images/logos/suzuki.html" alt="Suzuki"></a>
+  <p class="m-footer__copyright">Todos los derechos reservados Suzuki 2015</p>
+  <ul class="m-footer__legals">
+    <li class="m-footer__legals-item">
+        <a href="../../legales.html" class="m-footer__legals-link">Términos legales</a>
+    </li>
+    <li class="m-footer__legals-item">
+        <a href="../../aviso_privacidad.html" class="m-footer__legals-link">Aviso de privacidad</a>
+    </li>
+    <li class="m-footer__legals-item">
+      <a href="http://www.globalsuzuki.com/" onclick="ga('send', 'event', 'Footer', 'outbound_clic', 'Suzuki_global');" target="_blank" class="m-footer__legals-link">Suzuki global</a>
+    </li>
+  </ul>
+  <ul class="m-footer__social">
+    <li class="m-footer__social-item">
+      <a href="https://www.facebook.com/SuzukiAutosMexico" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Facebook');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/facebook.html" alt="Facebook" class="m-footer__social-icon">
+      </a>
+    </li>
+    <li class="m-footer__social-item">
+      <a href="https://twitter.com/suzuki_mex" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Twitter');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/twitter.html" alt="Twitter" class="m-footer__social-icon">
+      </a>
+    </li>
+    <li class="m-footer__social-item">
+      <a href="http://instagram.com/suzuki_mex" onclick="ga('send', 'event', 'Social', 'outbound_clic', 'Instagram');" class="m-footer__social-link" target="_blank">
+        <img src="assets/images/icons/social/instagram.html" alt="Instagram" class="m-footer__social-icon">
+      </a>
+    </li>
+  </ul>
+</footer>
