@@ -1,132 +1,134 @@
-$(document).ready(function(){
-    var $contact_message    = $('#contact_message'),
-        $contact_car_key    = $('#contact_car_key '),
+$(document).ready(function () {
+    var $contact_message = $('#contact_message'),
+        $contact_car_key = $('#contact_car_key '),
         $contact_department = $('#contact_department'),
         $contact_delegation = $('#contact_delegation'),
-        $contact_city       = $('#contact_city '),
-        $contact_email      = $('#contact_email'),
-        $contact_phone      = $('#contact_phone'),
-        $contact_name       = $('#contact_name '),
-        $contact_lastname   = $('#contact_lastname '),
+        $contact_city = $('#contact_city '),
+        $contact_email = $('#contact_email'),
+        $contact_phone = $('#contact_phone'),
+        $contact_name = $('#contact_name '),
+        $contact_lastname = $('#contact_lastname '),
         $contact_newsletter = $('#contact-newsletter');
     $contact_department.chosen();
     $contact_car_key.chosen();
-    $contact_message.on('focusout', function(){
-        $.validate_input( $contact_message );
+    $contact_message.on('focusout', function () {
+        $.validate_input($contact_message);
     });
-    $contact_car_key.on('change', function(){
-        $.validate_input( $contact_car_key );
+    $contact_car_key.on('change', function () {
+        $.validate_input($contact_car_key);
     });
-    $contact_department.on('change', function(){
-        $.validate_input( $contact_department );
+    $contact_department.on('change', function () {
+        $.validate_input($contact_department);
     });
-    $contact_delegation.on('focusout', function(){
-        $.validate_input( $contact_delegation );
+    $contact_delegation.on('focusout', function () {
+        $.validate_input($contact_delegation);
     });
-    $contact_city.on('focusout', function(){
-        $.validate_input( $contact_city );
+    $contact_city.on('focusout', function () {
+        $.validate_input($contact_city);
     });
-    $contact_email.on('focusout', function(){
-        $.validate_input( $contact_email );
+    $contact_email.on('focusout', function () {
+        $.validate_input($contact_email);
     });
-    $contact_phone.on('focusout', function(){
-        $.validate_input( $contact_phone );
+    $contact_phone.on('focusout', function () {
+        $.validate_input($contact_phone);
     });
-    $contact_name.on('focusout', function(){
-        $.validate_input( $contact_name );
+    $contact_name.on('focusout', function () {
+        $.validate_input($contact_name);
     });
-    $contact_lastname.on('focusout', function(){
-        $.validate_input( $contact_lastname );
+    $contact_lastname.on('focusout', function () {
+        $.validate_input($contact_lastname);
     });
 
-    var $btnSend = $('.enviar.button.blue'); 
+    var $btnSend = $('.enviar.button.blue');
     $btnSend.removeAttr('disabled');
 
-    $.submit_contact_form = function(){
+    $.submit_contact_form = function () {
         var form_errors = 0;
-        if( !$.validate_input( $contact_message ) ){
+        if (!$.validate_input($contact_message)) {
             form_errors++;
             $contact_message.focus();
         }
-        if( !$.validate_input( $contact_car_key ) ){
+        if (!$.validate_input($contact_car_key)) {
             form_errors++;
             $contact_car_key.focus();
         }
-        if( !$.validate_input( $contact_department ) ){
+        if (!$.validate_input($contact_department)) {
             form_errors++;
             $contact_department.focus();
         }
-        if( !$.validate_input( $contact_delegation ) ){
+        if (!$.validate_input($contact_delegation)) {
             form_errors++;
             $contact_delegation.focus();
         }
-        if( !$.validate_input( $contact_city ) ){
+        if (!$.validate_input($contact_city)) {
             form_errors++;
             $contact_city.focus();
         }
-        if( !$.validate_input( $contact_email ) ){
+        if (!$.validate_input($contact_email)) {
             form_errors++;
             $contact_email.focus();
         }
-        if( !$.validate_input( $contact_phone ) ){
+        if (!$.validate_input($contact_phone)) {
             form_errors++;
             $contact_phone.focus();
         }
-        if( !$.validate_input( $contact_name ) ){
+        if (!$.validate_input($contact_name)) {
             form_errors++;
             $contact_name.focus();
         }
-        if( !$.validate_input( $contact_lastname ) ){
+        if (!$.validate_input($contact_lastname)) {
             form_errors++;
             $contact_lastname.focus();
         }
 
-        if( form_errors == 0 ){
-            $btnSend.css('cursor','auto').prop('disabled', true);
+        if (form_errors == 0) {
+            $btnSend.css('cursor', 'auto').prop('disabled', true);
             $btnSend.parent('#loader_send_icon').css('display', 'block');
 
             var data = {
-                car_key     : $contact_car_key.val(),
-                city        : $contact_city.val(),
-                delegation  : $contact_delegation.val(),
-                department  : $contact_department.val(),
-                email       : $contact_email.val(),
-                phone       : $contact_phone.val(),
-                message     : $contact_message.val(),
-                name        : $contact_name.val(),
-                lastname    : $contact_lastname.val(),
-                newsletter  : $('#contact-newsletter:checked').length,
-                source      : 'Contact'
+                car_key: $contact_car_key.val(),
+                city: $contact_city.val(),
+                delegation: $contact_delegation.val(),
+                department: $contact_department.val(),
+                email: $contact_email.val(),
+                phone: $contact_phone.val(),
+                message: $contact_message.val(),
+                name: $contact_name.val(),
+                lastname: $contact_lastname.val(),
+                newsletter: $('#contact-newsletter:checked').length,
+                source: 'Contact'
             };
 
-            var service_url = '/autos/services/request/contact';
+            var service_url = 'http://api-suzuki.ktcagency.com/contact';
             $.ajax({
-                cache       : false,
-                data        : data,
-                dataType    : 'json',
-                type        : 'post',
-                success     : function( data ){
-                    if( data.status == 'ok' ){
+                cache: false,
+                data: data,
+                dataType: 'json',
+                type: 'POST',
+                success: function (data) {
+                    if (data.status == 'OK') {
                         var con_news = $('#contact-newsletter:checked').length;
                         var departamento = $contact_department.val();
                         var precio_actual = showMeTheMoney($contact_car_key.val());
-                        var news_srt    = con_news ? 'Envio_con_Newsletter' : 'Envio_Sin_Newsletter';
-                        var news_val    = con_news ? 600 : 0;
-                        var car_val     = departamento === 'ventas' ? precio_actual * 0.03 : 0;
-                        ga('send', 'event', 'Formulario', news_srt, departamento, news_val + car_val );
-                        $('#form-wrapper').fadeOut( 300 , function(){
+                        var news_srt = con_news ? 'Envio_con_Newsletter' : 'Envio_Sin_Newsletter';
+                        var news_val = con_news ? 600 : 0;
+                        var car_val = departamento === 'ventas' ? precio_actual * 0.03 : 0;
+                        ga('send', 'event', 'Formulario', news_srt, departamento, news_val + car_val);
+                        $('#form-wrapper').fadeOut(300, function () {
                             var correo = $("#contact_email").val();
                             $('#email-from').text(correo);
                             $('.form-thanks').fadeIn();
                         });
-                    }else{
-                        alert( data.message );
+                    } else {
+                        alert(data.message);
+                        $btnSend.css('cursor', 'auto').prop('disabled', false);
                     }
                 },
-                 error: function(x, t, m){
+                error: function (x, t, m) {
                     alert("Oops! Ha ocurrido un error, por favor, inténtalo nuevamente.")
+                    $btnSend.css('cursor', 'auto').prop('disabled', false);
                 },
-                url     : service_url
+                url: service_url
             });
         }
     };

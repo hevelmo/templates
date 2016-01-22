@@ -9,22 +9,25 @@ function getPos(name) {
 
 var fancyB;
 
-$(window).load(function() {
-    /*$.fancybox('<a href="/autos/ciaz"><img class="fancybox-image" src="/autos/images/sections/home/ciaz/pop-up.png" alt=""></a>', {
-        padding: 0,
-        autoDimensions: false,
-        width: 350,
-        height: 'auto',
-        transitionIn: 'none',
-        transitionOut: 'none',
-        helpers: {
-            overlay: {
-                locked: false
-            },
-        }
-    });*/
-});
+/* Video pop-up */
 
+$(window).load(function() {
+    //    if(!sessionStorage.clickcount){
+    //        sessionStorage.clickcount=1;
+    //        console.log("cargar el video");
+    //        $.fancybox('<a class="various fancybox.iframe" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">Youtube (iframe)</a>', {
+    //            'hideOnContentClick': false,
+    //            'autoScale': false,
+    //            'transitionIn': 'none',
+    //            'transitionOut': 'none',
+    //            'title': this.title, // optional
+    //            'width': 680, // or your size
+    //            'height': 495,
+    //            'href': 'https://www.youtube.com/embed/dMUF-PPyGfs?rel=0',
+    //            'type': 'iframe',
+    //        });
+    //    } else {}
+});
 
 $(document).ready(function() {
     var $sxc_name = $('#sxc_name'),
@@ -32,14 +35,11 @@ $(document).ready(function() {
         $sxc_email = $('#sxc_email');
 
 
-
-
-
     // Prevenir que la imagen no se vea en ocasiones
     //
     var $img = $('<img />');
     $img.load(function() {})
-    $img.attr('src', '/autos/images/sections/home/ciaz/pop-up.png');
+    $img.attr('src', '/autos/images/sections/home/nueva-vitara/Pop-up.jpg');
 
 
 
@@ -160,7 +160,7 @@ $(document).ready(function() {
     });
 
     $("#home-scross").on('click', function() {
-        document.location = "/autos/ciaz"
+        document.location = "http://nueva-vitara.com.mx";
     });
 
     /*$("#home-scross").hover(function(){
@@ -413,7 +413,7 @@ $(document).ready(function() {
             }
         },
     });
-    
+
     // bind the load more button
     loadButton.addEventListener('click', function() {
         feed.next();
@@ -424,5 +424,4 @@ $(document).ready(function() {
     if(window.location.pathname==='/autos/rendimientos'){
         $('#header-models-button').trigger('click');
     }
-
 });

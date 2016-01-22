@@ -22,36 +22,39 @@ var main_menu_available = false,
 
 var cars_data = [{
     key: 'swift-sport',
-    name: 'Swift Sport' 
+    name: 'Swift Sport'
 }, {
     key: 'swift',
-    name: 'Swift'    
+    name: 'Swift'
 }, {
     key: 'sx4-crossover',
     name: 'SX4 Crossover'
 }, {
     key: 'sx4-sedan',
-    name: 'SX4 Sedán'  
+    name: 'SX4 Sedán'
 }, {
     key: 'kizashi',
-    name: 'Kizashi'   
+    name: 'Kizashi'
 }, {
     key: 'grand-vitara',
-    name: 'Grand Vitara' 
+    name: 'Grand Vitara'
 }, {
     key: 's-cross',
-    name: 'S-Cross' 
+    name: 'S-Cross'
 }, {
     key: 'ciaz',
     name: 'Ciaz' 
+}, {
+    key: 'nueva-vitara',
+    name: 'Nueva Vitara'
 }];
 
 var wonload = false,
-    tdrive  = false;
+    tdrive = false;
 
-window.onload = function () {    
+window.onload = function () {
     wonload = true;
-    if(tdrive)
+    if (tdrive)
         alert("¡Listo! Carga completa \n__\nGracias por la espera. Ya puedes seleccionar la concesionaria de tu preferencia.");
 }
 
@@ -207,6 +210,7 @@ function get_car_data(k) {
 
 function get_car_by_url() {
     var root = window.location.pathname.split('/');
+   // console.log(root);
     return get_car_data(root[2]);
 }
 
@@ -250,7 +254,7 @@ function concessionaires_order_nearest(latitude, longitude) {
         dy = parseFloat(concessionaire.lon) - longitude;
         concessionaire.distance = Math.sqrt(dx * dx + dy * dy);
     }
-    concessionaires_data.sort(function(a, b) {
+    concessionaires_data.sort(function (a, b) {
         return a.distance - b.distance;
     });
 }
@@ -360,7 +364,7 @@ function validate(value, rules, required, custom_message) {
                     }
                     break;
                 case 'phone':
-                    if (!validations_regexp.phone.exec(value)) {
+                    if (!validations_regexp.phone.exec(value) || value.length < 10 || value.length > 10) {
                         r.message = validation_messages.phone;
                     }
                     break;
@@ -456,7 +460,7 @@ if ($('html').attr('data-useragent') == 'MSIE 10.0,10.0') {
 }
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     var $header_panel = $('#header-panel'),
         $expanded_links = $('a.expand-header'),
         $header_wrapper = $('.header-wrapper'),
@@ -466,22 +470,22 @@ $(document).ready(function() {
     $alertMessage = $('#alert_message');
     SuzukiWeb.init();
 
-    analytics_test_drive = function(title, value, label) {
+    analytics_test_drive = function (title, value, label, llave) {
         try {
             // value = parseInt(value, 10);
             if (!value) {
                 value = 0;
-            }else{
+            } else {
                 value = parseInt(value * 0.066);
             }
-            
-            ga('send', 'event', 'Prueba de Manejo', 'Confirmacion', title, ""+value+"");
-            
-            if(title.indexOf('Header') >= 0){
-                ga('send', 'event', 'Prueba de Manejo', 'Confirmacion_Header', label, ""+value+"");
+
+            ga('send', 'event', 'Prueba de Manejo', 'Confirmacion', title, "" + value + "");
+
+            if (title.indexOf('Header') >= 0) {
+                ga('send', 'event', 'Prueba de Manejo', 'Confirmacion_Header', label, "" + value + "");
                 console.log('header');
-            }else{
-                ga('send', 'event', 'Prueba de Manejo', 'Confirmacion_Modelos', label, ""+value+"");
+            } else {
+                ga('send', 'event', 'Prueba de Manejo', 'Confirmacion_Modelos', label, "" + value + "");
                 console.log('model');
             }
 
@@ -491,12 +495,30 @@ $(document).ready(function() {
         }
         // fb_pixel('6016795700971', '0.01');
 
-        /*Facebook Conversion Code for Prueba de manejo*/(function() {var _fbq = window._fbq || (window._fbq = []);if (!_fbq.loaded) {var fbds = document.createElement('script');fbds.async = true;fbds.src = '//connect.facebook.net/en_US/fbds.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(fbds, s);_fbq.loaded = true;}})();window._fbq = window._fbq || [];window._fbq.push(['track', '6018816845952', {'value':'5','currency':'MXN'}]);/*<noscript><img height="1" width="1" alt="" style="display:none" src="www.facebook.com/tr…" /></noscript>*/
+        /*Facebook Conversion Code for Prueba de manejo*/
+        (function () {
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded) {
+                var fbds = document.createElement('script');
+                fbds.async = true;
+                fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(fbds, s);
+                _fbq.loaded = true;
+            }
+        })();
+        window._fbq = window._fbq || [];
+        if(llave == "ciaz"){
+            window._fbq.push(['track', '6035846898952', {'value': '0.01', 'currency': 'MXN'}]);
+        } else {
+            window._fbq.push(['track', '6018816845952', {'value': '5', 'currency': 'MXN'}]);
+        }
+        /*<noscript><img height="1" width="1" alt="" style="display:none" src="www.facebook.com/tr…" /></noscript>*/
     }
 
 
     //Validates an input with data-validation-data attribute and displays or hide bubble meesage
-    $.validate_input = function($input) {
+    $.validate_input = function ($input) {
         if ($input.is('input') || $input.is('textarea')) {
             var val_data = $input.data('validation-data').split('|'),
                 required = val_data.indexOf('required');
@@ -514,7 +536,7 @@ $(document).ready(function() {
         }
     };
     // Show or hide menu patch when scrolls
-    $.adjust_menu_patch = function() {
+    $.adjust_menu_patch = function () {
         $('.menu-patch:hidden').show();
         if (!menu_data.models_menu) {
             if (header_section != '' && menu_data.position == 'absolute') {
@@ -526,7 +548,7 @@ $(document).ready(function() {
         }
     };
     //Sets menu position
-    $.$header_panel_directives = function() {
+    $.$header_panel_directives = function () {
         var min_h = $header_panel.height() + 100;
         var win_h = $(window).height();
         if (min_h < win_h) {
@@ -537,7 +559,7 @@ $(document).ready(function() {
             if (!IS_MOBILE) {
                 $('html,body').stop().animate({
                     scrollTop: 0
-                }, 300, 'easeOutSine', function() {
+                }, 300, 'easeOutSine', function () {
                     if (menu_wait_section) {
                         if (header_section == '') {
                             $.openPanel(menu_wait_section);
@@ -553,29 +575,29 @@ $(document).ready(function() {
             position: menu_data.position,
             top: '0'
         });
-        $(window).trigger('scroll').scroll(function() {
+        $(window).trigger('scroll').scroll(function () {
             $.adjust_menu_patch();
         });
     };
-    $(window).resize(function() {
+    $(window).resize(function () {
         $.$header_panel_directives();
     });
     //Add action to all header's close butons
-    $header_panel.delegate('.close-menu-box a', 'click', function(e) {
+    $header_panel.delegate('.close-menu-box a', 'click', function (e) {
         e.preventDefault();
         $.openPanel('');
     });
 
     //Adjust content to window height
     if ($('.window-adaptable').length > 0) {
-        $.adjust_auto_height = function() {
+        $.adjust_auto_height = function () {
             var min_h, hh, h_w;
             if (get_car_by_url() == null) {
                 h_w = $(window).height() - 95;
             } else {
                 h_w = $(window).height() - 50;
             }
-            $('.window-adaptable').each(function() {
+            $('.window-adaptable').each(function () {
                 try {
                     min_h = parseInt($(this).attr("data-min-height"));
                 } catch (e) {
@@ -592,16 +614,16 @@ $(document).ready(function() {
                 $(this).height(hh);
             });
         };
-        $(window).resize(function() {
+        $(window).resize(function () {
             $.adjust_auto_height();
         });
-        $(document).resize(function() {
+        $(document).resize(function () {
             $.adjust_auto_height();
         });
         $.adjust_auto_height();
     }
     //animates all transitions (needs an "a" element whit "name attrubute")
-    $.scroll_to = function(target_name) {
+    $.scroll_to = function (target_name) {
         var target, dest, header_height = $('#header-wrapper').height();
         if (target_name != 'top') {
             target = $('a[name="' + target_name + '"]');
@@ -617,7 +639,7 @@ $(document).ready(function() {
         }, 800, 'easeOutSine');
     };
     //Auto asigns scroll_to functions to a.scroll-in-site elements
-    $('a.scroll-in-site').on('click', function(e) {
+    $('a.scroll-in-site').on('click', function (e) {
         e.preventDefault();
         var target_name = $(this).attr("href").replace(/^#/, '');
         $.scroll_to(target_name);
@@ -630,7 +652,7 @@ $(document).ready(function() {
         marginLeft: 0,
         width: 0
     };
-    $.openPanel = function(section, options) {
+    $.openPanel = function (section, options) {
 
         //        Esconder pleca azul de geolocalización
         if ($("#geolocation-fixed")) {
@@ -746,7 +768,7 @@ $(document).ready(function() {
             $header_sections = $('#header-sections-wrapper .header-section')
             ii = $header_sections.length;
             ii--;
-            $header_sections.each(function(i) {
+            $header_sections.each(function (i) {
                 if (i != ii) {
                     $(this).remove();
                 } else {
@@ -759,14 +781,14 @@ $(document).ready(function() {
             height = 0;
             $header_panel.stop().animate({
                 height: 'auto'
-            }, 200, function() {
+            }, 200, function () {
                 $('#header-sections-wrapper .header-section').remove();
                 $header_panel.hide();
             });
-            $('.menu-patch').stop().show().fadeOut(function() {
+            $('.menu-patch').stop().show().fadeOut(function () {
                 $(this).width(0);
             });
-            setTimeout(function() {
+            setTimeout(function () {
                 $(window).trigger('scroll')
             }, 500);
             //Mostrar la pleca azul de geolocalización
@@ -776,7 +798,7 @@ $(document).ready(function() {
                 }
             }
         }
-        $('.header-links-list').delegate('a', 'click', function() {
+        $('.header-links-list').delegate('a', 'click', function () {
             $.openPanel('');
             var href_link_attr = $(this).attr("href").split("#")[1];
             var href_now = $(location).attr('href').split("#")[0];
@@ -795,15 +817,14 @@ $(document).ready(function() {
     };
 
 
-
-    $("#header-panel").resize(function() {
+    $("#header-panel").resize(function () {
         var _this = $(this);
         $('#header-spacer').stop().animate({
             height: _this.height()
         }, 300);
     });
 
-    $('a.expand-header').on('click', function(e) {
+    $('a.expand-header').on('click', function (e) {
         e.preventDefault();
         var section = $(this).attr('href').split('#').join('');
         var params = null;
@@ -845,7 +866,7 @@ $(document).ready(function() {
 
     // Open / close the mobile menu
     if (IS_MOBILE) {
-        $("#header-mobile i").click(function() {
+        $("#header-mobile i").click(function () {
             $(this).toggleClass("header-mobile-icon-active");
             openCloseMenu();
         });
@@ -869,8 +890,7 @@ $(document).ready(function() {
         //        }
 
 
-
-        $("#mobile-menu a").click(function(e) {
+        $("#mobile-menu a").click(function (e) {
             var idx = $(this).parent().index();
             var link = "";
             switch (idx) {
@@ -896,7 +916,7 @@ $(document).ready(function() {
 
         });
 
-        $('body').on('click', '#fire-test', function(e) {
+        $('body').on('click', '#fire-test', function (e) {
             e.preventDefault();
             openCloseMenu();
             var data = get_car_by_url();
@@ -910,7 +930,7 @@ $(document).ready(function() {
             openCloseMenu();
         });
 
-        $("#footer-content .row-1 .footer-column").click(function() {
+        $("#footer-content .row-1 .footer-column").click(function () {
             $(".footer-column .links").slideUp();
             $(".footer-column i").text("+");
             if ($(this).find(".links").css("display") != "block") {
@@ -935,7 +955,7 @@ $(document).ready(function() {
     }
 
     //Returns HTML for each header's section and adds a Close button if is required
-    $.get_header_html = function(section) {
+    $.get_header_html = function (section) {
         var html = '';
         switch (section) {
             case 'test-drive':
@@ -976,7 +996,7 @@ $(document).ready(function() {
         if (ii != current_tab) {
             current_tab = ii;
             $panelTabsNav.removeClass('active');
-            $panelTabsNav.each(function(i) {
+            $panelTabsNav.each(function (i) {
                 var $item = $(this);
                 if (i < ii) {
                     $item.removeClass('disabled');
@@ -999,7 +1019,7 @@ $(document).ready(function() {
     }
 
     //Service to add test drives
-    $.test_drive_form = function(data, callback) {
+    $.test_drive_form = function (data, callback) {
         //car_key         : ''
         //concessionaire  : ''
         //date            : ''
@@ -1009,7 +1029,7 @@ $(document).ready(function() {
         //newsletter      : ''
         //phone           : ''
         //source          : ''
-        var service_url = '/autos/services/request/test_drive';
+        var service_url = 'http://api-suzuki.ktcagency.com/testdrive';
         $("#header_send_td").attr('disabled', 'disabled').css({
             opacity: 0.3
         });
@@ -1019,37 +1039,42 @@ $(document).ready(function() {
         // Definition is in the website (head) template
         //
         /*window._fbq = window._fbq || [];
-        window._fbq.push(['track', '6018816845952', {
-            'value': '0.00',
-            'currency': 'MXN'
-        }]);
-        twttr.conversion.trackPid('l5h3p');*/
+         window._fbq.push(['track', '6018816845952', {
+         'value': '0.00',
+         'currency': 'MXN'
+         }]);
+         twttr.conversion.trackPid('l5h3p');*/
 
         $.ajax({
             cache: false,
             data: data,
             dataType: 'json',
             type: 'post',
-            success: function(data) {
-                if (data.status == 'ok') {
+            success: function (data) {
+                if (data.status == 'OK') {
                     if (callback) {
                         callback();
                     }
                 } else {
-                    alert(data.message);
+                    alert("Ha ocurrido un error, por favor, inténtelo nuevamente.");
                 }
                 $("#header_send_td").removeAttr('disabled').css({
                     opacity: 1
                 });
                 $("#models_send_td").removeAttr('disabled');
             },
-            error: function(x, t, m){
+            error: function (x, t, m) {
                 console.log(x);
+                alert("Ha ocurrido un error, por favor, inténtelo nuevamente.");
+                $("#header_send_td").removeAttr('disabled').css({
+                    opacity: 1
+                });
+                $("#models_send_td").removeAttr('disabled');
             },
             url: service_url
         });
     }
-    $.test_drive_header_form = function() {
+    $.test_drive_header_form = function () {
         if (tdh_data) {
             var form_errors = 0;
             if (!$.validate_input($('#htd_tel'))) {
@@ -1085,11 +1110,11 @@ $(document).ready(function() {
                     source: 'Header menu'
                 };
 
-                $.test_drive_form(data, function() {
+                $.test_drive_form(data, function () {
 
                     var precio_actual = showMeTheMoney(tdh_data.key);
 
-                    analytics_test_drive('Header_' + tdh_data.key, precio_actual, data.car_key+'_'+tdh_data.concessionaire_name);
+                    analytics_test_drive('Header_' + tdh_data.key, precio_actual, data.car_key + '_' + tdh_data.concessionaire_name, data.car_key);
 
                     $('#test_drive_form').hide();
                     $('#test_drive_resume').fadeIn();
@@ -1114,7 +1139,7 @@ $(document).ready(function() {
     }
 
     //Adds javascript actions to header section
-    $.start_header_listeners = function(section, options) {
+    $.start_header_listeners = function (section, options) {
         if (options === undefined || options === null) {
             options = {};
         }
@@ -1127,69 +1152,69 @@ $(document).ready(function() {
                 tdh_data = $.extend({}, default_data, options);
 
                 //Adds concessionaires items
-                function td_show_concessionaires(elements) {
-                    var i0 = 0,
-                        i1 = elements.length;
-                    var html = '';
-                    if (i1 > 0) {
-                        while (i0 < i1) {
-                            html += Mustache.render(concessionaires_li_element, elements[i0]);
-                            i0++;
-                        }
-                        html = '<ul>' + html + '</ul>';
-
-                    } else {
-                        html = concessionaires_no_found;
+            function td_show_concessionaires(elements) {
+                var i0 = 0,
+                    i1 = elements.length;
+                var html = '';
+                if (i1 > 0) {
+                    while (i0 < i1) {
+                        html += Mustache.render(concessionaires_li_element, elements[i0]);
+                        i0++;
                     }
-                    $('#input_concessionaire .input').hide();
-                    $('#concessionaires_list .list').html(html);
-                    $('#concessionaires_list').hide().fadeIn();
+                    html = '<ul>' + html + '</ul>';
 
-
-
+                } else {
+                    html = concessionaires_no_found;
                 }
+                $('#input_concessionaire .input').hide();
+                $('#concessionaires_list .list').html(html);
+                $('#concessionaires_list').hide().fadeIn();
 
-                function goto_step(step, disable) {
-                    var ii, $divinput;
-                    slide_tabs(step, disable);
-                    if (step == 2) {
-                        if (tdh_data.concessionaire_id != 0) {
-                            ii = concessionaires_data.length;
-                            while (ii--) {
-                                if (concessionaires_data[ii].id == tdh_data.concessionaire_id) {
-                                    td_show_concessionaires([concessionaires_data[ii]]);
-                                    break;
-                                }
-                            }
-                            $('#input_concessionaire .input').hide();
-                        } else {
-                            $('#input_concessionaire .input').hide().fadeIn();
-                            $('#concessionaires_search').val('').focus();
-                        }
 
-                    }
-                }
+            }
 
-                function td_select_concessionaire(id) {
-                        var ii, html, concessionaire;
-                        tdh_data.concessionaire_id = id;
+            function goto_step(step, disable) {
+                var ii, $divinput;
+                slide_tabs(step, disable);
+                if (step == 2) {
+                    if (tdh_data.concessionaire_id != 0) {
                         ii = concessionaires_data.length;
                         while (ii--) {
-                            concessionaire = concessionaires_data[ii];
-                            if (concessionaire.id == tdh_data.concessionaire_id) {
-                                tdh_data.concessionaire_key = concessionaire.key;
-                                tdh_data.concessionaire_name = concessionaire.name;
-                                html = '<ul>' + Mustache.render(concessionaires_li_element, concessionaire) + '</ul>';
-                                $('#form_concessionaire_selected .list').html(html);
+                            if (concessionaires_data[ii].id == tdh_data.concessionaire_id) {
+                                td_show_concessionaires([concessionaires_data[ii]]);
                                 break;
                             }
                         }
+                        $('#input_concessionaire .input').hide();
+                    } else {
+                        $('#input_concessionaire .input').hide().fadeIn();
+                        $('#concessionaires_search').val('').focus();
                     }
-                    //Tabs
+
+                }
+            }
+
+            function td_select_concessionaire(id) {
+                var ii, html, concessionaire;
+                tdh_data.concessionaire_id = id;
+                ii = concessionaires_data.length;
+                while (ii--) {
+                    concessionaire = concessionaires_data[ii];
+                    if (concessionaire.id == tdh_data.concessionaire_id) {
+                        tdh_data.concessionaire_key = concessionaire.key;
+                        tdh_data.concessionaire_name = concessionaire.name;
+                        html = '<ul>' + Mustache.render(concessionaires_li_element, concessionaire) + '</ul>';
+                        $('#form_concessionaire_selected .list').html(html);
+                        break;
+                    }
+                }
+            }
+
+                //Tabs
                 $panelTabsNav = $('li.td-nav-tabs');
                 $panelTabs = $('.td-tab');
 
-                $('li.td-nav-tabs a').on('click', function(e) {
+                $('li.td-nav-tabs a').on('click', function (e) {
                     e.preventDefault();
                     if (!$(this).parent().is('.disabled')) {
                         goto_step($(this).data('number'))
@@ -1197,7 +1222,7 @@ $(document).ready(function() {
                 });
 
                 //Select car at first screen or auto select it
-                $.test_drive_select_car = function(k) {
+                $.test_drive_select_car = function (k) {
                     var car_data = get_car_data(k),
                         $icons = $('#car_select_preview .car_thumb_160 .car, #td_concessionaire_car .car_thumb_60 .car, #td_form_car .car_thumb_60 .car, #td_final_car .car_thumb_60 .car'),
                         $car_texts = $('#car_select_name h3, #td_concessionaire_car h3, #td_form_car h3, #td_final_car h3');
@@ -1216,7 +1241,7 @@ $(document).ready(function() {
                 };
                 current_tab = -1;
 
-                $('#car_select_list').delegate('a', 'click', function(e) {
+                $('#car_select_list').delegate('a', 'click', function (e) {
                     e.preventDefault();
                     $.test_drive_select_car($(this).data('key'));
                     if (IS_MOBILE) {
@@ -1235,13 +1260,13 @@ $(document).ready(function() {
                     $.test_drive_select_car(tdh_data.key);
                     goto_step(2, true);
                 }
-                $("#change-car-test").on('click', function(e) {
+                $("#change-car-test").on('click', function (e) {
                     e.preventDefault();
                     $("#car_select_name, #car_select_preview").hide();
                     $("#car_select_list").fadeIn();
                 });
                 //Just go to other step when button was clicked
-                $('a.test-drive-goto').on('click', function(e) {
+                $('a.test-drive-goto').on('click', function (e) {
                     e.preventDefault();
                     if (IS_MOBILE) {
                         if ($(this).data('step') == "1") {
@@ -1252,19 +1277,19 @@ $(document).ready(function() {
                     goto_step($(this).data('step'));
                 });
 
-                $('#concessionaires_list').delegate('.td-concessionaire-button', 'click', function(e) {
+                $('#concessionaires_list').delegate('.td-concessionaire-button', 'click', function (e) {
                     e.preventDefault();
                     ga('send', 'event', 'Prueba de Manejo', 'Paso_3', 'Header_Fecha_Datos');
                     td_select_concessionaire($(this).data('id'));
                     goto_step(3);
                 });
-                $('#resetConcessionaire').on('click', function(e) {
+                $('#resetConcessionaire').on('click', function (e) {
                     e.preventDefault();
                     $('#concessionaires_list .list').html('');
                     $('#input_concessionaire .input').hide().fadeIn();
                     $('#concessionaires_search').val('').focus();
                 });
-                $('#tdr_end').on('click', function(e) {
+                $('#tdr_end').on('click', function (e) {
                     e.preventDefault();
                     $.openPanel('');
                 });
@@ -1276,26 +1301,26 @@ $(document).ready(function() {
                     dateFormat: 'yy-mm-dd'
                 });
                 var date_timeout;
-                $('#htd_date').on('focusout', function() {
+                $('#htd_date').on('focusout', function () {
                     clearTimeout(date_timeout);
-                    date_timeout = setTimeout(function() {
+                    date_timeout = setTimeout(function () {
                         var $input = $('#htd_date');
                         $.validate_input($input);
                     }, 250);
                 });
-                $('#htd_name').on('focusout', function() {
+                $('#htd_name').on('focusout', function () {
                     var $input = $(this);
                     $.validate_input($input);
                 });
-                $('#htd_lastname').on('focusout', function() {
+                $('#htd_lastname').on('focusout', function () {
                     var $input = $(this);
                     $.validate_input($input);
                 });
-                $('#htd_email').on('focusout', function() {
+                $('#htd_email').on('focusout', function () {
                     var $input = $(this);
                     $.validate_input($input);
                 });
-                $('#htd_tel').on('focusout', function() {
+                $('#htd_tel').on('focusout', function () {
                     var $input = $(this);
                     $.validate_input($input);
                 });
@@ -1307,18 +1332,18 @@ $(document).ready(function() {
                     }
                 };
                 var autocomplete = new google.maps.places.Autocomplete(document.getElementById('concessionaires_search'), optionsAutocomplete);
-                
+
                 // if(!autocomplete.types){
                 //     console.log('autocomplete no loaded');
                 //     alert('Lo siento, espere a que se carguen las concesionarias.');
                 // }
-                
-                if(!wonload){                    
+
+                if (!wonload) {
                     alert('Espera un poco, un poquito más… \n__\nEspera a que la página cargue completamente todas nuestras concesionarias para que puedas seleccionar la tuya.');
                     tdrive = true;
                 }
 
-                google.maps.event.addListener(autocomplete, 'place_changed', function() {
+                google.maps.event.addListener(autocomplete, 'place_changed', function () {
                     var gp = autocomplete.getPlace(),
                         elements = [];
 
@@ -1369,36 +1394,36 @@ $(document).ready(function() {
 
                 fuh_data = $.extend({}, default_data, options);
 
-                function goto_step(step, disable) {
-                    var ii, $divinput;
-                    slide_tabs(step, disable);
-                    if (step == 3) {
+            function goto_step(step, disable) {
+                var ii, $divinput;
+                slide_tabs(step, disable);
+                if (step == 3) {
 
 
-                    }
                 }
+            }
 
                 //Tabs
                 $panelTabsNav = $('li.step-nav-tabs.funding');
                 $panelTabs = $('.step-nav-tab.funding');
 
-                $panelTabsNav.children('a').on('click', function(e) {
+                $panelTabsNav.children('a').on('click', function (e) {
                     e.preventDefault();
                     if (!$(this).parent().is('.disabled')) {
                         goto_step($(this).data('number'))
                     }
                 });
-                $.funding_adjust_calc = function() {
+                $.funding_adjust_calc = function () {
                     var f_amount = funding_data.price * (funding_data.engagement / 100),
                         total_pay = funding_data.price - f_amount,
-                        //                        total_pay       =  funding_data.price -  f_amount,
+                    //                        total_pay       =  funding_data.price -  f_amount,
                         f_monthly_pay = funding_core(total_pay, funding_data.months);
                     $('#live-engagement,#funding_result_engagement,#funding_resume_engagement').html(moneyFormat(f_amount));
                     $('#live-months,#funding_result_months,#funding_resume_months').html(funding_data.months + ' meses');
                     $('#live-price,#funding_result_price,#funding_resume_price').html(moneyFormat(funding_data.price));
                     $('#funding_result_monthly_payment,#funding_resume_monthly_payment').html(moneyFormat(f_monthly_pay));
                 }
-                $.funding_select_version = function(ii) {
+                $.funding_select_version = function (ii) {
                     var $elements;
                     $elements = $('#funding-versions-tabs li a');
                     $elements.removeClass('active');
@@ -1410,7 +1435,7 @@ $(document).ready(function() {
                     fuh_data.car_version = car_d.versions[ii].key;
                     $.funding_adjust_calc();
                 }
-                $.funding_select_car = function(k) {
+                $.funding_select_car = function (k) {
                     var car_data = get_car_data(k),
                         $icons = $('#car_select_preview .car_thumb_160 .car, #fu_adjust_car .car_thumb_60 .car, #funding_result_data .car_thumb_60 .car, #funding-resume-car .car_thumb_60 .car'),
                         $car_texts = $('#car_select_name h3, #step-nav-tab h3, #fu_adjust_car h3, #funding_result_data h3, #funding-resume-car h3');
@@ -1423,7 +1448,7 @@ $(document).ready(function() {
                     //                        anio = '2013';
                     //                    }
 
-                    if(car_data.key == "ciaz"){
+                    if (car_data.key == "ciaz") {
                         anio = '2016';
                     }
 
@@ -1473,15 +1498,13 @@ $(document).ready(function() {
                 };
 
 
-                $.send_funding = function() {
+                $.send_funding = function () {
                     var extended = $('input[name="hfu_drive"]:checked').val(),
                         $name = $('#hfu_name'),
                         $lastname = $('#hfu_lastname'),
                         $email = $('#hfu_email'),
                         $tel = $('#hfu_tel'),
                         form_errors = 0;
-
-
                     if (!$.validate_input($email)) {
                         form_errors++;
                         $name.focus();
@@ -1499,33 +1522,33 @@ $(document).ready(function() {
                         $tel.focus();
                     }
                     // if (extended > 0) {
-                        // if (!$.validate_input($tel)) {
-                        //     form_errors++;
-                        //     $tel.focus();
-                        // }
+                    // if (!$.validate_input($tel)) {
+                    //     form_errors++;
+                    //     $tel.focus();
+                    // }
                     // } else {
 
-                        if (conce_d == null) {
+                    if (conce_d == null) {
 
-                            form_errors++;
-                            $.error_bubble($('#tdcss'), true);
-                            /*
-                             if(  ){
+                        form_errors++;
+                        $.error_bubble($('#tdcss'), true);
+                        /*
+                         if(  ){
 
-                             chzn-container
-                             $('#tdcss, #tdcss #tdcs').css({
-                             width: 'auto!important'
-                             });
+                         chzn-container
+                         $('#tdcss, #tdcss #tdcs').css({
+                         width: 'auto!important'
+                         });
 
-                             }*/
-                            $('#tdcs .chzn-container a').trigger('click').focus();
-                        } else {
-                            $.error_bubble($('#tdcss'), false);
-                        }
-                        $.error_bubble($tel, false);
-                        //
+                         }*/
+                        $('#tdcs .chzn-container a').trigger('click').focus();
+                    } else {
+                        $.error_bubble($('#tdcss'), false);
+                    }
+                    $.error_bubble($tel, false);
+                    //
                     // }
-                    
+
                     if (form_errors == 0) {
                         var data = {
                             car_key: fuh_data.key,
@@ -1553,57 +1576,49 @@ $(document).ready(function() {
                         } else {
                             ga('send', 'event', 'Financiamiento', 'Confirmacion_No_Prueba', 'Header_' + fuh_data.key, 0.012 * funding_data.price);
                         }
-                        
-                        var service_url = '/autos/services/request/financing';                        
+
+                        var service_url = 'http://suzuki.api.dev.ktc.mx/financing';
                         $.ajax({
                             async: true,
                             cache: false,
                             data: data,
                             dataType: 'json',
-                            type: 'post',
-                            success: function(data) {
-                                if (data.status == 'ok') {
+                            type: 'POST',
+                            success: function (data) {
+                                if (data.status == 'OK') {
                                     $('#funding_form').hide();
                                     $('#funding_resume').fadeIn();
-
                                 } else {
-                                    alert(data.message);
+                                    alert("Ha ocurrido un error, por favor, inténtelo nuevamente.");
                                 }
-
                             },
-                            error: function(x,t,m){
-                                if(t==="timeout"){
+                            error: function (x, t, m) {
+                                if (t === "timeout") {
                                     $('#funding_form').hide();
                                     $('#funding_resume').fadeIn();
                                 }
                             },
                             url: service_url
                         });
-
-
-
                     }
-
                 };
-
-
-                $('#hfu_name').on('focusout', function() {
+                $('#hfu_name').on('focusout', function () {
                     var $input = $(this);
                     $.validate_input($input);
                 });
-                $('#hfu_lastname').on('focusout', function() {
+                $('#hfu_lastname').on('focusout', function () {
                     var $input = $(this);
                     $.validate_input($input);
                 });
-                $('#hfu_email').on('focusout', function() {
+                $('#hfu_email').on('focusout', function () {
                     var $input = $(this);
                     $.validate_input($input);
                 });
-                $('#hfu_tel').on('focusout', function() {
+                $('#hfu_tel').on('focusout', function () {
                     var $input = $(this);
                     $.validate_input($input);
                 });
-                $('input[name="hfu_drive"]').on('change, click', function(e) {
+                $('input[name="hfu_drive"]').on('change, click', function (e) {
                     // if ($(this).val() > 0) {
                     //     $('.funding-hidden-inputs').show();
                     // } else {
@@ -1611,11 +1626,11 @@ $(document).ready(function() {
                     // }
                 });
                 $('#drive_no').trigger('click');
-                $('#tdr_end').on('click', function() {
+                $('#tdr_end').on('click', function () {
                     $.openPanel('');
                 });
                 $('#tdcs').concessionaire_selector({
-                    callback: function(data) {
+                    callback: function (data) {
                         conce_d = {
                             key: this.id,
                             name: this.name
@@ -1623,7 +1638,7 @@ $(document).ready(function() {
                         $.error_bubble($('#tdcss'), false, 'Elije tu concesionaria');
                     }
                 });
-                $('#tdcs').delegate('select', 'change', function() {
+                $('#tdcs').delegate('select', 'change', function () {
                     if ($('#tdcs select').length > 0) {
                         if ($('#tdcs select').length > 1) {
                             $('#error_concessionaire').css({
@@ -1635,13 +1650,13 @@ $(document).ready(function() {
                 })
 
                 $("#car_engagement_slider").slider({
-                    change: function(event, ui) {
+                    change: function (event, ui) {
                         funding_data.engagement = ui.value;
                         $.funding_adjust_calc();
                     },
                     max: 80,
                     min: 20,
-                    slide: function(event, ui) {
+                    slide: function (event, ui) {
                         funding_data.engagement = ui.value;
                         $.funding_adjust_calc();
                         $(this).parent().children(".star").html(ui.value + "%");
@@ -1651,13 +1666,13 @@ $(document).ready(function() {
 
                 });
                 $("#car_months_slider").slider({
-                    change: function(event, ui) {
+                    change: function (event, ui) {
                         funding_data.months = ui.value;
                         $.funding_adjust_calc();
                     },
                     max: 60,
                     min: 6,
-                    slide: function(event, ui) {
+                    slide: function (event, ui) {
                         funding_data.months = ui.value;
                         $.funding_adjust_calc();
                         $(this).parent().children(".star").html(ui.value);
@@ -1669,11 +1684,11 @@ $(document).ready(function() {
 
 
                 current_tab = -1;
-                $('#funding-versions-tabs').delegate('a', 'click', function(e) {
+                $('#funding-versions-tabs').delegate('a', 'click', function (e) {
                     e.preventDefault();
                     $.funding_select_version(parseInt($(this).data('version')));
                 });
-                $('#car_select_list').delegate('a', 'click', function(e) {
+                $('#car_select_list').delegate('a', 'click', function (e) {
                     e.preventDefault();
                     $.funding_select_car($(this).data('key'));
                     if (IS_MOBILE) {
@@ -1692,12 +1707,12 @@ $(document).ready(function() {
                     $.funding_select_car(fuh_data.key);
                     goto_step(2, true);
                 }
-                $("#change-car-test").on('click', function(e) {
+                $("#change-car-test").on('click', function (e) {
                     e.preventDefault();
                     $("#car_select_name, #car_select_preview").hide();
                     $("#car_select_list").fadeIn();
                 });
-                $('a.funding-goto').on('click', function(e) {
+                $('a.funding-goto').on('click', function (e) {
                     e.preventDefault();
                     if (IS_MOBILE) {
                         if ($(this).data('step') == "1") {
@@ -1708,12 +1723,12 @@ $(document).ready(function() {
                     goto_step($(this).data('step'));
                 });
                 if (IS_MOBILE) {
-                    $("#fake-calculate").on('click', function(e) {
+                    $("#fake-calculate").on('click', function (e) {
                         e.preventDefault();
                         $("#header-financiamiento .option-2, #fake-calculate").hide();
                         $(".funding-live-results, #modify-calc, #header-financiamiento .funding-goto").css("display", "block");
                     });
-                    $("#modify-calc").on('click', function(e) {
+                    $("#modify-calc").on('click', function (e) {
                         e.preventDefault();
                         $(".funding-live-results, #modify-calc, #header-financiamiento .funding-goto").hide();
                         $("#header-financiamiento .option-2, #fake-calculate").css("display", "block");
@@ -1724,50 +1739,50 @@ $(document).ready(function() {
 
                 var service_url = '/autos/servicesv2/quote/get_cars_versions',
                     $content_main = $('.header-section-content.quote'),
-                    //Variables que se utilizarán en el proceso de selección de versión.
+                //Variables que se utilizarán en el proceso de selección de versión.
                     selected_year, selected_model, selected_version, selected_engagement, models_data = [],
                     selected_state, selected_dealer;
 
-                function quote_show_step_index(step) {
-                    var $steps = $content_main.children('.screen'),
-                        $step = $steps.eq(step);
-                    $steps.removeClass('active').hide();
-                    $step.removeClass('active').fadeIn();
+            function quote_show_step_index(step) {
+                var $steps = $content_main.children('.screen'),
+                    $step = $steps.eq(step);
+                $steps.removeClass('active').hide();
+                $step.removeClass('active').fadeIn();
 
-                    if(IS_MOBILE){
-                        $('#quote-drive').change(function(){
-                            
-                            var me = $(this),
-                                checked = me.prop('checked'),
-                                news = '', loader= '';
-                            if(checked){
-                                news   = '-385px';
-                                loader = '-460px';
-                            }else{
-                                news   = '-325px';
-                                loader = '-395px';
-                            }
+                if (IS_MOBILE) {
+                    $('#quote-drive').change(function () {
 
-                            $('.quote-promo').css('bottom', news);
-                            $('.header-section-content.quote .loader_send').css('bottom', loader);
-                            $('#error-date').focus();
-                        });
-                    }
-                }
+                        var me = $(this),
+                            checked = me.prop('checked'),
+                            news = '', loader = '';
+                        if (checked) {
+                            news = '-385px';
+                            loader = '-460px';
+                        } else {
+                            news = '-325px';
+                            loader = '-395px';
+                        }
 
-                function percentage_changed(s_e) {
-                    selected_engagement = s_e;
-                    var out = selected_version.precio * selected_engagement * 0.01,
-                        money_out = moneyFormat(out),
-                        money_diference = selected_version.precio - out;
-                    $('span#quote-engagement-percentage-value').text(selected_engagement);
-                    $('#quote-engagement-money').val(money_out);
-                    $('#quote-result-engagement').text(money_out);
-                    $('#quote-result-diference').text(moneyFormat(money_diference));
-                    $('#quote-continue-step-4').prop({
-                        'disabled': false
+                        $('.quote-promo').css('bottom', news);
+                        $('.header-section-content.quote .loader_send').css('bottom', loader);
+                        $('#error-date').focus();
                     });
                 }
+            }
+
+            function percentage_changed(s_e) {
+                selected_engagement = s_e;
+                var out = selected_version.precio * selected_engagement * 0.01,
+                    money_out = moneyFormat(out),
+                    money_diference = selected_version.precio - out;
+                $('span#quote-engagement-percentage-value').text(selected_engagement);
+                $('#quote-engagement-money').val(money_out);
+                $('#quote-result-engagement').text(money_out);
+                $('#quote-result-diference').text(moneyFormat(money_diference));
+                $('#quote-continue-step-4').prop({
+                    'disabled': false
+                });
+            }
 
                 //ESTO NO SE ESTÁ UTILIZANDO
 
@@ -1801,204 +1816,234 @@ $(document).ready(function() {
                 };
 
                 var resp = false;
-                function quote_analytics_events(param){                    
-                    if(resp === true){                        
-                        console.log('Test drive: ' + param.drive);
 
-                        if(param.drive > 0){                            
-                            ga('send', 'event', 'Cotizacion con Prueba', 'Confirmacion', param.model+'_'+param.concessionaire, ''+ param.version_price * 0.066 +'');
-                            console.log('Con prueba');
-                        }else{
-                            ga('send', 'event', 'Cotizador', 'Confirmacion', param.model+'_'+param.concessionaire, ''+ param.version_price * 0.0086 +'');
-                            console.log('Sin prueba');
-                        }
+            function quote_analytics_events(param) {
+                if (resp === true) {
+                    console.log('Test drive: ' + param.drive);
 
-                        ga('send', 'event', 'Cotizador', param.model, param.combo_selected_state, param.version_price * 0.01);                        
-                        console.log('Cotizador: event sent');
-                        resp = false;
-                    }else{
-                        setTimeout(function(){
-                            quote_analytics_events(param);
-                        }, 3000);
-                        
+                    if (param.drive > 0) {
+                        ga('send', 'event', 'Cotizacion con Prueba', 'Confirmacion', param.model + '_' + param.concessionaire, '' + param.version_price * 0.066 + '');
+                        console.log('Con prueba');
+                    } else {
+                        ga('send', 'event', 'Cotizador', 'Confirmacion', param.model + '_' + param.concessionaire, '' + param.version_price * 0.0086 + '');
+                        console.log('Sin prueba');
                     }
-                }
 
-                function quote_goto_step(step) {
-                    step = parseInt(step, 10);
-                    switch (step) {
-                        case 1:
-                            quote_show_step_index(0);
-                            break;
-                        case 2:
-                            quote_show_step_index(1);
-                            break;
-                        case 3:
-                            quote_show_step_index(2);
-                            setTimeout(function(){
-                                // Select test-drive date functionality.
-                                $('#htd_date').datepicker({
-                                    minDate: '+1d',
-                                    maxDate: '+1m',
-                                    minLength: 0,
-                                    delay: 0,
-                                    dateFormat: 'yy-mm-dd'
-                                });
-                                var date_timeout;
-                                $('#htd_date').on('focusout', function() {
-                                    clearTimeout(date_timeout);
-                                    date_timeout = setTimeout(function() {
-                                        var $input = $('#htd_date');
-                                        $.validate_input($input);
-                                    }, 250);
-                                });
-                                // Menú Cotizar, Registro, Si el usuario selecciona el checkbox de prueba de manejo.
-                                $('#quote-drive').change(function(){                                    
-                                    if($(this).prop('checked')){
-                                        $('fieldset.htd_date').css('display', 'block');
-                                        $('#htd_date').addClass('validate');
-                                    }
-                                    else{
-                                        $('fieldset.htd_date').css('display', 'none');
-                                        $('#htd_date').removeClass('validate');                                 
-                                    }
-                                });
-                            }, 500);
-                            break;
-                        case 4:
-                            selected_state = $('#quote-states').val();
-                            selected_dealer = $('#quote-dealers').val();
-                            if (selected_state) {
-                                if (selected_dealer) {
-                                    quote_show_step_index(3);
-                                } else {
-                                    alert('Selecciona tu concesionaria');
-                                    return;
+                    ga('send', 'event', 'Cotizador', param.model, param.combo_selected_state, param.version_price * 0.01);
+                    console.log('Cotizador: event sent');
+                    resp = false;
+                } else {
+                    setTimeout(function () {
+                        quote_analytics_events(param);
+                    }, 3000);
+
+                }
+            }
+
+            function quote_goto_step(step) {
+                step = parseInt(step, 10);
+                switch (step) {
+                    case 1:
+                        quote_show_step_index(0);
+                        break;
+                    case 2:
+                        quote_show_step_index(1);
+                        break;
+                    case 3:
+                        quote_show_step_index(2);
+                        setTimeout(function () {
+                            // Select test-drive date functionality.
+                            $('#htd_date').datepicker({
+                                minDate: '+1d',
+                                maxDate: '+1m',
+                                minLength: 0,
+                                delay: 0,
+                                dateFormat: 'yy-mm-dd'
+                            });
+                            var date_timeout;
+                            $('#htd_date').on('focusout', function () {
+                                clearTimeout(date_timeout);
+                                date_timeout = setTimeout(function () {
+                                    var $input = $('#htd_date');
+                                    $.validate_input($input);
+                                }, 250);
+                            });
+                            // Menú Cotizar, Registro, Si el usuario selecciona el checkbox de prueba de manejo.
+                            $('#quote-drive').change(function () {
+                                if ($(this).prop('checked')) {
+                                    $('fieldset.htd_date').css('display', 'block');
+                                    $('#htd_date').addClass('validate');
                                 }
+                                else {
+                                    $('fieldset.htd_date').css('display', 'none');
+                                    $('#htd_date').removeClass('validate');
+                                }
+                            });
+                        }, 500);
+                        break;
+                    case 4:
+                        selected_state = $('#quote-states').val();
+                        selected_dealer = $('#quote-dealers').val();
+                        if (selected_state) {
+                            if (selected_dealer) {
+                                quote_show_step_index(3);
                             } else {
-                                alert('Selecciona tu estado');
+                                alert('Selecciona tu concesionaria');
                                 return;
                             }
+                        } else {
+                            alert('Selecciona tu estado');
+                            return;
+                        }
 
-                            break;
-                        case 5:
-                            var $v_inputs = $('input.validate'),
-                                $q_name = $('#quote-name'),
-                                $q_last_name = $('#quote-last-name'),
-                                $q_phone = $('#quote-phone'),
-                                $q_email = $('#quote-email'),
-                                $q_result_price = $('#quote-result-price'),
-                                $q_result_engagement = $('#quote-result-engagement');
-                                form_errors = false;
-                            $v_inputs.each(function() {
-                                if (!$.validate_input($(this))) {
-                                    $(this).focus();
-                                    form_errors = true;
-                                    return false;
-                                }
-                            });
-                            if (form_errors) {
+                        break;
+                    case 5:
+                        var $v_inputs = $('input.validate'),
+                            $q_name = $('#quote-name'),
+                            $q_last_name = $('#quote-last-name'),
+                            $q_phone = $('#quote-phone'),
+                            $q_email = $('#quote-email'),
+                            $q_result_price = $('#quote-result-price'),
+                            $q_result_engagement = $('#quote-result-engagement');
+                        form_errors = false;
+                        $v_inputs.each(function () {
+                            if (!$.validate_input($(this))) {
+                                $(this).focus();
+                                form_errors = true;
                                 return false;
                             }
-
-                            var quote_drive = $('#quote-drive:checked').length,
-                                quote_promo = $('#quote-promo:checked').length,
-                                htd_date;
-
-                            if (quote_drive > 0)
-                                htd_date = $('#htd_date').val();
-                            else
-                                htd_date = '';
-
-                            var data = {
-                                'year': selected_year,
-                                'model': selected_model,
-                                'version': selected_version.version,
-                                'state': selected_state,
-                                'concessionaire': $('#quote-dealers').val(),
-                                'engagement': selected_engagement,
-                                'name': $q_name.val(),
-                                'last-name': $q_last_name.val(),
-                                'phone': $q_phone.val(),
-                                'email': $q_email.val(),
-                                'drive': quote_drive,
-                                'date' : htd_date,
-
-                                'newsletter': quote_promo,
-                                    //,'fake'          : 1,
-
-                                'r-price': $q_result_price.html(),
-                                'r-engagement': $q_result_engagement.html()
-                            };
-
-                            // ga('send', 'event', 'Cotizador', selected_model, combo_state_names[selected_state + ''], selected_version.precio * 0.01);
-
-                            SuzukiWeb.BlockScreen();
-                            var send_url = '/services/request/financing';
-                            var checkeddrive = $('#quote-drive:checked').length;                            
-
-                            $.ajax({
-                                'data': data,
-                                'dataType': 'json',
-                                'error': SuzukiWeb.ErrorHandler,
-                                'beforeSend': function(){
-                                    $('.loader_send').show();
-                                    $('#quote-continue-step-final').prop({'disabled': true});
-                                },
-                                'success': function success(json_data) {
-                                    console.log('service response: ', json_data);
-                                    
-                                    SuzukiWeb.UnblockScreen();
-                                    $('.loader_send').hide();
-                                    $('#quote-continue-step-final').prop({'disabled': false});
-                                    
-                                    var template,html;
-                                    var jmonths = json_data.data.months,
-                                        jcompanies = json_data.data.companies.length,                                    
-                                        jresponse = (jmonths==='null' || jcompanies===0) ? false : true;                                    
-
-                                    if(!jresponse){                                    
-                                        template = '<div class="form-wrapper"><p>Conoce el desglose de planes de financiamiento de acuerdo con el número de meses cotizados y el tipo de seguro según la empresa que desees contratar (seguro para auto y seguro de vida).</p><p>Para tu comodidad, te hemos enviado esta tabla a tu correo electrónico.</p></div><div class="form-wrapper" id="bnp-error"> ¡Ups! Parece que el sistema de cotización no está disponible. Por favor, vuelve más tarde en lo que lo solucionamos. </div>';
-                                    }
-                                    else{
-                                        template = '<div class="form-wrapper"><p>Conoce el desglose de planes de financiamiento de acuerdo con el número de meses cotizados y el tipo de seguro según la empresa que desees contratar (seguro para auto y seguro de vida).</p><p>Para tu comodidad, te hemos enviado esta tabla a tu correo electrónico.</p></div><div class="form-wrapper" style="height: 180px;"><table class="final-quote" cellspacing="0" cellpadding="0"><thead><tr><th></th>{{#months}}<th>{{.}}</th>{{/months}}</tr></thead><tbody>{{#companies}}<tr><td class="name {{name}}">{{name}}</td>{{#options}}<td>{{price_money}}</td>{{/options}}</tr>{{/companies}}</tbody></table></div>';                                        
-                                        resp = true;
-                                        /* Facebook Conversion Code for Cotizaciones Ediciones Especiales */ (function() {var _fbq = window._fbq || (window._fbq = []);if (!_fbq.loaded) {var fbds = document.createElement('script');fbds.async = true;fbds.src = '//connect.facebook.net/en_US/fbds.js';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(fbds, s);_fbq.loaded = true;}})();window._fbq = window._fbq || [];window._fbq.push(['track', '6027345961752', {'value':'3','currency':'MXN'}]); /*<noscript><img height="1" width="1" alt="" style="display:none" src="www.facebook.com/tr…" /></noscript>*/
-                                    }
-
-                                    html = Mustache.render(template, json_data.data);
-                                    $('#quote_result_table').html(html);
-                                    quote_show_step_index(4);
-                                },
-                                'type': 'post',
-                                'url': '/autos/servicesv2/quote/save_quote'
-                            });
-                            
-                            var param = {
-                                'drive': quote_drive,
-                                'model': selected_model,
-                                'state_name': combo_state_names,
-                                'state': selected_state,
-                                'combo_selected_state': combo_state_names[selected_state + ''],
-                                'concessionaire': $('#quote-dealers').val(),
-                                'version': selected_version,
-                                'version_price': selected_version.precio                                
-                            };
-                            quote_analytics_events(param);                            
-
-                            break;
-                        default:
+                        });
+                        if (form_errors) {
                             return false;
-                            break;
+                        }
 
-                    }
+                        var quote_drive = $('#quote-drive:checked').length,
+                            quote_promo = $('#quote-promo:checked').length,
+                            htd_date;
+
+                        if (quote_drive > 0)
+                            htd_date = $('#htd_date').val();
+                        else
+                            htd_date = '';
+
+                        var data = {
+                            'year': selected_year,
+                            'model': selected_model,
+                            'version': selected_version.version,
+                            'state': selected_state,
+                            'concessionaire': selected_dealer,
+                            'engagement': selected_engagement,
+                            'name': $q_name.val(),
+                            'lastname': $q_last_name.val(),
+                            'phone': $q_phone.val(),
+                            'email': $q_email.val(),
+                            'drive': quote_drive,
+                            'date': htd_date,
+
+                            'newsletter': quote_promo,
+                            //,'fake'          : 1,
+
+                            'r-price': $q_result_price.html(),
+                            'r-engagement': $q_result_engagement.html()
+                        };
+
+                        // ga('send', 'event', 'Cotizador', selected_model, combo_state_names[selected_state + ''], selected_version.precio * 0.01);
+
+                        SuzukiWeb.BlockScreen();
+                        var send_url = 'http://api-suzuki.ktcagency.com/financing';
+                        var checkeddrive = $('#quote-drive:checked').length;
+
+                        $.ajax({
+                            data: data,
+                            dataType: 'json',
+                            error: SuzukiWeb.ErrorHandler,
+                            cache: false,
+                            beforeSend: function () {
+                                $('.loader_send').show();
+                                $('#quote-continue-step-final').prop({'disabled': true});
+                            },
+                            success: function success(json_data) {
+                                SuzukiWeb.UnblockScreen();
+                                $('.loader_send').hide();
+                                $('#quote-continue-step-final').prop({'disabled': false});
+                                var template, html, custom;
+
+                                template = '<div class="form-wrapper">' +
+                                        '<p>Conoce el desglose de planes de financiamiento de acuerdo con el número de meses cotizados y el tipo de seguro según la empresa que desees contratar (seguro para auto y seguro de vida).</p>' +
+                                        '<p>Para tu comodidad, te hemos enviado esta tabla a tu correo electrónico.</p>' +
+                                        '</div>' +
+                                    '<div class="form-wrapper" style="height: 180px;">' +
+                                    '<table class="final-quote" cellspacing="0" cellpadding="0">' +
+                                    '<thead><tr><th></th><th>12</th><th>24</th><th>36</th><th>48</th><th>60</th></tr></thead>' +
+                                    '<tbody>';
+
+                                for(var key1 in json_data.content.bnp_result){
+                                    template += '<tr><td class="name '+json_data.content.bnp_result[key1][0]['Nombre']+'">'+json_data.content.bnp_result[key1][0]['Nombre']+'</td>';
+                                    for( var key2 in json_data.content.bnp_result[key1][0]['Opciones']){
+                                        var importe = json_data.content.bnp_result[key1][0]['Opciones'][key2]['Importe'];
+                                        var formatted = importe.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+                                        template += '<td>$ '+formatted+'</td>';
+                                    }
+                                    template += '</tr>';
+                                }
+
+                                template += '</tbody></table></div>';
+                                resp = true;
+                                /* Facebook Conversion Code for Cotizaciones Ediciones Especiales */
+                                (function () {
+                                    var _fbq = window._fbq || (window._fbq = []);
+                                    if (!_fbq.loaded) {
+                                        var fbds = document.createElement('script');
+                                        fbds.async = true;
+                                        fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                                        var s = document.getElementsByTagName('script')[0];
+                                        s.parentNode.insertBefore(fbds, s);
+                                        _fbq.loaded = true;
+                                    }
+                                })();
+                                window._fbq = window._fbq || [];
+                                window._fbq.push(['track', '6027345961752', {'value': '3', 'currency': 'MXN'}]);
+                                //html = Mustache.render(template, json_data.data);
+                                $('#quote_result_table').html(template);
+                                quote_show_step_index(4);
+                            },
+                            error: function(){
+                                SuzukiWeb.UnblockScreen();
+                                $('.loader_send').hide();
+                                var template = '<div class="form-wrapper"><p>Conoce el desglose de planes de financiamiento de acuerdo con el número de meses cotizados y el tipo de seguro según la empresa que desees contratar (seguro para auto y seguro de vida).</p><p>Para tu comodidad, te hemos enviado esta tabla a tu correo electrónico.</p></div><div class="form-wrapper" id="bnp-error"> ¡Ups! Parece que el sistema de cotización no está disponible. Por favor, vuelve más tarde en lo que lo solucionamos. </div>';
+                                html = Mustache.render(template);
+                                $('#quote_result_table').html(html);
+                                $('#quote-continue-step-final').prop({'disabled': false});
+                                quote_show_step_index(4);
+                            },
+                            type: 'POST',
+                            url: 'http://api-suzuki.ktcagency.com/financing/website'
+                        });
+
+                        var param = {
+                            'drive': quote_drive,
+                            'model': selected_model,
+                            'state_name': combo_state_names,
+                            'state': selected_state,
+                            'combo_selected_state': combo_state_names[selected_state + ''],
+                            'concessionaire': $('#quote-dealers').val(),
+                            'version': selected_version,
+                            'version_price': selected_version.precio
+                        };
+                        quote_analytics_events(param);
+
+                        break;
+                    default:
+                        return false;
+                        break;
 
                 }
 
+            }
 
 
                 $content_main
-                    .delegate('#quote-models', 'change', function() {
+                    .delegate('#quote-models', 'change', function () {
                         var i0, item,
                             count = 0,
                             value = $(this).children(':selected').val(),
@@ -2026,54 +2071,54 @@ $(document).ready(function() {
 
                     })
 
-                // Cargar concesionarias al cambiar de estado
-                //
-                .delegate('#quote-states', 'change', function() {
-
-                    var $this, $dealers;
-
-                    $this = $(this);
-
-                    $dealers = $('#quote-dealers');
-
-                    // Pedir concesionarias para rellenar
-                    // select
+                    // Cargar concesionarias al cambiar de estado
                     //
-                    var data = { filter : true };
-                    $.ajax({
-                        url: '/autos/services/concessionaires/all',
-                        data: data,
-                        type: 'get',
-                        dataType: 'json',
-                        success: function(data, test) {
-                            var selected;
+                    .delegate('#quote-states', 'change', function () {
 
-                            selected = $this.find('option:selected').val();
+                        var $this, $dealers;
 
+                        $this = $(this);
 
-                            $dealers.empty()
-                                .append('<option value="" disabled selected>Concesionaria</option>');
+                        $dealers = $('#quote-dealers');
 
+                        // Pedir concesionarias para rellenar
+                        // select
+                        //
+                        var data = {filter: true};
+                        $.ajax({
+                            url: '/autos/services/concessionaires/all',
+                            data: data,
+                            type: 'get',
+                            dataType: 'json',
+                            success: function (data, test) {
+                                var selected;
 
-                            $.each(data.data, function(key, value) {
-
-
-                                if (selected === value.state_key) {
-
-                                    $dealers.append('<option value="' + value.name + '">' + value.name + '</option>');
-                                }
-
-                            });
+                                selected = $this.find('option:selected').val();
 
 
-                            $dealers.trigger("chosen:updated");
+                                $dealers.empty()
+                                    .append('<option value="" disabled selected>Concesionaria</option>');
 
 
-                        }
-                    });
-                })
+                                $.each(data.data, function (key, value) {
 
-                .delegate('#quote-years', 'change', function() {
+
+                                    if (selected === value.state_key) {
+
+                                        $dealers.append('<option value="' + value.name + '">' + value.name + '</option>');
+                                    }
+
+                                });
+
+
+                                $dealers.trigger("chosen:updated");
+
+
+                            }
+                        });
+                    })
+
+                    .delegate('#quote-years', 'change', function () {
                         var i0, item,
                             count = 0,
                             value = $(this).children(':selected').val(),
@@ -2095,38 +2140,38 @@ $(document).ready(function() {
                         $('#quote-versions').html(options_html).prop({
                             disabled: disabled
                         }).trigger('chosen:updated').trigger('change');
-                })
-                .delegate('#quote-versions', 'change', function() {
-                    var selected_version_index = $(this).children(':selected').index();
-                    if (selected_version_index > 0) {
-                        selected_version_index--;
-                    }
-                    selected_version = models_data[selected_year][selected_model][selected_version_index];
-                    var money_out = moneyFormat(selected_version.precio),
-                        $quote_engagement_percentage = $('#quote-engagement-percentage');
-                    $('#quote-result-version').text(selected_version.version);
-                    $('#quote-price').val(money_out);
-                    $('#quote-result-price').text(money_out);
+                    })
+                    .delegate('#quote-versions', 'change', function () {
+                        var selected_version_index = $(this).children(':selected').index();
+                        if (selected_version_index > 0) {
+                            selected_version_index--;
+                        }
+                        selected_version = models_data[selected_year][selected_model][selected_version_index];
+                        var money_out = moneyFormat(selected_version.precio),
+                            $quote_engagement_percentage = $('#quote-engagement-percentage');
+                        $('#quote-result-version').text(selected_version.version);
+                        $('#quote-price').val(money_out);
+                        $('#quote-result-price').text(money_out);
 
-                    var v = $quote_engagement_percentage.slider('value');
-                    if (v < 10 || v > 90) {
+                        var v = $quote_engagement_percentage.slider('value');
+                        if (v < 10 || v > 90) {
+                            $quote_engagement_percentage.slider({
+                                value: 10
+                            });
+                            v = 10;
+                        }
                         $quote_engagement_percentage.slider({
-                            value: 10
+                            disabled: false,
+                            value: v
                         });
-                        v = 10;
-                    }
-                    $quote_engagement_percentage.slider({
-                        disabled: false,
-                        value: v
+                    })
+                    .delegate('button.go-to-step', 'click', function () {
+                        var step = parseInt($(this).data('step'), 10);
+                        quote_goto_step(step);
+                    })
+                    .delegate('input.validate', 'focusout', function () {
+                        $.validate_input($(this));
                     });
-                })
-                .delegate('button.go-to-step', 'click', function() {
-                    var step = parseInt($(this).data('step'), 10);
-                    quote_goto_step(step);
-                })
-                .delegate('input.validate', 'focusout', function() {
-                    $.validate_input($(this));
-                });
 
 
                 quote_goto_step(1);
@@ -2151,13 +2196,12 @@ $(document).ready(function() {
 
                                     json_data.data[index1][index2][index3].precio = parseInt(json_data.data[index1][index2][index3].precio);
                                 }
-                                json_data.data[index1][index2].sort(function(a, b) {
+                                json_data.data[index1][index2].sort(function (a, b) {
                                     return b.precio - a.precio;
                                 })
                             }
 
                         }
-
 
 
                         // Eliminar datos harcode del quote mustache
@@ -2170,22 +2214,21 @@ $(document).ready(function() {
                         for (m in quoteModelos) {
 
                             // Excluir los SX4
-                            if(m.indexOf('SX4') < 0){
+                            if (m.indexOf('SX4') < 0) {
                                 $('#quote-models').append('<option value="' + m + '">' + m + '</option>');
                             }
 
                         }
 
 
-
                         models_data = json_data.data;
                         $("#quote-engagement-percentage").slider({
-                            change: function(event, ui) {
+                            change: function (event, ui) {
                                 percentage_changed(ui.value);
                             },
                             max: 90,
                             min: 10,
-                            slide: function(event, ui) {
+                            slide: function (event, ui) {
                                 percentage_changed(ui.value);
                             },
                             step: 1,
@@ -2218,34 +2261,30 @@ $(document).ready(function() {
         }
     };
     //Display Input errors
-    $.error_bubble = function($label, show, message) {
-            var $p = $label.parent().children('p.invalid-message');
-            if (show) {
-                if (message) {
-                    $p.html(message + '<span>&nbsp;</span>').stop().hide().fadeIn();
-                } else {
-                    $p.stop().hide().fadeIn();
-                }
+    $.error_bubble = function ($label, show, message) {
+        var $p = $label.parent().children('p.invalid-message');
+        if (show) {
+            if (message) {
+                $p.html(message + '<span>&nbsp;</span>').stop().hide().fadeIn();
             } else {
-                $p.hide();
+                $p.stop().hide().fadeIn();
             }
+        } else {
+            $p.hide();
         }
-        ////Newsletter form
+    }
+    ////Newsletter form
     var $newsletter_name = $('#newsletter_name');
     var $newsletter_email = $('#newsletter_email');
-    var $newsletter_phone = $('#newsletter_phone');
 
-    $newsletter_name.on('focusout', function() {
+    $newsletter_name.on('focusout', function () {
         $.validate_input($newsletter_name);
     });
-    $newsletter_email.on('focusout', function() {
+    $newsletter_email.on('focusout', function () {
         $.validate_input($newsletter_email);
     });
-    $newsletter_phone.on('focusout', function() {
-        $.validate_input($newsletter_phone);
-    });
 
-    $.newsletter_join_form = function() {
+    $.newsletter_join_form = function () {
 
         var form_errors = 0;
         if (!$.validate_input($newsletter_email)) {
@@ -2256,34 +2295,29 @@ $(document).ready(function() {
             form_errors++;
             $newsletter_name.focus();
         }
-        if (!$.validate_input($newsletter_phone)) {
-            form_errors++;
-            $newsletter_phone.focus();
-        }
 
         if (form_errors == 0) {
             var data = {
                 email: $newsletter_email.val(),
-                name:  $newsletter_name.val(),
-                phone: $newsletter_phone.val(),
-                source: 'Footer'
+                name: $newsletter_name.val(),
+                source: 'Footer',
             };
-            var service_url = '/autos/services/request/newsletter';
+            var service_url = 'http://api-suzuki.ktcagency.com/newsletter';
             $.ajax({
-                cache : false,
+                cache: false,
                 data: data,
                 dataType: 'json',
-                type: 'post',
-                success: function(data) {
-                    if (data.status == 'ok') {
+                type: 'POST',
+                success: function (data) {
+                    if (data.status == 'OK') {
                         $newsletter_email.val('');
                         $newsletter_name.val('');
                         $newsletter_phone.val('');
                         ga('send', 'event', 'Newsletter', 'Confirmacion', 'Footer', 600);
                     }
-                    alert(data.message);
+                    alert("Su email ha sido registrado con éxito!");
                 },
-                error: function(x, t, m){
+                error: function (x, t, m) {
                     alert("No se pudo suscribir a nuestro newsletter, inténtelo de nuevo");
                 },
                 url: service_url
@@ -2295,7 +2329,7 @@ $(document).ready(function() {
     //Loads html_sections_html contents
     $.ajax({
         url: '/autos/services/templates/header_contents',
-        success: function(data) {
+        success: function (data) {
             main_menu_available = true;
             html_sections_html = data.data;
             if (preselected_click != null) {
@@ -2305,11 +2339,11 @@ $(document).ready(function() {
         }
     });
     //Loads concessionaires data
-    var data = { filter : true };
+    var data = {filter: true};
     $.ajax({
         url: '/autos/services/concessionaires/all',
         data: data,
-        success: function(data) {
+        success: function (data) {
             concessionaires_data = data.data;
             if (geo_select_concessionaire_callback) {
                 geo_select_concessionaire_callback();
@@ -2318,7 +2352,7 @@ $(document).ready(function() {
     });
     $.ajax({
         url: '/autos/services/financing/car_prices',
-        success: function(data) {
+        success: function (data) {
             cars_prices = data.data;
         }
     });
@@ -2334,11 +2368,9 @@ $(document).ready(function() {
                 return;
             }
 
-            $body.prepend(geo_alert);
+            // $body.prepend(geo_alert);
 
-
-
-            var geo_listener = function() {
+            var geo_listener = function () {
                 var top = get_scroll_top();
                 if (top > 0) {
                     $('#geolocation-fixed').removeClass('active');
@@ -2348,7 +2380,7 @@ $(document).ready(function() {
             }
 
 
-            $body.on('click', '#geolocalization-button', function(e) {
+            $body.on('click', '#geolocalization-button', function (e) {
                 e.preventDefault();
                 $('#geolocation-fixed').removeClass('active');
                 var tomorrow = new Date();
@@ -2358,32 +2390,31 @@ $(document).ready(function() {
                 $(window).off('scroll', geo_listener);
             })
 
-            .on('click', '#test-drive-open', function(e) {
-                e.preventDefault();
-                $('#header-test-drive-button').trigger('click');
-            });
+                .on('click', '#test-drive-open', function (e) {
+                    e.preventDefault();
+                    $('#header-test-drive-button').trigger('click');
+                });
 
             $(window).scroll(geo_listener);
 
-            geo_timeout = setTimeout(function() {
+            geo_timeout = setTimeout(function () {
                 clearTimeout(geo_timeout);
                 $('#geolocation-fixed').addClass('active');
             });
 
 
-
-            navigator.geolocation.getCurrentPosition(function(position) {
+            navigator.geolocation.getCurrentPosition(function (position) {
                 clearTimeout(geo_timeout);
                 clearTimeout(geo_timeout);
 
                 $.ajax({
                     url: 'http://api.instantdrive.com.mx/v2/dealers/53c5c78a90f498310c5b1a63',
-                    success: function(data) {
+                    success: function (data) {
 
 
                         // Area
                         //
-                        var objectsArea = $.map(data.area, function(value) {
+                        var objectsArea = $.map(data.area, function (value) {
                             return new google.maps.LatLng(value.latitude, value.longitude);
                         });
 
@@ -2420,14 +2451,13 @@ $(document).ready(function() {
                 }
 
 
-            }, function() {
+            }, function () {
                 clearTimeout(geo_timeout);
                 clearTimeout(geo_timeout);
                 if ($('#geolocation-fixed').length) {
                     $('#geolocation-fixed').remove();
                 }
             });
-
 
 
             var today = new Date(),
@@ -2456,7 +2486,7 @@ $(document).ready(function() {
         init_hash = init_hash.split('#').join('');
         if ($('a[name="' + init_hash + '"]').length > 0) {
 
-            setTimeout(function() {
+            setTimeout(function () {
                 $.scroll_to(init_hash);
             }, 1000);
         } else if (init_hash == 'prueba-de-manejo') {
@@ -2467,7 +2497,7 @@ $(document).ready(function() {
     }
 
     if (IS_MOBILE) {
-        $("body").on("click", ".header-column", function() {
+        $("body").on("click", ".header-column", function () {
             if (!$(this).hasClass("header-column-open")) {
                 $('html, body').animate({
                     scrollTop: '0px'
@@ -2479,7 +2509,7 @@ $(document).ready(function() {
             }
         });
 
-        $("body").on("click", ".back-list-arrow", function() {
+        $("body").on("click", ".back-list-arrow", function () {
             var header_column_open = $(".header-column-open");
             $(".header-links-list").removeClass("header-links-open");
             header_column_open.removeClass("header-column-open");
@@ -2488,10 +2518,18 @@ $(document).ready(function() {
         });
     }
 
-    //hash para abrir el menu de mi suzuki automáticamente
-    if (window.location.hash == '#mi-suzuki') {
-        $('#header-owners-button').trigger('click');
+    /* Hash para abrir un elemento del menú automáticamente */
+    var hashtag = window.location.hash;
+    if (hashtag) {
+        if (hashtag == '#mi-suzuki') {
+            /* Mi Suzuki */
+            $('#header-owners-button').trigger('click');
+        } else if (hashtag === "#cotizar") {
+            /* Cotizar */
+            $('#quote-button').trigger('click');
+        };
     }
+
 
     //Scross & Bage popover
     var pop_over_template = '<div id="{{id}}" class="dummy-alert badge"><p class="alert-message"><h2>{{title}}</h2>{{{message}}}</p></div>',
@@ -2515,7 +2553,7 @@ $(document).ready(function() {
     while (i0--) {
         html_messages += Mustache.render(pop_over_template, messages_data[i0]);
     }
-    $body.append(html_messages).delegate('a.popoverbox', 'mouseover mouseout click', function(event) {
+    $body.append(html_messages).delegate('a.popoverbox', 'mouseover mouseout click', function (event) {
         var $this = $(this),
             target = $this.data('target'),
             $target = $(target);
@@ -2545,23 +2583,24 @@ $(document).ready(function() {
             openCloseMenu();
         }
 
-        $('.ap_arrows').click(function(){
-            var me = $(this),                
+        $('.ap_arrows').click(function () {
+            var me = $(this),
                 active = me.hasClass('active'),
                 direction = me.data('direction'),
                 table = me.parent('.ap_title').data('table'),
-                slider = $('#'+table+' .ap_tables_wrapper'),
-                margin='';
+                slider = $('#' + table + ' .ap_tables_wrapper'),
+                margin = '';
 
-            if(!active){
-                if(direction==='right')
+            if (!active) {
+                if (direction === 'right')
                     margin = '-100%';
                 else
                     margin = '0';
-                
-                slider.animate({ marginLeft: margin }, 300, function() {});
+
+                slider.animate({marginLeft: margin}, 300, function () {
+                });
             }
-        }); 
+        });
     }
 
 });

@@ -13,7 +13,7 @@ $(document).ready(function(){
 	var $model_select = $('#model_select');
 
     $.ajax({
-        url: '/motos/data/refacciones.json',
+        url: '/motos/refacciones/data',
         cache: false,
         type: 'GET',
         dataType: 'json',
@@ -41,8 +41,27 @@ $(document).ready(function(){
     });
 
 	$('#model_select').change(function(){		
-		if($('#model_select').val() !== null)
-			$(".link.refreshment").attr("href", 'http://cdn.suzuki.stg.ktc.mx/motos/files/refacciones/'+$('#model_select').val()).attr('target', '_blank');
+		if($('#model_select').val() !== null) {
+			var loc = window.location.hostname;
+			switch(loc){
+				case 'suzuki.dev.ktc.mx':
+				case 'www.suzuki.dev.ktc.mx':
+					var cdn = 'http://cdn.suzuki.dev.ktc.mx/';
+					break;
+				case 'suzuki.stg.ktc.mx':
+				case 'www.suzuki.stg.ktc.mx':
+					var cdn = 'http://cdn.suzuki.stg.ktc.mx/';
+					break;
+				case 'suzuki.com.mx':
+				case 'www.suzuki.com.mx':
+					var cdn = 'http://cdn.ktcagency.com/';
+					break;
+				default:
+					var cdn = 'http://cdn.suzuki.stg.ktc.mx/';
+					break;
+			}
+			$(".link.refreshment").attr("href", cdn + 'motos/files/refacciones/' + $('#model_select').val()).attr('target', '_blank');
+		}
 		$('.label.refreshment').html('Modelo:  ' + $(this.options[this.selectedIndex]).closest('optgroup').prop('label'));
 	});
 

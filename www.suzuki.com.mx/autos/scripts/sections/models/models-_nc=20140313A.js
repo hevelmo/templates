@@ -7,7 +7,7 @@ $(document).ready(function(){
     var mwonload = false,
     mtdrive  = false;
 
-    window.onload = function () {    
+    window.onload = function () {
         mwonload = true;
         if(mtdrive || tdrive)
             alert("¡Listo! Carga completa \n__\nGracias por la espera. Ya puedes seleccionar la concesionaria de tu preferencia.");
@@ -38,10 +38,10 @@ $(document).ready(function(){
         }
     }
 
-    // $('.home span').hover(        
+    // $('.home span').hover(
     //     function() {
     //         // $(this).animate({ 'background-position': '-35px' }, 100, function() {});
-    //       }, function() {            
+    //       }, function() {
     //         // $(this).animate({ 'background-position': '0' }, 100, function() {});
     //       }
     // );
@@ -128,7 +128,7 @@ $(document).ready(function(){
     $('#back-to-top-button').hide();
 
 
-    //First Arrow animation
+    // First Arrow animation
     $.animate_arrow = function( $arrow ){
         $arrow.css( { marginTop:-82,opacity:1}).animate({marginTop:-20,opacity:0}, 1000, function(){
             $.animate_arrow( $(this) );
@@ -143,7 +143,7 @@ $(document).ready(function(){
         });
         $.animate_arrow( $arrow2 )
     }
-    //Specifications Slider controls and functionality
+    // Specifications Slider controls and functionality
     var specifications_i = 0;
     var specifications_total =  $('.specifications-wrapper .specification').length - 1;
     $('a.specifications-controls').on('click', function( e ){
@@ -321,19 +321,19 @@ $(document).ready(function(){
                     source          : 'Model ' + current_car.name
                 };
 
-                var precio_actual = showMeTheMoney(current_car.key);                
+                var precio_actual = showMeTheMoney(current_car.key);
                 var cd = get_concessionaire_data_by_id( selected_concessionaire );
 
                 analytics_test_drive( 'Modelos_' + current_car.key , precio_actual, data.car_key+'_'+cd.name);
-                
+
                 $('#step-2-concessionaire-final').html( cd.name );
                 $('#step-2-mail-final').html( data.email );
 
                 $('#step-2-form').hide();
                 $('#step-2-final').hide().fadeIn();
-                
 
-                $.test_drive_form( data ,function(){                    
+
+                $.test_drive_form( data ,function(){
                     $('#step-2-form').hide();
                     $('#step-2-final').hide().fadeIn();
                 });
@@ -341,7 +341,7 @@ $(document).ready(function(){
         };
 
         $('#concessionaires_search_models').click(function(){
-            if(!mwonload){                    
+            if(!mwonload){
                 alert('Espera un poco, un poquito más… \n__\nEspera a que la página cargue completamente todas nuestras concesionarias para que puedas seleccionar la tuya.');
                 mtdrive = true;
             }
@@ -433,7 +433,8 @@ $(document).ready(function(){
         nextClick   : true,
         padding     : 0,
         prevEffect  : 'none',
-        width		: '70%'
+        width		: '70%',
+        titleShow   : true
     });
     if(!IS_MOBILE){
         $(".gallery-box-link.html").on('click mouseup', function( e ){
@@ -447,7 +448,8 @@ $(document).ready(function(){
                  minWidth	: 920
             });
     }
-    $('a.gallery-box-link').on('click', function( e ){
+    //Agregar todas las clases de galerías especiales en este selector
+    $('a.gallery-box-link, a.gallery-box-link-special, a.accessories, a.urban, a.interior, a.rugged').on('click', function( e ){
         e.preventDefault();
         var url = $(this).attr('href').trim();
         $('a.fancybox-thumbs').each(function(){
@@ -456,13 +458,15 @@ $(document).ready(function(){
             console.log(u);
             console.log(' ');
             console.log(u.trim());
+            console.log(url);
             if( u.trim() == url ){
+                console.log("click");
+                console.log("click");
                 $(this).trigger('click');
                 return false;
             }
         });
     });
-
     if (IS_MOBILE) {
         var margin = 0;
         var table = $("#versions-price-table");
@@ -470,7 +474,7 @@ $(document).ready(function(){
         var width_table = table.find(".cell").width() * (cols - 1);
         var arrow_left = $(".arrow-prices-left");
         var arrow_right = $(".arrow-prices-right");
-        
+
         var colums = '';
         for(var i=cols; i>1; i--){
             colums += '#features-space-wrapper .suzuki-table.cols-'+i;
@@ -511,7 +515,7 @@ $(document).ready(function(){
         models_menu = models_header.css('top');
     if(models_menu === '-50px'){
         model_menu_scroll = true;
-        var top;  
+        var top;
     }
 
     $(window).resize(function() {
@@ -527,7 +531,7 @@ $(document).ready(function(){
             else
                 top = -50;
 
-            models_header.css('top', top);            
+            models_header.css('top', top);
             setTimeout(function(){
                 switch_arrow();
             }, 100);
@@ -535,15 +539,15 @@ $(document).ready(function(){
             if( header_section == '' ){
                 switch_menus( get_scroll_top() < 10 ? 'regular' : 'cars'  );
                 switch_arrow();
-            } 
+            }
         }
-        
+
         // if(get_scroll_top() > 200) $('.top').fadeIn();
         // else $('.top').fadeOut();
 
 
 
-        
+
         // if( header_section == '' ){
         //     switch_menus( get_scroll_top() < 10 ? 'regular' : 'cars'  );
         //     switch_arrow();

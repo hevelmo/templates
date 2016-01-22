@@ -10,16 +10,16 @@ $(document).ready(function() {
 
     // MOTOS SLIDER
 	$.active_slider_dots = function(slide_dots){
-		var sd = slide_dots,			
+		var sd = slide_dots,
 			current_active_slide_number = parseInt(sd.current_active_slide.attr('data-slide')),
 			next_active_slide_number = parseInt(sd.next_active_slide.attr('data-slide')),
 			slides_number = parseInt($('.events-slider-wrapper').attr('data-slides'));
 
   		if((current_active_slide_number >= 1) && (current_active_slide_number <= slides_number)){
 			var hide_arrows = (next_active_slide_number===1 || next_active_slide_number===slides_number) ? true : false;
-			
-			sd.current_active_dot.removeClass('events-active-slide-dot');        
-	        sd.current_active_slide.removeClass('events-active-slide');        
+
+			sd.current_active_dot.removeClass('events-active-slide-dot');
+	        sd.current_active_slide.removeClass('events-active-slide');
 	        sd.next_active_dot.addClass('events-active-slide-dot');
 	        sd.next_active_slide.addClass('events-active-slide');
 	        sd.slider.animate({ left: sd.left_animation+'%' }, 500, function(){});
@@ -29,19 +29,19 @@ $(document).ready(function() {
         		if(sd.direction==='left' || next_active_slide_number===1 )
         			$('.events-slider-left-arrow').fadeOut();
         		else
-        			$('.events-slider-right-arrow').fadeOut();	        		
+        			$('.events-slider-right-arrow').fadeOut();
         	}
         }
 	}
 
-    $('.events-slider-dot').click(function(){        
-        var me = $(this),           
+    $('.events-slider-dot').click(function(){
+        var me = $(this),
             slide_dot_number = parseInt(me.attr('data-slide-dot')),
             slide = $("div[data-slide='"+slide_dot_number+"']"),
             is_active_slide = slide.hasClass('events-active-slide'),
             slide_dots = {
             	slider: $('.events-slider-wrapper'),
-            	current_active_dot: $('.events-active-slide-dot'),            	
+            	current_active_dot: $('.events-active-slide-dot'),
             	current_active_slide: $('.events-active-slide'),
             	next_active_dot: me,
             	next_active_slide: slide,
@@ -49,9 +49,9 @@ $(document).ready(function() {
             	data_slide_arrow: slide_dot_number,
             	direction: null
             };
-        
+
         if (!is_active_slide)
-        	$.active_slider_dots(slide_dots);        
+        	$.active_slider_dots(slide_dots);
     });
 
     $('.events-slider-left-arrow').click(function(){
@@ -59,7 +59,7 @@ $(document).ready(function() {
         	direction = 'left',
 			slide_arrow_number = parseInt(me.attr('data-slide-arrow')),
 			slide_dots = {
-	        	slider: $('.events-slider-wrapper'),        	            	
+	        	slider: $('.events-slider-wrapper'),
 	        	current_active_slide: $('.events-active-slide'),
 	        	current_active_dot: $('.events-active-slide-dot'),
 	        	next_active_dot: $("div[data-slide-dot='" + (slide_arrow_number-1) +"']"),
@@ -79,7 +79,7 @@ $(document).ready(function() {
         	direction = 'right',
 			slide_arrow_number = parseInt(me.attr('data-slide-arrow')),
 			slide_dots = {
-	        	slider: $('.events-slider-wrapper'),        	            	
+	        	slider: $('.events-slider-wrapper'),
 	        	current_active_slide: $('.events-active-slide'),
 	        	current_active_dot: $('.events-active-slide-dot'),
 	        	next_active_dot: $("div[data-slide-dot='" + (slide_arrow_number+1) +"']"),
@@ -87,7 +87,7 @@ $(document).ready(function() {
 	        	left_animation: "-"+((slide_arrow_number)*100),
 	        	data_slide_arrow: slide_arrow_number+1,
 	        	direction: direction
-	        };        
+	        };
 
         $.active_slider_dots(slide_dots);
 		me.attr('data-slide-arrow', slide_arrow_number+1);
@@ -108,15 +108,15 @@ $(document).ready(function() {
                 var show_button = parseInt($(".see_more").attr('data-last-sections'));
                 if(show_button>4)
                     see_more_button.css({'opacity':'1', 'display':'table'});
-            }else{                
-                $.show_see_more();                
+            }else{
+                $.show_see_more();
             }
         }, 200);
     }
     $.show_see_more();
 
     $.see_more_events = function(me){
-        page++;  
+        page++;
         var data = {  pagination : page },
             service_url = '/motos/noticias/see_more';
 
@@ -125,13 +125,13 @@ $(document).ready(function() {
             data     : data,
             dataType : 'json',
             type     : 'post',
-            success  : function(data) {                
+            success  : function(data) {
                 $('.events_gallery_content').prepend(data.html);
 
                 if(IS_MOBILE)
                     $('.events_gallery_content .section_wrapper').css('height', section_height);
-                
-                setTimeout(function(){                    
+
+                setTimeout(function(){
                     $.show_event_by_type(SHOW_BY_TYPE, true);
                     setTimeout(function(){
                         if(!data.button)
@@ -149,11 +149,11 @@ $(document).ready(function() {
     $('.see_more').bind("click", function(){
         $.see_more_events($(this));
     });
-  
+
     $.show_event_by_type = function(element_id, more_events){
         if(!more_events)
             $('.event_all').fadeOut();
-        setTimeout(function(){     
+        setTimeout(function(){
             $('.'+element_id).fadeIn();
         }, 500);
     }
@@ -171,8 +171,8 @@ $(document).ready(function() {
         $("a.section_link").fancybox({
             'transitionIn'  :   'elastic',
             'transitionOut' :   'elastic',
-            'speedIn'       :   600, 
-            'speedOut'      :   200, 
+            'speedIn'       :   600,
+            'speedOut'      :   200,
             'overlayShow'   :   false
         });
         $('.fancybox-skin').attr('style', 'padding: 0px; width: auto; height: auto;');
@@ -184,21 +184,21 @@ $(document).ready(function() {
 
     //Hover
     $.type_hover_effect = function(params){
-        if(!params.me.hasClass('active'))                
-            params.me.children('.tab_image').attr('src', params.image);            
+        if(!params.me.hasClass('active'))
+            params.me.children('.tab_image').attr('src', params.image);
         params.me.children('.tab_name').css('color', params.color);
     }
     $('.tab').hover(function(e){
         var me = $(this),
-            params = {  me: me, 
-                        image: white_path + me.data('image') +'.png', 
+            params = {  me: me,
+                        image: white_path + me.data('image') +'.png',
                         color: '#ffffff'
                      };
         $.type_hover_effect(params);
     }, function(e){
         var me = $(this),
-            params = {  me: me, 
-                        image: path + me.data('image') +'.png', 
+            params = {  me: me,
+                        image: path + me.data('image') +'.png',
                         color: '#9f9f9f'
                      };
         $.type_hover_effect(params);
@@ -218,31 +218,31 @@ $(document).ready(function() {
             see_more = $('.see_more'),
             promotion_all = $('#event_all'),
             gallery_content = $('.events_gallery_content');
-            
+
             SHOW_BY_TYPE = id;
             $.show_event_by_type(id, false);
 
             see_more.hide();
             if(IS_MOBILE)
                 gallery_content.css('min-height', section_height);
-            
+
             if($('.'+tab).length>=5){
                 var counter=0;
                 for(var i=0; i<5; i++){
                     if(i===0){
                         if(promotion_all.hasClass('see-more-hidden'))
-                            counter++;                        
+                            counter++;
                     }
                     else{
                         if($('#event_'+i).hasClass('see-more-hidden'))
-                            counter++; 
-                    }                    
-                }                    
+                            counter++;
+                    }
+                }
                 if(counter<5 && !promotion_all.hasClass('see-more-hidden') && !me.hasClass('see-more-hidden')){
                     if(see_more.css('display')==='none'){
-                        setTimeout(function(){     
+                        setTimeout(function(){
                             see_more.show();
-                        }, 800);                        
+                        }, 800);
                     }
                 }
             }
@@ -289,7 +289,7 @@ $(document).ready(function() {
         section_height= ((grid_width / 2) / 100) * 90;
 
         $('.events_gallery_content .section_wrapper').css('height', section_height);
-        
+
         var section_num = $('.section_wrapper.gallery-box-link').length,
             section_row = section_num % 2;
 

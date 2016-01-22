@@ -5,6 +5,7 @@ $(document).ready(function(){
         $contact_delegation = $('#contact_delegation'),
         $contact_city       = $('#contact_city '),
         $contact_email      = $('#contact_email'),
+        $contact_phone      = $('#contact_phone'),
         $contact_name       = $('#contact_name '),
         $contact_lastname   = $('#contact_lastname '),
         $contact_newsletter = $('#contact-newsletter');
@@ -28,6 +29,9 @@ $(document).ready(function(){
     $contact_email.on('focusout', function(){
         $.validate_input( $contact_email );
     });
+    $contact_phone.on('focusout', function(){
+        $.validate_input( $contact_phone );
+    });
     $contact_name.on('focusout', function(){
         $.validate_input( $contact_name );
     });
@@ -47,6 +51,10 @@ $(document).ready(function(){
         if( !$.validate_input( $contact_car_key ) ){
             form_errors++;
             $contact_car_key.focus();
+        }
+        if( !$.validate_input( $contact_phone ) ){
+            form_errors++;
+            $contact_phone.focus();
         }
         if( !$.validate_input( $contact_department ) ){
             form_errors++;
@@ -85,6 +93,7 @@ $(document).ready(function(){
                 email       : $contact_email.val(),
                 message     : $contact_message.val(),
                 name        : $contact_name.val(),
+                phone       : $contact_phone.val(),
                 lastname    : $contact_lastname.val(),
                 newsletter  : $('#contact-newsletter:checked').length,
                 source      : 'Contact'

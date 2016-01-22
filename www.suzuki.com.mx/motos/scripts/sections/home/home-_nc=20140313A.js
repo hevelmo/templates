@@ -13,21 +13,34 @@ $(window).load(function(){ });
 
 $(document).ready(function() {
 
-    if(IS_MOBILE){
-        $('.slide-mobile').css('display', 'block');
-        $('.home-slider-wrapper').on("swipe",function(event){            
-        })
-    }
-    else{
-        $('.slide-desktop').css('display', 'block');
-    }
+    /*
+     * Home Slider
+     */
 
-    // MOTOS SLIDER INITIALIZATION
-    $("div[data-slide='1']").addClass('home-active-slide');
-    $("div[data-slide-dot='1']").addClass('home-active-slide-dot');
-    if($(".home-slider-wrapper").find(".home-slide").length > 1){
-        $(".home-slider-dots").css('display', 'inline-block');
-    }
+        console.debug("Home.js is running");
+    /**
+     * [Slick Slider Motos Initialization]
+     * @type {Function}
+     */
+    $('.js-home-slider').on('init', function(){
+        $('.l-home-slider').css({
+            'opacity':1,
+            'visibility':"visible"
+        });
+    }) 
+
+    $('.js-home-slider').slick({
+        accessibility: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        dots: true,
+        infinite: false,
+        slideToShow: 1,
+        touchMove: true,
+        swipeToSlide: false,
+        adaptativeHeight: true
+    });
 
     $('.play-video-fancybox').fancybox({
         autoSize: false,
@@ -49,12 +62,10 @@ $(document).ready(function() {
 
 
     // Prevenir que la imagen no se vea en ocasiones
-    // 
+    //
     var $img = $('<img />');
     $img.load(function() {})
     $img.attr('src', '/motos/images/sections/home/ciaz/pop-up.png');
-
-
 
     $sxc_name.on('focusout', function() {
         $.validate_input($sxc_name);
@@ -65,6 +76,11 @@ $(document).ready(function() {
     $sxc_email.on('focusout', function() {
         $.validate_input($sxc_email);
     });
+
+    /**
+     * @param  {[type]}
+     * @return {[type]}
+     */
     $.test_drive_promo_s_cross = function(form) {
         var form_errors = 0;
 
@@ -181,6 +197,10 @@ $(document).ready(function() {
         });
     });*/
 
+    /**
+     * Description
+     * @return {[type]} [description]
+     */
     function run_faros() {
             flash.stop().animate({
                 opacity: 1
@@ -421,7 +441,7 @@ $(document).ready(function() {
         success: function(data) {
             var pagination = $('.see-more-content').length,
                 photos = data.data.length,
-                photo_url, photo_text, photo_text_length, 
+                photo_url, photo_text, photo_text_length,
                 gallery_arrow,
                 counter = 0;
 
@@ -455,30 +475,30 @@ $(document).ready(function() {
                         class_name = array_classes_one[index];
                     }
 
-                    $grid.append("<a class='fancybox-thumbs-instafeed' data-fancybox-group='instaFeed' href='" + photo_url + "' alt='suzuki_mex' title='" + photo_text + "'><div class='grid-square ie-8-fallback " + class_name + "' style='background-image: url("+ photo_url +");'><div class='photo-mask'><p class='photo-title'><b> SUZUKI_MOTOS </b><br/>"+ photo_text +"</p></div></div></a>");                    
+                    $grid.append("<a class='fancybox-thumbs-instafeed' data-fancybox-group='instaFeed' href='" + photo_url + "' alt='suzuki_mex' title='" + photo_text + "'><div class='grid-square ie-8-fallback " + class_name + "' style='background-image: url("+ photo_url +");'><div class='photo-mask'><p class='photo-title'><b> SUZUKI_MOTOS </b><br/>"+ photo_text +"</p></div></div></a>");
                 });
             }
 
             if(IS_MOBILE){
                 var gridInstagram = parseInt($('.home-grid-instagram').css('width'));
-                
+
                 if(gridInstagram){
                     var gSquareInstagram = gridInstagram / 2;
-                    
+
                     $('.grid-square').css('width', gSquareInstagram).css('height', gSquareInstagram);
-                    
+
                     $('.see-more-button').css('width', gridInstagram);
                     $('.see-more-button').css('top', gridInstagram);
                     $('.see-more-button > div > img').hide();
                     $('.see-more-button > div > p').hide();
 
-                    $('.home-grid-instagram').css('height', gridInstagram);                
-                }                
+                    $('.home-grid-instagram').css('height', gridInstagram);
+                }
             }
         },
-        after: function() {            
-            $('.see-more-button').click(function(){ 
-                feed.next();                
+        after: function() {
+            $('.see-more-button').click(function(){
+                feed.next();
             });
         },
     });
@@ -486,16 +506,16 @@ $(document).ready(function() {
 
     // MOTOS SLIDER
     $('.home-slider-dot').click(function(){
-        
+
         var me = $(this),
-            slider = $('.home-slider-wrapper'),            
+            slider = $('.home-slider-wrapper'),
             slide_dot_number = me.attr('data-slide-dot'),
             slide = $("div[data-slide='"+slide_dot_number+"']"),
             left_animation = (slide_dot_number-1)*100,
             is_active_slide = slide.hasClass('home-active-slide'),
             slide_active = $('.home-active-slide'),
             slide_dot_active = $('.home-active-slide-dot');
-        
+
         if (!is_active_slide){
             slide_dot_active.removeClass('home-active-slide-dot');
             me.addClass('home-active-slide-dot');
@@ -516,7 +536,7 @@ $(document).ready(function() {
         dataType: 'json',
         success: function(data){
             tips_json = data.tips;
-            getRandomTip(false);        
+            getRandomTip(false);
         },
         error: function(e){
             console.log(e);
@@ -531,7 +551,7 @@ $(document).ready(function() {
             }, 500);
         }else{
             $(".home-tip-text").html(tips_json[tip].html);
-        }        
+        }
     }
 
     function getRandomTip(effect) {
@@ -541,7 +561,7 @@ $(document).ready(function() {
 
             for(var i=0; i<tips_json.length;i++){
                 if(!tips_json[i].shown)
-                    unread_tips = true;                
+                    unread_tips = true;
             }
 
             if(unread_tips){
@@ -557,15 +577,15 @@ $(document).ready(function() {
     }
 
     $('.more-tips-text').click(function(){
-        getRandomTip(true);        
+        getRandomTip(true);
     });
 
     $('.more-tips-image').click(function(){
-        getRandomTip(true);        
+        getRandomTip(true);
     });
 
     $('#mi_suzuki_link').click(function(){
         $('#header-owners-button').trigger('click');
-    });   
+    });
 
 });

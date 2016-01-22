@@ -110,6 +110,21 @@ $( document ).ready( function(){
         $('#concessionaire-phone').bind("click", function () {
             ga('send', 'event', 'Distribuidores', 'llamar', cc.name);
         });
+        //Email patch  <a id="concessionaire-email" href="mailto:" target="_blank">prueba@prueba.com</a>
+        $('#concessionaire-email').remove();
+        $.each(cc.emails, function (key,value){
+           var countEmpty = 0;
+           if(value.email!="null"){
+               var appendHtmlEmail = '<a id="concessionaire-email" href="mailto:'+value.email+'" target="_blank">'+value.email+'</a><br/>';
+               $('#emailData').append(appendHtmlEmail);
+           } else {
+               countEmpty++;
+           }
+           if(countEmpty!=0){
+               $('#emailData').hide();
+           }
+        });
+
         if( cc.website != 'No' ){
             $('#concessionaire-website-wrapper').show();
             $('#concessionaire-website').text( cc.website );

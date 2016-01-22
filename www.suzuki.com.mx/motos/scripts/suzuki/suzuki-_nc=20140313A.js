@@ -545,13 +545,13 @@ $(document).ready(function() {
         //         $('#header-zone').removeClass('responsive');
         //         $('#models-header').removeClass('responsive');
         //         $('.menu-patch').removeClass('responsive');
-        //     }           
+        //     }
         // }else{
         //     if(!$('#header-zone').hasClass('responsive')){
         //         $('#header-zone').addClass('responsive');
         //         $('#models-header').addClass('responsive');
         //         $('.menu-patch').addClass('responsive');
-        //     }            
+        //     }
         // }
     });
     //Add action to all header's close butons
@@ -730,18 +730,43 @@ $(document).ready(function() {
 
         //Quote validation stg vs. prod (10 14 2015)
         // quote_validation:update
-        var quote_flag = false, 
-            m_margin = -330,
-            m_width  = 108,
-            q_margin = 337, 
-            q_width  = 142,
-            o_margin = 37,
-            o_width  = 183;
 
-        if(!quote_flag){
-            m_margin = -158;
-            m_width  = 119;
-        }
+
+        // This are the values for the patch menu with "Financiamiento"
+         var quote_flag = true,
+             m_margin = -330,
+             m_width = 108,
+             q_margin = 337,
+             q_width = 142,
+             o_margin = 37,
+             o_width = 183;
+         if (!quote_flag) {
+             m_margin = -158;
+             m_width = 119;
+         }
+
+
+
+//         var quote_flag = true,
+//             m_margin, m_width,
+//             q_margin, q_width,
+//             o_margin, o_width;
+//         if (quote_flag) {
+//             m_margin = -158;
+//             m_width = 120;
+//             q_margin = 337;
+//             q_width = 142;
+//             o_margin = 37;
+//         } else {
+//             m_margin = -330;
+//             m_width = 108;
+//             q_margin = 337;
+//             q_width = 142;
+//             o_margin = 37;
+//             o_width = 183;
+//         }
+
+
 
         switch (section) {
             case 'test-drive':
@@ -883,7 +908,7 @@ $(document).ready(function() {
                 ga('send', 'event', 'Motos', 'clic_categoría', $(this).text());
             }).delegate('.moto-thumb', 'click', function(){
                 var me = $(this),
-                    category = me.parent('.category-wrapper').children('.moto-info').children('.title');                        
+                    category = me.parent('.category-wrapper').children('.moto-info').children('.title');
                 $.show_motos(category);
                 ga('send', 'event', 'Motos', 'clic_categoría', category.text());
             });
@@ -893,7 +918,7 @@ $(document).ready(function() {
                     var title = me.children('.moto-info').children('.title'),
                         t_length = title.length;
                     $.show_motos(title);
-                    ga('send', 'event', 'Motos', 'clic_categoría', title.text());          
+                    ga('send', 'event', 'Motos', 'clic_categoría', title.text());
             });
         }
 
@@ -967,14 +992,14 @@ $(document).ready(function() {
     if (IS_MOBILE) {
         $("#header-mobile i").click(function() {
             $(this).toggleClass(function(index, className, state) {
-                var icon_id = $(this).attr('id');                
-                
-                $(this).css('display', 'none');                
+                var icon_id = $(this).attr('id');
+
+                $(this).css('display', 'none');
                 if(icon_id === 'menu_icon')
                     $('#close_icon').css('display','block');
-                else                    
+                else
                     $('#menu_icon').css('display','block');
-            });         
+            });
             openCloseMenu();
         });
 
@@ -988,7 +1013,7 @@ $(document).ready(function() {
         if(sm_top<340)
             $('#mobile-menu .header-submenu').css('top', 340);
         else
-            $('#mobile-menu .header-submenu').css('top', sm_top);        
+            $('#mobile-menu .header-submenu').css('top', sm_top);
 
         $( window ).scroll(function() {
               // $('#mobile-menu').css('top', $('body').scrollTop());
@@ -1027,10 +1052,10 @@ $(document).ready(function() {
                 // To hide 'quote' option on the menu: comment case 3 and change case 5 to 4;
                 // To show 'quote' option, viceversa.
 
-                // case 3:
-                //     link = "#quote-button";
-                //     break;
-                case 4: // case 5:
+//                case 3:
+//                    link = "#quote-button";
+//                    break;
+                case 4: // case 4:
                     link = "#header-owners-button";
                     break;
             }
@@ -1092,7 +1117,7 @@ $(document).ready(function() {
         }
 
         $('.mobile_newsletter').click(function(){
-            openCloseMenu(); 
+            openCloseMenu();
         });
     }
 
@@ -1875,10 +1900,10 @@ $(document).ready(function() {
                         $step = $steps.eq(step);
                     $steps.removeClass('active').hide();
                     $step.removeClass('active').fadeIn();
-                    
+
                     if(IS_MOBILE){
                         if(step==3){
-                            quote_step_height('800px');                        
+                            quote_step_height('800px');
                         }else if(step==4){
                             quote_step_height('545px');
                         }
@@ -1887,7 +1912,7 @@ $(document).ready(function() {
 
                 if(IS_MOBILE){
                     $('#back-to-step-1, .close-menu-box').click(function(){
-                        quote_step_height('632px');                    
+                        quote_step_height('632px');
                     });
                 }
 
@@ -1951,17 +1976,18 @@ $(document).ready(function() {
                             selected_state = $('#quote-states').val();
                             selected_dealer = $('#quote-dealers').val();
                             if (selected_state) {
-                                if (selected_dealer) {
+                                /*if (selected_dealer) {
                                     quote_show_step_index(3);
                                 } else {
                                     alert('Selecciona tu concesionaria');
                                     return;
-                                }
+                                }*/
+                                quote_show_step_index(3);
                             } else {
                                 alert('Selecciona tu estado');
                                 return;
                             }
-
+                            //quote_show_step_index(3);
                             break;
                         case 5:
                             var $v_inputs = $('input.validate'),
@@ -1986,7 +2012,7 @@ $(document).ready(function() {
                                 'model': selected_model,
                                 'version': selected_version.version,
                                 'state': selected_state,
-                                'concessionaire': $('#quote-dealers').val(),
+                                //'concessionaire': $('#quote-dealers').val(),
                                 'engagement': selected_engagement,
                                 'name': $q_name.val(),
                                 'last-name': $q_last_name.val(),
@@ -2000,11 +2026,13 @@ $(document).ready(function() {
 
                             };
 
-                            ga('send', 'event', 'Cotizador', selected_model, combo_state_names[selected_state + ''], selected_version.precio * 0.01);
+                            var precio_cotizado = Math.round( selected_version.precio * 0.01 );
+
+                            ga('send', 'event', 'Cotizador', selected_model + '_' + selected_version.version , data.state, ''+precio_cotizado+'');
 
                             SuzukiWeb.BlockScreen();
                             var send_url = '/services/request/financing';
-                            var checkeddrive = $('#quote-drive:checked').length;                            
+                            var checkeddrive = $('#quote-drive:checked').length;
 
                             $.ajax({
                                 'data': data,
@@ -2020,7 +2048,7 @@ $(document).ready(function() {
                                     $('#quote-continue-step-final').prop({'disabled': false});
 
                                     var template,html;
-                                    if(json_data.data.months==='null' || json_data.data.companies.length===0){                                    
+                                    if(json_data.data.months==='null' || json_data.data.companies.length===0){
                                         template = '<div class="form-wrapper"><p>Conoce el desglose de planes de financiamiento de acuerdo con el número de meses cotizados y el tipo de seguro según la empresa que desees contratar (seguro para moto y seguro de vida).</p><p>Para tu comodidad, te hemos enviado esta tabla a tu correo electrónico.</p></div><div class="form-wrapper" id="bnp-error"> ¡Ups! Parece que el sistema de cotización no está disponible. Por favor, vuelve más tarde en lo que lo solucionamos. </div>';
                                     }else{
                                         var companies = json_data.data.companies;
@@ -2053,7 +2081,7 @@ $(document).ready(function() {
 
                     }
 
-                }                
+                }
 
                 $content_main
                     .delegate('#quote-models', 'change', function() {
@@ -2165,11 +2193,11 @@ $(document).ready(function() {
                     $('#quote-result-price').text(money_out);
 
                     var v = $quote_engagement_percentage.slider('value');
-                    if (v < 10 || v > 90) {
+                    if (v < 20 || v > 90) {
                         $quote_engagement_percentage.slider({
-                            value: 10
+                            value: 20
                         });
-                        v = 10;
+                        v = 20;
                     }
                     $quote_engagement_percentage.slider({
                         disabled: false,
@@ -2239,12 +2267,12 @@ $(document).ready(function() {
                                 percentage_changed(ui.value);
                             },
                             max: 90,
-                            min: 10,
+                            min: 20,
                             slide: function(event, ui) {
                                 percentage_changed(ui.value);
                             },
                             step: 1,
-                            value: 10,
+                            value: 20,
                             disabled: true
                         });
                         $('#quote-models,#quote-years,#quote-versions').chosen({
