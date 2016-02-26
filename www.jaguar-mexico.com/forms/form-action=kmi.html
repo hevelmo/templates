@@ -1,0 +1,215 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>MANTENME INFORMADO</title>
+
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/form-basic.css">
+    <link rel="stylesheet" type="text/css" href="assets/shared/css/reset-v.css">
+	<link rel="stylesheet" href="../resources/css/fonts-jaguar.css"/>
+	<link rel="stylesheet" href="../resources/css/fonts-proximanova-latin1.css"/>
+
+        <link href="assets/css/main_stc.css" rel="stylesheet" type="text/css" media="screen" />
+        
+    <link rel="stylesheet" href="assets/base-ui/bootstrap/bootstrap-select/bootstrap-select.css">
+    <link rel="stylesheet" href="assets/base-ui/bootstrap/bootstrap-datepicker/css/datepicker.css">
+    <link rel="stylesheet" href="assets/base-ui/bootstrap/bootstrap-datepicker/css/datepicker3.css">
+    
+    <link rel="stylesheet" href="assets/picker/themes/default.css" />
+	<link rel="stylesheet" href="assets/picker/themes/default.date.css" />
+	<link rel="stylesheet" href="assets/picker/themes/default.time.css" />
+   
+</head>
+<center>
+	<header>
+		<h1>JAGUAR</h1><br><br><h2>MANTENME INFORMADO<br></h2>
+    </header>
+</center>
+    <div class="main-content">
+
+
+        <!-- You only need this form and the form-basic.css -->
+
+        <form role="form" id="raqform" name="raqform" method="post" enctype="multipart/form-data"class="form-basic" >
+
+        	<input type="hidden" name="action"  value="process_general_form" class="ignore">
+    		<input type="hidden" name="vehicle_make" id="vehicle_make" value="Jaguar" class="ignore">
+    		<input type="hidden" name="keepinformed" id="keepinformed" value="true" class="ignore">
+    		<input type="hidden" name="customer_preferredcontact" id="customer_preferredcontact" value="email" class="ignore">
+
+            <fieldset>
+
+            <div class="form-title-row">
+				<span>Manténte al día con todo lo que está sucediendo en Jaguar. Complete este formulario y recibirá nuestro boletín electrónico, además de la información más reciente y ofertas especiales de vehículos Jaguar.</span>
+            </div>
+
+                            
+            <div class="form-row">
+                <label>
+                    <span>Nombre*</span>
+                    <input type="text" name="customer_firstname" placeholder="Nombre" class=":required raq" required />
+                </label>
+            </div>
+			
+			<div class="form-row">
+                <label>
+                    <span>Apellido*</span>
+                    <input type="text" name="customer_lastname" placeholder="Apellido" class=":required raq" required />
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Correo electr&oacute;nico*</span>
+                    <input type="text" placeholder="nombre@email.com" name="customer_email" class=":required :email raq" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
+                </label>
+            </div>
+			
+            <div class="form-row">
+                <label>
+                    <span>Tel&eacute;fono*</span>
+                    <input type="phone" placeholder="10 d&iacute;gitos" name="customer_phone" class=":required raq" required />
+                </label>
+            </div>
+			
+			            <div class="form-row">
+                <label>
+                    <span>Modelo*</span>
+                    <select name="vehicle_model" class=":required raq" required>
+                        <option value="">Elija un modelo</option>
+                        <option value="JAGUAR FTYPE"> JAGUAR FTYPE</option><option value="JAGUAR XF"> JAGUAR XF</option><option value="JAGUAR XJ"> JAGUAR XJ</option><option value="JAGUAR XE"> JAGUAR XE</option>                    </select>
+                </label>
+            </div>
+			                        
+                        <div class="form-row">
+                <label class="raq">
+                    <span>¿Cuándo planeas comprar?*</span>
+                </label>
+                <select name="purchase_timeframe_desktop" id="purchase_timeframe_desktop" required>
+                    <option value="">Elige un periodo de tiempo </option>
+                    <option value="1-30 días">1 a 30 días </option>
+                    <option value="1-3 meses">1 a 3 meses </option>
+                    <option value="4-6 meses">4 a 6 meses </option>
+                    <option value="6-12 meses">6 a 12 meses </option>
+                    <option value="+12 meses">+ 12 meses </option>
+                </select>
+            </div>
+                                        
+                        <div class="form-row">
+                <label class="raq">
+                    <span>Estado*</span>
+                    <select name="state_desktop" id="state_desktop" required>
+                        <option value="">Elige un estado</option>
+                        <option value="AGUASCALIENTES">AGUASCALIENTES</option>
+                        <option value="BAJA CALIFORNIA">BAJA CALIFORNIA</option>
+                        <option value="BAJA CALIFORNIA SUR">BAJA CALIFORNIA SUR</option>
+                        <option value="CAMPECHE">CAMPECHE</option>
+                        <option value="COAHUILA">COAHUILA</option>
+                        <option value="COLIMA">COLIMA</option>
+                        <option value="CHIAPAS">CHIAPAS</option>
+                        <option value="CHIHUAHUA">CHIHUAHUA</option>
+                        <option value="DISTRITO FEDERAL">DISTRITO FEDERAL</option>
+                        <option value="DURANGO">DURANGO</option>
+                        <option value="GUANAJUATO">GUANAJUATO</option>
+                        <option value="GUERRERO">GUERRERO</option>
+                        <option value="HIDALGO">HIDALGO</option>
+                        <option value="JALISCO">JALISCO</option>
+                        <option value="MEXICO">MEXICO</option>
+                        <option value="MICHOACAN">MICHOACAN</option>
+                        <option value="MORELOS">MORELOS</option>
+                        <option value="NAYARIT">NAYARIT</option>
+                        <option value="NUEVO LEON">NUEVO LEON</option>
+                        <option value="OAXACA">OAXACA</option>
+                        <option value="PUEBLA">PUEBLA</option>
+                        <option value="QUERETARO">QUERETARO</option>
+                        <option value="QUINTANA ROO">QUINTANA ROO</option>
+                        <option value="SAN LUIS POTOSI">SAN LUIS POTOSI</option>
+                        <option value="SINALOA">SINALOA</option>
+                        <option value="SONORA">SONORA</option>
+                        <option value="TABASCO">TABASCO</option>
+                        <option value="TAMAULIPAS">TAMAULIPAS</option>
+                        <option value="TLAXCALA">TLAXCALA</option>
+                        <option value="VERACRUZ">VERACRUZ</option>
+                        <option value="YUCATAN">YUCATAN</option>
+                        <option value="ZACATECAS">ZACATECAS</option>                        
+                    </select>
+                </label>
+            </div>
+                            
+            			
+            <div class="form-row">
+            	<center>
+	            	<label>
+	                    <p class="help-block raq">* información requerida</p>
+	                </label>
+	                <label>
+	                    <a class="help-block raq" href="../terms-conditions.html" target="_blank">politica de privacidad&NonBreakingSpace;&NonBreakingSpace;<img src="assets/base-ui/land-rover/img/dark_carot.png" class="pparrow raq"></a>
+	                </label>
+                </center>
+                <button class="raq" type="submit">Enviar</button>
+            </div>
+            <input type="hidden" name="signature_form" value="b05f1e05d8bfa4e5e1a54f5e1e2423" />
+            </fieldset>
+        </form>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/base-ui/jquery/jquery-1.11.1.min.js">/x3C/script>')</script>
+
+    <script src="assets/base-ui/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/base-ui/jquery/jquery.validate.js"></script>
+    <script src="assets/base-ui/jquery/additional-methods.js"></script>
+    <script src="assets/base-ui/bootstrap/bootstrap-select/bootstrap-select.js"></script>
+    <script src="assets/base-ui/land-rover/js/custom.raq.js"></script>
+             
+             
+	<!-- specific validation rules -->
+	
+			<script>
+			$( document ).ready(function() {
+						
+			$( "#purchase_timeframe_desktop" ).rules( "add", {
+			  required: true,
+			  messages: {
+				required: "Debes elegir un periodo de tiempo"
+			  }
+			});
+												
+			$( "#state_desktop" ).rules( "add", {
+			  required: true,
+			  messages: {
+				required: "Debes elegir un estado"
+			  }
+			});
+									});
+			</script>
+		
+			<script src="assets/picker/picker.js" /></script>
+			<script src="assets/picker/picker.date.js" /></script>
+			<script src="assets/picker/picker.time.js" /></script>
+			<script src="assets/picker/translations/es_ES.js" /></script>
+			<script src="assets/ready.js" /></script>
+<!-- 
+	<h2> Debug </h2>
+	<h3> Received data </h3>
+<pre>
+Array
+(
+)
+</pre>
+	<h3> Errors </h3>
+<pre>
+</pre>
+-->
+             
+             
+</body>
+
+</html>

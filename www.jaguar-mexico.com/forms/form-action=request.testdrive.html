@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>SOLICITA UNA PRUEBA DE MANEJO</title>
+
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/form-basic.css">
+    <link rel="stylesheet" type="text/css" href="assets/shared/css/reset-v.css">
+	<link rel="stylesheet" href="../resources/css/fonts-jaguar.css"/>
+	<link rel="stylesheet" href="../resources/css/fonts-proximanova-latin1.css"/>
+
+        <link href="assets/css/main_stc.css" rel="stylesheet" type="text/css" media="screen" />
+        
+    <link rel="stylesheet" href="assets/base-ui/bootstrap/bootstrap-select/bootstrap-select.css">
+    <link rel="stylesheet" href="assets/base-ui/bootstrap/bootstrap-datepicker/css/datepicker.css">
+    <link rel="stylesheet" href="assets/base-ui/bootstrap/bootstrap-datepicker/css/datepicker3.css">
+    
+    <link rel="stylesheet" href="assets/picker/themes/default.css" />
+	<link rel="stylesheet" href="assets/picker/themes/default.date.css" />
+	<link rel="stylesheet" href="assets/picker/themes/default.time.css" />
+   
+</head>
+<center>
+	<header>
+		<h1>JAGUAR</h1><br><br><h2>SOLICITA UNA PRUEBA DE MANEJO<br></h2>
+    </header>
+</center>
+    <div class="main-content">
+
+
+        <!-- You only need this form and the form-basic.css -->
+
+        <form role="form" id="raqform" name="raqform" method="post" enctype="multipart/form-data"class="form-basic" >
+
+        	<input type="hidden" name="action"  value="process_general_form" class="ignore">
+    		<input type="hidden" name="vehicle_make" id="vehicle_make" value="Jaguar" class="ignore">
+    		<input type="hidden" name="keepinformed" id="keepinformed" value="true" class="ignore">
+    		<input type="hidden" name="customer_preferredcontact" id="customer_preferredcontact" value="email" class="ignore">
+
+            <fieldset>
+
+            <div class="form-title-row">
+				<span>Para agendar una prueba de manejo y a fin de brindarte una atención más personalizada, por favor llena los campos solicitados a continuación.</span>
+            </div>
+
+                            
+            <div class="form-row">
+                <label>
+                    <span>Nombre*</span>
+                    <input type="text" name="customer_firstname" placeholder="Nombre" class=":required raq" required />
+                </label>
+            </div>
+			
+			<div class="form-row">
+                <label>
+                    <span>Apellido*</span>
+                    <input type="text" name="customer_lastname" placeholder="Apellido" class=":required raq" required />
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Correo electr&oacute;nico*</span>
+                    <input type="text" placeholder="nombre@email.com" name="customer_email" class=":required :email raq" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
+                </label>
+            </div>
+			
+            <div class="form-row">
+                <label>
+                    <span>Tel&eacute;fono*</span>
+                    <input type="phone" placeholder="10 d&iacute;gitos" name="customer_phone" class=":required raq" required />
+                </label>
+            </div>
+			
+			            <div class="form-row">
+                <label>
+                    <span>Modelo*</span>
+                    <select name="vehicle_model" class=":required raq" required>
+                        <option value="">Elija un modelo</option>
+                        <option value="JAGUAR FTYPE"> JAGUAR FTYPE</option><option value="JAGUAR XF"> JAGUAR XF</option><option value="JAGUAR XJ"> JAGUAR XJ</option><option value="JAGUAR XE"> JAGUAR XE</option>                    </select>
+                </label>
+            </div>
+			                        <div class="form-row">
+                <label>
+                    <span>Distribuidor*</span>
+                    <select name="dealer_desktop" id="dealer_desktop" class=":required raq" required>
+                        <option value="">Elija</option>
+                        <option value="2"> JAGUAR LAND ROVER MASARYK </option><option value="3"> JAGUAR LAND ROVER PEDREGAL </option><option value="6"> JAGUAR LAND ROVER GUADALAJARA </option><option value="8"> JAGUAR LAND ROVER LEON</option><option value="1"> JAGUAR LAND ROVER MONTERREY </option><option value="9"> JAGUAR LAND ROVER MERIDA</option><option value="10"> JAGUAR LAND ROVER INTERLOMAS</option><option value="11"> JAGUAR LAND ROVER PUEBLA</option><option value="7"> JAGUAR LAND ROVER COUNTRY GUADALAJARA</option><option value="12"> JAGUAR LAND ROVER CULIACAN</option>                    </select>
+                </label>
+            </div>
+                        
+                                        
+                            
+            			<div class="form-row">
+                <label for="input_date" class="raq input-text"><span>Fecha de preferencia*</span></label>
+                <input tabindex="8" type="text" placeholder="Click para elegir" name="date_desktop" id="input_date" class="form-control raq" style="cursor:pointer !important;">
+            </div>
+            <div class="form-row">
+                <label for="input_time" class="input-text raq"><span>Hora*</span></label>
+                <input tabindex="9" type="text" placeholder="Click para elegir" name="time_desktop" id="input_time" class="form-control raq" style="cursor:pointer !important;">
+            </div>
+            			
+            <div class="form-row">
+            	<center>
+	            	<label>
+	                    <p class="help-block raq">* información requerida</p>
+	                </label>
+	                <label>
+	                    <a class="help-block raq" href="../terms-conditions.html" target="_blank">politica de privacidad&NonBreakingSpace;&NonBreakingSpace;<img src="assets/base-ui/land-rover/img/dark_carot.png" class="pparrow raq"></a>
+	                </label>
+                </center>
+                <button class="raq" type="submit">Enviar</button>
+            </div>
+            <input type="hidden" name="signature_form" value="b05f1e05d8bfa4e5e1a54f5e1e2423" />
+            </fieldset>
+        </form>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/base-ui/jquery/jquery-1.11.1.min.js">/x3C/script>')</script>
+
+    <script src="assets/base-ui/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/base-ui/jquery/jquery.validate.js"></script>
+    <script src="assets/base-ui/jquery/additional-methods.js"></script>
+    <script src="assets/base-ui/bootstrap/bootstrap-select/bootstrap-select.js"></script>
+    <script src="assets/base-ui/land-rover/js/custom.raq.js"></script>
+             
+             
+	<!-- specific validation rules -->
+	
+			<script>
+			$( document ).ready(function() {
+									
+			$( "#dealer_desktop" ).rules( "add", {
+			  required: true,
+			  messages: {
+				required: "Debes elegir un distribuidor"
+			  }
+			});
+												
+			$( "#input_date" ).rules( "add", {
+			  required: true,
+			  length: 10,
+			  messages: {
+				required: "Debes elegir una fecha"
+			  }
+			});
+			$( "#input_time" ).rules( "add", {
+			  required: true,
+			  length: 5,
+			  messages: {
+				required: "Debes elegir una hora",
+				length: "La hora no parece valida"
+			  }
+			});
+						});
+			</script>
+		
+			<script src="assets/picker/picker.js" /></script>
+			<script src="assets/picker/picker.date.js" /></script>
+			<script src="assets/picker/picker.time.js" /></script>
+			<script src="assets/picker/translations/es_ES.js" /></script>
+			<script src="assets/ready.js" /></script>
+<!-- 
+	<h2> Debug </h2>
+	<h3> Received data </h3>
+<pre>
+Array
+(
+)
+</pre>
+	<h3> Errors </h3>
+<pre>
+</pre>
+-->
+             
+             
+</body>
+
+</html>

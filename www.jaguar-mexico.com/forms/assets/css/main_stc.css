@@ -1,0 +1,44 @@
+fieldset {
+	border: 0;
+}
+	/* Validator Form */
+	
+input.vanadium-invalid, select.vanadium-invalid, textarea.vanadium-invalid {
+  border-color: red !important;
+  border-style: solid !important;
+}
+
+input.vanadium-valid, select.vanadium-valid, textarea.vanadium-valid {
+  border-color: #0F0 !important;
+  border-style: solid !important;
+}
+
+.vanadium-message-value {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.vanadium-advice {
+  font-size: 13px;
+}
+
+.vanadium-advice.vanadium-invalid, .vanadium-advice.vanadium-invalid * {
+  color: red;
+}
+
+input.vanadium-valid {
+  background-color: greenyellow;
+}
+
+input.vanadium-valid ~ .vanadium-valid-advice {
+  display: inline !important;
+  color: green;
+}
+
+.container.vanadium-valid {
+  border-color: #0F0 !important;
+}
+
+.container.vanadium-invalid {
+  border-color: #F00 !important;
+}
