@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+html, body{padding: 0px; margin:0; font-family: NissanAGRegular, Helvetica, Arial, sans-serif; font-size:13px; line-height: 130%;}
+body{background: transparent url('../imagenes/nissan-mayo.jpg') center top no-repeat; }
+body p{font-family: Lato, Helvetica, Arial, sans-serif; color:#797979; font-size:12px; line-height: 1.6; margin:0;}
+a {color: #C81444; text-decoration: none;}
+a:hover {text-decoration: none; color:#F2AC30;}
+.seo{display:none;}
+#head{margin:0 auto; width:1040px; height:160px; position:relative;}
+section{margin:0; width:100%; height:auto;}
+#contenido{margin:-50px auto 0; width:1040px; height:570px; position:relative;}
+#atributos{margin:30px auto; width:1040px; height:auto;}
+#atributos h3{font-family: NissanAGBold, Helvetica, Arial, sans-serif; font-size: 34px; text-align: left; padding: 5px 0 15px; border-bottom: 1px dashed #000000; color:#000000;}
+#atributos .tiida{width:33%; height:auto; float:left; display:inline-block; background:#f4f4f4; padding: 20px 0;}
+#atributos .march{width:33%; height:auto; float:left; display:inline-block; background:#eeeeee; padding: 20px 0;}
+#atributos .versa{width:33%; height:auto; float:left; display:inline-block; background:#e5e5e5; padding: 20px 0;}
+.formulario {width: 300px; height: 546px; position: absolute; right: 0; top: 0px; background: #313131;}
+.frase{font-family: NissanAGRegular, Helvetica, Arial, sans-serif; color:#000000; text-transform: uppercase; font-size: 34px; width: 550px; height: 150px; position: absolute; left:190px; top: 0px; line-height: 1.1;}
+.frase span{font-family: NissanAGBold, Helvetica, Arial, sans-serif;}
+.frase strong{font-size: 70px; font-family: NissanAGBold, Helvetica, Arial, sans-serif; color:#c61444;}
+.triangulo_izq {width: 0; height: 0; border-top: 30px solid transparent; border-right: 40px solid #313131; border-bottom: 30px solid transparent; position: absolute; right: 300px; top: 80px;}
+.autos{width: 700px; height: 140px; position: absolute; left: 0; bottom: 25px;}
+.auto{width:200px; height:116px; float:left; display:inline-block; margin-right:13px; background: #eeeeee; padding: 12px; line-height: 1.2; text-transform: uppercase;}
+.autolast{width:200px; height:116px; float:left; display:inline-block; background: #eeeeee; padding: 12px; line-height: 1.2; text-transform: uppercase;}
+.auto span.nombre, .autolast span.nombre{font-family: NissanAGBold, Helvetica, Arial, sans-serif; color:#000000; font-size: 24px;}
+.auto span.version, .autolast span.version{font-family: NissanAGRegular, Helvetica, Arial, sans-serif; color:#c61444; font-size: 14px;}
+.auto div.precio, .autolast div.precio{background: #ffffff; font-family: NissanAGRegular, Helvetica, Arial, sans-serif; color:#707070; font-size: 14px; padding: 8px; margin-top: 12px;}
+.auto div.precio span, .autolast div.precio span{font-family: NissanAGBold, Helvetica, Arial, sans-serif; color:#c61444; font-size: 22px}
+footer{width:100%; height:auto; padding:15px 0; background:#ffffff; display: inline-block; position: relative;}
+footer .contiene{margin:0px auto; width:1040px; height:auto; text-align:center;}
+#nissan{width:122px; height:158px; margin:0; background-image: url('../imagenes/nissan.png'); background-size:auto 100%; background-position:center center; background-repeat:no-repeat; position:absolute; left:0; top:0;}
+#telefonos{margin: 0 auto; padding: 7px 10px; background: #000000; color: #ffffff; font-size: 16px; font-style: italic; font-family: NissanAGBold, Helvetica, Arial, sans-serif; width: 300px; text-align: center;}
+#daosa{width:272px; height:60px; margin:0; background-image: url('../imagenes/daosa.png'); background-size:auto 100%; background-position:center center; background-repeat:no-repeat; position:absolute; right:0; top:15px;}
+#nissanGdl{width:341px; height:60px; margin:0; background-image: url('../imagenes/gdl-nissan.jpg'); background-size:auto 100%; background-position:center center; background-repeat:no-repeat; position:absolute; right:0; top:0;}
+.caracteristicas{width:80%; height:auto; display:block; margin:20px auto 0; border:1px solid #eeeeee;}
+.caracteristicas img{width:100%; height:auto; margin-bottom: -4px;}
+.texto{padding:15px; background: rgba(0,0,0,0.1)}
+
+/* INCLUDE FUENTES */
+@font-face {
+  font-family: NissanAGBold;
+  src: url('http://www.nissan.com.mx/fonts/nissanag-bold-webfont.eot?1428691099');
+  src: url('http://www.nissan.com.mx/fonts/nissanag-bold-webfont.eot?&1428691099#iefix') format('embedded-opentype'), url('http://www.nissan.com.mx/fonts/nissanag-bold-webfont.ttf?1428691099') format('truetype'), url('http://www.nissan.com.mx/fonts/nissanag-bold-webfont.woff?1428691099') format('woff'), url('http://www.nissan.com.mx/fonts/nissanag-bold-webfont.svg?1428691099#NissanAGBold') format('svg');
+}
+@font-face {
+  font-family: NissanAGMedium;
+  src: url('http://www.nissan.com.mx/fonts/nissanag-medium-webfont.eot?1428691099');
+  src: url('http://www.nissan.com.mx/fonts/nissanag-medium-webfont.eot?&1428691099#iefix') format('embedded-opentype'), url('http://www.nissan.com.mx/fonts/nissanag-medium-webfont.ttf?1428691099') format('truetype'), url('http://www.nissan.com.mx/fonts/nissanag-medium-webfont.woff?1428691099') format('woff'), url('http://www.nissan.com.mx/fonts/nissanag-medium-webfont.svg?1428691099#NissanAGMedium') format('svg');
+}
+@font-face {
+  font-family: NissanAGRegular;
+  src: url('http://www.nissan.com.mx/fonts/nissanag-regular-webfont.eot?1428691099');
+  src: url('http://www.nissan.com.mx/fonts/nissanag-regular-webfont.eot?&1428691099#iefix') format('embedded-opentype'), url('http://www.nissan.com.mx/fonts/nissanag-regular-webfont.ttf?1428691099') format('truetype'), url('http://www.nissan.com.mx/fonts/nissanag-regular-webfont.eot.woff?1428691099') format('woff'), url('http://www.nissan.com.mx/fonts/nissanag-regular-webfont.svg?1428691099#NissanAGRegular') format('svg');
+}
+@font-face {
+  font-family: NissanAGMedExt;
+  src: url('http://www.nissan.com.mx/fonts/nissanag-medext-webfont.eot?1428691099');
+  src: url('http://www.nissan.com.mx/fonts/nissanag-medext-webfont.eot?&1428691099#iefix') format('embedded-opentype'), url('http://www.nissan.com.mx/fonts/nissanag-medext-webfont.ttf?1428691099') format('truetype'), url('http://www.nissan.com.mx/fonts/nissanag-medext-webfont.woff?1428691099') format('woff'), url('http://www.nissan.com.mx/fonts/nissanag-medext-webfont.svg?1428691099#NissanAGMedExt') format('svg');
+}
+/* FIN INCLUDE FUENTES */

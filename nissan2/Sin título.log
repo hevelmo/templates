@@ -1,0 +1,12 @@
+
+20/05/16 1:34:45 p.m. - ERROR: Download of "http://nissanguadalajara.com/movil/favicon.ico",
+	referenced from "http://nissanguadalajara.com/movil/",
+	failed with error code -1100 (File does not exist.)
+20/05/16 1:34:45 p.m. - ERROR: Download of "http://nissanguadalajara.com/movil/imagenes/nissan.jpg",
+	referenced from "http://nissanguadalajara.com/movil/css/estilos.css",
+	failed with error code -1100 (File does not exist.)
+20/05/16 1:34:45 p.m. - ERROR: Download of "http://nissanguadalajara.com/movil/imagenes/daosa.png",
+	referenced from "http://nissanguadalajara.com/movil/css/estilos.css",
+	failed with error code -1100 (File does not exist.)
+
+---------------------
