@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="es-MX" class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="es-MX" class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="es-MX" class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html lang="es-MX" class="no-js lt-ie10"> <![endif]-->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Suzuki Autos Guadalajara</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <!--<meta name="google-site-verification" content="000000000000000000" />-->
+        <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" />
+        <link type="text/css" rel="stylesheet" href="css/plugins/jquery.fancybox/jquery.fancybox.css" />
+        <link type="text/css" rel="stylesheet" href="css/plugins/jquery.fancybox/jquery.fancybox-thumbs.css" />
+        <link type="text/css" rel="stylesheet" href="css/plugins/jquery.fancybox/jquery.fancybox-buttons.css" />
+        <link type="text/css" rel="stylesheet" href="css/plugins/jquery.chosen/chosen.css" />
+        <link type="text/css" rel="stylesheet" href="css/libs/datepicker.css" />
+        <link type="text/css" rel="stylesheet" href="css/suzuki/main.css" />
+        <link type="text/css" rel="stylesheet" href="css/webfonts/fontawesome/font-awesome.css" />
+        <link type="text/css" rel="stylesheet" href="css/webfonts/suzuki-webfontkit/stylesheet.css" />
+        <link type="text/css" rel="stylesheet" href="css/plugins/jquery.dummy-alert/main.css" />
+        <link type="text/css" rel="stylesheet" href="css/plugins/instantdrive.utils/main.css" />
+        <link type="text/css" rel="stylesheet" href="css/sections/concessionaires.css" />
+        <!-- Favicons
+         ==================================================
+        <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+        <link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+        --> <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-56368711-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+        <!-- End Google Analytics --><script type='text/javascript'>
+        function trackOutboundLink( url ) {
+        	ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; } });
+        }
+        //Usage :
+        //<a href="http://www.example.com" onclick=”trackOutboundLink(‘http://www.example.com’); return false;">Check out example.com</a>
+        </script>
+        <!--[if IE]>
+        <link type="text/css" rel="stylesheet" href="/css/suzuki/iefix.css" />
+        <![endif]-->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!-- Suzuki v2.0.2 ( 2014-03-13 ) -->
+    </head>
+    <body>
+        <!-- Begin: Header -->
+            <section id="header-wrapper">
+                <section id="header-content">
+                    <div class="header-wrapper" id="header-spacer">
+                        <header id="header-zone">
+                            <div id="logo-wrapper">
+                                <div id="logo">
+                                    <a href="/" title="Suzuki Autos México">
+                                        <span>Suzuki <sup style="position: relative; top: -2px;">&copy;</sup> Guadalajara</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="regular-header">
+                                <div class="content-no_wrapper">
+                                    <div id="top-bar">
+                                        <nav>
+                                            <ul>
+                                                <li>
+                                                    <a href="grupo"   title="Grupo">
+                                                        <span>Grupo</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="concesionarias"   title="Grupo">
+                                                        <span>Concesionarias</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="catalogo.html" title="Catalogos">
+                                                        <span>Catálogos</span>
+                                                    </a>
+                                                </li>
+                                                <li class="last">
+                                                    <a href="contacto.html" title="Contactános">
+                                                        <span>Contáctanos</span>
+                                                    </a>
+                                                </li>
+                                                <li class="last">
+                                                    <a href="http://suzukigdl.com.mx/seminuevos/" title="Seminuevos López Mateos">
+                                                        <span>Seminuevos</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div id="main-nav">
+                                        <nav>
+                                            <ul>
+                                                <li>
+                                                    <a href="#modelos" title="Modelos" class="expand-header" id="header-models-button">
+                                                        <span>Modelos</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#financiamiento" onclick="ga('send', 'event', 'Financiamiento', 'Paso_1', 'Header_Selecciona_Suzuki');" title="Financiamiento" class="expand-header" id="header-financing-button">
+                                                        <span>Financiamiento</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#propietarios" title="Propietarios" class="expand-header" id="header-owners-button">
+                                                        <span>Mi Suzuki</span>
+                                                    </a>
+                                                </li>
+                                                <li class="last">
+                                                    <a href="#antes-de-comprar" title="Antes de comprar" class="expand-header" id="header-before-buy-button">
+                                                        <span>Comprar un Suzuki</span>
+                                                    </a>
+                                                </li>
+                                                <div class="clearfix"></div>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="models-header">
+                                <div class="content">
+
+                                </div>
+                            </div>
+                        </header>
+                        <div id="header-mobile">
+                            <a href="/"><img src="images/template/common/header/horizontal_logo.png" alt="Logo Suzuki"></a>
+                            <i class="fa fa-bars" id="show-panel-header-mobile"></i>
+                            <!--<i class="fa fa-reorder" id="show-panel-header-mobile">&#9776;</i>-->
+                        </div>
+                        <div id="header-panel">
+                            <div id="header-sections-wrapper"></div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        <!-- End: Header -->
+        <!-- Begin: Content -->
+            <div id="content-wrapper">
+                <div id="content-content">
+                    <!--<div id="concessionaires" class="window-adaptable" data-min-height="550">-->
+                    <div id="concessionaires" class="window-adaptable hidden-mobil" data-min-height="550">
+                        <div class="concessionaire-column list" id="concessionaires-list">
+                            <div class="content">
+                                <div class="concessionaire-grupo" align="justify" style="display:none;">Suzuki Vallarta fue la primera agencia de la marca SUZUKI en el Estado de Jalisco abriendo sus puertas a los jaliscienses en el año 2005; durante el año 2006 crecimos nuestras instalaciones en el área de servicio y sala de ventas para brindar una mejor atención a nuestros clientes.<br><br>
+                                Gracias al éxito de la marca, en el año 2008 inauguramos la sucursal de López Mateos que es una de las concesionarias más grandes del país, contamos también con dos agencias mas, ubicadas en Colima y Morelia , convirtiéndonos así, en el grupo con mas agencias Suzuki en el país.<br>
+                                <br>
+                                Por 5 años consecutivos nos hemos mantenido dentro de los primeros cinco lugares de ventas a nivel nacional y representamos el 11% de las ventas de la marca Suzuki en México.<br><br>
+                                Al ser uno de los grupos con más agencias, Suzuki Motor de México nos ha tomado en cuenta para programas piloto de la marca, los más destacados: CRM, Certificación de Refacciones y Suzuki Test Drive.</div>
+                                <div class="concessionaire-list">
+                                    <div id="concessionaires-dynamic-list">
+                                        <a name="concesionaires-list"></a>
+                                        <ul>
+                                            <li class="separator">Jalisco</li>
+                                            <li class="concessionaire" data-key="lopez-mateos">
+                                                <div class="image">
+                                                    <img src="images/sections/concessionaires/previews/lopez-mateos-small.jpg" title="Suzuki López Mateos" />
+                                                </div>
+                                                <div class="address">
+                                                    <h3><a href="concesionarias/suzuki-lopez-mateos.html">Suzuki López Mateos</a></h3>
+                                                    <address>
+                                                        <span class="address">Av. López Mateos Núm. 5654 Col. Arboledas, Zapopan, Jalisco.</span><br>
+                                                        <span class="phone">01-(33)-3884-8200</span>
+                                                    </address>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <i>&#59238;</i>
+                                            </li>
+                                            <li class="concessionaire" data-key="vallarta">
+                                                <div class="image">
+                                                    <img src="images/sections/concessionaires/previews/vallarta-small.jpg" title="Suzuki Vallarta" />
+                                                </div>
+                                                <div class="address">
+                                                    <h3><a href="concesionarias/suzuki-vallarta.html">Suzuki Vallarta</a></h3>
+                                                    <address>
+                                                        <span class="address">Av. Vallarta Núm. 5300 Col. Jardines  Vallarta, Zapopan, Jalisco.</span><br>
+                                                        <span class="phone">01-(33)-3777-1989</span>
+                                                    </address>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <i>&#59238;</i>
+                                            </li>
+                                            <li class="separator">Colima</li>
+                                            <li class="concessionaire" data-key="colima">
+                                                <div class="image">
+                                                    <img src="images/sections/concessionaires/previews/colima-small.jpg" title="Suzuki Colima" />
+                                                </div>
+                                                <div class="address">
+                                                    <h3><a href="concesionarias/suzuki-colima.html">Suzuki Colima</a></h3>
+                                                    <address>
+                                                        <span class="address">Av. Felipe Sevilla del Río Núm. 536, Col. Lomas de Circunvalación, Colima, Colima.</span><br>
+                                                        <span class="phone">01-(312)-316-3263</span>
+                                                    </address>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <i>&#59238;</i>
+                                            </li>
+                                            <li class="separator">Michoacán</li>
+                                            <li class="concessionaire" data-key="morelia">
+                                                <div class="image">
+                                                    <img src="images/sections/concessionaires/previews/morelia-small.jpg" title="Suzuki Morelia" />
+                                                </div>
+                                                <div class="address">
+                                                    <h3><a href="concesionarias/suzuki-morelia.html">Suzuki Morelia</a></h3>
+                                                    <address>
+                                                        <span class="address">Periférico Paseo de la Republica 3169 Colonia Las Américas</span><br>
+                                                        <span class="address">Morelia, Michoacán.</span><br>
+                                                        <span class="phone">01-(443)-500-53-00</span>
+                                                    </address>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <i>&#59238;</i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="concessionaire-column info" id="concessionaires-data">
+                            <div class="content">
+                                <div class="concessionaire-close-box">
+                                    <a href="#close" class="concessionaire-close">
+                                        <span>close</span>
+                                    </a>
+                                </div>
+                                <div class="concessionaire-data-wrapper">
+                                    <div class="wrapper-title">
+                                        <div class="data title">
+                                            <h1 id="concessionaire-title">Suzuki López Mateos</h1>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper-data">
+                                        <div class="data address">
+                                            <div class="section-name">Dirección</div>
+                                            <address id="concessionaire-address">
+                                                Av. López Mateos Núm. 5654 Col. Arboledas, Zapopan, Jalisco.
+                                            </address>
+                                            <p>CP: <span id="concessionaire-zip">44200</span></p>
+                                        </div>
+                                        <div class="data phone">
+                                            <div class="section-name">Teléfono</div>
+                                            <a id="concessionaire-phone" href="call:01-(33)-3884-8200" target="_blank">01-(33)-3884-8200</a>
+                                        </div>
+                                        <div class="data website" id="concessionaire-website-wrapper">
+                                            <div class="section-name">Sitio Web</div>
+                                            <p><a id="concessionaire-website" href="#" target="_blank">Sitio Web</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper-image">
+                                        <div class="big-image">
+                                            <img id="concessionaire-image" src="images/sections/concessionaires/previews/aguascalientes-big.jpg" alt="Suzuki Aguascalientes" title="Suzuki Aguascalientes" />
+                                        </div>
+                                    </div>
+                                    <div class="wrapper-test-drive">
+                                        <div class="data test-drive">
+                                            <a href="#prueba-de-manejo" id="open-test-drive">Agenda tu prueba de manejo</a>
+                                        </div>
+                                        <div class="view-more"><a href="#more" class="view-all-concessionaires">Ver todas las concesionarias</a></div>
+                                        <a href="#" id="back-list-concessionaires">Ver todas las concesionarias</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="concessionaire-column map" id='concessionaires-map'>
+                            <div class="content">
+                                 <div id="map_canvas" data-concessionaire-preselected-id="15" data-lat-lon="20.6244,-103.421"></div>
+                            </div>
+                            <div id="shadow-map"></div>
+                        </div>
+                    </div>
+                    <div id="concessionaires-normal" class="window-adaptable hidden-nomobil" data-min-height="550">
+                    <!--<div id="concessionaires-normal" class="window-adaptable hidden-nomobil" style="display: none;" data-min-height="550">-->
+                        <div class="concessionaire-column list-normal" id="concessionaires-list">
+                            <div class="content">
+                                <div class="concessionaire-list">
+                                    <div id="concessionaires-dynamic-list">
+                                        <a name="concesionaires-list"></a>
+                                        <ul>
+                                            <li class="separator">Jalisco</li>
+                                            <li class="concessionaire" data-key="lopez-mateos">
+                                                <div class="image">
+                                                    <img src="images/sections/concessionaires/previews/lopez-mateos-small.jpg" title="Suzuki López Mateos" />
+                                                </div>
+                                                <div class="address">
+                                                    <h3><a href="concesionarias/suzuki-lopez-mateos.html">Suzuki López Mateos</a></h3>
+                                                    <address>
+                                                        <span class="address">Av. López Mateos Núm. 5654 Col. Arboledas, Zapopan, Jalisco.</span><br>
+                                                        <span class="phone">01-(33)-3884-8200</span>
+                                                    </address>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                            <li class="concessionaire" data-key="vallarta">
+                                                <div class="image">
+                                                    <img src="images/sections/concessionaires/previews/vallarta-small.jpg" title="Suzuki Vallarta" />
+                                                </div>
+                                                <div class="address">
+                                                    <h3><a href="concesionarias/suzuki-vallarta.html">Suzuki Vallarta</a></h3>
+                                                    <address>
+                                                        <span class="address">Av. Vallarta Núm. 5300 Col. Jardines  Vallarta, Zapopan, Jalisco.</span><br>
+                                                        <span class="phone">01-(33)-3777-1989</span>
+                                                    </address>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                            <li class="separator">Colima</li>
+                                            <li class="concessionaire" data-key="colima">
+                                                <div class="image">
+                                                    <img src="images/sections/concessionaires/previews/colima-small.jpg" title="Suzuki Colima" />
+                                                </div>
+                                                <div class="address">
+                                                    <h3><a href="concesionarias/suzuki-colima.html">Suzuki Colima</a></h3>
+                                                    <address>
+                                                        <span class="address">Av. Felipe Sevilla del Río Núm. 536, Col. Lomas de Circunvalación, Colima, Colima.</span><br>
+                                                        <span class="phone">01-(312)-316-3263</span>
+                                                    </address>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                            <li class="separator">Michoacán</li>
+                                            <li class="concessionaire" data-key="morelia">
+                                                <div class="image">
+                                                    <img src="images/sections/concessionaires/previews/morelia-small.jpg" title="Suzuki Morelia" />
+                                                </div>
+                                                <div class="address">
+                                                    <h3><a href="concesionarias/suzuki-morelia.html">Suzuki Morelia</a></h3>
+                                                    <address>
+                                                        <span class="address">Av. Camelinas Núm. 3169 Fracc. Las Américas Morelia, Michoacán.</span><br>
+                                                        <span class="phone">01-(443)-500-53-00</span>
+                                                    </address>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="concessionaire-column info" id="concessionaires-data">
+                            <div class="content">
+                                <!--<div class="concessionaire-close-box">
+                                    <a href="#close" class="concessionaire-close">
+                                        <span>close</span>
+                                    </a>
+                                </div>-->
+                                <div class="concessionaire-data-wrapper">
+                                    <div class="wrapper-title">
+                                        <div class="data title">
+                                            <h1 id="concessionaire-title">Suzuki López Mateos</h1>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper-data">
+                                        <div class="data address">
+                                            <div class="section-name">Dirección</div>
+                                            <address id="concessionaire-address">
+                                                Av. López Mateos Núm. 5654 Col. Arboledas, Zapopan, Jalisco.
+                                            </address>
+                                            <p>CP: <span id="concessionaire-zip">44200</span></p>
+                                        </div>
+                                        <div class="data phone">
+                                            <div class="section-name">Teléfono</div>
+                                            <a id="concessionaire-phone" href="call:01-(33)-3884-8200" target="_blank">01-(33)-3884-8200</a>
+                                        </div>
+                                        <div class="data website" id="concessionaire-website-wrapper">
+                                            <div class="section-name">Sitio Web</div>
+                                            <p><a id="concessionaire-website" href="#" target="_blank">Sitio Web</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper-image">
+                                        <div class="big-image">
+                                            <img id="concessionaire-image" src="../images/sections/concessionaires/previews/lopez-mateos-big.jpg" alt="Suzuki López Mateos" title="Suzuki López Mateos" />
+                                        </div>
+                                    </div>
+                                    <div class="wrapper-test-drive">
+                                        <!--<div class="data test-drive">
+                                            <a href="#prueba-de-manejo" id="open-test-drive">Agenda tu prueba de manejo</a>
+                                        </div>-->
+                                        <div class="view-more"><a href="#more" class="view-all-concessionaires">Ver todas las concesionarias</a></div>
+                                        <!--<div class="view-more"><a href="#more" class="view-all-concessionaires">Ver todas las concesionarias</a></div>
+                                        <a href="#" id="back-list-concessionaires">Ver todas las concesionarias</a>-->
+                                    </div>
+                                </div>
+                                <div class="concessionaire-column map-normal" id='concessionaires-map-normal'>
+                                    <div class="content">
+                                         <div id="map_canvas_normal" data-concessionaire-preselected-id="15" data-lat-lon="20.6244,-103.421"></div>
+                                    </div>
+                                    <div id="shadow-map-normal"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- End: Content -->
+        <!-- Begin: Footer -->
+            <div id="footer-wrapper">
+                <div id="footer-content">
+                    <div class="footer-row first row-1">
+                        <div class="footer-column column-a">
+                            <div class="footer-title">Comprar un Suzuki <i class="fa fa-plus" style="font-size: 15px; margin: 5px 20px;"></i></div>
+                            <ul class="links">
+                                <li><a href="#modelos" onclick="$.openPanel( 'models' );return false;"><span>Modelos</span></a></li>
+                                <li><a href="catalogo.html"><span>Catálogos</span></a></li>
+                                <!--<li><a href="#prueba-de-manejo"  onclick=" var modelo = get_car_by_url(); $.openPanel('test-drive', modelo ); return false;"><span>Agenda prueba de manejo</span></a></li>-->
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="footer-column column-b">
+                            <div class="footer-title">Redes sociales <i class="fa fa-plus" style="font-size: 15px; margin: 5px 20px;"></i></div>
+                            <ul class="links social">
+                                <li><a onclick="ga('send', 'event', 'Social', 'Liga_externa', 'Footer_Facebook');"  target="_blank" href="https://www.facebook.com/SuzukiGuadalajaraLopezMateosYAvVallarta"><span>Facebook</span></a></li>
+                                <li><a onclick="ga('send', 'event', 'Social', 'Liga_externa', 'Footer_Twitter');"   target="_blank" href="https://twitter.com/Suzuki_Gdl"><span>Twitter</span></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="footer-column column-c">
+                            <div class="footer-title">Catálogos <i class="fa fa-plus" style="font-size: 15px; margin: 5px 20px;"></i></div>
+                            <ul class="links links-s-1">
+                                <li><a href="catalogo.html#swift"><span>Swift</span></a></li>
+                                <li><a href="catalogo.html#swift-sport"><span>Swift Sport</span></a></li>
+                                <li><a href="catalogo.html#kizashi"><span>Kizashi</span></a></li>
+                            </ul>
+                            <ul class="links links-s-2">
+                                <li><a href="catalogo.html#s-cross"><span>S-Cross</span></a></li>
+                                <li><a href="catalogo.html#grand-vitara"><span>Grand Vitara</span></a></li>
+                                <li><a href="catalogo.html#ciaz"><span>Ciaz</span></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="footer-column column-d hidden">
+                            <div class="footer-title">Financiamiento <i class="fa fa-plus" style="font-size: 15px; margin: 5px 20px;"></i><</div>
+                            <ul class="links">
+                                <!--<a href="#financiamiento"
+                                <li><a href="#" onclick="$.openPanel( 'financing' );return false;"><span>Obtener una cotización hoy mismo</span></a></li> -->
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="footer-row row-2">
+                        <div class="footer-column column-g">
+                            <div class="footer-title">Noticias Suzuki</div>
+                            <div class="footer-form">
+                            <!-- Begin MailChimp Signup Form -->
+                                <div id="mc_embed_signup">
+                                <p>Experimenta el estilo de vida Suzuki. Ingresa tus datos:</p>
+                                <form action="//medigraf.us6.list-manage.com/subscribe/post?u=eb6adc86fe16ad4e6562f80c1&amp;id=0136300666" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                    <div id="mc_embed_signup_scroll">
+                                        <fieldset>
+                                            <label for="mce-FNAME"><span style="color: red; font-size: 12px;"><span class="fa fa-asterisk"></span></span> Nombre completo:</label>
+                                            <input type="text" id="mce-FNAME" name="FNAME" placeholder="Nombre completo" data-validation-data="required|name">
+                                            <p class="invalid-message">Escribe tu nombre<span>&nbsp;</span></p>
+                                        </fieldset>
+                                        <fieldset>
+                                            <label for="mce-EMAIL"><span style="color: red; font-size: 12px;"><span class="fa fa-asterisk"></span></span> Correo electrónico:</label>
+                                            <input type="email" id="mce-EMAIL" name="EMAIL" placeholder="Correo electrónico" data-validation-data="required|email" novalidate="">
+                                            <p class="invalid-message">Escribe tu email<span>&nbsp;</span></p>
+                                        </fieldset>
+                                        <input type="hidden" name="CONCESIO" value="Guadalajara">
+                                        <div id="mce-responses" class="clear">
+                                            <div class="response" id="mce-error-response" style="display:none">Ocurrio un problema.</div>
+                                            <div class="response" id="mce-success-response" style="display:none">Se envió tu mensaje</div>
+                                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                        <div style="position: absolute; left: -5000px;"><input type="text" name="b_eb6adc86fe16ad4e6562f80c1_0136300666" tabindex="-1" value=""></div>
+                                        <div class="clear submit"><input type="submit" class="button red" value="Registrarse" name="subscribe" id="mc-embedded-subscribe"></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!--End mc_embed_signup-->
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="footer-row first row-1">
+                        <div class="footer-column column-a">
+                            <div class="footer-title"><a href="http://www.suzukivallarta.com.mx" target="_blank" style="color: #fff; font-weight: 900; font-size: 16px;">Av. Vallarta</a></div>
+                            Av. Vallarta No. 5300-A.<br/>
+                            Col. Jardines Vallarta. Zapopan, Jal.<br/>
+                            Tel. 01(33)3777-1989
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="footer-column column-c">
+                            <div class="footer-title"><a href="http://www.suzuki-lm.com.mx" target="_blank" style="color: #fff; font-weight: 900; font-size: 16px;">Av. López Mateos</a></div>
+                            Av. López Mateos No. 5654<br/>
+                            Col. Arboledas. Zapopan, Jal.<br/>
+                            Tel. 01(33)3884-8200
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="footer-column column-c">
+                            <div class="footer-title"><a href="http://www.suzukicolima.com.mx" target="_blank" style="color: #fff; font-weight: 900; font-size: 16px;">Colima</a></div>
+                            Av. Felipe Sevilla No. 536<br/>
+                            Col. Lomas de Circunvalación. Colima, Colima.<br/>
+                            Tel. 01(31)2316-3263
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="footer-column column-c">
+                            <div class="footer-title"><a href="http://www.suzukimorelia.com.mx" target="_blank" style="color: #fff; font-weight: 900; font-size: 16px;">Morelia</a></div>
+                            Periférico Paseo de la Republica 3169 Colonia Las Américas<br/>
+                            Morelia, Michoacán, C.P. 58270
+                            Tel. 01-(443)-500-53-00
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="footer-row last">
+                        <div class="footer-copyright">
+                            <p>&copy; 2015 Suzuki Motor de México / Guadalajara</p>
+                        </div>
+                        <div class="footer-legals">
+                            <ul class="links">
+
+                                <li><a href="legales.html"><span>Términos legales</span></a></li>
+                                <li><a href="aviso-privacidad.html"><span>Aviso de privacidad</span></a></li>
+                                <li class="last"><a target="_blank" href="http://www.globalsuzuki.com/"><span>Suzuki Global</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        <!-- End: Footer -->
+        <!--<script type="text/javascript">var IS_MOBILE = parseInt( 0 );</script>-->
+        <script type="text/javascript">var IS_MOBILE = parseInt( 0 );</script>
+        <!-- Responsive Menu -->
+        <script src="http://maps.google.com/maps/api/js?libraries=places,geometry&amp;sensor=true&amp;_nc=20140313A"></script>
+        <!--<script src="scripts/libs/jquery-1.10.2.js?_nc=20140313A"></script>-->
+        <script src="scripts/libs/jquery-1.10.2.min.js?_nc=20140313A"></script>
+        <script src="scripts/libs/jquery-ui-1.10.3.custom.min.js?_nc=20140313A"></script>
+        <script src="scripts/libs/jquery-ui-1.10.3.custom.extends.min.js?_nc=20140313A"></script>
+        <script src="scripts/libs/jquery.ui.touch-punch.min.js?_nc=20140313A"></script>
+        <script src="scripts/libs/modernizr-2.6.2.min.js?_nc=20140313A"></script>
+        <script src="scripts/libs/mustache.js?_nc=20140313A"></script>
+        <script src="plugins/amplify-1.1.0/amplify.min.js?_nc=20140313A"></script>
+        <script src="scripts/plugins/jquery.easing.1.3.js?_nc=20140313A"></script>
+        <script src="scripts/plugins/jquery.fancybox/jquery.fancybox.pack.js?_nc=20140313A"></script>
+        <script src="scripts/plugins/jquery.chosen/chosen.jquery.js?_nc=20140313A"></script>
+        <script src="plugins/resizeevent/jquery.resize.js?_nc=20140313A"></script>
+        <!--<script src="scripts/plugins/jquery.dummy-alert/jquery.dummy-alert.js?_nc=20140313A"></script>-->
+        <script src="plugins/placeholder/jquery.placeholder.js?_nc=20140313A"></script>
+        <script src="plugins/browserdetect/broswedetect.js?_nc=20140313A"></script>
+        <script src="scripts/suzuki/jquery.concessionaire_selector.js?_nc=20140313A"></script>
+        <script src="scripts/suzuki/ui.js?_nc=20140313A"></script>
+        <script src="scripts/libs/plugins.js?_nc=20140313A"></script>
+        <script src="scripts/suzuki/templates.js?_nc=20140313A"></script>
+        <script src="scripts/suzuki/suzuki.js?_nc=20140313A"></script>
+        <script src="instantdrive/scripts/utils.js?_nc=20140313A"></script>
+        <!--<script src="scripts/plugins/jquery.dummy-alert/jquery.dummy-alert.phrases.js?_nc=20140313A"></script>-->
+        <script src="scripts/plugins/googlemaps/infobox.js?_nc=20140313A"></script>
+        <script src="scripts/sections/concessionaires/concessionaires.js?_nc=20140313A"></script>
+        <!-- Google Code para etiquetas de remarketing -->
+        <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 956352007;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+        </script>
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <noscript>
+        <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/956352007/?value=0&amp;guid=ON&amp;script=0"/>
+        </div>
+        </noscript>
+    </body>
+</html>
