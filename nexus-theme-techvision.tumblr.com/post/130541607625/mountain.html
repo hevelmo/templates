@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<script>var __pbpa = true;</script><script>var translated_warning_string = 'Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?';</script><script type="text/javascript" language="javascript" src="http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=4407ac63b04a974114891da19b333539"></script>
+<!DOCTYPE html>
+<!--[if IE 8]><html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#"> 
+        <meta name="apple-itunes-app" content="app-id=305343404,affiliate-data=at=11l3M5&ct=us.itunes.uni.tumblr.ipdt,app-argument=tumblr://x-callback-url/blog?blogName=nexus-theme-techvision&postID=130541607625&referrer=smart-app-banner">
+        <meta charset="utf-8">
+        <title>NEXUS - THEME — Mountain</title>
+        
+        <meta name="description" content="Mountain">
+        
+        <style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}</style>
+<link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://static.tumblr.com/kc2pvvu/gYMn9ddmr/imagesloaded.pkgd.min.js"></script>
+<script src="http://static.tumblr.com/ftrip3q/oyJo1vioc/masonry-pkgd-min.js"></script>
+<script src="http://static.tumblr.com/kc2pvvu/KE0n721rz/jquery.infinitescroll.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+        
+    <script>
+   $(window).on("load", function(){
+   $("#content").animate({opacity: 1}, 15000);
+    
+   var loading = function(){
+        $(".loadingNextPosts").addClass("loadingNextPostsFadeIn");
+        function loadingFadeOut(){
+            var timeOutLoading = window.setTimeout(function(){
+                $(".loadingNextPosts").removeClass("loadingNextPostsFadeIn");
+            }, 10000);
+        }
+        loadingFadeOut();
+    }
+    var $pageNumber = 1;
+     
+    var $container = $("#content");
+    $container.infinitescroll({
+            prefill: true,
+            speed: 'fast',
+            navSelector: "#pagination",
+            nextSelector: "#pagination a:first-child",
+            itemSelector: "#content article",
+    },
+   function (newElements) {
+        loading();
+        var $newElems;
+        $newElems = $(newElements).css("opacity", "0");
+        $newElems.addClass("newItemInitial");
+        $newElems.imagesLoaded(function (){
+            $newElems.animate({opacity: 1}, "slow");
+            $newElems.addClass("newItemLoaded");
+            $container.masonry('appended', $newElems);
+        });
+        $pageNumber++;
+        Tumblr.LikeButton.get_status_by_page($pageNumber);
+        
+          $(".postImageContainer").hover(function(){
+            $(this).addClass('gradientHoverPost');
+            $(this).children(".notecount, .likeReblogButtons").addClass("notesLikeFadeIn");
+        }, function(){
+            $(this).removeClass('gradientHoverPost');
+            $(this).children(".notecount, .likeReblogButtons").removeClass("notesLikeFadeIn");
+        });
+    });
+    
+    function triggerMasonry(){
+    if(! $container){
+        return;
+    }
+    $container.imagesLoaded(function(){
+
+
+        $container.masonry({
+            itemSelector: 'article',
+            columnwidth: '.grid-sizer',
+            gutter: 0,
+            resize: true,
+            percentPosition: true
+        });
+    });
+    }
+    $(function(){
+        var $container = $("#content");
+        triggerMasonry();
+    });
+    WebFont.load({
+        google:{
+            families:['Arimo', 'Varela Round']
+        },
+        active: triggerMasonry,
+        inactive: triggerMasonry
+    });
+   
+    $(".headerButton").click(function(){
+        $('.sidebar').addClass("sidebarFadeIn");
+        $(".fadingBackground").addClass("fadingBackgroundTrigger");
+        $(".headerBlog").addClass("contentFade");
+        $("#content article").addClass("contentFade");
+        $(".loadingNextPosts").addClass("loadingNextPostsHidden");
+    });
+    $(".fadingBackground").click(function(){
+        $('.sidebar').removeClass("sidebarFadeIn");
+        $('body').removeClass("contentSlide");
+        $(this).removeClass("fadingBackgroundTrigger");
+        $(".headerBlog").removeClass("contentFade");
+        $("#content article").removeClass("contentFade");
+        $(".loadingNextPosts").removeClass("loadingNextPostsHidden");
+    });
+    
+    $(".postImageContainer").hover(function(){
+            $(this).addClass('gradientHoverPost');
+            $(this).children(".notecount, .likeReblogButtons").addClass("notesLikeFadeIn");
+        }, function(){
+            $(this).removeClass('gradientHoverPost');
+            $(this).children(".notecount, .likeReblogButtons").removeClass("notesLikeFadeIn");
+        });
+    
+    var fadeStart = 0;
+    var fadeUntil = screen.width/6;
+    var headerImageOpacity = 0;
+    var masthead = $(".headerBlog");
+    $(window).bind("scroll", function(){
+        var offset = $(document).scrollTop();
+        if(offset <= fadeUntil){
+            headerImageOpacity = 1 - (offset / (fadeUntil*1.5));
+        }
+        else if(offset <= fadeStart){
+            headerImageOpacity = 1;
+        }
+        masthead.css('opacity', headerImageOpacity);
+    });
+    
+    $(window).scroll(function(e){
+        scrollPosition = $(window).scrollTop();
+        $(".headerBlog").css("-webkit-transform", "translateY("+ -(scrollPosition*0.1) +"px)");
+        $(".HeaderBlog").css("transform", "translateY("+ -(scrollPosition*0.1) +"px)");
+    });
+});
+    </script>
+    <style>
+body{
+    background: #ecf0f1;
+    margin: 0;
+    padding: 0;
+}
+push-content{
+     left: 0;
+     overflow-x: hidden;
+     position: relative;
+     transition: all 0.5s ease-in;
+}
+.topBar{
+     width: 100%;
+     height: 80px;
+     background: #ffffff;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 99;
+     transition: all 0.5s ease-in;
+     text-align: center;
+}
+.topBar-push{
+    left: 18%;
+}
+.topBar a{
+    text-decoration: none;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    color: rgba(0,0,0,1);
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    font-size: 72%;
+    letter-spacing: 15px;
+    transition: all ease-in 0.3s;
+}
+.topBar a span{
+    border: 1px solid rgba(0,0,0,0.87);
+    padding: 10px;
+}
+.topBar a:hover{
+    opacity: 0.38;
+}
+.headerButton{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 28px;
+    left: 1.5%;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    transition: opacity 0.5s ease-out;
+}
+.headerButton:hover{
+    opacity: 0.6;
+}
+.socialTop{
+    position: fixed;
+    list-style: none;
+    top: 0;
+    right: 1%;
+    margin: 0;
+    margin-top: -10px;
+    padding: 0;
+    float: right;
+    opacity: 0.87;
+}
+.socialTop li{
+    float: left;
+}
+.socialTop li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    -webkit-transition: all ease-in 0.3s;
+    transition: all ease-in 0.3s;
+}
+.socialTop li a:hover{
+    opacity: 0.38;
+}
+.headerBlog{
+    width: 100%;
+    height: 0;
+    padding-bottom: 30%;
+    background: url('http://static.tumblr.com/68da64ae47155f8ce3971aa95f47435d/ftrip3q/a11o2dw8y/tumblr_static_18tqo86z2wkgcs4wwcws8g40w.jpg') no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 97;
+    transition: all 0.5s ease-in;
+}
+.headerBlog-push{
+    left: 18%;
+}
+.descriptionHeader{
+    display: block;
+    width: 35%;
+    padding: 0;
+    margin-left: 32.5%;
+    position: relative;
+    margin-top: 15%;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 130%;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 0.5px;
+}
+.sidebar{
+    width: 14%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -14%;
+    background: #ffffff;
+    background: #070707;
+    z-index: 99;
+    display: block;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+.sidebarFadeIn{
+    left: 0;
+}
+.menu-sidebar{
+    width: 60%;
+}
+.menu-sidebar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+    letter-spacing: 0px;
+}
+.menu-sidebar ul li{
+    display: block;
+    font-family: 'Varela Round', sans-serif;
+    text-transform: uppercase;
+    color: rgba(0,0,0,1);
+    color: rgba(255,255,255,1);
+    margin-left: 15%;
+    margin-bottom: 15%;
+    padding-right: 2%;
+    text-align: left;
+    font-size: 78%;
+    font-weight: bold;
+}
+.menu-sidebar ul li a{
+    text-decoration: none;
+    font-size: 100% !important;
+    color: rgba(0,0,0,0.87);
+    color: rgba(255,255,255,0.87);
+}
+.menu-sidebar ul li a:hover{
+    color: rgba(0,0,0,0.38);
+    color: rgba(255,255,255,0.38);
+}
+.titleBlog{
+    text-decoration: none;
+    color: rgba(0,0,0,1);
+    color: rgba(255,255,255,1);
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-align: center;
+    display: block;
+    margin-bottom: 5%;
+}
+.sidebarDescription{
+    color: rgba(0,0,0,1);
+    opacity: 0.7;
+    text-transform: capitalize !important;
+}
+.content-wrapper{
+    width: 100%;
+    position: relative;
+    background: #ecf0f1;
+    z-index: 98;
+}
+#content{
+    width: 85%;
+    margin: 0;
+    margin-top: 32%;
+    margin-left: 10%;
+    padding: 0;
+    padding-top: 20px;
+    display: block;
+    background: #ecf0f1;
+    z-index: 98;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.grid-sizer,
+#content article{
+    width: 20%;
+    
+    position: relative;
+    margin: 0;
+    margin-left: 2%;
+    margin-bottom: 20px;
+    padding: 0;
+    display: block !important;
+    padding: 0;
+    float: left !important;
+    z-index: 98;
+    border: 10px solid #ffffff;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.04);
+}
+.contentFade{
+    opacity: 0.8;
+}
+.contentFadeIn{
+    opacity: 1;
+}
+@media only screen and (max-width: 1100px){
+    .grid-sizer,
+    #content article{
+        width: 42%;
+    }
+}
+.textPost{
+    font-family: 'Arimo', sans-serif;
+    background: #ffffff;
+    
+    padding-bottom: 10%;
+}
+.textPost .title a{
+    font-weight: bold;
+    font-size: 80%;
+    text-decoration: none !important;
+    color: rgba(0,0,0,0.7) !important;
+    
+    padding: 5% 0% 0% 0%;
+    margin-left: 5%;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    
+}
+.textPost p{
+    letter-spacing: 0.6px;
+    font-weight: 400;
+    font-size: 90%;
+    color: rgba(0,0,0,0.38) !important;
+    
+    padding: 5%;
+}
+.textPost ul{
+    margin: 0;
+    margin-left: 5%;
+    padding: 0;
+    list-style: none;
+    display: block;
+    background: #ffffff;
+    
+}
+.textPost ul li{
+    display: inline !important;
+    margin-right: 5%;
+    float: left;
+}
+.textPost ul li a{
+    display: inline-block; 
+    float: left;
+}
+.textNotes{
+    font-family: 'Arimo', sans-serif;
+    font-size: 80%;
+    font-weight: bold;
+    color: rgba(0,0,0,0.54) !important;
+    
+    text-decoration: none;
+} 
+.quotePost{
+    background: #ffffff;
+    
+    padding-bottom: 5%;
+}
+.quotePost blockquote{
+    font-family: 'Arimo', sans-serif;
+    font-size: 90%;
+    font-weight: 400;
+    color: rgba(0,0,0,0.38) !important;  
+    
+    letter-spacing: 0.6px;
+    padding: 2%;
+    margin-left: 2%;
+    background: #ffffff;
+    
+}
+.quotePost cite{
+    font-family: 'Arimo', sans-serif;
+    font-size: 80%;
+    font-weight: bold;
+    color: rgba(0,0,0,0.7) !important;
+    
+    padding-bottom: 0.5%;
+    margin-left: 5%;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    
+    background: #ffffff;
+    
+}
+.quotePost ul{
+    margin: 0;
+    margin-top: 4%;
+    margin-left: 5%;
+    padding: 0;
+    list-style: none;
+    display: block;
+    background: #ffffff;
+}
+.quotePost ul li{
+    display: inline !important;
+    margin-right: 5%;
+    float: left;
+}
+.quotePost ul li a{
+    display: inline-block; 
+    float: left;
+}
+.quoteNotes{
+    font-family: 'Arimo', sans-serif;
+    font-size: 80%;
+    font-weight: bold;
+    color: rgba(0,0,0,0.54) !important;
+    
+    text-decoration: none;
+} 
+.type-chat{
+    background: #ffffff;
+    
+    padding-bottom: 5%;
+}
+.titleChat{
+    font-family: 'Arimo', sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    color: rgba(0,0,0,0.7) !important;   
+          
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    
+    margin-bottom: 5%;
+}
+.chat-lines{
+    list-style: none;
+    position: relative;
+    margin-top: 5% !important; 
+    padding: 5%;
+}
+.typeChat ul li{
+    font-family: 'Arimo', sans-serif;
+    font-size: 40% !important;
+    font-weight: 400;
+    padding: 5% !important;
+}
+.chatName{
+    font-weight: bold;
+}
+.odd{
+    margin-top: 4%;
+    color: rgba(0,0,0,0.38);
+    
+}
+.even{
+    color: rgba(0,0,0,0.6);
+    
+}
+.linkPost{
+    background: #ffffff;
+    
+    padding-bottom: 5%;
+}
+.linkPost .title a{
+    font-family: 'Arimo', sans-serif;
+    font-size: 80%;
+    font-weight: bold;
+    color: rgba(0,0,0,0.7) !important;
+    
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    
+    padding: 0;
+    padding-bottom: 2%;
+    margin-left: 2%;
+}
+.linkBody{
+    font-family: 'Arimo', sans-serif;
+    font-size: 70%;
+    font-weight: 400;
+    color: rgba(0,0,0,0.38) !important;  
+     
+    margin-left: 2%;
+}
+photo.inner{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ecf0f1;
+    display: inline-block;
+    text-transform: capitalize;
+}
+.postInfo{
+    width: 100%;
+    padding: 1% 0 5% 0;
+    background: #ffffff;
+    font-family: 'Arimo', sans-serif;
+    font-size: 85%;
+    text-transform: capitalize;
+    overflow-x: hidden;
+    
+}
+.postInfo a{
+    font-family: 'Arimo', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+.captionPost{
+    margin-left: 5%;
+    font-family: 'Arimo', sans-serif;
+    font-size: 80%;
+    font-weight: bold;
+    letter-spacing: 0.1px;
+    color: rgba(255,255,255,0.7) !important;
+    color: rgba(0,0,0,0.7) !important;
+}
+.captionPost a{
+    color: rgba(255,255,255,0.7);
+        color: rgba(0,0,0,0.7) !important;
+    text-decoration: none;
+}
+.contentSource{
+    margin-left: 5%;
+}
+.contentSource a{
+    padding-left: 2%;
+    border-left: 3px solid rgba(255,255,255,0.12);
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 80%;
+    text-decoration: none;
+    color: rgba(255,255,255,0.54);
+    color: rgba(0,0,0,0.7) !important;
+}
+.tags{
+    text-align: left;
+    font-size: 70%;
+}
+.tags li{
+    display: inline;
+    list-style-type: none;
+    
+    color: rgba(0,0,0,0.38);
+}
+.tags li a{
+    text-decoration: none;
+    
+    color: rgba(0,0,0,0.38);
+    text-transform: uppercase;
+}
+.tags a:before{
+    content: '#';
+}
+.postInfoTextShadow{
+    text-shadow: 0px 0px 10px #00a8ff;
+}
+.photosetInner{
+    width: 100%;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 85%;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    background: #ffffff;
+    color: #121212;
+}
+.photosetInner blockquote p{
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 85%;
+    letter-spacing: 0.2px;
+    color: #121212;
+    
+}
+.photosetInner p{
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 85%;
+    letter-spacing: 0.2px;
+    margin-left: 5% !important;
+    color: #121212;
+    
+}
+.photosetInner p a{
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 85%;
+    letter-spacing: 0.2px;
+    color: #121212;
+    
+}
+.html_photoset{
+    z-index: 1;
+    padding: 6% 0%;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 85%;
+    color: #000000;
+    text-transform: uppercase;
+}
+.photosetLikeReblog{
+    width: 100%;
+    padding: 1% 0 5% 0%;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+.photosetLikeReblog ul{
+    list-style: none;
+    padding: 2%;
+    margin-left: 15%;
+}
+.photosetLikeReblog ul li{
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-right: 10%;
+}
+.photoset img{
+    width: 100%;
+    position: relative;
+    display: block !important;
+}
+.tumblr_blog{
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+}
+.hover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.display{
+    opacity: 1;
+}
+.displayPostNotesContainer{
+    opacity: 1;
+    visibility: visible;
+}
+.wrapperContentPost{
+    width: 100%;
+    height: 0;
+    padding-bottom: 30%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    -moz-transition: padding-bottom 0.5s, opacity 0.5s, visibility 0.5s ease-out;
+    -o-transition: padding-bottom 0.5s, opacity 0.5s, visibility 0.5s ease-out;
+    -ms-transition: padding-bottom 0.5s, opacity 0.5s, visibility 0.5s ease-out;
+    -webkit-transition: padding-bottom 0.5s, opacity 0.5s, visibility 0.5s ease-out;
+    transition: padding-bottom 0.5s, opacity 0.5s, visibility 0.5s ease-out;
+}
+.wrapperContentPostSlide{
+    padding-bottom: 50%;
+    opacity: 1;
+    visibility: visible;
+    z-index: 99;
+}
+.notecount{
+    position: absolute;
+    top: 0.5%;
+    right: 1%;
+    text-transform: capitalize;
+    padding: 2%;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 80% !important;
+    letter-spacing: 0px;
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 1s, visibility 1s ease-out;
+    -moz-transition: opacity 1s, visibility 1s ease-out;
+    -ms-transition: opacity 1s, visibility 1s ease-out;
+    -o-transition: opacity 1s, visibility 1s ease-out;
+    transition: opacity 1s, visibility 1s ease-out;
+}
+.notecount a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.likeReblogButtons{
+    width: 50%;
+    opacity: 0;
+    visibility: hidden;
+    list-style: none;
+    position: absolute;
+    top: 0.5%;
+    left: 4%;
+    padding: 0;
+    -webkit-transition: opacity 1s, visibility 1s ease-out;
+    -moz-transition: opacity 1s, visibility 1s ease-out;
+    -ms-transition: opacity 1s, visibility 1s ease-out;
+    -o-transition: opacity 1s, visibility 1s ease-out;
+    transition: opacity 1s, visibility 1s ease-out;
+}
+.likeReblogButtons li{
+    height: 16px;
+    text-align: center;
+    position: relative;
+    margin-right: 12%;
+    float: left;
+    display: inline-block;
+    padding: 0;
+}
+.notesLikeFadeIn{
+    opacity: 1;
+    visibility: visible;
+}
+.postImageContainer{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    background: rgba(0,0,0,0.01);
+    -webkit-transition: background 0.5s ease-out;
+    transition: background 0.5s ease-out;
+}
+.gradientHoverPost{
+    background: rgba(0,0,0,0.6);
+}
+.imgPhoto{
+    width: 100%; 
+    -webkit-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: block;
+    vertical-align: top;
+    z-index: -1;
+    overflow: hidden;
+}
+.imgOpacity{
+    opacity: 0.6;
+}
+.newItemInitial{
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -webkit-transition: -webkit-transform 2.8s;
+    transition: transform 2.8s;
+    -moz-transition: -moz-transform 2.8s;
+    -o-transition: -o-transform 2.8s;
+    -ms-transition: -ms-transform 2.8s;
+}
+.newItemLoaded{
+    -webkit-transform: rotateX(360deg);
+    transform: rotateX(360deg);
+    -moz-transform: rotateX(360deg);
+    -o-transform: rotateX(360deg);
+    -ms-transform: rotateX(360deg);
+}
+.loadingNextPosts{
+    width: 100%;
+    height: 10%;
+    background: #090909;
+    margin: 0;
+    padding: 0;
+    padding-top: 2%;
+    font-family: 'Arimo', sans-serif;
+    font-size: 65%;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.4px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 99;
+    transition: box-shadow 1s ease-out;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+#loadingNextPosts p{
+    vertical-align: middle;
+    position: relative;
+}
+.loadingNextPostsFadeIn{
+    opacity: 1;
+    visibility: visible;
+}
+.loadingNextPostsHidden{
+    opacity: 0;
+    visibility: hidden;
+}
+#pagination{
+    visibility: hidden;
+    opacity: 0;
+}
+.fadingBackground{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 14%;
+    background: rgba(0,0,0,0.3);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
+    transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
+}
+.fadingBackgroundTrigger{
+    opacity: 1;
+    visibility: visible;
+}
+    </style>
+    <link rel="alternate" href="android-app://com.tumblr/tumblr/x-callback-url/blog?blogName=nexus-theme-techvision%26postID=130541607625" />
+<link rel="alternate" href="ios-app://305343404/tumblr/x-callback-url/blog?blogName=nexus-theme-techvision&postID=130541607625" />
+<link rel="alternate" type="application/json+oembed" href="https://www.tumblr.com/oembed/1.0?url=http://nexus-theme-techvision.tumblr.com/post/130541607625/mountain" title="Mountain"/>
+<script src="http://assets.tumblr.com/assets/scripts/tumblelog_post_message_queue.js?_v=8b0553f75283ecbeb78be24f096f4c2c"></script>
+
+<link rel="stylesheet" type="text/css" href="http://assets.tumblr.com/fonts/gibson/stylesheet.css?v=3">
+<meta name="keywords" content="Landscapes" />
+
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. --><!-- Read more: http://ogp.me/ --><meta property="fb:app_id" content="48119224995" /><meta property="og:site_name" content="NEXUS - THEME" /><meta property="og:title" content="" /><meta property="og:url" content="http://nexus-theme-techvision.tumblr.com/post/130541607625/mountain" /><meta property="og:description" content="Mountain" /><meta property="og:determiner" content="a" /><meta property="og:type" content="tumblr-feed:photo" /><meta property="og:image" content="http://41.media.tumblr.com/139a95d6d7e1253c63e68971473648e1/tumblr_nvqsmzOnc01u7hqnao1_1280.jpg" /><meta property="og:image:height" content="854" /><meta property="og:image:width" content="1280" /><meta property="al:ios:url" content="tumblr://x-callback-url/blog?blogName=nexus-theme-techvision&amp;postID=130541607625" /><meta property="al:ios:app_name" content="Tumblr" /><meta property="al:ios:app_store_id" content="305343404" /><meta property="al:android:url" content="tumblr://x-callback-url/blog?blogName=nexus-theme-techvision&amp;postID=130541607625" /><meta property="al:android:app_name" content="Tumblr" /><meta property="al:android:package" content="com.tumblr" /><!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+<!-- TWITTER TAGS --><meta charset="utf-8"><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="nexus-theme-techvision" /><meta name="twitter:description" content="Mountain" /><meta name="twitter:image" content="http://40.media.tumblr.com/139a95d6d7e1253c63e68971473648e1/tumblr_nvqsmzOnc01u7hqnao1_500.jpg" /><meta name="twitter:url" content="http://nexus-theme-techvision.tumblr.com/post/130541607625/mountain" /><meta name="twitter:site" content="tumblr" /><meta name="twitter:app:name:iphone" content="Tumblr" /><meta name="twitter:app:name:ipad" content="Tumblr" /><meta name="twitter:app:name:googleplay" content="Tumblr" /><meta name="twitter:app:id:iphone" content="305343404" /><meta name="twitter:app:id:ipad" content="305343404" /><meta name="twitter:app:id:googleplay" content="com.tumblr" /><meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=nexus-theme-techvision&amp;postID=130541607625&amp;referrer=twitter-cards" /><meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=nexus-theme-techvision&amp;postID=130541607625&amp;referrer=twitter-cards" /><meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=nexus-theme-techvision&amp;postID=130541607625&amp;referrer=twitter-cards" />
+
+<!-- GOOGLE CAROUSEL --><script type="application/ld+json">{"@type":"SocialMediaPosting","url":"http:\/\/nexus-theme-techvision.tumblr.com\/post\/130541607625\/mountain","mainEntityOfPage":true,"datePublished":"2015-10-05T10:18:35-04:00","author":"nexus-theme-techvision","image":"http:\/\/41.media.tumblr.com\/139a95d6d7e1253c63e68971473648e1\/tumblr_nvqsmzOnc01u7hqnao1_1280.jpg","articleBody":"Mountain","@context":"http:\/\/schema.org"}</script>
+<link rel="canonical" href="mountain.html" />
+
+</head>
+    <body class="push-content">
+    
+    <div class="topBar">
+        <img class="headerButton" src="http://static.tumblr.com/vipjqhy/4Gko1bj4v/hamburgerdark.png" />
+        <a href="../../index.html"><span>NEXUS</span></a>
+            <ul class="socialTop">
+        <li><a class="facebookTopBar" href=""><img src="http://static.tumblr.com/ftrip3q/8IZnupkz0/facebooklight.png" /></a></li>
+        <li><a class="twitterTopBar" href=""><img src="http://static.tumblr.com/ftrip3q/064nuttf9/twiiterlight.png" /></a></li>
+        <li><a class="instagramTopBar" href=""><img src="http://static.tumblr.com/ftrip3q/OD6nv67zc/instagramtopbarlight.png" /></a></li>
+        <li><a class="rssTopBar" href="../../rss.rss"><img src="http://static.tumblr.com/ftrip3q/bimnuttju/rsslight.png" /></a></li>
+    </ul>
+    </div>
+    
+    <div class="headerBlog">
+        <p class="descriptionHeader">Nexus is a clean and minimal theme with a large header, a slide-in sidebar and infinite scroll.</p>
+    </div>
+    <div class="sidebar">
+    <div class="menu-sidebar">
+        <ul>
+            <li class="titleBlog">NEXUS</li>
+            <li class="sidebarDescription">Nexus is a clean and minimal theme with a large header, a slide-in sidebar and infinite scroll.</li>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="http://techvision-themes.com">Theme</a></li>
+            <li><a href="../../archive.html">Archive</a></li>
+            <li><a href="../../rss.rss">Rss</a></li>
+            
+            
+            
+            <li><a href="../../tagged/Tech.html"><span>Tech</span></a></li>
+        <li><a href="../../tagged/Design.html"><span>Design</span></a></li>
+        <li><a href="../../tagged/Landscapes.html"><span>Landscapes</span></a></li>
+        <li><a href="http://nexus-theme-techvision.tumblr.com/tagged/Inspiration"><span>Inspiration</span></a></li>
+        <li><a href="http://nexus-theme-techvision.tumblr.com/tagged/Architecture"><span>Architecture</span></a></li>
+        </ul>
+        </div>
+    </div>
+
+<div class="content-wrapper">
+    <div id="content">
+    <div class="grid-sizer"></div>
+
+<article class="post">
+    
+
+    
+    <div class="photo inner">
+        <div class="postImageContainer">
+             <img class="imgPhoto" src="http://41.media.tumblr.com/139a95d6d7e1253c63e68971473648e1/tumblr_nvqsmzOnc01u7hqnao1_1280.jpg" alt="Mountain" />
+                <p class="notecount"><a href="mountain.html">2 notes</a></p>
+                <ul class="likeReblogButtons">
+                    <li class="reblogButton"><a href="https://www.tumblr.com/reblog/130541607625/2MuWZbPO" class="reblog_button"style="display: block;width:16px;height:16px;"><svg width="100%" height="100%" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#fff"><path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path></svg></a></li>
+                    <li class="likeButton"><div class="like_button" data-post-id="130541607625" data-blog-name="nexus-theme-techvision" id="like_button_130541607625"><iframe id="like_iframe_130541607625" src="http://assets.tumblr.com/assets/html/like_iframe.html?_v=7e54d4bd89ee867096df32769aefa90c#name=nexus-theme-techvision&post_id=130541607625&color=white&rk=2MuWZbPO&root_id=130541607625" scrolling="no" width="16" height="16" frameborder="0" class="like_toggle" allowTransparency="true" name="like_iframe_130541607625"></iframe></div></li>
+                </ul>
+        </div>
+       
+        <div class="postInfo">
+            <div class="captionPost"><p>Mountain</p></div>
+            <div class="contentSource">
+                 
+            </div>
+            
+            <ul class="tags">
+                
+                <li><a href="../../tagged/Landscapes.html">Landscapes</a></li>
+                
+            </ul>
+            
+        </div>             
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+</article>
+
+
+
+</div>
+
+</div>
+
+<style>
+body{
+    overflow-x: hidden;
+    background: #ffffff !important;
+}
+#tumblr_controls{
+    top: 0 !important;
+}
+.headerBlog{
+    display: none;
+}
+.content-wrapper{
+    background: #ffffff !important;
+}
+#content{
+    position: relative;
+    margin-top: 10%;
+    vertical-align: top;
+    z-index: 90;
+    background: #ffffff !important;
+}
+#content article{
+    width: 24%;
+    position: absolute;
+    top: 0;
+    margin-left: 38%;
+    overflow-y: auto;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    transition: box-shadow 0.25s ease-out;
+    overflow-y: hidden;
+    vertical-align: top;
+    float: none;
+}
+#content article:hover{
+    box-shadow: 0px 10px 6px -6px rgba(0,0,0,0.2);
+}
+.post{
+    margin-left: 44%;
+    background: #ffffff;
+}
+.postInfo{
+    display: block;
+    background: #ecf0f1 !important;
+}
+.captionPost{
+   color: rgba(0,0,0,0.7) !important;
+}
+.captionPost a{
+        color: rgba(0,0,0,0.7) !important;
+}
+.contentSource a{
+    color: rgba(0,0,0,0.7) !important;
+}
+.textInner{
+    background: white;
+}
+#ask_form{
+    margin-bottom: 10px;
+    height: 300px;
+}
+#content article:before{
+    content: none;
+}
+#content article:after{
+    content: none;
+}
+ol.notes{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0 0 1.5px 0;
+}
+.textPost{
+    background: #ffffff;
+}
+.title a{
+    text-shadow: none;
+}
+#permNotes{
+    width: 100%;
+    background: #ffffff;
+    position: relative;
+    margin-left: 0;
+    margin-top: 0;
+    padding-top: 5%;
+    padding-bottom: 15px;
+    font-family: 'Arimo', sans-serif;
+    font-size: 70%;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #121212;
+}
+#permNotes a{
+    color: #121212;
+}
+.notes li{
+    text-indent: 39%;
+    height: 50%;
+    margin-bottom: 0.5%;
+    color: #bbbbbb !important;
+}
+.notes li a{
+    font-family: 'Arimo', sans-serif;
+    font-size: 100%;
+    font-weight: 700;
+    color: #121212 !important;
+    text-decoration: none;
+}
+.notes li a img{
+    margin-right: 4px;
+    vertical-align: -25%;
+}
+.textInner a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+.note more_notes_link_container{
+    margin-top: 100px;
+}
+.more_notes_link{
+    color: #121212;
+    background: none;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    text-indent: 39%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.more_notes_link:hover{
+    text-shadow: 0px 0px 6px 2px #18a0df;
+}
+</style>
+
+
+<div id="permNotes">
+    <span class="notesItem"><ol class="notes"><!-- START NOTES --><li class="note reblog tumblelog_janfifteenth without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://janfifteenth.tumblr.com/" title="land fill"><img src="http://33.media.tumblr.com/avatar_81aa2b25462b_16.png" class="avatar " alt="" /></a><span class="action" data-post-url="http://janfifteenth.tumblr.com/post/140737464029"><a rel="nofollow" href="http://janfifteenth.tumblr.com/" class="tumblelog" title="land fill">janfifteenth</a> reblogged this from <a rel="nofollow" href="../../index.html" class="source_tumblelog" title="NEXUS - THEME">nexus-theme-techvision</a></span><div class="clear"></div></li><li class="note reblog tumblelog_irridium-theme without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://irridium-theme.tumblr.com/" title="Irridium"><img src="http://assets.tumblr.com/images/default_avatar/octahedron_closed_16.png" class="avatar " alt="" /></a><span class="action" data-post-url="http://irridium-theme.tumblr.com/post/138075567683"><a rel="nofollow" href="http://irridium-theme.tumblr.com/" class="tumblelog" title="Irridium">irridium-theme</a> reblogged this from <a rel="nofollow" href="../../index.html" class="source_tumblelog" title="NEXUS - THEME">nexus-theme-techvision</a></span><div class="clear"></div></li><li class="note reblog tumblelog_nexus-theme-techvision original_post without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="../../index.html" title="NEXUS - THEME"><img src="http://33.media.tumblr.com/avatar_7c327a4b5f2c_16.png" class="avatar " alt="" /></a><span class="action" data-post-url="http://nexus-theme-techvision.tumblr.com/post/130541607625"><a rel="nofollow" href="../../index.html" class="tumblelog" title="NEXUS - THEME">nexus-theme-techvision</a> posted this</span><div class="clear"></div></li><!-- END NOTES --></ol>
+</span>
+</div>
+
+
+<div class="loadingNextPosts"><p>LOADING NEXT SET OF POSTS...</p></div>
+
+<div class="searchFadingBackground"></div>
+<div class="fadingBackground"></div>
+
+<iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe><script type="text/javascript">
+    (function(){
+        var analytics_frame = document.getElementById('ga_target');
+        var analytics_iframe_loaded;
+        var user_logged_in;
+        var blog_is_nsfw = 'No';
+        var addthis_enabled = false;
+
+        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+        var eventer = window[eventMethod];
+        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+        eventer(messageEvent,function(e) {
+            var message = (e.data && e.data.split) ? e.data.split(';') : '';
+            switch (message[0]) {
+                case 'analytics_iframe_loaded':
+                    analytics_iframe_loaded = true;
+                    postCSMessage();
+                    postGAMessage();
+                    postATMessage();
+                    postRapidMessage();
+                    break;
+                case 'user_logged_in':
+                    user_logged_in = message[1];
+                    postGAMessage();
+                    postATMessage();
+                    break;
+            }
+        }, false);
+
+        analytics_frame.src = "https://secure.assets.tumblr.com/analytics.html?3fc3652c0f8f5058bb8bcd113bf32e17#" +
+                              "http://nexus-theme-techvision.tumblr.com";
+        function postGAMessage() {
+            if (analytics_iframe_loaded && user_logged_in) {
+                var is_ajax = false;
+                analytics_frame.contentWindow.postMessage(['tick_google_analytics', is_ajax, user_logged_in, blog_is_nsfw, '/post/130541607625/mountain?route=%2Fpost%2F%3Aid%2F%3Asummary'].join(';'), analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+        function postCSMessage() {
+            COMSCORE = true;
+            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
+        }
+        function postATMessage() {
+            if (addthis_enabled && analytics_iframe_loaded) {
+                analytics_frame.contentWindow.postMessage('enable_addthis', analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+        function postRapidMessage() {
+                            if (analytics_iframe_loaded) {
+                    var is_ajax = '';
+                    var route = '/post/:id/:summary';
+                    var tumblelog_id = '217881551';
+                    var yahoo_space_id = '1197719230';
+                    var rapid_client_only = '1';
+                    var apv = '1';
+                    var rapid_ex = '';
+
+                    analytics_frame.contentWindow.postMessage(
+                        [
+                            'tick_rapid', is_ajax, route, user_logged_in, tumblelog_id,
+                            yahoo_space_id, rapid_client_only, apv, rapid_ex
+                        ].join(';'),
+                        analytics_frame.src.split('/analytics.html')[0]
+                    );
+                }
+                    }
+    })();
+</script><script type="text/javascript">!function(s){s.src='https://px.srvcs.tumblr.com/impixu?T=1460140340&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvbmV4dXMtdGhlbWUtdGVjaHZpc2lvbi50dW1ibHIuY29tXC9wb3N0XC8xMzA1NDE2MDc2MjVcL21vdW50YWluIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLzppZFwvOnN1bW1hcnkifQ==&U=NNEIKGAHFE&K=318b1ac063914d8d0d9cceefd2b23a0daa12c5e2aeb66389b87e4fa883bf6655&R=http%3A%2F%2Fnexus-theme-techvision.tumblr.com%2F'.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1460140340&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvbmV4dXMtdGhlbWUtdGVjaHZpc2lvbi50dW1ibHIuY29tXC9wb3N0XC8xMzA1NDE2MDc2MjVcL21vdW50YWluIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLzppZFwvOnN1bW1hcnkiLCJub3NjcmlwdCI6MX0=&U=NNEIKGAHFE&K=7969c3ecc81c306b942022f1bc2f6e026ce2bbef5129c1d09e9d14b0db6fb50b&R=http://nexus-theme-techvision.tumblr.com/"></noscript><script >
+        (function (w,d) {
+            'use strict';
+            var l = function(el, type, listener, useCapture) {
+                el.addEventListener ?
+                el.addEventListener(type, listener, !!useCapture) :
+                el.attachEvent && el.attachEvent('on' + type, listener, !!useCapture);
+            };
+            var a = function () {
+                                if (d.getElementById('tumblr-cdx')) {
+                    return;
+                }
+                var s = d.createElement('script');
+                var el = d.getElementsByTagName('script')[0];
+                s.async = true;
+                s.src = 'http://assets.tumblr.com/assets/scripts/vendor/cedexis/cedexis.radar.js?_v=7450eec657e34e1e41dac4e1af96a170';
+                s.type = 'text/javascript';
+                s.id = 'tumblr-cdx';
+                d.body.appendChild(s);
+            };
+            l(w,'load',a);
+        }(window, document));
+</script><script type="text/javascript">!function(s){s.src='https://px.srvcs.tumblr.com/impixu?T=1460140340&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL25leHVzLXRoZW1lLXRlY2h2aXNpb24udHVtYmxyLmNvbVwvcG9zdFwvMTMwNTQxNjA3NjI1XC9tb3VudGFpbiIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC9wb3N0XC86aWRcLzpzdW1tYXJ5IiwicG9zdHMiOlt7InBvc3RpZCI6IjEzMDU0MTYwNzYyNSIsImJsb2dpZCI6IjIxNzg4MTU1MSIsInNvdXJjZSI6MzN9XX0=&U=LAOCAHDPCO&K=d904dc2c2def937076b82bc87df9c9b664743f3543f4a18294381c66b6e48091&R=http%3A%2F%2Fnexus-theme-techvision.tumblr.com%2F'.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1460140340&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL25leHVzLXRoZW1lLXRlY2h2aXNpb24udHVtYmxyLmNvbVwvcG9zdFwvMTMwNTQxNjA3NjI1XC9tb3VudGFpbiIsInJlcXR5cGUiOjAsInJvdXRlIjoiXC9wb3N0XC86aWRcLzpzdW1tYXJ5IiwicG9zdHMiOlt7InBvc3RpZCI6IjEzMDU0MTYwNzYyNSIsImJsb2dpZCI6IjIxNzg4MTU1MSIsInNvdXJjZSI6MzN9XSwibm9zY3JpcHQiOjF9&U=LAOCAHDPCO&K=6a41c2af93a45e40c64f111197052831d35613f458ffbeab7f50b961f055d000&R=http://nexus-theme-techvision.tumblr.com/"></noscript>
+<noscript id="bootloader" data-bootstrap="{&quot;Components&quot;:{&quot;PostActivity&quot;:[],&quot;TumblelogIframe&quot;:{&quot;tumblelogBundleSrc&quot;:&quot;http:\/\/assets.tumblr.com\/client\/prod\/standalone\/tumblelog\/index.build.js?_v=4c22c5b18d52b09a1b92438d5b82a7c3&quot;,&quot;tumblelogName&quot;:&quot;nexus-theme-techvision&quot;,&quot;isLoggedIn&quot;:false,&quot;isFriend&quot;:false,&quot;formKey&quot;:&quot;&quot;,&quot;tumblelogTitle&quot;:&quot;NEXUS - THEME&quot;,&quot;tumblelogAvatar&quot;:&quot;http:\/\/38.media.tumblr.com\/avatar_7c327a4b5f2c_40.png&quot;,&quot;tumblelogHost&quot;:&quot;http:\/\/nexus-theme-techvision.tumblr.com&quot;,&quot;brag&quot;:true,&quot;currentPageType&quot;:&quot;single_post&quot;,&quot;currentPage&quot;:&quot;1&quot;,&quot;tag&quot;:&quot;&quot;,&quot;query&quot;:&quot;&quot;,&quot;chrono&quot;:false,&quot;postId&quot;:&quot;130541607625&quot;,&quot;src&quot;:&quot;http:\/\/nexus-theme-techvision.tumblr.com\/post\/130541607625\/mountain&quot;,&quot;postUrl&quot;:&quot;&quot;,&quot;isBlocked&quot;:null,&quot;isAdmin&quot;:false,&quot;lookupButtonUrl&quot;:&quot;&quot;,&quot;showSpamButton&quot;:false,&quot;showRootPostButton&quot;:false,&quot;rootPostUrl&quot;:&quot;&quot;,&quot;showRadarPostButton&quot;:false,&quot;radarKeys&quot;:&quot;&quot;,&quot;isUniblocked&quot;:false,&quot;isNsfw&quot;:false,&quot;isAdult&quot;:false,&quot;isSpam&quot;:false,&quot;isPrimaryBlog&quot;:false,&quot;canEdit&quot;:false,&quot;canReblogSelf&quot;:false,&quot;showLikeButton&quot;:false,&quot;showReblogButton&quot;:false,&quot;reblogUrl&quot;:&quot;&quot;,&quot;showFanMailButton&quot;:false,&quot;showMessagingButton&quot;:false,&quot;loginCheckIframeSrc&quot;:&quot;http:\/\/assets.tumblr.com\/assets\/html\/iframe\/login_check.html?_v=282357db21d8a5883cc1c780ace4cb5f&quot;,&quot;appInstallUrl&quot;:&quot;https:\/\/go.onelink.me\/893408789?pid=tumblr_blog_network\u0026c=tumblr_blog_network\u0026af_sub3=blog_name&quot;}},&quot;Flags&quot;:{&quot;doods&quot;:&quot;eyJmaWx0ZXJfbnNmdyI6dHJ1ZSwia2V5Y29tbWFuZF9hdXRvX3BhZ2luYXRlIjp0cnVlLCJsb2dnZWRfb3V0X3NlYXJjaCI6dHJ1ZSwiYXJjaGl2ZS1wbHVzIjp0cnVlLCJzZWN1cmVfZm9ybV9rZXkiOnRydWUsInNlY3VyZV9mb3JtX2tleV9mdWxseV9vbiI6dHJ1ZSwidHVtYmxlbG9nX3BvcG92ZXIiOnRydWUsImNhbm9uaWNhbF91cmxfd3JpdGVzIjp0cnVlLCJlbmFibGVfY2FwdHVyZV9qcyI6dHJ1ZSwicHJpbWFfcG9zdF9mb3JtcyI6dHJ1ZSwibG9ja2VkX3JlYmxvZ191aSI6dHJ1ZSwibG9ja2VkX3JlYmxvZ191aV9wYXJzZV90ZXN0Ijp0cnVlLCJ0YWJsZXRfYmFubmVyX2FjdGl2ZSI6dHJ1ZSwibW9iaWxlX2Jhbm5lcl9hY3RpdmUiOnRydWUsImxvZ19zZWFyY2hfYm94Ijp0cnVlLCJ1c2VyX21lbnRpb25zIjp0cnVlLCJodG1sNV9hdWRpb19wbGF5ZXIiOnRydWUsInBvcG92ZXJfcmVjb21tZW5kYXRpb25zIjp0cnVlLCJpbmRhc2hfcmVjb21tZW5kYXRpb25zIjp0cnVlLCJwb3B0aWNhX3R1bWJsZWxvZ19wb3BvdmVycyI6dHJ1ZSwidHVtYmxyX3R2Ijp0cnVlLCJkZXByZWNhdGVfZmVhdHVyZWRfdGFncyI6dHJ1ZSwicmVibG9nX3VpX3JlZnJlc2giOnRydWUsInRhYl9zd2l0Y2hlciI6dHJ1ZSwiZmFzdF9jb21wb3NlIjp0cnVlLCJkYXNoYm9hcmRfcmVmcmVzaCI6dHJ1ZSwibW9iaWxlX3dlYl9waG90b3NldHMiOnRydWUsIm1vYmlsZV93ZWJfZ2F0ZSI6dHJ1ZSwibW9iaWxlX3dlYl9wYWdlX3RpdGxlcyI6dHJ1ZSwibW9iaWxlX3dlYl9zZWFyY2giOnRydWUsIm1vYmlsZV93ZWJfc2VhcmNoX2ZpbHRlciI6dHJ1ZSwibW9iaWxlX3dlYl9hYnVzZV9mb3JtIjp0cnVlLCJkb250X2Nhc3RfanNfZm9sbG93cyI6dHJ1ZSwiYWRzX25ld192ZW5kb3JfYnV0dG9ucyI6dHJ1ZSwiYmxvY2tfZmVhdHVyZSI6dHJ1ZSwicmVhY3RpdmF0aW9uX2Zsb3ciOnRydWUsImd1bHBqc19hZG1pbiI6dHJ1ZSwiZW5hYmxlX2pzX2Vycm9yc19sb2ciOnRydWUsImVuYWJsZV9qc19lcGhlbWVyYWxfbG9nIjp0cnVlLCJqc19wZXJmb3JtYW5jZV9sb2dnaW5nIjp0cnVlLCJsb2dfbGFkeSI6dHJ1ZSwiY3Nsb2dnZXJfanMiOnRydWUsImRpc2NvdmVyeV9odWJfYWNjZXNzIjp0cnVlLCJoZWFkZXJfYWNjb3VudF9tZW51Ijp0cnVlLCJlbmFibGVfcHJpbWFfc2hhcmVfcG9wb3ZlciI6dHJ1ZSwiZW5hYmxlX3NoYXJlX2VtYmVkX2NvZGUiOnRydWUsInBpbnRlcmVzdF9zaGFyaW5nIjp0cnVlLCJyZWRkaXRfc2hhcmluZyI6dHJ1ZSwicG9zdF9pdF9mb3J3YXJkIjp0cnVlLCJwZWVwcl9zZWFyY2hfYW5kX2ZpbHRlciI6dHJ1ZSwiaW50ZXJuc19wYWdlIjp0cnVlLCJmb2xsb3dlZF9zZWFyY2hlc19iaWdfd2ViIjp0cnVlLCJkaXNhYmxlX3B1YmxpY19yZXBsaWVzIjp0cnVlLCJ3ZWJfYmxvZ19zdWJzY3JpcHRpb25zIjp0cnVlLCJub3Rlc19yZWRlc2lnbl9waGFzZV8wMSI6dHJ1ZSwibmV3X3JlcGxpZXMiOnRydWUsImRpc2FibGVfeWFob29fYl9jb29raWUiOnRydWUsInByaW1hX3R1bWJsZWxvZ19idW5kbGUiOnRydWV9&quot;},&quot;Context&quot;:{&quot;name&quot;:&quot;default&quot;,&quot;time&quot;:1460140340000,&quot;userinfo&quot;:{&quot;primary&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;channels&quot;:[]},&quot;hosts&quot;:{&quot;assets_host&quot;:&quot;http:\/\/assets.tumblr.com&quot;,&quot;secure_assets_host&quot;:&quot;https:\/\/secure.assets.tumblr.com&quot;,&quot;www_host&quot;:&quot;http:\/\/www.tumblr.com&quot;,&quot;secure_www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;embed_host&quot;:&quot;https:\/\/embed.tumblr.com&quot;,&quot;safe_host&quot;:&quot;http:\/\/safe.txmblr.com&quot;,&quot;platform_host&quot;:&quot;http:\/\/platform.tumblr.com&quot;},&quot;language&quot;:&quot;en_US&quot;,&quot;language_simple&quot;:&quot;en&quot;},&quot;Translations&quot;:[]}"></noscript>
+<script src="http://assets.tumblr.com/client/prod/standalone/tumblelog/index.build.js?_v=4c22c5b18d52b09a1b92438d5b82a7c3"></script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Theme name
+    Template URI: 
+    Description: One page portfolio, creative
+    Author: 
+    Author URI: 
+    License: 
+    License URI: 
+    Version: 1.0
+    
+    All files, unless otherwise stated, are released under the GNU General Public License
+    version 3.0 (http://www.your-site.com/index.html)
+
+-----------------------------------------------------------------------------------
+    
+    CSS INDEX
+    ===================
+	
+    1. Theme Default CSS (body, link color, section etc)
+    2.  
+    3.  
+    4.  
+    5.  
+-----------------------------------------------------------------------------------*/
+
+/*----------------------------------------*/
+/*  1.  Theme default CSS
+/*----------------------------------------*/
+html, body {height: 100%;}
+.floatleft {float:left}
+.floatright {float:right}
+.alignleft {float:left;margin-right:15px;margin-bottom: 15px}
+.alignright {float:right;margin-left:15px;margin-bottom: 15px}
+.aligncenter {display:block;margin:0 auto 15px}
+a:focus {outline:0px solid}
+img {max-width:100%;height:auto}
+.fix {overflow:hidden}
+h1, h2, h3, h4, h5, h6,p {margin:0 0 15px;}
+a {transition: all 0.3s ease 0s;text-decoration:none}
+body {
+  background-color: #F15B65;
+}
+.header-area{text-align:center;}
+.heading-text > h3 {
+  color: #ffffff;
+  padding: 15px 0;
+}
+.version-header{text-align: center;}
+.page-link {
+  margin-bottom: 100px;
+  padding: 15px 0;
+  text-align: center;
+}
+.page-link a {
+  background: #3b5998 none repeat scroll 0 0;
+  border: 1px solid #cccccc;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 20px;
+  min-width: 230px;
+  padding: 9px 26px;
+  text-decoration: none;
+}
+.preview-area {
+  padding: 15px;
+}
+.version-header > h3 {
+  margin-bottom: 30px;
+}
+.view-img {
+  padding: 0 25px;
+  text-align: center;
+}
+.view-text {
+  font-size: 20px;
+  margin-bottom: 17px;
+  padding: 18px 0;
+  text-align: center;
+}
+.version-1 {
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+.version-2 {
+  background-color: #eeeeee;
+  padding: 30px;
+}
+.{}
+.{}
+.{}
