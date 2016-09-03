@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Originales efectos Tooltip con jQuery html5tooltips</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- html5tooltips Styles & animations -->
+    <link href="css/html5tooltips.css" rel="stylesheet">
+    <link href="css/html5tooltips.animation.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="navbar-inner">
+        <div class="container">
+          <h1 class="navbar-text navbar-left nombre-plugin">jQuery html5tooltips.js</h1>
+          <p class="navbar-text navbar-left link-post"><a href="http://blog.endeos.com/jquery-html5tooltips" class="navbar-link">Volver al artículo</a></p>
+        </div>
+      </div>
+    </nav>
+    <!-- /NAV BAR -->
+
+
+
+
+    <!-- MAIN CONTENT -->
+    <div class="container demos">
+      
+      <div class="row basicos">
+        <div class="col-xs-12">
+          <!-- the content -->
+
+          <h2>Tooltip básico</h2>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <i class="fa fa-battery-quarter" data-tooltip="Casi que ya toca cargar la batería..." data-tooltip-animate-function="spin" ></i>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <i class="fa fa-battery-half" data-tooltip="No maltrates tu batería, deberías cargarla ya" data-tooltip-animate-function="spin"></i>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <i class="fa fa-battery-three-quarters" data-tooltip="Aun te queda energía" data-tooltip-animate-function="spin"></i>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <i class="fa fa-battery-full" data-tooltip="¡Batería recién cargada!" data-tooltip-animate-function="spin"></i>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row ampliados">
+        <div class="col-xs-12">
+
+          <div class="col-xs-12">
+
+            <h2>Tooltip con ampliación de texto</h2>
+            <input type="text" placeholder="Haz clic cuando veas el tooltip..." data-tooltip="Aquí puedes escribir texto" data-tooltip-more="Puedes escribir lo que tu quieras, eres totalmente libre" data-tooltip-stickto="right" data-tooltip-maxwidth="200" data-tooltip-animate-function="foldin" data-tooltip-color="rouge">
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row efectos">
+        <div class="col-xs-12">
+
+          <h2>Efectos de tooltip</h2>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+            <h3>Efecto slide</h3>
+            <i class="fa fa-cog" data-tooltip="Tooltip con efecto slide" data-tooltip-animate-function="slidein" data-tooltip-color="salmon"></i>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+            <h3>Efecto escalado</h3>
+            <i class="fa fa-cog" data-tooltip="Tooltip con efecto escalado" data-tooltip-animate-function="scalein" data-tooltip-color="salmon"></i>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+            <h3>Efecto rueda</h3>
+            <i class="fa fa-cog" data-tooltip="Tooltip con efecto rodado" data-tooltip-animate-function="roll" data-tooltip-color="salmon"></i>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4 col-md-push-2 col-lg-4 ">
+            <h3>Efecto spin</h3>
+            <i class="fa fa-cog" data-tooltip="Tooltip con efecto spin" data-tooltip-animate-function="spin" data-tooltip-color="salmon"></i>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-sm-push-3 col-md-4 col-md-push-2 col-lg-4">
+            <h3>Efecto volteo</h3>
+            <i class="fa fa-cog" data-tooltip="Tooltip con efecto volteado" data-tooltip-animate-function="foldin" data-tooltip-color="salmon"></i>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- /MAIN CONTENT -->
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom functions file -->
+    <script src="js/functions.js"></script>
+    <!-- html5tooltips script -->
+    <script src="js/html5tooltips.js"></script>
+  </body>
+</html>

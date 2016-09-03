@@ -527,7 +527,6 @@
 					$innerbar.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function () {
 						$innerbar.find(".pull-right").fadeIn(900);
 					});
-
 				});
 			}, {accY: -100});
 		} else {
@@ -540,7 +539,7 @@
 				$innerbar.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function () {
 					$innerbar.find(".pull-right").fadeIn(900);
 				});
-
+				console.log($innerbar);
 			});
 		}
 

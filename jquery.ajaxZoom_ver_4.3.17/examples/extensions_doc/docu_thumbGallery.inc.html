@@ -1,0 +1,224 @@
+<style type="text/css"> 
+	.optionsTable {width: 100%; border-spacing: 0; border: 1px solid #AAAAAA; font-family: Tahoma, Geneva, sans-serif; font-size: 10pt;}
+	.optionsTable th {background-color: #D4D4D4; padding-top: 10px; padding-bottom: 10px; font-size:12pt; font-family: "Comic Sans MS", cursive, sans-serif;}
+	.optionsTable td,th{padding-left: 5px; padding-right: 5px;}
+	.optionsTable th{white-space: nowrap;}
+	.optionsTable td,th {vertical-align: top; line-height: 1.2em; text-align: left; border-bottom: 1px solid #AAAAAA; padding-top: 3px; padding-bottom: 8px;}
+	.optionsTable .subOpt td {border-bottom-width: 0; font-size: 12pt;}
+	.optionsTable tr.important {font-weight: bolder;}
+	.optionsTable td:nth-child(1) {border-right: #AAA 1px dotted;}
+	.optionsTable td:nth-child(2) {border-right: #AAA 1px dotted;}
+	.optionsTable ul,ol {padding-left: 14px; margin-top: 0}
+	.optionsTable li {margin-bottom: 5px; padding-left: 14px;}
+	.optionsTable tr:nth-child(odd) { background-color: #FDFDFD;}
+	.optionsTable tr:nth-child(even) { background-color: #FFFFFF;}
+	.optionsTable tr:last-child>td { border-bottom: none;}	
+	.optionsTable.sub th {padding-top: 3px; padding-bottom: 3px; font-size: 11pt;}
+	.optionsTable.sub td {line-height: 1em; padding-bottom: 2px; padding-top: 2px;}
+	.optionsSimilarExDescr {position: absolute; background-color: #eee; font-size: 9px; width: 100%; pointer-events: none; text-align: center; overflow: hidden;}
+	.optionsSimilarExLI {float: left; margin: 0 10px 10px 0; position: relative; border: #aaa 1px solid;}
+	.optionsHeader {color: #1a4a7a; font-size: 150%; margin: 0; padding: 20px 0px 5px 0px;}
+	.optionsText {}
+</style>
+
+<!-- $.azThumbGallery - documentation -->
+<table class="optionsTable" >
+<tbody>
+	<tr><th>Option</th><th>Default</th><th>Description</th></tr>
+	
+	<tr><td>axZmPath </td><td> 'auto' </td><td>Path to /axZm directory, e.g. /test/axZm/ </td></tr>
+	<tr><td>folderSelect </td><td> 'select' </td><td> 
+		The look of navigation for subfolders. Only useable if "zoomDir" is defined (not with "zoomData").  
+		Possible values: "select", "folders", "imgFolders" or false
+	</td></tr>
+	<tr><td>zoomDir </td><td> null </td><td>
+		Path to subfolders with images; 
+		If "folderSelect" is set to false, then you can define the path directly to some folder with images.
+	</td></tr>
+	<tr><td>firstFolder </td><td> null </td><td>
+		After page loads select from which "zoomDir" subfolder thumbnails should be loaded first, 
+		integer (index of subfolder) or string (name of the subfolder). If nothitng is defined 
+		and there is no hash value (see "setHash" option below), then first subfolder is selected instantly.
+		
+	</td></tr>
+	<tr><td>zoomData </td><td> null </td><td> 
+		Alternativly to "zoomDir" where all images from a folder or subfolders are loaded, you can define several images from different folders. 
+		Here "zoomData" can be CSV string separated with "|"; 
+		it can also be an array or it can be an object where property values are the paths of the images.
+	</td></tr>
+	<tr><td>folderIconPrefix </td><td> 'folder_icon_' </td><td>
+		Applied if folderSelect is set to "folders". 
+		Value is the prefix of icon image located in /axZm/icons directory. 
+		On default the three icons are: folder_icon_close.png, folder_icon_close_over.png, folder_icon_open.png
+	</td></tr>
+	
+	<tr><td>imgFoldersSettings </td><td> {} </td><td> 
+		This option is applied only if the value of "folderSelect" option is "imgFolders".
+		<table class="optionsTable sub" style="margin-top: 10px;">
+		<tbody>
+			<tr><th>Option</th><th>Default</th><th>Description</th></tr>
+			<tr><td>thumbNumber </td><td> 3 </td><td>amount of icons to show, max 3 </td></tr>
+			<tr><td>thumbWidth </td><td> 32</td><td>width of the icons </td></tr>
+			<tr><td>thumbHeight </td><td> 32 </td><td>height of the icons </td></tr>
+			<tr><td>thumbRetina </td><td> true </td><td>true will double the resolution of the thumbnails images  </td></tr>
+			<tr><td>thumbQual </td><td> 100 </td><td>jpg quality of the thumbnail image</td></tr>
+			<tr><td>thumbMode </td><td> 'contain' </td><td>possible values: "contain", "cover" or false</td></tr>
+			<tr><td>thumbsCache </td><td> true </td><td>cache thumbnails </td></tr>
+			<tr><td>thumbOpacity </td><td> 1.0 </td><td>opacity </td></tr>
+		</tbody>
+		</table>
+	</td></tr>
+	
+	<tr><td>folderNameFunc </td><td> function </td><td>
+		This is a "filter" function for the titles of the subfolders. 
+		The first argument passed to the function is the name of the subfolder from the file system.
+		This input string can be changed and returned in a different way. 
+		On default this function makes first letter uppercase, replaces _ (underscore) to empty space 
+		and truncates the resulting string to max. 15 characters. If you do not want to have any changes, 
+		simply set folderNameFunc to <code>function(input){return input;}</code>
+	</td></tr>
+	
+	<tr><td>axZmCallBacks </td><td> {} </td><td> AJAX-ZOOM has several callbacks, http://www.ajax-zoom.com/index.php?cid=docs#onBeforeStart </td></tr>
+	<tr><td>fullScreenApi </td><td> false </td><td> Try to open AJAX-ZOOM at browsers fullscreen mode, possible on modern browsers except IE < 10 and mobile </td></tr>
+	<tr><td>setHash </td><td> false </td><td> 
+		Set location hash when users navigate between the folders. 
+		Setting the location hash will result in switching between folders when the user hits browser backword button. 
+		Also if the location address is copied with the hash, opening it again will load this folder at first.
+	</td></tr>
+	
+	<!-- <tr><th colspan="3">Thumbs</th></tr> -->
+	<tr><td>thumbWidth </td><td> 120 </td><td>Width of the thumbnail image </td></tr>
+	<tr><td>thumbHeight </td><td> 120 </td><td>Height of the thumbnail image </td></tr>
+	<tr><td>thumbRetina </td><td> true </td><td>true will double the resolution of the thumbnails images but keep "thumbWidth" and "thumbHeight" on screen </td></tr>
+	<tr><td>thumbsCache </td><td> true </td><td>Cache thumbnails </td></tr>
+	<tr><td>thumbQual </td><td> 90 </td><td>jpg quality of the thumbnail image </td></tr>
+	<tr><td>thumbMode </td><td> false </td><td>possible values: "contain", "cover" or false</td></tr>
+	<tr><td>thumbBackColor </td><td> '#FFFFFF' </td><td>Background color of the thumb if "thumbMode" is set to "contain"</td></tr>
+	<tr><td>thumbPadding </td><td> null </td><td>Quickly overwrite the css padding of the thumbs </td></tr>
+	<tr><td>thumbMarginRight </td><td> null </td><td>Quickly overwride the css margin to the right of the thumbs </td></tr>
+	<tr><td>thumbMarginBottom </td><td> null </td><td>Quickly overwride the css margin to the bottom of the thumbs </td></tr>
+	<tr><td>thumbCss </td><td> {} </td><td>Quickly overwride any other CSS </td></tr>
+	<tr><td>thumbPreloadingImg </td><td> 'ajax-loader-map-white.gif' </td><td>Image located in /axZm/icons directory which will appear before the thumbs are loaded </td></tr>
+	
+	<tr><td>thumbDescr </td><td> [] </td><td>
+		array; poaaible array elements: fileName, thumbDescr, fullDescr; 
+		thumbDescr and fullDescr are returned from AJAX-ZOOM for regular thumbs. 
+		On default thumbDescr returns resolution of the original image. 
+		It is adjustable in /axZm/zoomConfig.inc.php or /axZm/zoomConfigCustom.inc.php 
+		over $zoom['config']['galleryThumbDesc'] and $zoom['config']['galleryThumbFullDesc'] options.
+	</td></tr>
+	
+	<tr><td>thumbDescrJoin </td><td> '&lt;br>' </td><td>
+		If thumbDescr has more than one elemets, they will be splitted by this string
+	</td></tr>
+	
+	<tr><td>thumbDescrTruncate </td><td> false </td><td>
+		integer - truncate each of the descriptions adding [...] or false
+	</td></tr>
+	
+	<tr><td>thumbsPerPage </td><td> null </td><td>
+		In case the number of thumbs will exceed "thumbsPerPage" value, the extension will append "page numbers" under the thumbs. 
+		null disables the feature.
+	</td></tr>
+	<tr><td>thumbsContainer </td><td> 'thumbsParentContainer' </td><td>ID of the container where thumbs should be inserted. Container can be responsive.</td></tr>
+	<tr><td>selectContainer </td><td> 'selectParentContainer' </td><td>ID of the container where folders navigation - "folderSelect" should be inserted. Container can be responsive.</td></tr>
+	
+	<tr><td>ajaxZoomOpenMode </td><td> 'fullscreen' </td><td>
+		Determines how AJAX-ZOOM is opened when the user clicks on the image thumbs, 
+		possible values: 
+		<ul style="margin-top: 10px">
+			<li>'fullscreen' - AJAX-ZOOM opens at fullscreen mode, see also "fullScreenApi" option</li>
+			<li>'fancyboxFullscreen' - AJAX-ZOOM opens in the responsive Fancybox. Fancybox is a commonly used lightbox jQuery plugin</li>
+			<li>'fancybox' - AJAX-ZOOM opens in regular fixed width and height Fancybox</li>
+			<li>'colorbox' - AJAX-ZOOM opens in Colorbox with fixed width and height. Colorbox is an other popular lightbox plugin</li>
+			<li>'zoomSwitch' - In case "embedMode" is enabled, which means that AJAX-ZOOM is already opened next to the thumbs, 
+				clicking on the thumb will just switch the image within AJAX-ZOOM. This value is set instantly when "embedMode" is set to true;
+			</li>
+		</ul>
+	</td></tr>
+	
+	<tr><td>exampleFullscreen </td><td> 'mouseOverExtension' </td><td>Configuration set <sup><a href="#o_sup_2">2</a></sup> which is passed to AJAX-ZOOM when "ajaxZoomOpenMode" is 'fullscreen' </td></tr>
+	<tr><td>exampleFancyboxFullscreen </td><td> 'mouseOverExtension' </td><td>Configuration set <sup><a href="#o_sup_2">2</a></sup> which is passed to AJAX-ZOOM when "ajaxZoomOpenMode" is 'fancyboxFullscreen'</td></tr>
+	<tr><td>exampleFancybox </td><td> 'modal' </td><td>Configuration set <sup><a href="#o_sup_2">2</a></sup> which is passed to AJAX-ZOOM when "ajaxZoomOpenMode" is 'fancybox' </td></tr>
+	<tr><td>exampleColorbox </td><td> 'modal' </td><td>Configuration set <sup><a href="#o_sup_2">2</a></sup> which is passed to AJAX-ZOOM when "ajaxZoomOpenMode" is 'colorbox'</td></tr>
+	<tr><td>fancyBoxParam </td><td> {} </td><td>If fancybox is used in "ajaxZoomOpenMode" option, Fancybox options </td></tr>
+	<tr><td>colorBoxParam </td><td> {} </td><td>If colorbox is used in "ajaxZoomOpenMode" option, Colorbox options </td></tr>
+	
+	<tr><td> </td><td>  </td><td> </td></tr>
+	<tr><td>embedMode </td><td> false </td><td>Display AJAX-ZOOM next to the thumbs</td></tr>
+	<tr><td>embedDivID </td><td> '' </td><td>
+		ID of the container where AJAX-ZOOM player in "embedMode" should be inserted. 
+		In case "embedDivID" is a responsive container, please set "embedResponsive" to true!
+	</td></tr>
+	<tr><td>embedResponsive </td><td> false </td><td> If "embedDivID" is responsive, you should enable this option. </td></tr>
+	<tr><td>embedExample </td><td> 9 </td><td>Configuration set <sup><a href="#o_sup_1">1</a></sup> which is passed to AJAX-ZOOM when "embedMode" is enabled</td></tr>
+	<tr><td>embedZoomSwitchAnm </td><td> 'SwipeHorz' </td><td>
+		When clicked on the thumbs the image inside AJAX-ZOOM will be switched with one of the following effects: 
+		"Center", "Top", "Right", "Bottom", "Left", "StretchVert", "StretchHorz", "SwipeHorz", "SwipeVert", "Vert", "Horz"; 
+		
+	</td></tr>
+	<tr><td>embedZoomSwitchSpeed </td><td> 300 </td><td> 
+		Set speed (duration) of switching, overrides following AJAX-ZOOM internal options: 
+		galleryFadeInSpeed, galleryInnerFade, gallerySlideSwipeSpeed; set to "embedZoomSwitchSpeed" 
+		to diable this overriding.
+	</td></tr>
+	<tr><td>embedSwitchWithPage </td><td> true </td><td>
+		If "thumbsPerPage" is activated and page numbers are present, then clicking on the page number will switch to the first shown image on that page.
+	</td></tr>
+	<tr><td>embedFirstImage </td><td> 1 </td><td>
+		When gallery loads first the index (number) or file name which should be loaded first. 
+		See also "firstFolder" option in case applied.
+	</td></tr>
+
+</tbody>
+</table>
+
+<div style="clear: both;">
+	<sup id="o_sup_1">1</sup> examples where $.azThumbGallery is used:<br>
+	<ul style="list-style: none; display: inline-block; padding: 0; margin: 0">
+		<li class="optionsSimilarExLI"><div class="optionsSimilarExDescr">example5.php</div><a href="example5.php"><img src="http://www.ajax-zoom.com/pic/layout/image-zoom_5.jpg" style="width: 100px; height: auto;" align="left" alt=""></a></li>
+		<li class="optionsSimilarExLI"><div class="optionsSimilarExDescr">example7.php</div><a href="example7.php"><img src="http://www.ajax-zoom.com/pic/layout/image-zoom_7.jpg" style="width: 100px; height: auto;" align="left" alt=""></a></li>
+		<li class="optionsSimilarExLI"><div class="optionsSimilarExDescr">example8.php</div><a href="example8.php"><img src="http://www.ajax-zoom.com/pic/layout/image-zoom_8.jpg" style="width: 100px; height: auto;" align="left" alt=""></a></li>
+		<li class="optionsSimilarExLI"><div class="optionsSimilarExDescr">example11.php</div><a href="example11.php"><img src="http://www.ajax-zoom.com/pic/layout/image-zoom_11.jpg" style="width: 100px; height: auto;" align="left" alt=""></a></li>
+		<li class="optionsSimilarExLI"><div class="optionsSimilarExDescr">example16.php</div><a href="example16.php"><img src="http://www.ajax-zoom.com/pic/layout/image-zoom_16.jpg" style="width: 100px; height: auto;" align="left" alt=""></a></li>
+		<li class="optionsSimilarExLI"><div class="optionsSimilarExDescr">example21.php</div><a href="example21.php"><img src="http://www.ajax-zoom.com/pic/layout/image-zoom_21.jpg" style="width: 100px; height: auto;" align="left" alt=""></a></li>
+	</ul> 
+</div>
+
+<div style="clear: both; margin-top: 10px">
+	<sup id="o_sup_2">2</sup> you will find the respective configuration set in /axZm/zoomConfigCustom.inc.php after<br>
+	<code>elseif ($_GET['example'] == [someValue])</code><br>
+	There you can change existing options or copy from /axZm/zoomConfig.inc.php other options to change the values. 
+</div>
+  
+
+
+<script type="text/javascript">
+if (window.jQuery){
+	$('.optionsTable:not(.methods) td:nth-child(2)').each(function(){
+ 		var txt = $.trim($(this).html());
+ 		if (txt == 'false' || txt == 'true'){
+ 			$(this).html('<span style="color: green">'+txt+'</span>');
+		} else if (txt == 'null') {
+			$(this).html('<span style="color: blue">'+txt+'</span>');
+		} 
+		else if (txt == 'function'){
+			$(this).html('<span style="color: #003c00">'+txt+'</span>');
+		}
+		//else if (txt.charAt(0) != '\'' && txt.charAt(0) != '{' && txt.charAt(0) != '['){
+		else if (parseInt(txt) == txt){
+			$(this).html('<span style="color: red">'+txt+'</span>');
+		}
+	});
+
+	$('.optionsTable:not(.sub) td:nth-child(1)').each(function(){
+ 		var txt = $.trim($(this).html());
+ 		if (txt){$(this).parent().attr('id', 'pOpt_'+txt);}
+	});
+	
+	if (window.optionsHeader){$('<div class="optionsHeader">'+window.optionsHeader+'</div>').insertBefore('.optionsTable:eq(0)');}
+	if (window.optionsText){$('<p class="optionsText">'+window.optionsText+'</p>').insertBefore('.optionsTable:eq(0)');}
+}
+</script>
+
+<div style="clear: both; height: 50px;"></div>
