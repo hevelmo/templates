@@ -3,47 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Simple Slide Panel</title>
-<style>
-	* { margin: 0; padding: 0; }
-	.wrapper-container {
-		overflow: hidden;
-	}
-	.about-content {
-	    width: 100%;
-	    /* z-index: 1; */
-	    transition: all 0.7s ease;
-	    -webkit-transition: all 0.7s ease;
-	    -moz-transition: all 0.7s ease;
-	    max-width: 1580px;
-	    margin: 0 auto;
-
-	    border:  1px solid red;
-	}
-	.google-maps {
-	    height: 500px;
-	    position: relative;
-	    overflow: hidden;
-	    background-color: rgb(229, 227, 223);
-	}
-	.footer-fixed {
-		position: relative;
-		z-index: 9999;
-		bottom: 0px;
-		width: 100%;
-		height: 70px;
-		padding-top: 0px;
-	}
-	.dark-footer-fixed {
-		background-color: #0c1117;
-		border-top: solid 1px rgba(0,0,0,0.1);
-	}
-	.brands-agencies {
-		display: block;
-		padding: 20px;
-		color: #fff;
-	}
-</style>
-
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/hover.css">
 </head>
 	<body>
 		<div id="content-start-dealer-search-map" class="about-content">
@@ -56,11 +18,52 @@
 				<div class="tap-brands-bottom-close"></div>
 				<div class="tap-brands-bottom tap-brands-bottom-config active-tap-brands-bottom">
 				</div>
-				<div class="footer-fixed dark-footer-fixed">
+				<div class="footer-fixed white-footer-fixed">
 					<div class="brands-agencies">
-						<a href="" class="show-brands-bottom show-brands-bottom-config">
-							logo
-						</a>
+						<div class="clearfix">
+							<a href="" class="show-brands-bottom show-brands-bottom-config hvr-overline-reveal">
+								<img src="img/our-brands/home_logo_ford.png" alt=". . ." />
+							</a>
+							<a href="" class="show-brands-bottom show-brands-bottom-config hvr-overline-reveal">
+								<img src="img/our-brands/home_logo_jaguar.png" alt=". . ." />
+							</a>
+							<a href="" class="show-brands-bottom show-brands-bottom-config hvr-overline-reveal">
+								<img src="img/our-brands/home_logo_land_rover.png" alt=". . ." />
+							</a>
+							<a href="" class="show-brands-bottom show-brands-bottom-config hvr-overline-reveal">
+								<img src="img/our-brands/home_logo_lincoln.png" alt=". . ." />
+							</a>
+							<a href="" class="show-brands-bottom show-brands-bottom-config hvr-overline-reveal">
+								<img src="img/our-brands/home_logo_mazda.png" alt=". . ." />
+							</a>
+							<a href="" class="show-brands-bottom show-brands-bottom-config hvr-overline-reveal">
+								<img src="img/our-brands/home_logo_chrysler.png" alt=". . ." />
+							</a>
+							<a href="" class="show-brands-bottom show-brands-bottom-config hvr-overline-reveal">
+								<img src="img/our-brands/home_logo_jeep.png" alt=". . ." />
+							</a>
+							<a href="" class="show-brands-bottom show-brands-bottom-config hvr-overline-reveal">
+								<img src="img/our-brands/home_logo_dodge.png" alt=". . ." />
+							</a>
+							<a href="" class="show-brands-bottom show-brands-bottom-config hvr-overline-reveal">
+								<img src="img/our-brands/home_logo_ram.png" alt=". . ." />
+							</a>
+							<a href="" class="show-brands-bottom show-brands-bottom-config hvr-overline-reveal">
+								<img src="img/our-brands/home_logo_mitsubishi_motors.png" alt=". . ." />
+							</a>
+							<a href="" class="show-brands-bottom show-brands-bottom-config hvr-overline-reveal">
+								<img src="img/our-brands/home_logo_mercedes_benz.png" alt=". . ." />
+							</a>
+							<a href="" class="show-brands-bottom show-brands-bottom-config hvr-overline-reveal">
+								<img src="img/our-brands/home_logo_smart.png" alt=". . ." />
+							</a>
+							<a href="" class="show-brands-bottom show-brands-bottom-config hvr-overline-reveal">
+								<img src="img/our-brands/home_logo_sprinter.png" alt=". . ." />
+							</a>
+							<a href="" class="show-brands-bottom show-brands-bottom-config hvr-overline-reveal">
+								<img src="img/our-brands/home_logo_volvo.png" alt=". . ." />
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

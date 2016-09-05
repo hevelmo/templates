@@ -1,0 +1,81 @@
+* { margin: 0; padding: 0; }
+.wrapper-container {
+	overflow: hidden;
+}
+.about-content {
+    width: 100%;
+    /* z-index: 1; */
+    transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    max-width: 1580px;
+    margin: 0 auto;
+
+    border:  1px solid red;
+}
+.google-maps {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(229, 227, 223);
+}
+.footer-fixed {
+	position: relative;
+	z-index: 9999;
+	bottom: 0px;
+	width: 100%;
+	height: auto;
+	padding-top: 0px;
+}
+.dark-footer-fixed {
+	background-color: rgb(229, 227, 223);
+	border-top: solid 1px rgba(0,0,0,0.1);
+}
+.white-footer-fixed {
+    background-color: rgba(255,255,255,1);
+    border-top: solid 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 0px 25px rgba(0,0,0,0.2), 0 0 15px rgba(0,0,0,0.2);
+}
+.brands-agencies {
+	display: block;
+	color: #fff;
+}
+.brands-agencies a {
+	float: left;
+	padding: 10px 25px;
+	opacity: 0.4;
+	border-left: solid 1px transparent;
+	border-right: solid 1px transparent;	
+}
+.brands-agencies a:hover:first-child {
+	border-right: solid 1px rgba(0,0,0,0.1);
+}
+.brands-agencies a:hover {	
+	border-left: solid 1px rgba(0,0,0,0.1);
+	border-right: solid 1px rgba(0,0,0,0.1);
+}
+.brands-agencies a:hover:last-child {
+	border-left: solid 1px rgba(0,0,0,0.1);
+}
+.brands-agencies a > img {
+	width: 56px;
+}
+.brands-agencies a > img:hover {
+	-moz-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	transform: scale(1.5);
+}
+.brands-agencies a:hover {
+    background-color: rgba(255,255,255,1);
+    opacity: 1;
+}
+.brands-agencies a,
+.brands-agencies a:hover,
+.brands-agencies a > img:hover {
+	-webkit-transition: all .5s ease-out;
+	-moz-transition: all .5s ease-out;
+	-o-transition: all .5s ease-out;
+	transition: all .5s ease-out;
+}
