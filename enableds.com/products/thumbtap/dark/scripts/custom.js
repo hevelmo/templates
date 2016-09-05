@@ -506,6 +506,7 @@ $(document).ready(function () {
     
     //Bottom Share Fly-up    
     $('.show-share-bottom, .show-share-box').click(function(){
+        console.log('refresh');
         $('.share-bottom-tap-close').toggleClass('share-bottom-tap-close-active');
         $('.share-bottom').toggleClass('active-share-bottom'); 
         $('.back-to-top-badge').removeClass('back-to-top-badge-visible');
