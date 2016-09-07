@@ -1,0 +1,1708 @@
+<!doctype html>
+<html class="export">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Simple CSS Media Query Generator">
+
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Isotope does not require any CSS files -->
+  <link rel="stylesheet" href="css/master.css" media="screen">
+
+<!--   <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+ -->
+    <!-- Latest compiled and minified CSS -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body id="main-container" class="page--index" data-page="index">
+<!-- <div id="nav">
+
+    <a href="">
+        <span id="link">About</span>
+    </a>
+
+    <a href="">
+        <span id="link">Aspect Ratio</span>
+    </a>
+
+    <a href="">
+        <span id="link">Retina</span>
+    </a>
+
+    <a href="">
+        <span id="link">Javascript</span>
+    </a>
+
+    <a href="">
+        <span id="link">Resources</span>
+    </a>
+
+    <a href="">
+        <span id="link">Contact</span>
+    </a>
+</div> -->
+
+<div class="hero">
+  <div class="primary-content">
+  <h1 id="title">
+    <span id="simple">Simple</span> CSS Media Queries</h1>
+
+<div id="options-container">
+        <h3 id="sel-plat">Please specify your breakpoint (mobile first approach)</h3>
+        <div class="big-demo" data-js-module="hero-demo">
+
+      <div class="ui-group">
+        <div id="breakpoints" class="button-group">
+          <button class="button is-checked" data-filter="*" onclick="smallPhone();"><img id="plat-img" src="img/small-phone.png"><br><span id="all">Small Phone</span></button>
+          <button class="button" data-filter=".iOS" onclick="smartPhone();"><img id="plat-img" src="img/smart-phone.png"><br><span id="all">Smart phone</span></button>
+          <button class="button" data-filter=".android" onclick="tablet();"><img id="plat-img" src="img/tablet.png"><br><span id="all">Tablet</span></button>
+          <button class="button" data-filter=".windows" onclick="laptop();"><img id="plat-img" src="img/laptop.png"><br><span id="all">Laptop</span></button>
+          <button class="button" id="screen-button" onclick="largeDesktop();"><img id="plat-img" src="img/desktop.png"><br><span id="all">Desktop</span>
+          </button>
+        </div>
+      </div>
+        <h3 id="or">or...</h3>
+
+        <h3 id="sel-plat">Your platform</h3>
+        <div class="big-demo" data-js-module="hero-demo">
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Here is your CSS Media Query</h4>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <textarea id="gen-media" class="copyTarget" style="width: 100%; resize: none;"></textarea>
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="copy-button" class="btn btn-primary" data-clipboard-action="copy" data-clipboard-target="textarea">Copy</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      <div class="ui-group">
+        <div id="filters" class="button-group">
+          <button class="button is-checked" data-filter="*"><img id="plat-img" src="img/all-plat.jpg"><br><span id="all">All</span></button>
+          <button class="button" data-filter=".iOS"><img id="plat-img" src="img/apple.png"><br><span id="all">iOS</span></button>
+          <button class="button" data-filter=".android"><img id="plat-img" src="img/android.png"><br><span id="all">Android</span></button>
+          <button class="button" data-filter=".windows"><img id="plat-img" src="img/windows.png"><br><span id="all">Windows</span></button>
+          <!-- <button class="button" id="screen-button" onclick="yourAR();"><img id="plat-img" src="img/screen.png"><br><span id="all">Your Aspect Ratio</span>
+          </button> -->
+          <button class="button" id="screen-button" onclick="yourScreen();"><img id="plat-img" src="img/screen.png"><br><span id="all">Your screen</span>
+          </button><br>
+          <input id="search" type="text" class="quicksearch" placeholder="Search for your device..." /><br><br>
+    <!--       <button class="button" data-filter="ium">&#x2013;ium</button>
+     --></div>
+      </div>
+
+  </div>
+  <div class="grid">
+
+
+<!-- Windows Laptops -->
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Dell XPS 13 9350</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC One</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Asus ZenBook UX303U</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('2000', '3000');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Microsoft Surface Book</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('320', '534');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S2</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('320', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S3</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('320', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S4</p>
+    </div> 
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S5</p>
+    </div> 
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('768', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">LG Nexus 4</p>
+    </div>  
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">android</h5>
+        <p class="symbol">LG Nexus 5</p>
+    </div>   
+   
+   <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1200', '1920');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Asus Nexus 7</p>
+    </div>   
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">HP Envy 13</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('2160', '3840');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Dell Inspiron 15 7559</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Lenovo Yoga 710</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1800', '3200');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Asus Zenbook UX305CA</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">HP Spectre 13</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1800', '3200');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Lenovo Yoga 900</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1824', '2736');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Microsoft Surface Pro 4</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Acer Aspire V3-574G</p>
+    </div>
+
+        <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1440', '2160');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Microsoft Surface Pro 3</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">MSI GE62 2QD Apache Pro</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('2160', '3840');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Asus ZenBook Pro UX501</p>
+    </div>
+
+
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Acer Chromebook 14</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Acer Aspire R 14</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('768', '1366');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Dell Inspiron 11 3000 Series</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('2160', '3840');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Dell XPS 15 Touch</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Lenovo ThinkPad 13</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1440', '2560');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Lenovo ThinkPad X1 Carbon</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Lenovo ThinkPad X1 Yoga</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Origin EON17-X</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1440', '2560');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Razer Blade Stealth</p>
+    </div>
+
+    <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Samsung Notebook 7 Spin</p>
+    </div>
+
+
+<!-- Windows Laptops End -->
+
+      <div value="ML640XL" class="element-item windows" data-category="transition" onclick="getMediaQuery('720', '1280');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Microsoft Lumia 640 XL</p>
+        <!--Resolution: 720 x 1280-->
+<!--         <p class="weight">200.59</p>
+ -->      </div>
+      <div class="element-item windows" data-category="transition" onclick="getMediaQuery('480', '854');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Nokia Lumia 635</p>
+        <!--480 x 854-->
+<!--         <p class="weight">200.59</p>
+ -->      </div>
+      <div class="element-item windows" data-category="transition" onclick="getMediaQuery('480', '854');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Nokia Lumia 530</p>
+        <!--480 x 854-->
+<!--         <p class="weight">200.59</p>
+ -->      </div>
+      <div class="element-item windows" data-category="transition" onclick="getMediaQuery('720', '1280');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Nokia Lumia 735</p>
+        <!--Resolution: 720 x 1280-->
+<!--         <p class="weight">200.59</p>
+ -->      </div>
+      <div class="element-item windows " data-category="transition" onclick="getMediaQuery('768', '1280');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Nokia Lumia 1020</p>
+        <!--768 x 1280-->
+<!--         <p class="weight">200.59</p>
+ -->      </div>
+      <div class="element-item windows " data-category="transition" onclick="getMediaQuery('720', '1280');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Microsoft Lumia 640</p>
+        <!--Resolution: 720 x 1280-->
+<!--         <p class="weight">200.59</p>
+ -->      </div>
+      <div class="element-item windows " data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Nokia Lumia 1520</p>
+        <!--Resolution: 1080 x 1920-->
+<!--         <p class="weight">200.59</p>
+ -->      </div>
+      <div class="element-item windows " data-category="transition" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">windows</h5>
+        <p class="symbol">Nokia Lumia 930</p>
+        <!--Resolution: 1080 x 1920-->
+<!--         <p class="weight">200.59</p>
+ -->      </div>
+
+ <!-- New Windows start -->
+ <!-- Windows search -->
+
+     <div class="element-item windows " data-category="transition" onclick="getMediaQuery('768', '1366');">
+            <h5 class="name">windows</h5>
+            <p class="symbol">ASUS Vivo</p>
+     </div>
+
+     <div class="element-item windows " data-category="transition" onclick="getMediaQuery('800', '1280');">
+            <h5 class="name">windows</h5>
+            <p class="symbol">Dell Venue 8</p>
+     </div>
+
+     <div class="element-item windows " data-category="transition" onclick="getMediaQuery('320', '480');">
+            <h5 class="name">windows</h5>
+            <p class="symbol">HTC Windows Phone 8S</p>
+     </div>
+
+     <div class="element-item windows " data-category="transition" onclick="getMediaQuery('320', '480');">
+            <h5 class="name">windows</h5>
+            <p class="symbol">HTC Windows Phone 8X</p>
+     </div>
+
+     <div class="element-item windows " data-category="transition" onclick="getMediaQuery('768', '1366');">
+            <h5 class="name">windows</h5>
+            <p class="symbol">Microsoft Surface</p>
+     </div>
+
+     <div class="element-item windows " data-category="transition" onclick="getMediaQuery('720', '1280');">
+            <h5 class="name">windows</h5>
+            <p class="symbol">Microsoft Surface Pro</p>
+     </div>
+
+     <div class="element-item windows " data-category="transition" onclick="getMediaQuery('900', '1600');">
+            <h5 class="name">windows</h5>
+            <p class="symbol">Sony VAIO Tap 20</p>
+     </div>
+
+ <!-- New Windows end -->
+
+<!-- iOS start -->
+<!-- Also iOS search -->
+
+      <div class="element-item iOS " data-category="alkali" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPod Touch 4th Gen</p>
+     </div>
+
+     <div class="element-item iOS " data-category="alkali" onclick="getMediaQuery('320', '568');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPod Touch 5th Gen</p>
+     </div>
+
+      <div class="element-item iOS " data-category="post-transition" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPhone 2G</p>
+      </div>
+
+      <div class="element-item iOS " data-category="post-transition" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPhone 3G</p>
+      </div>
+      <div class="element-item iOS " data-category="post-transition" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPhone 3GS</p>
+      </div>
+
+      <div class="element-item iOS " data-category="post-transition" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPhone 4</p>
+<!--         <p class="weight">207.2</p>
+ -->      </div>
+      <div class="element-item iOS " data-category="transition" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPhone 4s</p>
+<!--         <p class="weight">196.967</p>
+ -->      </div>
+      <div class="element-item iOS " data-category="alkali" onclick="getMediaQuery('320', '568');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPhone 5</p>
+     </div>
+     <div class="element-item iOS " data-category="alkali" onclick="getMediaQuery('320', '568');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPhone 5C</p>
+     </div>
+     <div class="element-item iOS " data-category="alkali" onclick="getMediaQuery('320', '568');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPhone 5S</p>
+     </div>
+     <div class="element-item iOS " data-category="alkali" onclick="getMediaQuery('375', '667');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPhone 6</p>
+     </div>
+     <div class="element-item iOS " data-category="alkali" onclick="getMediaQuery('414', '736');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPhone 6 Plus</p>
+     </div>
+
+      <div class="element-item iOS " data-category="alkali" onclick="getMediaQuery('720', '1280');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPhone 5s</p>
+<!--         <p class="weight">22.99</p>
+ -->      </div>
+      <div class="element-item iOS " data-category="transition" onclick="getMediaQuery('720', '1280');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPhone 5c</p>
+<!--         <p class="weight">112.411</p>
+ -->      </div>
+      <div class="element-item iOS " data-category="alkaline-earth" onclick="getMediaQuery('720', '1280');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPhone 6</p>
+<!--         <p class="weight">40.078</p>
+ -->      </div>
+      <div class="element-item iOS " data-category="transition" onclick="getMediaQuery('720', '1280');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPhone 6 plus</p>
+<!--         <p class="weight">186.207</p>
+ -->      </div>
+
+     <div class="element-item iOS" data-category="actinoid" onclick="getMediaQuery('720', '946');">
+            <h5 class="name">iOS</h5>
+            <p class="symbol">iPad Mini</p>
+    <!--         <p class="weight">238.029</p>
+     -->      </div>
+      <div class="element-item iOS " data-category="actinoid" onclick="getMediaQuery('768', '1024');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPad</p>
+<!--         <p class="weight">(244)</p>
+ -->  </div>
+      <div class="element-item iOS " data-category="actinoid" onclick="getMediaQuery('768', '1024');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPad 2</p>
+<!--         <p class="weight">(244)</p>
+ -->  </div>
+      <div class="element-item iOS " data-category="actinoid" onclick="getMediaQuery('768', '1024');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPad 3</p>
+<!--         <p class="weight">(244)</p>
+ -->  </div>
+ <div class="element-item iOS " data-category="actinoid" onclick="getMediaQuery('768', '1024');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">iPad Air</p>
+<!--         <p class="weight">(244)</p>
+ -->  </div>
+
+
+ <div class="element-item iOS" data-category="lanthanoid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">13" Macbook Pro</p>
+<!--         <p class="weight">173.054</p>
+ -->   </div>
+
+  <div class="element-item iOS" data-category="lanthanoid" onclick="getMediaQuery('1600', '2560');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">13" Macbook Pro Retina</p>
+<!--         <p class="weight">173.054</p>
+ -->   </div>
+
+   <div class="element-item iOS" data-category="lanthanoid" onclick="getMediaQuery('1800', '2880');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">15" Macbook Pro Retina</p>
+<!--         <p class="weight">173.054</p>
+ -->   </div>
+
+    <div class="element-item iOS" data-category="lanthanoid" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">21" iMac</p>
+<!--         <p class="weight">173.054</p>
+ -->   </div>
+
+
+    <div class="element-item iOS" data-category="lanthanoid" onclick="getMediaQuery('2304', '4096');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">21" iMac 4k</p>
+<!--         <p class="weight">173.054</p>
+ -->   </div>
+
+     <div class="element-item iOS" data-category="lanthanoid" onclick="getMediaQuery('2880', '5120');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">27" iMac 4k</p>
+<!--         <p class="weight">173.054</p>
+ -->   </div>
+
+      <div class="element-item iOS" data-category="lanthanoid" onclick="getMediaQuery('768', '1366');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">11" Macbook Air</p>
+<!--         <p class="weight">173.054</p>
+ -->   </div>
+
+       <div class="element-item iOS" data-category="lanthanoid" onclick="getMediaQuery('900', '1440');">
+        <h5 class="name">iOS</h5>
+        <p class="symbol">13" Macbook Air</p>
+<!--         <p class="weight">173.054</p>
+ -->   </div>
+
+<!-- iOS end -->
+
+
+<!-- Android Start -->
+<!-- Android search -->
+
+<!-- Start of Page 1 -->
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('2160', '3840');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Xperia Z5 Premium</p>
+<!--         <p class="weight">121.76</p>
+ -->      </div>
+       <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC One A9</p>
+        <!--Resolution: 1080 x 1920-->
+<!--         <p class="weight">127.6</p>
+ -->      </div>
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('1440', '2560');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Nexus 6P</p>
+        <!--Resolution: 1440 x 2560-->
+<!--         <p class="weight">121.76</p>
+ -->      </div>
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('1080', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Xperia Z5</p>
+        <!--Resolution: 1080 x 1920 -->
+<!--         <p class="weight">121.76</p>
+ -->      </div>
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('1440', '2560');">
+        <h5 class="name">android</h5>
+        <p class="symbol">LG G5</p>
+        <!--Resolution: 1440 x 2560-->
+<!--         <p class="weight">121.76</p>
+ -->      </div>
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">android</h5>
+        <p class="symbol">OnePlus 3</p>
+        <!--Resolution: 1080 x 1920-->
+<!--         <p class="weight">121.76</p>
+ -->      </div>
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('720', '1280');" >
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC 10</p>
+        <!--Resolution: 1440 x 2560-->
+<!--         <p class="weight">121.76</p>
+ -->      </div>
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('1440', '2560');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S7</p>
+        <!--Resolution: 1440 x 2560-->
+<!--         <p class="weight">121.76</p>
+ -->      </div>
+
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('768', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Acer Iconia Tab A1-810</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Acer Iconia Tab A100</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('720', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Huawei Ascend P6</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Huawei Ascend P7</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Acer Iconia Tab A101</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Acer Iconia Tab A200</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('648', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Acer Iconia Tab A500</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Acer Iconia Tab A501</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Acer Liquid E2</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('496', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Ainol Novo 7 Elf 2</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Alcatel Smart Mini 875</p>
+      </div>
+
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '427');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Alcatel One Touch 903</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('480', '800');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Alcatel One Touch Idol X</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('480', '800');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Alcatel One Touch T10</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('480', '800');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Amicroe 7 TouchTAB II</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('768', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Amicroe 9.7 TouchTAB IV</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Archos 70b (it2)</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('768', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Archos 80G9</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Arnova 10b G3</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('480', '800');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Arnova 7 G2</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('640', '1067');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Arnova 7F G3</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1067');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Arnova 8C G3</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Asus B1-A71</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('601', '962');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Asus Fonepad  </p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">ASUS MeMo Pad</p>
+      </div>
+
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Asus MeMo Pad ME172V</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1128');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Asus Padfone</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Asus Transformer Pad</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Asus Transformer TF101</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '960');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Barnes & Noble Nook HD</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('768', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">BAUHN AMID-972XS</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('768', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">BAUHN AMID-9743G</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">BAUHN ASP-5000H</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '598');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Galaxy Nexus</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HP Slate 7 2800</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('768', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HP Touchpad</p>
+      </div>
+
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC Desire</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC Desire 700</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC Desire C</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC Desire HD</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC Desire X</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('480', '800');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC Desire Z (Vision)</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC Droid Eris</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('540', '960');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC Evo 3D</p>
+      </div>
+      
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('540', '960');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC Evo 4G LTE</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('720', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC Incredible 2</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC Legend</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC MyTouch Slide 4G</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('1080', '1920');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC One</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC One Mini</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC One S</p>
+      </div>
+
+<!-- End of Page 1 -->
+
+<!-- Start of Page 2 -->
+
+
+<div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC One SV</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC One V</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC One X</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC One X+</p>
+      </div>
+
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC One XL</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC Sensation XL</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC Velocity 4G</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('267', '356');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC Wildfire A3333</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">HTC Wildfire S</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '569');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Huawei Ascend G510</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('480', '813');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Huawei Ascend Mate</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Huawei U8650 Sonic</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '544');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Huawei U8860</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Huawei Y300-0151</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '963');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Kindle Fire 2</p>
+      </div>
+
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('533', '801');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Kindle Fire HD</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1220');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Kindle Fire HD 8.9</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Lenovo IdeaTab A1000</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Lenovo IdeaTab S6000</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Lenovo Yoga Tablet 10</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('602', '962');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Lenovo Yoga Tablet 8</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">LG Ally</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '598');">
+        <h5 class="name">android</h5>
+        <p class="symbol">LG G2</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">LG Optimus 2x</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">LG Optimus Black P970</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('384', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">LG Optimus G E975</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '427');">
+        <h5 class="name">android</h5>
+        <p class="symbol">LG Optimus L3 E400</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '427');">
+        <h5 class="name">android</h5>
+        <p class="symbol">LG Optimus L3 II E425f</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">LG Optimus L7 P700</p>
+      </div>
+
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">LG Optimus L9 P760</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('768', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">LG Optimus Pad V900</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '569');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola Defy</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola Defy Mini</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '559');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola Droid 3</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola Droid Bionic</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola Droid Razr</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '598');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola Electrify 2</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola Fire XT</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '240');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola FlipOut</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '569');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola Milestone</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '598');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola Moto G</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '598');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola RAZR HD 4G</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '598');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola RAZR M 4G</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola RAZR MAXX</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola Xoom</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola Xoom 2</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Motorola Xoom 2 Media Edition</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Nexus 10</p>
+      </div>
+
+
+<!-- End of Page 2 -->
+
+
+
+
+<!-- Start of Page 3 -->
+
+
+<div class="element-item android " data-category="metalloid" onclick="getMediaQuery('384', '598');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Nexus 4</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '598');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Nexus 5</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('603', '966');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Nexus 7</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '960');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Nexus 7 (2013)</p>
+      </div>
+
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('731', '1170');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Nexus 7 (LCD Density set to 175PPI)</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Nexus One</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Nexus S</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('768', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Panasonic Toughpad FZ-A1</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">PendoPad 10"</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('480', '800');">
+        <h5 class="name">android</h5>
+        <p class="symbol">PendoPad 7"</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('768', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Pioneer Dreambook</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '427');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy 5/Europa I5500</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Ace 2 I8160</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Ace Plus S7500</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Ace S5830</p>
+      </div>
+
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Beam I8530</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '598');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Camera GC100</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Mini 2 S6500</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Note 10.1 (2014 Edition) P600</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Note 10.1 N8010</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '637');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Note 10.1 N8010 (Multiscreen Enabled)</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Note 2 N7100</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Note 3 N9005</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('601', '962');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Note 8.0 N5100</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('601', '962');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Note 8.0 N5110</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('400', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Note N700</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S Duos S7562</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S I9000</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S WiFi YPG70CW</p>
+      </div>
+
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S2 I9100</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S3 I9300</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S3 Mini I8190</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S4 Active I9295</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S4 I9500</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S4 I9505</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S4 Mini I9190</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy S4 Zoom SM-C105</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Tab 10.1 P7510</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Tab 2 10.1 P5110</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Tab 2 7.0 P3110</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Tab 3 10.1 P5210</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Tab 3 7.0 T210</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Tab 3 Kids T2105</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Tab 7.0 Plus P6210</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Tab 7.7 P6810</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Tab 8.9 4G P7320</p>
+      </div>
+
+
+
+<!-- End of Page 3 -->
+
+
+
+
+
+<!-- Start of Page 3 -->
+
+
+<div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Tab 8.9 P7310</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('400', '683');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Tab P1000</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy X Cover 2 S7710</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '427');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Y S5360</p>
+      </div>
+
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Galaxy Young S6310</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Samsung Infuse 4G I997</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('480', '800');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Scroll Excel</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('425', '974');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Ericcson Xperia Play</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '569');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Ericsson Xperia Arc</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '401');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Ericsson Xperia Mini ST15i</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('480', '854');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Ericsson Xperia Neo</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '569');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Ericsson Xperia X10</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Ericsson Xperia X8</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Tablet S</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Xperia P</p>
+      </div>
+
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Xperia S</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '569');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Xperia Sola</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '598');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Xperia SP</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Xperia Tablet Z</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Xperia Tipo</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '569');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Xperia U</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '598');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Xperia V</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '598');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Xperia Z</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '598');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Sony Xperia Z1</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('400', '683');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Telstra T-Hub 2</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('600', '799');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Tesco Hudl</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Toshiba AT100</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('602', '961');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Toshiba AT1S0</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Toshiba AT200</p>
+      </div>
+
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('800', '1280');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Toshiba AT300</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('900', '1600');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Toshiba AT330</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Wiko Cink Slim</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '640');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Xiaomi MI-3</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('768', '1024');">
+        <h5 class="name">android</h5>
+        <p class="symbol">Yarvik Xenta Tab 8c</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">ZTE T22 (Telstra Urbane)</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">ZTE T28 (Telstra Active Touch)</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">ZTE T760 (Telstra Smart-Touch 2)</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '480');">
+        <h5 class="name">android</h5>
+        <p class="symbol">ZTE T790 (Telstra Pulse)</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '533');">
+        <h5 class="name">android</h5>
+        <p class="symbol">ZTE T81 (Telstra Frontier 4G)</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('360', '598');">
+        <h5 class="name">android</h5>
+        <p class="symbol">ZTE T82 (Telstra Easy Touch 4G)</p>
+      </div>
+
+      <div class="element-item android " data-category="metalloid" onclick="getMediaQuery('320', '534');">
+        <h5 class="name">android</h5>
+        <p class="symbol">ZTE T83 (Telstra Dave 4G)</p>
+      </div>
+
+
+
+
+<!-- End of Page 3 -->
+
+<!-- Android end -->
+
+  </div>
+</div>
+
+  </div>
+
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+<!-- Looking for isotope.js? Use isotope.pkgd.min.js -->
+<!-- Isotope does NOT require jQuery. But it does make things easier -->
+
+<!-- <script src="js/isotope-docs.min.js"></script> -->
+<script src="js/master.js"></script>
+<!-- <script src="js/clipboard.min.js"></script> -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83159967-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+
+$('.grid').isotope({
+    masonry: {
+    columnWidth: '.grid-sizer',
+    gutter: '.gutter-sizer'
+  },
+  itemSelector: '.grid-item',
+  percentPosition: true
+});
+
+
+
+function yourScreen(){
+  var viewportWidth = $(window).width();
+  var viewportHeight = $(window).height();
+
+  getMediaQuery(viewportWidth, viewportHeight);
+}
+
+function yourAR(){
+  var viewportWidth = $(window).width();
+  var viewportHeight = $(window).height();
+  var ar = viewportWidth/viewportHeight;
+
+  var widthValue = Math.round(viewportWidth/viewportWidth*ar);
+  var heightValue = Math.round(viewportWidth/viewportHeight*ar);
+
+
+  var media = "@media only screen ";
+  var maxWidth = "   " + "and (device-aspect-ratio: " + heightValue + "/" + widthValue + ")" + "{";
+  var css = "   " + "/* Styles here */" ;
+  var brack = "\n" + "}";
+
+   $('#gen-media').text(media + "\n" + maxWidth + "\n" + css + brack);
+      $('#myModal').modal();
+}
+
+  var clipboard = new Clipboard('.btn', {
+        target: function() {
+            return document.querySelector('textarea#gen-media');
+        }
+    });
+
+    $( "#copy-button" ).click(function() {
+      $("#copy-button").text("Copied!");
+      $("#copy-button").css("background-color", "#FC5185").css("border-color", "#FC5185").css("font-weight", "900");
+    });
+
+    clipboard.on('success', function(e) {
+        //console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        //console.log(e);
+    });
+</script>
+
+<footer id="footer-container">
+  <div id="share-buttons">
+
+    <!-- Twitter -->
+    <a href="https://twitter.com/share?url=michael-gannon.com/media/index.html&text=CSS%20Media%20Query%20Generator:%20http://michael-gannon.com/media/index.html&CSS%20Media%20Query%20Generator%20&hashtags=simplecss" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+    </a>
+
+    <!-- Facebook -->
+    <a href="http://www.facebook.com/sharer.php?u=http://michael-gannon.com/media/index.html" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+    </a>
+    
+    <!-- Google+ -->
+    <a href="https://plus.google.com/share?url=michael-gannon.com/media/index.html" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+    </a>
+    
+    <!-- LinkedIn -->
+    <a href="http://www.linkedin.com/shareArticle?mini=true&url=michael-gannon.com/media/index.html" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+    </a>
+    
+    <!-- Reddit -->
+    <a href="http://reddit.com/submit?url=michael-gannon.com/media/index.html&title=Simple%20Share%20Buttons" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
+    </a>
+
+    
+    <!-- Tumblr-->
+    <a href="http://www.tumblr.com/share/link?url=michael-gannon.com/media/index.html&title=Simple%20Share%20Buttons" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/tumblr.png" alt="Tumblr" />
+    </a>
+
+
+    <!-- Email -->
+    <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 michael-gannon.com/media/index.html">
+        <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+    </a>
+
+    <form id="donate-button" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="CU55YNWUKVAQU">
+      <input id="donate"   type="image" src="img/button.png" border="none" name="submit" alt="PayPal - The safer, easier way to pay online!"><!-- 
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"> -->
+    </form>
+    
+</div>
+
+</footer>
+<script type="text/javascript">
+ var images = ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png', '11.png', '12.png', '13.png'];
+
+ $('body').css({'background-image': 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+</script>
+</body>
+</html>
