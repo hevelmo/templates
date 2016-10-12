@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2014 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="mail-1" unicode="&#xe800;" d="m0-29l324 342 176-100 176 100 324-342-1000 0z m0 114l0 414 254-147z m0 503l0 141 1000 0 0-141-500-285z m746-236l254 147 0-414z" horiz-adv-x="1000" />
+<glyph glyph-name="mail-alt" unicode="&#xe805;" d="m0 11v443q25-28 56-49 202-137 278-192 32-24 51-37t53-27 61-13h2q28 0 61 13t53 27 51 37q95 68 278 192 32 22 56 49v-443q0-37-26-63t-63-27h-822q-36 0-63 27t-26 63z m0 595q0 43 23 72t66 29h822q36 0 62-26t27-63q0-44-27-84t-68-69q-210-146-262-181-5-4-23-17t-30-22-29-18-33-15-27-5h-2q-12 0-27 5t-33 15-29 18-30 22-23 17q-51 35-147 101t-114 80q-35 23-65 64t-31 77z" horiz-adv-x="1000" />
+<glyph glyph-name="mail" unicode="&#xe806;" d="m0 28v644q0 8 2 18l460-460q39-39 95-39 55 0 94 39l460 460q2-9 2-18v-644q0-37-26-62t-62-26h-937q-36 0-62 26t-26 62z m63 728q13 4 25 4h937q12 0 25-4l-463-463q-13-12-31-12t-30 12z" horiz-adv-x="1113.3" />
+<glyph glyph-name="post" unicode="&#xe807;" d="m50 625c-50 0-25-17 0-37l350-288 400 288c25 20 50 37 0 37l-400 0z m-50-75l0-425c0-25 25-50 45-50l760 0c20 0 45 25 45 50l0 425-450-325z" horiz-adv-x="850" />
+</font>
+</defs>
+</svg>

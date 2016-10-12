@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>API de Archivos con Javascript</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var file, fileReader, fileList, blob, getFile, reader, name, conten, type, getName, getContent, getType, j, files, output, i, f;
+	getFile=document.getElementById('files');
+	file = window.File;
+	fileReader = window.FileReader;
+	fileList = window.FileList;
+	blob = window.Blob;
+
+	// Verificamos el sopor te de la API de Archivos, es necesario que soporte las 4 funciones.
+	if (file && fileReader && fileList && blob) {
+	  	function handleFileSelect(evt) {
+			console.log(file, fileReader, fileList, blob);
+			files = evt.target.files; // Objeto para Lista de Archivos, en el objeto existen los datos del archivo
+			console.log(files);
+
+			for( j=0;j<getFile.files.length;j++){
+		    	reader = new FileReader();//instanciamos FileReader
+		    	reader.onloadend = (function(f){//creamos la función que recogerá los datos
+		        	return function(e){
+		        		name = f.name;
+		            	content = e.target.result.split(",",2)[1];//obtenemos el contenido del archivo, estará codificado en Base64
+		            	type = f.type;
+		            	getName = name;
+		            	getContent = content;
+		            	getType = type;
+
+
+		            	$('#params .file').html(getName);
+		            	$('#params .mime_type').html(getType);
+		            	$('#params .file_content').html(getContent);
+
+		            	//le paso a una función el nombre del archivo y su contenido. Esta función puede pasar el contenido por ajax u otro medio al servidor
+		            	console.log(getName);
+		            	console.log(getType);
+		            	console.log(getContent);
+		        	}
+		    	})(getFile.files[j]);
+		    	reader.readAsDataURL(getFile.files[j]);//
+		    }
+			output = [];//Creamos un arreglo para guardar todos los archivos datos en diferentes posiciones.
+			for (i = 0, f; f = files[i]; i++) {//Recorremos el objeto files para obtener los datos de cada archivo y guardarlos en el arreglo.
+		  		output.push('<div id="params"><div class="file"></div><div class="file_content"></div><div class="mime_type"></div></div><li><strong>',
+	  				f.name, '</strong> (', f.type || 'n/a', ') - ',
+				  	f.size, ' bytes, ultima modificacion: ',
+				  	f.lastModifiedDate.toLocaleDateString(), '</li>');
+	  			console.log(output);
+			}
+			document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';//Introducimos la lista de archivos entre las etiquetas <ul></ul>
+			//console.log(output);
+	  	}
+	  	document.getElementById('files').addEventListener('change', handleFileSelect, false);//Ponemos un listener para escuchar cuando el evento Change del input file se ejecute, quiere decir cuando se de click en "Abrir"
+	} else {
+  		//alert();
+  		console.log('Tu navegador no tiene soporte para estas funciones.');
+	}
+});
+</script>
+<style>
+body{
+	font-family:Verdana, Geneva, sans-serif;
+}
+</style>
+</head>
+
+<body>
+<p><strong>Ejemplo</strong>: Usando API de Archivos de Javascript</p>
+<div class="example">
+    <input type="file" id="files" name="files[]" multiple />
+    <div id="list"></div>
+</div>
+</body>
+</html>

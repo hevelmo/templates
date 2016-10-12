@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "vw-black";
+  src: url("fonts/vwheadlineot-black-webfont.eot");
+  src: url("fonts/vwheadlineot-black-webfont-.eot#iefix") format("embedded-opentype"),
+  	 url("fonts/vwheadlineot-black-webfont.woff") format("woff"),
+  	 url("fonts/vwheadlineot-black-webfont.ttf") format("truetype"),
+  	 url("http://www.volkswagenguadalajara.com/72-horas/css/fonts/vwheadlineot-black-webfont.svg#vw_headline_otblack") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "vw";
+  src: url("fonts/vwheadlineot-book-webfont.eot");
+  src: url("fonts/vwheadlineot-book-webfont-.eot#iefix") format("embedded-opentype"),
+  	   url("fonts/vwheadlineot-book-webfont.woff") format("woff"),
+  	   url("fonts/vwheadlineot-book-webfont.ttf") format("truetype"),
+  	   url("http://www.volkswagenguadalajara.com/72-horas/css/fonts/vwheadlineot-book-webfont.svg#vw_headline_otbook") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "vw-semibold";
+  src: url("fonts/vwheadlineot-semibold-webfont.eot");
+  src: url("fonts/vwheadlineot-semibold-webfont-.eot#iefix") format("embedded-opentype"),
+  	   url("fonts/vwheadlineot-semibold-webfont.woff") format("woff"),
+  	   url("fonts/vwheadlineot-semibold-webfont.ttf") format("truetype"),
+  	   url("http://www.volkswagenguadalajara.com/72-horas/css/fonts/vwheadlineot-semibold-webfont.svg#vw_headline_otsemibold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

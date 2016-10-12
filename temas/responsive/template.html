@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Your site description." />
+    <title>Your page title</title>
+
+    <link href="responsive.css" rel="stylesheet" />
+    <link href="../camcar/css/webfonts/font-awesome/font-awesome.css" rel="stylesheet" />
+</head>
+<body>
+	<a class="ov1" href="#" data-modal-target="#overlay1">Launch internal overlay</a>
+	<div id="overlay1" class="hidden">
+	    <p>
+	        Lorem ipsum dolor sit amet...
+	        <!--<img src="../camcar/intranet/admin/cdn/img/convenios/4/el-desvan-de-catherine.jpg" alt="">-->
+	        <iframe class="modal-iframe iframe-full" src="../admin/cdn/img/convenios/10/5asec.pdf" frameborder="0"></iframe>
+	    </p>
+	</div>
+	<a class="ov2" data-modal-target="#overlay2">Launch internal overlay</a>
+	<div id="overlay2" class="hidden">
+	    <h2>Step One</h2>
+	    <p>
+	        Lorem ipsum dolor sit amet...
+	    </p>
+		<p><a class="ov3" data-modal-target="#overlay3">Go to Step Two</a></p>
+	</div>
+    <div id="overlay3" class="hidden">
+	    <h2>Step Two</h2>
+	    <p>
+	        Lorem ipsum dolor sit amet...
+	    </p>
+	        <p><a class="ov2" data-modal-target="#overlay2">Back to Step One</a></p>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<a class="icon-social" href="http://facebook.com/SEODiaz" target="_blank">
+		<i class="fa fa-facebook" style="color: rgb(255, 255, 255);"></i>
+	</a>
+	<style>
+		body {
+			background: #000;
+		}
+		.icon-social {
+			color: #fff;
+			padding: 15px 18px;
+			height: 25px;
+			max-height: 25px;
+			min-height: 25px;
+			width: 25px;
+			max-width: 25px;
+			min-width: 25px;
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			border-radius: 50%;
+			-webkit-box-shadow: inset 0 0 0 1px rgba(255,255,255,1);
+			-moz-box-shadow: inset 0 0 0 1px rgba(255,255,255,1);
+			box-shadow: inset 0 0 0 1px rgba(255,255,255,1);
+			-webkit-transition: all 500ms;
+			-moz-transition: all 500ms;
+			-ms-transition: all 500ms;
+			-o-transition: all 500ms;
+			transition: all 500ms;
+			-webkit-box-sizing: border-content;
+			-moz-box-sizing: border-content;
+			box-sizing: border-content;
+			font-size: 25px;
+			text-decoration: none;
+			line-height: inherit;;
+		}
+		.icon-social:hover {
+			-webkit-box-shadow: inset 0 0 0 30px rgba(255,255,255,1);
+			-moz-box-shadow: inset 0 0 0 30px rgba(255,255,255,1);
+			box-shadow: inset 0 0 0 30px rgba(255,255,255,1);
+			color: #000;
+		}
+		.icon-social i {
+			width: 23px;
+		    text-align: center;
+		    line-height: 1;
+		}
+	</style>
+
+    <script src="vendor/jquery-2.1.4.min.js"></script>
+    <script src="responsive.js"></script>
+    <script>
+		jQuery(document).ready(function($) {
+			$("a.icon-social").hover(
+				function() {
+					var i = $(this).find('i');
+					if(i.hasClass("fa-facebook")) {
+						i.css('color','#4862A3');
+					} else if(i.hasClass("fa-twitter")) {
+						i.css('color','#55ACEE');
+					} else if(i.hasClass("fa-google-plus")) {
+						i.css('color','#DD4D3C');
+					} else if(i.hasClass("fa-linkedin")) {
+						i.css('color','#1C87BD');
+					} else if(i.hasClass("fa-rss")) {
+						i.css('color','#ED8732');
+					}
+				}, function() {
+					$(this).find('i').css('color','#FFF');
+				}
+			);
+			$("a.icon-social").attr('target','_blank');
+		});  	
+    </script>
+</body>
+</html>

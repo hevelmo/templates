@@ -1,0 +1,29 @@
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: *
+Disallow: /*xhr-details
+Disallow: /*compare
+Disallow: /*notepad
+Disallow: /*recherches
+Disallow: /vpdf
+Disallow: /vpdf/
+Disallow: /*customer
+Disallow: /*chart.apis.google.com
+
+Disallow: /*contactDealer
+Disallow: /*view
+Disallow: /*country
+Disallow: /*price_from
+Disallow: /*price_to
+Disallow: /*reg_date_from
+Disallow: /*reg_date_to
+Disallow: /*km_from
+Disallow: /*km_to
+Disallow: /*kw_from
+Disallow: /*kw_to
+Disallow: /*gas
+Disallow: /*color
+Disallow: /*gears
+Disallow: /*zip
+Disallow: /*radius

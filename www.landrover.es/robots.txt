@@ -1,0 +1,13 @@
+# robots.txt http://www.landrover.es/
+
+User-agent: *
+Disallow: /system/
+Disallow: /*?configUrl=
+Disallow: /*compare/?
+Disallow: /fc/
+Disallow: /resources/
+Allow: /resources/public/
+Disallow: /layout/
+
+
+Sitemap: http://www.landrover.es/sitemap.xml

@@ -1,0 +1,127 @@
+/* http://refreshless.com/nouislider/ */
+
+.slider {
+	position:relative;
+}
+.slider:before {
+	content:'';
+	position:absolute;
+	display:block;
+	width:100%;
+	height:11px;
+	background:#ddd;
+	margin:0 -8px;
+}
+
+/* jquery.nouislider.min.css */
+/*! noUiSlider - 7.0.10 - 2014-12-27 14:50:47 */
+.noUi-target,
+.noUi-target * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-touch-action: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+.noUi-target {
+    position: relative;
+    direction: ltr
+}
+.noUi-base {
+    width: 100%;
+    height: 100%;
+    position: relative
+}
+.noUi-origin {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0
+}
+.noUi-handle {
+    position: relative;
+    z-index: 1
+}
+.noUi-stacking .noUi-handle {
+    z-index: 10
+}
+.noUi-state-tap .noUi-origin {
+    -webkit-transition: left .3s, top .3s;
+    transition: left .3s, top .3s
+}
+.noUi-state-drag * {
+    cursor: inherit!important
+}
+.noUi-base {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+.noUi-horizontal {
+    height: 11px;
+	top:6px;
+	margin:0 8px;
+}
+.noUi-horizontal .noUi-handle {
+	width: 16px;
+	height: 23px;
+    left: -8px;
+    top: -6px
+}
+.noUi-vertical {
+    width: 18px
+}
+.noUi-vertical .noUi-handle {
+    width: 28px;
+    height: 34px;
+    left: -6px;
+    top: -17px
+}
+.noUi-background {
+    background: #ddd;
+}
+.noUi-connect {
+	background:#003057; 
+
+    -webkit-transition: background 450ms;
+    transition: background 450ms
+}
+.noUi-origin {
+
+}
+.noUi-target {
+      
+}
+.noUi-target.noUi-connect {
+
+}
+.noUi-dragable {
+    cursor: w-resize
+}
+.noUi-vertical .noUi-dragable {
+    cursor: n-resize
+}
+.noUi-handle {
+	background: #FFF none repeat scroll 0% 0%;
+	border: 1px solid #003057;
+	outline: medium none;
+	cursor: pointer;
+
+}
+.noUi-active {
+
+}
+
+[disabled] .noUi-connect,
+[disabled].noUi-connect {
+    background: #B8B8B8
+}
+[disabled] .noUi-handle {
+    cursor: not-allowed
+}
+
+/* jquery.nouislider.pips.min.css */
+/*! noUiSlider - 7.0.10 - 2014-12-27 14:50:47 */
+.noUi-pips,.noUi-pips *{-moz-box-sizing:border-box;box-sizing:border-box}.noUi-pips{position:absolute;font:400 12px Arial;color:#999}.noUi-value{width:40px;position:absolute;text-align:center}.noUi-value-sub{color:#ccc;font-size:10px}.noUi-marker{position:absolute;background:#CCC}.noUi-marker-large,.noUi-marker-sub{background:#AAA}.noUi-pips-horizontal{padding:10px 0;height:50px;top:100%;left:0;width:100%}.noUi-value-horizontal{margin-left:-20px;padding-top:20px}.noUi-value-horizontal.noUi-value-sub{padding-top:15px}.noUi-marker-horizontal.noUi-marker{margin-left:-1px;width:2px;height:5px}.noUi-marker-horizontal.noUi-marker-sub{height:10px}.noUi-marker-horizontal.noUi-marker-large{height:15px}.noUi-pips-vertical{padding:0 10px;height:100%;top:0;left:100%}.noUi-value-vertical{width:15px;margin-left:20px;margin-top:-5px}.noUi-marker-vertical.noUi-marker{width:5px;height:2px;margin-top:-1px}.noUi-marker-vertical.noUi-marker-sub{width:10px}.noUi-marker-vertical.noUi-marker-large{width:15px}
