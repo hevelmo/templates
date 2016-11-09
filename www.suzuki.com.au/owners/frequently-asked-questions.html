@@ -1,0 +1,926 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<html lang="en" class="no-js">
+  <head>
+    <!--[if lt IE 9]>    
+        <script type="text/javascript">
+            window.location.href = "/update-browser.html";
+        </script>
+    <![endif]-->
+    <meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!d){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[y[n]];return f&&f.push([b,n,r,i]),i}}function p(e,t){w[e]=v(e).concat(t)}function v(e){return w[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var w={},y={},b={on:p,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a};return b}function i(){return new r}function a(){d=!0,s=p.backlog={}}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o(),d=!1;p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=b.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(w,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-995.min.js"},y=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a(),origin:m,features:{},xhrWrappable:y};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../sites/all/themes/suzuki/src/icons/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="shortlink" href="frequently-asked-questions.html" />
+<link rel="canonical" href="frequently-asked-questions.html" />
+<meta name="description" content="Answers to the most commonly asked questions about topics such as Suzuki Service, Sales and Finance." />
+
+        <title>Frequently Asked Questions (FAQ) | Suzuki Australia</title>
+    <link rel="stylesheet" href="../sites/all/themes/suzuki/dist/css/style.v_1b684c8d00c88048cca7a17248e1dde5.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1 user-scalable=no">
+    <script src="../sites/all/themes/suzuki/dist/js/modernizr.v_ffa00013bdbc125f90d8f467f493fece.js"></script>
+  </head>
+  <body class="with-sub-nav">
+        <!-- GTM Data Layer. Must come before GTM tag -->
+<!-- Google Tag Manager -->
+<noscript><iframe src="http://www.googletagmanager.com/ns.html?id=GTM-WQWPD5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WQWPD5');</script>
+<!-- End Google Tag Manager -->    
+<!--  -->
+    <!-- region header start --> 
+<div data-suzuki-main-nav class="suzuki-main-nav--wrap">
+    <div class="suzuki-main-nav" data-suzukinav data-fixed-nav>
+        
+        <div class="suzuki-main-nav__logo__wrapper">
+            <a href="../home.html">
+            <div class="suzuki-main-nav__logo__image desktop"></div>
+            <div class="suzuki-main-nav__logo__image mobile"></div>
+            </a>
+        </div>
+
+        <div class="suzuki-main-nav__button__wrapper" data-m="navtoggle">
+            <button class="suzuki-main-nav__toggle-nav" data-navtoggle='{"r" : true, "default" :{}, "large-up" : false}' >
+                <span class="burger-stripe"> </span>
+                <span class="burger-stripe"> </span>
+                <span class="burger-stripe"> </span>
+            </button>
+            <form class="suzuki-main-nav__search-form" action="/search/suzuki_search" method="post" data-m="currentdealer">
+                <a href="frequently-asked-questions.html#" class="suzuki-main-nav__search-form__toggle" data-navtoggle-search ></a>
+                <div class="suzuki-main-nav__search-form__item">
+                    <input type="text" name="keys" required placeholder="Type here..." class="suzuki-main-nav__search-form__input">
+                    <button type="submit" class="suzuki-main-nav__search-form__submit"></button>
+                </div>
+            </form>
+
+            <div class="suzuki-main-nav__locator" data-m="currentdealer">
+                <a href="../dealer-locator.html" data-currentdealer-display="link">
+                    <div class="suzuki-main-nav__locator--wrap">
+                        <div class="suzuki-main-nav__locator__image">
+                            <span class="suzuki-main-nav__locator__icon"></span>
+                        </div>
+                        <div class="suzuki-main-nav__locator__text">
+                            <span class="suzuki-main-nav__locator__name" data-currentdealer-display="name"></span>
+                            <span class="suzuki-main-nav__locator__view-dealer">View Dealership Details</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="suzuki-main-nav__toggle-nav__wrapper" data-navtoggle-nav-wrapper data-fixed-nav>
+            <ul class="suzuki-main-nav__toggle-nav__menu unstyled fade" data-navtoggle-mainmenu>
+                                    <li class="parent suzuki-main-nav__toggle-nav__menu__item" data-navtoggle-submenu>
+                        <a data-no-children href="frequently-asked-questions.html#">Vehicles</a>
+                                                    <ul class="suzuki-main-nav__toggle-nav__sub-menu unstyled" data-fixed-nav> 
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item car--menu parent">
+                                        <a href="../vehicles.html" data-car-menu>Browse Range</a>
+                                                                                            <div class="car--sub-menu--wrap">
+                                                    <div class="car--sub-menu">
+                                                                                                            <div class="car--sub-menu__item">
+                                                            <a class="car--sub-menu__item__image--wrap" href="../vehicles/hatch/celerio.html">
+                                                                <img class="car--sub-menu__item__image" src="../sites/default/files/styles/main_nav_model_default/public/image/_Celerio--3160x1720-_0004_BlueSkySettingF34_0.jpg" alt="Celerio"/>
+                                                                <img class="car--sub-menu__item__logo" src="../sites/default/files/styles/main_nav_model_logo_default/public/model_logo/CELERIO-Black.png" alt=""/>
+                                                            </a>
+                                                        </div>
+                                                                                                                                                                    <div class="car--sub-menu__item">
+                                                            <a class="car--sub-menu__item__image--wrap" href="../vehicles/hatch/swift.html">
+                                                                <img class="car--sub-menu__item__image" src="../sites/default/files/styles/main_nav_model_default/public/image/Swift-3160x1720-_0011_UrbanSetting1_0.jpg" alt="Swift"/>
+                                                                <img class="car--sub-menu__item__logo" src="../sites/default/files/styles/main_nav_model_logo_default/public/model_logo/Logo_Swift.png" alt=""/>
+                                                            </a>
+                                                        </div>
+                                                                                                                                                                    <div class="car--sub-menu__item">
+                                                            <a class="car--sub-menu__item__image--wrap" href="../vehicles/hatch/swift-sport.html">
+                                                                <img class="car--sub-menu__item__image" src="../sites/default/files/styles/main_nav_model_default/public/image/Swift_Sport-Garage_Hero_reto.jpg" alt="Swift Sport"/>
+                                                                <img class="car--sub-menu__item__logo" src="../sites/default/files/styles/main_nav_model_logo_default/public/model_logo/Logo_Swift_Sport.png" alt=""/>
+                                                            </a>
+                                                        </div>
+                                                                                                                                                                    <div class="car--sub-menu__item">
+                                                            <a class="car--sub-menu__item__image--wrap" href="../vehicles/hatch/baleno.html">
+                                                                <img class="car--sub-menu__item__image" src="../sites/default/files/styles/main_nav_model_default/public/image/_BALENO-3160x1720-_0003_Baleno1_0.jpg" alt="Baleno"/>
+                                                                <img class="car--sub-menu__item__logo" src="../sites/default/files/styles/main_nav_model_logo_default/public/model_logo/AllNewBALENO-1520x400.png" alt=""/>
+                                                            </a>
+                                                        </div>
+                                                                                                                                                                    <div class="car--sub-menu__item">
+                                                            <a class="car--sub-menu__item__image--wrap" href="../vehicles/suv/s-cross.html">
+                                                                <img class="car--sub-menu__item__image" src="../sites/default/files/styles/main_nav_model_default/public/image/S-Cross_Turbo_Hero.jpg" alt="S-Cross"/>
+                                                                <img class="car--sub-menu__item__logo" src="../sites/default/files/styles/main_nav_model_logo_default/public/model_logo/scross_logo_black.png" alt=""/>
+                                                            </a>
+                                                        </div>
+                                                                                                                </div>
+                                                         <div class="car--sub-menu">
+                                                                                                                                                                    <div class="car--sub-menu__item">
+                                                            <a class="car--sub-menu__item__image--wrap" href="../vehicles/suv/vitara.html">
+                                                                <img class="car--sub-menu__item__image" src="../sites/default/files/styles/main_nav_model_default/public/image/_VitaraTurbo-3160x1720-_0009.jpg" alt="Vitara"/>
+                                                                <img class="car--sub-menu__item__logo" src="../sites/default/files/styles/main_nav_model_logo_default/public/model_logo/VitaraLogo_1500x2002.png" alt=""/>
+                                                            </a>
+                                                        </div>
+                                                                                                                                                                    <div class="car--sub-menu__item">
+                                                            <a class="car--sub-menu__item__image--wrap" href="../vehicles/suv/jimny-sierra.html">
+                                                                <img class="car--sub-menu__item__image" src="../sites/default/files/styles/main_nav_model_default/public/image/009_JimnySierra-MudSplash.jpg" alt="Jimny Sierra"/>
+                                                                <img class="car--sub-menu__item__logo" src="../sites/default/files/styles/main_nav_model_logo_default/public/model_logo/Logo_Jimmy.png" alt=""/>
+                                                            </a>
+                                                        </div>
+                                                                                                                                                                    <div class="car--sub-menu__item">
+                                                            <a class="car--sub-menu__item__image--wrap" href="../vehicles/suv/grand-vitara.html">
+                                                                <img class="car--sub-menu__item__image" src="../sites/default/files/styles/main_nav_model_default/public/image/_GrandVitara-3160x1720-_0003_UrbanNightSetting_0.jpg" alt="Grand Vitara"/>
+                                                                <img class="car--sub-menu__item__logo" src="../sites/default/files/styles/main_nav_model_logo_default/public/model_logo/Logo_Grand_Vitara.png" alt=""/>
+                                                            </a>
+                                                        </div>
+                                                                                                                                                                    <div class="car--sub-menu__item">
+                                                            <a class="car--sub-menu__item__image--wrap" href="../vehicles/van/apv.html">
+                                                                <img class="car--sub-menu__item__image" src="../sites/default/files/styles/main_nav_model_default/public/image/_APV-3160x1720-_0001_Setting1.jpg" alt="APV"/>
+                                                                <img class="car--sub-menu__item__logo" src="../sites/default/files/styles/main_nav_model_logo_default/public/model_logo/Logo_APV.png" alt=""/>
+                                                            </a>
+                                                        </div>
+                                                                                                                                                                    <div class="car--sub-menu__item browse">
+                                                            <div class="car--sub-menu__item__shadow">
+                                                                <a href="../vehicles.html" class="car--sub-menu__item__browse--wrap">
+                                                                    <div class="car--sub-menu__item__browse">
+                                                                        <span>Browse Suzuki Range</span>
+                                                                        <span class="arrow"> </span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                                                </li>
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item">
+                                        <a href="../vehicles/compare.html">Compare</a>
+                                                                                </li>
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item">
+                                        <a href="../vehicles/build-your-suzuki.html">Build</a>
+                                                                                </li>
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item">
+                                        <a href="../finance-insurance.html">Finance</a>
+                                                                                </li>
+                                                            </ul>
+                                            </li>
+                                    <li data-navtoggle-submenu class="suzuki-main-nav__toggle-nav__menu__item no-children" >
+                        <a data-no-children href="../latest-offers.html">Offers</a>
+                                            </li>
+                                    <li class="parent suzuki-main-nav__toggle-nav__menu__item current active" data-navtoggle-submenu>
+                        <a data-no-children href="frequently-asked-questions.html#">Owners</a>
+                                                    <ul class="suzuki-main-nav__toggle-nav__sub-menu unstyled" data-fixed-nav> 
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item">
+                                        <a href="../owners.html">Overview</a>
+                                                                                </li>
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item">
+                                        <a href="warranty.html">Warranty</a>
+                                                                                </li>
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item">
+                                        <a href="servicing.html">Servicing</a>
+                                                                                </li>
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item">
+                                        <a href="vehicle-care.html">Vehicle Care</a>
+                                                                                </li>
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item">
+                                        <a href="genuine-parts.html">Genuine Parts</a>
+                                                                                </li>
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item current">
+                                        <a href="frequently-asked-questions.html">FAQs</a>
+                                                                                </li>
+                                                            </ul>
+                                            </li>
+                                    <li class="parent suzuki-main-nav__toggle-nav__menu__item" data-navtoggle-submenu>
+                        <a data-no-children href="frequently-asked-questions.html#">Suzuki Life!</a>
+                                                    <ul class="suzuki-main-nav__toggle-nav__sub-menu unstyled" data-fixed-nav> 
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item">
+                                        <a href="../suzuki-life.html">Overview</a>
+                                                                                </li>
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item">
+                                        <a href="../suzuki-life/news.html">News</a>
+                                                                                </li>
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item">
+                                        <a href="../suzuki-life/lifestyle.html">Lifestyle</a>
+                                                                                </li>
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item">
+                                        <a href="../suzuki-life/videos.html">Videos</a>
+                                                                                </li>
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item">
+                                        <a href="../suzuki-life/ambassadors.html">Ambassadors</a>
+                                                                                </li>
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item">
+                                        <a href="../suzuki-life/sponsorships.html">Sponsorships</a>
+                                                                                </li>
+                                    
+                                    <li class="suzuki-main-nav__toggle-nav__sub-menu__item">
+                                        <a href="http://suzukistore.com.au" target="_blank">Merchandise</a>
+                                                                                </li>
+                                                            </ul>
+                                            </li>
+                                <li class="suzuki-main-nav__toggle-nav__menu__dealer-locator">
+                    <a href="../dealer-locator.html"><div class="link-wrap"><span class="icon"></span><span class="text">Dealer locator</span></div></a>
+                </li>
+            </ul>
+            
+        </div>
+
+        <div class="suzuki-main-nav__buying-tools__mobile">
+            <button class="suzuki-main-nav__buying-tools" data-navtoggle-buyingTools>
+                <span class="suzuki-main-nav__buying-tools__text">Buying Tools</span>
+                <img class="suzuki-main-nav__buying-tools__image" src="../sites/all/themes/suzuki/dist/img/header-buying-tools.png" alt="Suzuki buying tools image"/>
+            </button>
+            <button class="suzuki-main-nav__buying-tools__exit" data-navtoggle-buyingTools-exit>
+                <span class="suzuki-main-nav__buying-tools__exit__icon">&times;</span>
+            </button>
+        </div>
+
+        <div class="suzuki-main-nav__buying-tools__wrap">
+            <div class="suzuki-main-nav__buying-tools__desktop">
+                <button class="suzuki-main-nav__buying-tools" data-navtoggle-buyingTools>
+                    <span class="suzuki-main-nav__buying-tools__text">Buying Tools</span>
+                    <img class="suzuki-main-nav__buying-tools__image" src="../sites/all/themes/suzuki/dist/img/header-buying-tools-stretch.png" alt="Suzuki buying tools image"/>
+                    <span class="suzuki-main-nav__buying-tools__burger active" data-buyingtools-burger>
+                        <span class="stripe stripe--1"></span>
+                        <span class="stripe stripe--2"></span>
+                        <span class="stripe stripe--3"></span>
+                    </span>
+                </button>
+                <button class="suzuki-main-nav__buying-tools__exit" data-navtoggle-buyingTools-exit>
+                    <span class="suzuki-main-nav__buying-tools__exit__icon">&times;</span>
+                </button>
+            </div>
+            <div class="suzuki-main-nav__toggle-nav__buying-tools-menu__wrap">
+                <div class="suzuki-main-nav__toggle-nav__buying-tools-menu__dealer" data-m="currentdealer">
+                    <a href="../dealer-locator.html" data-currentdealer-display="link"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="250" height="140" alt="" data-currentdealer-display="image"/></a>
+                    <div class="suzuki-main-nav__toggle-nav__buying-tools-menu__dealer__info">
+                        <p data-currentdealer-display="name"></p>
+                        <address>
+                        <span data-currentdealer-display="street"></span>, <br />
+                        <span data-currentdealer-display="suburb"></span>, <span data-currentdealer-display="state">VIC</span> 
+                        <span data-currentdealer-display="postcode"></span>
+                        </address>
+                        <a class="call-to" href="frequently-asked-questions.html#" data-currentdealer-display="phone"></a>
+                    </div>
+                </div>
+                <ul class="suzuki-main-nav__toggle-nav__buying-tools-menu unstyled" data-navtoggle-buyingTools-menu>
+                    <li class="suzuki-main-nav__toggle-nav__buying-tools-menu__dealer-locator">
+                        <a href="../dealer-locator.html"><div class="link-wrap"><span class="icon"></span><span class="text">Dealer locator</span></div></a>
+                    </li>
+                    <li class="suzuki-main-nav__toggle-nav__buying-tools-menu__book-drive">
+                        <a href="../book-test-drive.html"><div class="link-wrap"><span class="icon"></span><span class="text">Book a test drive</span></div></a>
+                    </li>
+                    <li class="suzuki-main-nav__toggle-nav__buying-tools-menu__request-brochure">
+                        <a href="../brochure-request.html"><div class="link-wrap"><span class="icon"></span><span class="text">Request brochure</span></div></a>
+                    </li>
+                    <li class="suzuki-main-nav__toggle-nav__buying-tools-menu__service-booking">
+                        <a href="../service-booking.html"><div class="link-wrap"><span class="icon"></span><span class="text">Service booking</span></div></a>
+                    </li>
+                    <li class="suzuki-main-nav__toggle-nav__buying-tools-menu__dealer-enquiry">
+                        <a href="../enquiry.html"><div class="link-wrap"><span class="icon"></span><span class="text">General enquiry</span></div></a>
+                    </li>
+                </ul>
+
+                
+            </div>
+        </div>
+            
+    </div>
+        <div class="dark-overlay" data-navtoggle-buyingtools-exit> </div>
+</div>
+
+
+
+<!-- region header end -->
+
+<main id="main-container" data-ajax-loader>
+        
+
+        <!-- region content start --> 
+<div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div class="l-section">
+    <div class="row">
+        <div class="small-12 columns">
+            <h1 class="text-center">Frequently Asked Questions (FAQs)</h1>
+            
+        </div>
+    </div>
+    <div class="l-thin-container">
+                    <div class="l-section">
+                <h2 class="text-center">
+                    Service
+                </h2>
+                <div data-m="tabccordion" data-tabccordion='{"id" : "faq", "multi" : true}'>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_how_much_will_a_suzuki_service_cost" data-tabccordion-accordionlink>
+                            How much will a Suzuki service cost?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_how_much_will_a_suzuki_service_cost" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>If you have bought an eligible new Suzuki after the 1st May 2013, you can have peace of mind knowing your Scheduled Maintenance Service costs are capped for 5 years.</p>
+
+<table>
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>Baleno 1.4L</th>
+			<th>Baleno 1.0L Turbo</th>
+			<th>Celerio</th>
+			<th>Swift</th>
+			<th>Vitara 1.4L Turbo</th>
+			<th>Vitara</th>
+			<th>S-Cross</th>
+			<th>Kizashi</th>
+			<th>APV</th>
+			<th>Jimny</th>
+			<th>Grand Vitara</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>6 months</th>
+			<td>$175</td>
+			<td>$175</td>
+			<td>$199</td>
+			<td>$199</td>
+			<td>$175</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$269</td>
+			<td>$269</td>
+		</tr>
+		<tr>
+			<th><strong>12 months</strong></th>
+			<td>$175</td>
+			<td>$175</td>
+			<td>$199</td>
+			<td>$199</td>
+			<td>$175</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$269</td>
+			<td>$269</td>
+		</tr>
+		<tr>
+			<th><strong>18 months</strong></th>
+			<td>$175</td>
+			<td>$175</td>
+			<td>$199</td>
+			<td>$199</td>
+			<td>$175</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$269</td>
+			<td>$269</td>
+		</tr>
+		<tr>
+			<th><strong>24 months</strong></th>
+			<td>$459</td>
+			<td>$429</td>
+			<td>$289</td>
+			<td>$289</td>
+			<td>$359</td>
+			<td>$295</td>
+			<td>$295</td>
+			<td>$295</td>
+			<td>$295</td>
+			<td>$299</td>
+			<td>$299</td>
+		</tr>
+		<tr>
+			<th><strong>30 months</strong></th>
+			<td>$175</td>
+			<td>$175</td>
+			<td>$199</td>
+			<td>$199</td>
+			<td>$175</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$269</td>
+			<td>$269</td>
+		</tr>
+		<tr>
+			<th><strong>36 months</strong></th>
+			<td>$175</td>
+			<td>$329</td>
+			<td>$199</td>
+			<td>$199</td>
+			<td>$379</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$269</td>
+			<td>$269</td>
+		</tr>
+		<tr>
+			<th><strong>42 months</strong></th>
+			<td>$175</td>
+			<td>$175</td>
+			<td>$199</td>
+			<td>$199</td>
+			<td>$175</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$269</td>
+			<td>$269</td>
+		</tr>
+		<tr>
+			<th><strong>48 months</strong></th>
+			<td>$499</td>
+			<td>$469</td>
+			<td>$289</td>
+			<td>$289</td>
+			<td>$399</td>
+			<td>$295</td>
+			<td>$295</td>
+			<td>$295</td>
+			<td>$295</td>
+			<td>$299</td>
+			<td>$299</td>
+		</tr>
+		<tr>
+			<th><strong>54 months</strong></th>
+			<td>$175</td>
+			<td>$175</td>
+			<td>$199</td>
+			<td>$199</td>
+			<td>$175</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$269</td>
+			<td>$269</td>
+		</tr>
+		<tr>
+			<th><strong>60 months</strong></th>
+			<td>$175</td>
+			<td>$175</td>
+			<td>$199</td>
+			<td>$199</td>
+			<td>$175</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$249</td>
+			<td>$269</td>
+			<td>$269</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Under the Capped Price Service Program service checks are required every 6 months or 10,000 kms if distance has been travelled prior to scheduled date.&nbsp;Maintenance service costs are capped for 5 years and by having your Suzuki regularly serviced by an Authorised Suzuki Dealer as per the Capped Price Service Terms and Conditions, your warranty will be extended up to 5 years or 140,000 kms*</p>
+
+<p><em>^ Does not include Grand Vitara Diesel</em></p>
+
+<p><em>*All Suzuki Dealers are independent businesses and prices may vary.</em>&nbsp;<em>For full terms and conditions of the Capped Price Service Program please click&nbsp;<a href="../capped-price-service-terms.html">here</a>&nbsp;</em></p>
+
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_how_often_should_i_get_my_suzuki_serviced" data-tabccordion-accordionlink>
+                            How often should I get my Suzuki Serviced?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_how_often_should_i_get_my_suzuki_serviced" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>As of the 1st May 2013 all eligible Suzuki vehicles* are covered by Suzuki’s Capped Price Service program.&nbsp; Under the Capped Price Service Program service checks are required every 6 months or 10,000 kms if distance has been travelled prior to scheduled date.&nbsp; Maintenance service costs are capped for 5 years and by having your Suzuki regularly serviced by an Authorised Suzuki Dealer as per the Capped Price Service Terms and Conditions, your warranty will be extended up to 5 years or 140,000 kms*.</p>
+
+<p>For vehicles not included in the Capped Price Service Program*, please refer to your owner’s warranty and service handbook or contact your local authorised Suzuki dealer to discuss your servicing needs.</p>
+
+<p><em>*For full terms and conditions of the Capped Price Service Program please click <a href="../capped-price-service-terms.html">here&nbsp;</a></em></p>
+
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_do_i_have_to_have_my_suzuki_serviced_at_a_suzuki_dealer" data-tabccordion-accordionlink>
+                            Do I have to have my Suzuki serviced at a Suzuki Dealer?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_do_i_have_to_have_my_suzuki_serviced_at_a_suzuki_dealer" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	We recommend that you service your Suzuki at an Authorised Suzuki dealer, as all Suzuki technicians are trained on Suzuki product and have access to special tools and regular product updates, ensuring that your vehicle is serviced or repaired to the highest standards, however it is not compulsory.</p>
+<p>
+	The 3yr /100,000 km** warranty supplied with the purchase of all Suzuki vehicles will not be affected if you choose to service at a non-Authorised service outlet, as long as you ensure that it is serviced in accordance with the recommendations in your owner&rsquo;s service and warranty handbook by a suitable qualified person using only genuine parts and recommended lubricants.</p>
+<p>
+	If you have purchased an eligible Suzuki vehicle after the 1st of May 2013, it is only by servicing at an Authorised Suzuki dealer that your service cost will be capped for 5 years* and you will be eligible for the additional warranty offered under the Suzuki Capped Price Service Program.</p>
+<p>
+	<small><em>*For full terms and conditions of the Capped Price Service Program please click <a href="../capped-price-service-terms.html">here</a></em></small></p>
+<p>
+	<small><em>**whichever occurs first</em>.&nbsp;</small></p>
+
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_how_often_do_i_need_my_air-conditioning_serviced" data-tabccordion-accordionlink>
+                            How often do I need my air-conditioning serviced?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_how_often_do_i_need_my_air-conditioning_serviced" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	This will depend on the model and age of your Suzuki. Please consult your Owner&#39;s Manual or local Authorised Suzuki dealer for specific information.</p>
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_what_is_the_right_type_of_oil_for_my_car" data-tabccordion-accordionlink>
+                            What is the right type of oil for my car?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_what_is_the_right_type_of_oil_for_my_car" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	This will depend on the model and age of your Suzuki. Please consult your Owner&#39;s Manual or local Authorised Suzuki dealer for specific information.</p>
+
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_what_are_the_benefits_of_using_genuine_suzuki_parts" data-tabccordion-accordionlink>
+                            What are the benefits of using Genuine Suzuki Parts?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_what_are_the_benefits_of_using_genuine_suzuki_parts" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	Genuine Suzuki Parts are designed, manufactured and tested on the full range of Suzuki vehicles. Fitted by our specially trained Suzuki technicians, the superior quality of our Suzuki Genuine Parts provides the greatest reliability and performance. All our Genuine Parts are competitively priced and meet the high quality standards of Suzuki, plus they come with a&nbsp;one&nbsp;year warranty to give you complete peace of mind.</p>
+
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_can_a_suzuki_dealer_check_and_top-up_my_oil_for_me" data-tabccordion-accordionlink>
+                            Can a Suzuki Dealer check and top-up my oil for me?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_can_a_suzuki_dealer_check_and_top-up_my_oil_for_me" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	Your local Authorised Suzuki dealer will be happy to assist with checking and topping up oil.</p>
+
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_i_have_missed_one_of_my_services_what_happens_now" data-tabccordion-accordionlink>
+                            I have missed one of my services. What happens now?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_i_have_missed_one_of_my_services_what_happens_now" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	Missed services need to be discussed with your local Suzuki dealer as this may affect your vehicle&#39;s warranty. It is important that the servicing schedule is returned to normal as soon as possible.</p>
+
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_why_should_i_get_my_car_serviced_at_a_suzuki_dealer" data-tabccordion-accordionlink>
+                            Why should I get my car serviced at a Suzuki Dealer?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_why_should_i_get_my_car_serviced_at_a_suzuki_dealer" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	We are committed to keeping your Suzuki safe and reliable, giving you complete piece of mind. It is a franchise requirement that all technicians employed by Authorised Suzuki dealers are trained on Suzuki products. This training, combined with the necessary specialist tooling and regular product updates, ensures that your Suzuki is serviced or repaired to the highest standards.</p>
+
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_where_can_i_get_my_suzuki_serviced" data-tabccordion-accordionlink>
+                            Where can I get my Suzuki serviced?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_where_can_i_get_my_suzuki_serviced" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	We recommend that you have your Suzuki serviced at an Authorised Suzuki dealer as staff have had the necessary training, use the Suzuki specialist tools and have experience in looking after the full range of Suzuki vehicles. If you decide to have your vehicle serviced outside of our network, it is important to ensure that any parts fitted are either Genuine Suzuki parts or parts of equivalent quality to meet warranty requirements. It is also necessary to obtain a detailed service invoice listing the parts and oils used in the service, as this information may be required should you need to make a warranty claim. All warranty repairs shall only be carried out by an Authorised Suzuki Dealer. Refer to dealer locator to find your nearest dealer.</p>
+
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_how_can_i_contact_suzuki" data-tabccordion-accordionlink>
+                            How can I contact Suzuki?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_how_can_i_contact_suzuki" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	If you&#39;re an owner and have changed your contact details, or if you have a question about your car you can Contact Suzuki Customer Assistance Centre on 1800 777 088 or speak to your local Authorised Suzuki Dealership who will help in any way they can.</p>
+
+                        </div>
+                                    </div>
+            </div>
+                    <div class="l-section">
+                <h2 class="text-center">
+                    Sales
+                </h2>
+                <div data-m="tabccordion" data-tabccordion='{"id" : "faq", "multi" : true}'>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_will_i_be_charged_for_any_recall_work_carried_out_on_my_vehicle" data-tabccordion-accordionlink>
+                            Will I be charged for any recall work carried out on my vehicle?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_will_i_be_charged_for_any_recall_work_carried_out_on_my_vehicle" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	No, all recall work will be carried out at no cost.</p>
+
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_how_will_i_know_if_my_vehicle_is_affected_by_a_recall" data-tabccordion-accordionlink>
+                            How will I know if my vehicle is affected by a recall?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_how_will_i_know_if_my_vehicle_is_affected_by_a_recall" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	If you purchased your Suzuki from a Suzuki dealer your details will have been passed to Suzuki Australia Pty Ltd who will then write to you to advise that your vehicle is affected by a safety recall. If you did not purchase your Suzuki from a Suzuki dealer then you will need to advise Suzuki Australia Pty Ltd that you are the new owner of the vehicle, by submitting the details on the transfer of warranty card located at the rear of the Warranty and Service Record Booklet or advising your local Suzuki dealer. If you are unsure if your vehicle is affected by a safety recall then your local Suzuki dealer will be able to check this for you.</p>
+
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_what_is_a_safety_recall" data-tabccordion-accordionlink>
+                            What is a safety recall?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_what_is_a_safety_recall" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	If a vehicle manufacturer detects a concern on a vehicle that may cause a safety related issue they may undertake a vehicle safety recall whereby they try to locate every affected vehicle in order to have faults rectified, at no cost to the owners, at Authorised Suzuki dealers. Additionally, from time to time Suzuki identify areas where the ownership experience can be improved and may carry out small modifications to improve reliability or function. In Australia, car recalls are operated under a code of practice agreed between FCAI and the car makers. FCAI operates a website which contains detailed information on vehicle recalls in Australia.</p>
+
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_is_the_warranty_transferable_between_owners" data-tabccordion-accordionlink>
+                            Is the warranty transferable between owners?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_is_the_warranty_transferable_between_owners" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	The standard Suzuki warranty applies to the vehicle and is therefore transferable between owners. Transfer of warranty to a subsequent owner requires completion of the transfer of warranty card located at the rear of the Warranty and Service Record Booklet. If your Suzuki has an extended warranty, please consult the terms and conditions of this agreement for further details.</p>
+
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_something_has_failed_on_my_suzuki_is_it_covered_under_warranty" data-tabccordion-accordionlink>
+                            Something has failed on my Suzuki. Is it covered under warranty?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_something_has_failed_on_my_suzuki_is_it_covered_under_warranty" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	This will depend on the cause of the failure. Your Authorised Suzuki dealer will be able to advise you further, which will involve the inspection of your vehicle. All warranty repairs shall only be carried out by an Authorised Suzuki Dealer.</p>
+
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_what_is_an_environmental_charge" data-tabccordion-accordionlink>
+                            What is an environmental charge?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_what_is_an_environmental_charge" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	Toxic substances found in cars include oil, antifreeze, brake fluid and batteries. These substances must be disposed of correctly, often involving temporarily storing them in approved bins. The waste disposal specialists who collect the contents of the bins have to maintain registered vehicles, premises and facilities appropriate for these substances. The licence to carry this out is expensive, with the dealerships themselves incurring significant costs referred to as an environmental charge.</p>
+
+                        </div>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_how_can_i_contact_suzuki" data-tabccordion-accordionlink>
+                            How can I contact Suzuki?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_how_can_i_contact_suzuki" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	If you&#39;re an owner and have changed your contact details, or if you have a question about your car you can Contact Suzuki Customer Assistance Centre on 1800 777 088 or speak to your local Authorised Suzuki Dealership who will help in any way they can.</p>
+
+                        </div>
+                                    </div>
+            </div>
+                    <div class="l-section">
+                <h2 class="text-center">
+                    Finance
+                </h2>
+                <div data-m="tabccordion" data-tabccordion='{"id" : "faq", "multi" : true}'>
+                                            <a class="accordion__link-head" href="frequently-asked-questions.html#faq_how_can_i_contact_suzuki" data-tabccordion-accordionlink>
+                            How can I contact Suzuki?
+                        </a>
+                        <div class="accordion__body l-inner-container body-copy" id="faq_how_can_i_contact_suzuki" data-tabccordion-tab  data-m='responsive_table' data-responsive_table='{"r" : true, "default" : {}, "medium-up" : false}'>
+                            <p>
+	If you&#39;re an owner and have changed your contact details, or if you have a question about your car you can Contact Suzuki Customer Assistance Centre on 1800 777 088 or speak to your local Authorised Suzuki Dealership who will help in any way they can.</p>
+
+                        </div>
+                                    </div>
+            </div>
+            </div>
+</div>  </div>
+</div>
+<section class="row full l-light-container l-center-align l-padded-section">
+    <div class="columns">
+        <h2 class="collapse">Get In Touch With Your Local Suzuki Dealership.</h2>
+        <ul class="unstyled large-icons-list">
+            <li><a href="../dealer-locator.html" class="cta large-icon icon--dealer-locator"><span class="large-icon--text">Dealer Locator</span></a></li>
+            <li><a href="../book-test-drive.html" class="cta large-icon icon--test-drive"><span class="large-icon--text">Book a Test Drive</span></a></li>
+            <li><a href="../brochure-request.html" class="cta large-icon icon--brochure icon--padded"><span class="large-icon--text">Request Brochure</span></a></li>
+            <li><a href="../service-booking.html" class="cta large-icon icon--service-booking icon--padded"><span class="large-icon--text">Service Booking</span></a></li>
+            <li><a href="../enquiry.html" class="cta large-icon icon--enquiry icon--padded"><span class="large-icon--text">General Enquiry</span></a></li>
+        </ul>
+    </div>
+</section>
+<!-- region content end -->
+
+        <!-- region content bottom start --> 
+	<div class="row full collapse quicklinks l-section collapse-top" data-m="equalize">
+		<h2 class="accessory-category__title l-center-align l-thin-section">Explore the Exciting World of Suzuki.</h2>
+				    <div class="small-6 large-3 columns" data-equalize-watch>
+		        <div class="quicklink-container">
+		            <a href="../suzuki-life/news.html" class="quicklink">
+    <div class="quicklink__inner">
+        
+    
+     <img src=" data:image/gif;base64,R0lGODdhZAA2AIAAAP///wAAACwAAAAAZAA2AAACUISPqcvtD6OctNqLs968+w+G4kiW5omm6sq27gvH8kzX9o3n+s73/g8MCofEovGITCqXzKbzCY1Kp9Sq9YrNarfcrvcLDovH5LL5jE6r17ACADs= " alt="Latest News" class="is-unloaded l-fluid-image quicklink__image" data-m="respim" data-respim='{ "r" : true, "default" : { "width" : 640, "height" : 346, "src" : "/sites/default/files/styles/world_of_suzuki_default/public/image/10_iK-2_City_Rear.jpg" }, "xlarge-up" : { "width" : 958, "height" : 518, "src" : "/sites/default/files/styles/world_of_suzuki_xlarge_up/public/image/10_iK-2_City_Rear.jpg" }, "xxlarge-up" : { "width" : 1278, "height" : 691, "src" : "/sites/default/files/styles/world_of_suzuki_xxlarge_up/public/image/10_iK-2_City_Rear.jpg" } }' > <noscript> <img src="../sites/default/files/styles/world_of_suzuki_default/public/image/10_iK-2_City_Rear.jpg" alt="Latest News" class="l-fluid-image quicklink__image" > </noscript> 
+
+
+        <span class="quicklink__explore">Read News</span>
+        <span class="quicklink__title">Latest News</span>
+        <div class="quicklink__footer"></div>
+    </div>
+</a>		        </div>
+		    </div>
+				    <div class="small-6 large-3 columns" data-equalize-watch>
+		        <div class="quicklink-container">
+		            <a href="../latest-offers.html" class="quicklink">
+    <div class="quicklink__inner">
+        
+    
+     <img src=" data:image/gif;base64,R0lGODdhZAA2AIAAAP///wAAACwAAAAAZAA2AAACUISPqcvtD6OctNqLs968+w+G4kiW5omm6sq27gvH8kzX9o3n+s73/g8MCofEovGITCqXzKbzCY1Kp9Sq9YrNarfcrvcLDovH5LL5jE6r17ACADs= " alt="Latest Offers" class="is-unloaded l-fluid-image quicklink__image" data-m="respim" data-respim='{ "r" : true, "default" : { "width" : 640, "height" : 346, "src" : "/sites/default/files/styles/world_of_suzuki_default/public/image/general-3160x1720-PlateClearance-CarLineup5.jpg" }, "xlarge-up" : { "width" : 958, "height" : 518, "src" : "/sites/default/files/styles/world_of_suzuki_xlarge_up/public/image/general-3160x1720-PlateClearance-CarLineup5.jpg" }, "xxlarge-up" : { "width" : 1278, "height" : 691, "src" : "/sites/default/files/styles/world_of_suzuki_xxlarge_up/public/image/general-3160x1720-PlateClearance-CarLineup5.jpg" } }' > <noscript> <img src="../sites/default/files/styles/world_of_suzuki_default/public/image/general-3160x1720-PlateClearance-CarLineup5.jpg" alt="Latest Offers" class="l-fluid-image quicklink__image" > </noscript> 
+
+
+        <span class="quicklink__explore">View Offers</span>
+        <span class="quicklink__title">Latest Offers</span>
+        <div class="quicklink__footer"></div>
+    </div>
+</a>		        </div>
+		    </div>
+				    <div class="small-6 large-3 columns" data-equalize-watch>
+		        <div class="quicklink-container">
+		            <a href="../vehicles/suv/vitara.html" class="quicklink">
+    <div class="quicklink__inner">
+        
+    
+     <img src=" data:image/gif;base64,R0lGODdhZAA2AIAAAP///wAAACwAAAAAZAA2AAACUISPqcvtD6OctNqLs968+w+G4kiW5omm6sq27gvH8kzX9o3n+s73/g8MCofEovGITCqXzKbzCY1Kp9Sq9YrNarfcrvcLDovH5LL5jE6r17ACADs= " alt="Drive Best City SUV" class="is-unloaded l-fluid-image quicklink__image" data-m="respim" data-respim='{ "r" : true, "default" : { "width" : 640, "height" : 346, "src" : "/sites/default/files/styles/world_of_suzuki_default/public/image/-CoTY-3160x1720-_1.jpg" }, "xlarge-up" : { "width" : 958, "height" : 518, "src" : "/sites/default/files/styles/world_of_suzuki_xlarge_up/public/image/-CoTY-3160x1720-_1.jpg" }, "xxlarge-up" : { "width" : 1278, "height" : 691, "src" : "/sites/default/files/styles/world_of_suzuki_xxlarge_up/public/image/-CoTY-3160x1720-_1.jpg" } }' > <noscript> <img src="../sites/default/files/styles/world_of_suzuki_default/public/image/-CoTY-3160x1720-_1.jpg" alt="Drive Best City SUV" class="l-fluid-image quicklink__image" > </noscript> 
+
+
+        <span class="quicklink__explore">VIEW VITARA</span>
+        <span class="quicklink__title">Drive Best City SUV</span>
+        <div class="quicklink__footer"></div>
+    </div>
+</a>		        </div>
+		    </div>
+			    <div class="small-6 large-3 columns">
+	    	
+<div class="twitter-feed" >
+	<div data-m="multi_carousel" data-multi_carousel=
+		'{"r" : true, "default" : {}, 
+		"small-only" : {"arrows": false, "slidesToShow": 1, "slidesToScroll": 1, "dots": false, "swipe": false},  
+		"medium-up"  : {"arrows": true,  "slidesToShow": 1, "slidesToScroll": 1, "dots": false}}'>
+							<div data-equalize-watch>
+					<div class="twitter-card">
+	<div class="twitter-card--wrap">
+		<div class="twitter-card__top">
+			<img class="twitter-card__top__image" src="http://pbs.twimg.com/profile_images/484581548692234240/gRGTzXkk_normal.jpeg" alt="suzukioz" />
+			<div class="twitter-card__top__name">
+				<span class="twitter-card__top__name__text">Suzuki Australia</span>
+				<span class="twitter-card__top__name__user">suzukioz</span>
+			</div>
+		</div>
+
+		<div class="twitter-card__content">
+			The BLOCKheads taking a break from their road trip to Tasmania during the <a href="http://www.twitter.com/hashtag/Suzuki" target="_blank">#Suzuki</a> challenge.… https://t.co/XWYwom14ge
+		</div>
+		<div class="twitter-card__mobile-view">
+			<p><a href="https://twitter.com/suzukioz" target="_blank">View Twitter</a></p>
+		</div>
+
+		<div class="twitter-card__bottom">
+			<a href="http://www.twitter.com/intent/tweet?in_reply_to=784195470008745984" target="_blank"><span class="twitter-card__bottom__reply"> </span></a>
+			<a href="http://www.twitter.com/intent/retweet?tweet_id=784195470008745984" target="_blank"><span class="twitter-card__bottom__retweet"> </span></a>
+			<a href="http://www.twitter.com/intent/favorite?tweet_id=784195470008745984" target="_blank"><span class="twitter-card__bottom__favorite"> </span></a>
+			<span class="twitter-card__bottom__time">Posted 1 month ago</span>
+		</div>
+	</div>
+</div>
+				</div>
+							<div data-equalize-watch>
+					<div class="twitter-card">
+	<div class="twitter-card--wrap">
+		<div class="twitter-card__top">
+			<img class="twitter-card__top__image" src="http://pbs.twimg.com/profile_images/484581548692234240/gRGTzXkk_normal.jpeg" alt="suzukioz" />
+			<div class="twitter-card__top__name">
+				<span class="twitter-card__top__name__text">Suzuki Australia</span>
+				<span class="twitter-card__top__name__user">suzukioz</span>
+			</div>
+		</div>
+
+		<div class="twitter-card__content">
+			We've pimped up the Vitara Turbos on @TheBlock . Check them out below and stay tuned for the BLOCKheads' adventure… https://t.co/7JrYgL0emo
+		</div>
+		<div class="twitter-card__mobile-view">
+			<p><a href="https://twitter.com/suzukioz" target="_blank">View Twitter</a></p>
+		</div>
+
+		<div class="twitter-card__bottom">
+			<a href="http://www.twitter.com/intent/tweet?in_reply_to=783242271760101376" target="_blank"><span class="twitter-card__bottom__reply"> </span></a>
+			<a href="http://www.twitter.com/intent/retweet?tweet_id=783242271760101376" target="_blank"><span class="twitter-card__bottom__retweet"> </span></a>
+			<a href="http://www.twitter.com/intent/favorite?tweet_id=783242271760101376" target="_blank"><span class="twitter-card__bottom__favorite"> </span></a>
+			<span class="twitter-card__bottom__time">Posted 1 month ago</span>
+		</div>
+	</div>
+</div>
+				</div>
+							<div data-equalize-watch>
+					<div class="twitter-card">
+	<div class="twitter-card--wrap">
+		<div class="twitter-card__top">
+			<img class="twitter-card__top__image" src="http://pbs.twimg.com/profile_images/484581548692234240/gRGTzXkk_normal.jpeg" alt="suzukioz" />
+			<div class="twitter-card__top__name">
+				<span class="twitter-card__top__name__text">Suzuki Australia</span>
+				<span class="twitter-card__top__name__user">suzukioz</span>
+			</div>
+		</div>
+
+		<div class="twitter-card__content">
+			RT @TheBlock: Here's your chance to WIN a brand new @suzukioz Vitara Turbo! <a href="http://www.twitter.com/hashtag/9TheBlock" target="_blank">#9TheBlock</a>
+https://t.co/XauiF9p4uq
+		</div>
+		<div class="twitter-card__mobile-view">
+			<p><a href="https://twitter.com/suzukioz" target="_blank">View Twitter</a></p>
+		</div>
+
+		<div class="twitter-card__bottom">
+			<a href="http://www.twitter.com/intent/tweet?in_reply_to=783153498716188672" target="_blank"><span class="twitter-card__bottom__reply"> </span></a>
+			<a href="http://www.twitter.com/intent/retweet?tweet_id=783153498716188672" target="_blank"><span class="twitter-card__bottom__retweet"> </span></a>
+			<a href="http://www.twitter.com/intent/favorite?tweet_id=783153498716188672" target="_blank"><span class="twitter-card__bottom__favorite"> </span></a>
+			<span class="twitter-card__bottom__time">Posted 1 month ago</span>
+		</div>
+	</div>
+</div>
+				</div>
+							<div data-equalize-watch>
+					<div class="twitter-card">
+	<div class="twitter-card--wrap">
+		<div class="twitter-card__top">
+			<img class="twitter-card__top__image" src="http://pbs.twimg.com/profile_images/484581548692234240/gRGTzXkk_normal.jpeg" alt="suzukioz" />
+			<div class="twitter-card__top__name">
+				<span class="twitter-card__top__name__text">Suzuki Australia</span>
+				<span class="twitter-card__top__name__user">suzukioz</span>
+			</div>
+		</div>
+
+		<div class="twitter-card__content">
+			@andyandbenblock adding a few personalisation touches to the Suzuki Vitara Turbo... 😂.… https://t.co/TmleWG1hBw
+		</div>
+		<div class="twitter-card__mobile-view">
+			<p><a href="https://twitter.com/suzukioz" target="_blank">View Twitter</a></p>
+		</div>
+
+		<div class="twitter-card__bottom">
+			<a href="http://www.twitter.com/intent/tweet?in_reply_to=775832589873668096" target="_blank"><span class="twitter-card__bottom__reply"> </span></a>
+			<a href="http://www.twitter.com/intent/retweet?tweet_id=775832589873668096" target="_blank"><span class="twitter-card__bottom__retweet"> </span></a>
+			<a href="http://www.twitter.com/intent/favorite?tweet_id=775832589873668096" target="_blank"><span class="twitter-card__bottom__favorite"> </span></a>
+			<span class="twitter-card__bottom__time">Posted 1 month ago</span>
+		</div>
+	</div>
+</div>
+				</div>
+				</div>
+</div>
+	    </div>
+	</div>
+
+
+<!-- region content bottom end -->
+</main>
+
+    <!-- region footer start --> 
+<footer class="suzuki-footer">
+	<div class="suzuki-footer__top-level">
+		<div class="suzuki-footer__top-level__heading">
+			<span class="suzuki-footer__top-level__heading__text">Suzuki. Way of Life!</span>
+		</div>
+					<div class="suzuki-footer__top-level__icons">
+				<a href="https://www.facebook.com/suzukiaustralia" target="_blank"> <span class="suzuki-footer__top-level__icons__facebook"> </span></a>
+				<a href="https://twitter.com/suzukioz" target="_blank"> <span class="suzuki-footer__top-level__icons__twitter"> </span></a>
+				<a href="https://plus.google.com/105629927208912540510/about" target="_blank"> <span class="suzuki-footer__top-level__icons__google-plus"> </span></a>
+				<a href="https://www.youtube.com/user/suzukiaustralia" target="_blank"> <span class="suzuki-footer__top-level__icons__youtube"> </span></a>
+				<a href="https://www.instagram.com/suzukiaustraliacars/" target="_blank"> <span class="suzuki-footer__top-level__icons__instagram"> </span></a>
+			</div>
+				<div class="suzuki-footer__top-level__links">
+							<a class="suzuki-footer__top-level__links_item" href="../vehicles.html">Vehicles</a>
+							<a class="suzuki-footer__top-level__links_item" href="../latest-offers.html">Offers</a>
+							<a class="suzuki-footer__top-level__links_item" href="../owners.html">Owners</a>
+							<a class="suzuki-footer__top-level__links_item" href="../suzuki-life.html">Suzuki Life!</a>
+					</div>
+	</div>
+
+	<div class="suzuki-footer__bottom-level">
+		<div class="suzuki-footer__bottom-level__copyright">&copy; Suzuki Australia Pty. Ltd.</div>
+		<div class="suzuki-footer__bottom-level__links">
+							<a href="../enquiry.html">Contact Us</a>
+							<a href="../terms-and-conditions.html">Terms and Conditions</a>
+							<a href="../privacy.html">Privacy Policy</a>
+							<a href="http://www.suzukinet.com.au/website/Logon.htm">Dealers</a>
+							<a href="http://resource.suzuki.com.au/">Dealer Portal</a>
+							<a href="http://resource.suzuki.com.au/">Media Portal</a>
+					</div>
+	</div>
+</footer>
+
+<!-- region footer end -->
+
+    <script src="../sites/all/themes/suzuki/dist/js/main.v_d288624450bd2ad091dfea2f4c4de6ae.js"></script>
+    <script src="../sites/all/themes/suzuki/dist/js/header.v_f6d3351a214df26a2a39bb9ed0189f5e.js"></script>
+    <script>
+var versaTag = {};
+versaTag.id = "3564";
+versaTag.sync = 0;
+versaTag.dispType = "js";
+versaTag.ptcl = "HTTPS";
+versaTag.bsUrl = "bs.serving-sys.com/BurstingPipe";
+//VersaTag activity parameters include all conversion parameters including custom parameters and Predefined parameters. Syntax: "ParamName1":"ParamValue1", "ParamName2":"ParamValue2". ParamValue can be empty.
+versaTag.activityParams = vijs.util.versaTag ? vijs.util.versaTag.getParams() :  {"Session":""};
+//Static retargeting tags parameters. Syntax: "TagID1":"ParamValue1", "TagID2":"ParamValue2". ParamValue can be empty.
+versaTag.retargetParams = {};
+//Dynamic retargeting tags parameters. Syntax: "TagID1":"ParamValue1", "TagID2":"ParamValue2". ParamValue can be empty.
+versaTag.dynamicRetargetParams = {};
+// Third party tags conditional parameters and mapping rule parameters. Syntax: "CondParam1":"ParamValue1", "CondParam2":"ParamValue2". ParamValue can be empty.
+versaTag.conditionalParams = {};
+</script>
+<script id="ebOneTagUrlId" src="https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js"></script>
+<noscript>
+<iframe src="https://bs.serving-sys.com/BurstingPipe?cn=ot&onetagid=3564&ns=1&activityValues=$$Session=%5BSession%5D$$&retargetingValues=$$$$&dynamicRetargetingValues=$$$$&acp=$$$$&" style="display:none;width:0px;height:0px"></iframe>
+</noscript>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"d4a34c5529","applicationID":"12403979","transactionName":"bgBXZBRRDBAEAE0PDFdKdFMSWQ0NSg1WAgZmFVRXA28UCgAU","queueTime":0,"applicationTime":1516,"ttGuid":"","agentToken":"","atts":"QkdUElxLHx4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

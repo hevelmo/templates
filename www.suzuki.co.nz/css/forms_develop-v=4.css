@@ -1,0 +1,168 @@
+/* For radio button*/
+.section-forms .choice-item {
+    display: inline-block;
+}
+
+.section-forms .choice-item .label, .section-forms .choice-item input {
+    float: left;
+}
+
+/* Table */
+.th_20 {
+    width: 20%;
+}
+
+.th_10 {
+    width: 10%;
+}
+
+.th_30 {
+    width: 30%;
+}
+
+.th_40 {
+    width: 40%;
+}
+
+.th_50 {
+    width: 50%;
+}
+
+.th_35 {
+    width: 35%;
+}
+
+/* I forgot where did I use but please keep them */
+.width-70 {
+    width: 65% !important;
+}
+
+.width-30 {
+    width: 30% !important;
+}
+
+/* Mainly for this case: '5 = strongly agree, 4 = agree, 3 = undecided, 2= disagree, 1 = strongly disagree' */
+.section-forms h2 small {
+    font-size: 50%;
+    display: block;
+}
+
+/* Parts enquiry form */
+.form-55874 .th-desc {
+    width: 20%;
+}
+
+.form-55874 .th-num {
+    width: 20%;
+}
+
+.form-55874 .th-qty {
+    width: 10%;
+}
+
+.form-55874 .th-ava-qty {
+    width: 10%;
+}
+
+.form-55874 .th-cost {
+    width: 10%;
+}
+
+.form-55874 .th-retail {
+    width: 10%;
+}
+
+.form-55874 .th-due-af {
+    width: 10%;
+}
+
+.form-55874 .th-due-sf {
+    width: 10%;
+}
+
+/* Survey: new - multi choices*/
+#form_181743_whyChoose .choice-item {
+    display: block;
+}
+
+#form_181743_whyChoose .label, #form_181743_whyChoose input {
+    display: inline-block;
+    float: none;
+}
+
+/* Survey: 2years - multi choices*/
+#form_502685_whyChoose .choice-item {
+    display: block;
+}
+
+#form_502685_whyChoose .label, #form_502685_whyChoose input {
+    display: inline-block;
+    float: none;
+}
+
+/* Survey: 3years - multi choices*/
+#form_502697_factor .choice-item {
+    display: block;
+}
+
+#form_502697_factor .label, #form_502697_factor input {
+    display: inline-block;
+    float: none;
+}
+
+#form_502697_whyChoose .choice-item {
+    display: block;
+}
+
+#form_502697_whyChoose .label, #form_502697_whyChoose input {
+    display: inline-block;
+    float: none;
+}
+
+/* advertising subsidy */
+.section-forms table .choice-item .label, .section-forms table .choice-item input {
+    float: none !important;
+}
+
+/* Survey: 2years & 3years*/
+.form-502685 .section-3 h2,
+.form-502685 .section-5 h2,
+.form-502685 .section-8 h2,
+.form-502697 .section-3 h2,
+.form-502697 .section-5 h2,
+.form-502697 .section-8 h2 {
+    /*font-size: 1.125em;*/
+}
+
+/* Comment*/
+.margin-comment {
+    margin-top: -30px !important;
+}
+
+/* Question*/
+.margin-question {
+    margin-top: -20px !important;
+}
+
+/* Automobile warranty registration & motorcycle warranty registration */
+._form_222822_driverDetail_phone_pre,
+._form_222822_driverDetail_cellphone_pre,
+._form_222822_driverDetail_fax_pre,
+._form_508695_driverDetail_phone_pre,
+._form_508695_driverDetail_cellphone_pre,
+._form_508695_driverDetail_fax_pre {
+    display: inline-block;
+    width: 30%;
+}
+
+
+/* Dealer Reward Points */
+.form-115428 .section-2 h2 { font-size: 1em; }
+
+
+
+.postLink {
+    margin: 0 0 .5em;
+    display: inline-block;
+    font-size: .875em;
+}
