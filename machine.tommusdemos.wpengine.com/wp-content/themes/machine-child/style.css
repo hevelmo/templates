@@ -1,0 +1,11 @@
+/*
+Theme Name: Machine WP Child
+Theme URI: 
+Description: Child theme for the Machine theme
+Author: <a href="http://www.madeinebor.com">Tom Rhodes</a>
+Author URI: 
+Template: machinewp
+Version: 1.0.0
+*/
+
+@import url('../machinewp/style.css');

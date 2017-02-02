@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2014 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="blogger" unicode="&#xe801;" d="m0-150l0 1000 1000 0 0-1000-1000 0z m188 377q0-195 218-191l235 0q160 23 173 189l0 88q-3 59-39 85t-84 28q10 35 2 94-5 61-47 101t-111 45l-191 0q-65-9-108-47t-48-99l0-293z m96-29q-16 29 0 58t56 35l285 0q41-5 58-35t1-58-55-35l-285 0q-43 5-60 35z m35 264q-14 27 1 53t55 32l156 0q41-4 56-30t-1-53-55-34l-156 0q-41 6-56 32z" horiz-adv-x="1000" />
+<glyph glyph-name="pinterest" unicode="&#xe802;" d="m0 350q4 213 150 356t350 144q219-4 358-149t142-351q-4-211-150-354t-350-146q-70 0-141 21 14 22 28 49 15 34 39 125 6 26 17 69 14-24 47-43 88-41 186 8 101 58 140 181 36 129-8 239t-158 160q-142 41-277-9t-187-171q-14-45-17-89t3-86 29-75 63-51q9-4 15 0 8 4 16 31t6 38q-2 3-8 13-41 67-27 140t60 124q72 64 169 70t165-53q37-42 48-103t0-116-38-105q-49-76-115-78-39 2-64 30t-14 66q3 21 23 84t22 94q-6 74-69 76-49-6-72-44t-26-87q6-57 18-78-21-88-33-141-4-14-22-84t-19-107l0-55q-139 65-219 187t-80 270z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>
