@@ -527,6 +527,7 @@
 					$innerbar.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function () {
 						$innerbar.find(".pull-right").fadeIn(900);
 					});
+
 				});
 			}, {accY: -100});
 		} else {
@@ -539,7 +540,7 @@
 				$innerbar.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function () {
 					$innerbar.find(".pull-right").fadeIn(900);
 				});
-				console.log($innerbar);
+
 			});
 		}
 
@@ -1415,5 +1416,11 @@
 	}
 
 	initmap();
+
+	function Mutesound() {
+		player.addEvent('ready', function () {
+			player.api('setVolume', 0);
+		});
+	}
 
 })(jQuery);
