@@ -1,0 +1,502 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Marco - Restaurant HTML5 Responsive Template</title>
+	<link rel="stylesheet" href="assets/css/app.css">
+	<script src="assets/js/vendor/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CLora:400,400i" rel="stylesheet">
+  </head>
+
+<!-- 
+Nav classes:
+1. Navigation position: nav-top, nav-bottom,
+2. Navigation opacity: nav-solid, nav-transparent,
+3. Navigation color: nav-light-text, nav-dark-text,
+4. Navigation items position: nav-left, nav-right, nav-left-all, nav-right-all
+
+-->
+
+
+
+
+
+
+
+	<body class="nav-classes nav-top nav-solid nav-dark-text nav-left" data-height-fixed-nav="80">
+		<section class="main-navigation nav-standard" id="nav-helper">
+			<div class="row">
+				<div class="col-sm-12 columns">
+					<div class="nav-wrapper">
+						<div class="nav-logo nav-logo-dark">
+							<a href="index.html" class="show-in-viewport">
+								<img src="assets/img/logo-dark.png" alt=""/>
+							</a>
+						</div>
+						<div class="nav-logo nav-logo-light">
+							<a href="index.html" class="show-in-viewport">
+								<img src="assets/img/logo-light.png" alt=""/>
+							</a>
+						</div>
+						<div id="reorder-mobile" class="hide-for-large btn-mobile-overlay" style="">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="34px" viewBox="0 0 120 60" preserveAspectRatio="xMidYMid meet" zoomAndPan="disable" >
+								<line id="line-top" x1="10" y1="59" x2="110" y2="59"  shape-rendering="crispEdges" stroke="#fff" style="stroke-width: 2px; vector-effect: non-scaling-stroke; fill: none;"/>
+								<line id="line-center" x1="10" y1="30" x2="110" y2="30"  shape-rendering="crispEdges" stroke="#fff" style="stroke-width: 2px; vector-effect: non-scaling-stroke; fill: none;"/>
+								<line id="line-bottom" x1="10" y1="1" x2="110" y2="1" shape-rendering="crispEdges" stroke="#fff" style="stroke-width: 2px; vector-effect: non-scaling-stroke; fill: none;"/>
+							</svg>
+						</div>
+		
+						<div class="show-for-large nav-items">
+							<ul class="dropdown menu desktop-menu menu-main-menu">
+								<li class="menu-item menu-item-has-children">
+									<a class="link-hover" href="mosaic2.html#">Home</a>
+									<ul class="dropdown menu vertical" data-toggle>
+										<li class="menu-item"><a href="index.html"><span class="title">Home 1</span></a></li>
+										<li class="menu-item"><a href="home2.html"><span class="title">Home 2</span></a></li>
+										<li class="menu-item"><a href="home3.html"><span class="title">Home 3</span></a></li>
+										<li class="menu-item"><a href="home4.html"><span class="title">Home 4</span></a></li>
+										<li class="menu-item"><a href="home5.html"><span class="title">Home 5</span></a></li>
+										<li class="menu-item"><a href="home6.html"><span class="title">Home 6</span></a></li>
+									</ul>
+								</li>				
+								<li class="menu-item menu-item-has-children">
+									<a class="link-hover" href="mosaic2.html#">Menu</a>
+									<ul class="dropdown menu vertical" data-toggle>
+										<li class="menu-item"><a href="menu.html"><span class="title">Food menu 1</span></a>
+										</li>
+										<li class="menu-item"><a href="menu2.html"><span class="title">Food menu 2</span></a></li>
+										<li class="menu-item"><a href="menu3.html"><span class="title">Food menu 3</span></a></li>
+									</ul>
+								</li>
+								<li class="menu-item">
+									<a class="link-hover" href="reservation.html">Reservation</a>
+								</li>
+								<li class="menu-item menu-item-has-children">
+									<a class="link-hover" href="mosaic2.html#">Pages</a>
+									<ul class="dropdown menu vertical" data-toggle>
+										<li class="menu-item menu-item-has-children">
+											<a href="mosaic2.html#"><span class="title">Blog</span></a>
+											<ul class="dropdown menu vertical" data-toggle>
+												<li class="menu-item"><a href="blog.html"><span class="title">Blog grid</span></a>
+												</li>
+												<li class="menu-item"><a href="blog2.html"><span class="title">Blog rows</span></a></li>
+											</ul>
+										</li>	
+										<li class="menu-item">
+											<a href="gallery.html"><span class="title">Gallery</span></a>
+										</li>	
+										<li class="menu-item menu-item-has-children"><a href="mosaic2.html#"><span class="title">Team</span></a>
+											<ul class="dropdown menu vertical" data-toggle>
+												<li class="menu-item"><a href="team1.html"><span class="title">Team 1</span></a></li>
+												<li class="menu-item"><a href="team2.html"><span class="title">Team 2</span></a></li>
+												<li class="menu-item"><a href="team3.html"><span class="title">Team 3</span></a></li>
+											</ul>
+										</li>
+										<li class="menu-item menu-item-has-children"><a href="mosaic2.html#"><span class="title">Mosaic</span></a>
+											<ul class="dropdown menu vertical" data-toggle>
+												<li class="menu-item"><a href="mosaic.html"><span class="title">Mosaic 1</span></a></li>
+												<li class="menu-item"><a href="mosaic2.html"><span class="title">Mosaic 2</span></a></li>
+											</ul>
+										</li>
+										<li class="menu-item"><a href="about.html"><span class="title">About</span></a></li>
+										<li class="menu-item"><a href="private-dining.html"><span class="title">Private dining</span></a></li>
+										<li class="menu-item">
+											<a href="contact.html"><span class="title">Contact</span></a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-has-children">
+									<a class="link-hover" href="mosaic2.html#">Elements</a>
+									<ul class="dropdown menu vertical" data-toggle>
+										<li class="menu-item"><a href="elements-typo.html"><span class="title">Typography</span></a></li>
+										<li class="menu-item menu-item-has-children"><a href="mosaic2.html#"><span class="title">Block elements</span></a>
+											<ul class="dropdown menu vertical" data-toggle>
+												<li class="menu-item"><a href="elements-grid.html"><span class="title">Grid</span></a></li>
+												<li class="menu-item"><a href="elements-blocks.html"><span class="title">Elements</span></a></li>
+											</ul>
+										</li>
+										<li class="menu-item"><a href="elements-buttons.html"><span class="title">Buttons</span></a></li>
+										<li class="menu-item"><a href="elements-images.html"><span class="title">Images</span></a></li>
+										<li class="menu-item menu-item-has-children"><a href="mosaic2.html#"><span class="title">Navigation</span></a>
+											<ul class="dropdown menu vertical" data-toggle>
+												<li class="menu-item"><a href="elements-nav-right-left.html"><span class="title">Right/Left items</span></a></li>
+												<li class="menu-item"><a href="elements-nav-center.html"><span class="title">Centered items</span></a></li>
+											</ul>
+										</li>
+										<li class="menu-item"><a href="elements-intro.html"><span class="title">Intro</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<div class="mobile-navbar-overlay nav-overlay-closed hide-for-large">
+			<div class="close-nav btn-mobile-overlay">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 width="40px" height="40px" viewBox="0 0 100 100" style=""
+				 xml:space="preserve">
+					<circle cx="50" cy="50" r="40" stroke="#fff" style="stroke-width: 2px; vector-effect: non-scaling-stroke; fill: none;"/>
+					<line id="e4_line" x1="35" y1="35" x2="65" y2="65" stroke="#fff" style="stroke-width: 2px; vector-effect: non-scaling-stroke; fill: none;"/><line x1="65" y1="35" x2="35" y2="65" stroke="#fff" style="stroke-width: 2px; vector-effect: non-scaling-stroke; fill: none;"/>
+				</svg>
+			</div>
+			<ul class="menu-mobile">
+				<li class="menu-item menu-item-has-children">
+					<a href="mosaic2.html#">Home</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item"><a class="link-hover" href="index.html"><span class="title">Home 1</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="home2.html"><span class="title">Home 2</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="home3.html"><span class="title">Home 3</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="home4.html"><span class="title">Home 4</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="home5.html"><span class="title">Home 5</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="home6.html"><span class="title">Home 6</span></a></li>
+					</ul>
+				</li>					
+				<li class="menu-item menu-item-has-children">
+					<a class="" href="mosaic2.html#">Menu</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item"><a class="link-hover" href="menu.html"><span class="title">Food menu 1</span></a>
+						</li>
+						<li class="menu-item"><a class="link-hover" href="menu2.html"><span class="title">Food menu 2</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="menu3.html"><span class="title">Food menu 3</span></a></li>
+					</ul>
+				</li>
+				<li class="menu-item">
+					<a class="link-hover" href="reservation.html">Reservation</a>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a class="" href="mosaic2.html#">Pages</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item menu-item-has-children">
+							<a class="" href="mosaic2.html#">Blog</a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a class="link-hover" href="blog.html"><span class="title">Blog grid</span></a>
+								</li>
+								<li class="menu-item"><a class="link-hover" href="blog2.html"><span class="title">Blog rows</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item">
+							<a class="link-hover" href="gallery.html">Gallery</a>
+						</li>	
+						<li class="menu-item menu-item-has-children"><a href="mosaic2.html#"><span class="title">Team</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a class="link-hover" href="team1.html"><span class="title">Team 1</span></a></li>
+								<li class="menu-item"><a class="link-hover" href="team2.html"><span class="title">Team 2</span></a></li>
+								<li class="menu-item"><a class="link-hover" href="team3.html"><span class="title">Team 3</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item menu-item-has-children"><a href="mosaic2.html#"><span class="title">Mosaic</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a class="link-hover" href="mosaic.html"><span class="title">Mosaic 1</span></a></li>
+								<li class="menu-item"><a class="link-hover" href="mosaic2.html"><span class="title">Mosaic 2</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a class="link-hover" href="about.html"><span class="title">About</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="private-dining.html"><span class="title">Private dining</span></a></li>
+						<li class="menu-item">
+							<a class="link-hover" href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a class="" href="mosaic2.html#">Elements</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item"><a href="elements-typo.html"><span class="title">Typography</span></a></li>
+						<li class="menu-item menu-item-has-children"><a href="mosaic2.html#"><span class="title">Block elements</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a class="link-hover" href="elements-grid.html"><span class="title">Grid</span></a></li>
+								<li class="menu-item"><a class="link-hover" href="elements-blocks.html"><span class="title">Elements</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a class="link-hover" href="elements-buttons.html"><span class="title">Buttons</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="elements-images.html"><span class="title">Images</span></a></li>
+						<li class="menu-item menu-item-has-children"><a href="mosaic2.html#"><span class="title">Navigation</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a class="link-hover" href="elements-nav-right-left.html"><span class="title">Right/Left items</span></a></li>
+								<li class="menu-item"><a class="link-hover" href="elements-nav-center.html"><span class="title">Centered items</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a class="link-hover" href="elements-intro.html"><span class="title">Intro</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		</div> 
+		<div class="mobile-navbar-helper hide-for-large"></div>
+		
+		
+		<section id="fixed-nav" class="page-header-nav fixed-nav show-for-large">
+			<div class="nav-logo nav-logo-dark">
+				<a href="index.html" class="show-in-viewport">
+					<img src="assets/img/logo-dark.png" alt=""/>
+				</a>
+			</div>
+			<ul class="dropdown menu desktop-menu menu-main-menu">
+				<li class="menu-item menu-item-has-children">
+					<a class="link-hover" href="mosaic2.html#">Home</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item"><a href="index.html"><span class="title">Home 1</span></a></li>
+						<li class="menu-item"><a href="home2.html"><span class="title">Home 2</span></a></li>
+						<li class="menu-item"><a href="home3.html"><span class="title">Home 3</span></a></li>
+						<li class="menu-item"><a href="home4.html"><span class="title">Home 4</span></a></li>
+						<li class="menu-item"><a href="home5.html"><span class="title">Home 5</span></a></li>
+						<li class="menu-item"><a href="home6.html"><span class="title">Home 6</span></a></li>
+					</ul>
+				</li>				
+				<li class="menu-item menu-item-has-children">
+					<a class="link-hover" href="mosaic2.html#">Menu</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item"><a href="menu.html"><span class="title">Food menu 1</span></a>
+						</li>
+						<li class="menu-item"><a href="menu2.html"><span class="title">Food menu 2</span></a></li>
+						<li class="menu-item"><a href="menu3.html"><span class="title">Food menu 3</span></a></li>
+					</ul>
+				</li>
+				<li class="menu-item">
+					<a class="link-hover" href="reservation.html">Reservation</a>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a class="link-hover" href="mosaic2.html#">Pages</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item menu-item-has-children">
+							<a href="mosaic2.html#"><span class="title">Blog</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a href="blog.html"><span class="title">Blog grid</span></a>
+								</li>
+								<li class="menu-item"><a href="blog2.html"><span class="title">Blog rows</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item">
+							<a href="gallery.html"><span class="title">Gallery</span></a>
+						</li>		
+						<li class="menu-item menu-item-has-children"><a href="mosaic2.html#"><span class="title">Team</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a href="team1.html"><span class="title">Team 1</span></a></li>
+								<li class="menu-item"><a href="team2.html"><span class="title">Team 2</span></a></li>
+								<li class="menu-item"><a href="team3.html"><span class="title">Team 3</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item menu-item-has-children"><a href="mosaic2.html#"><span class="title">Mosaic</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a href="mosaic.html"><span class="title">Mosaic 1</span></a></li>
+								<li class="menu-item"><a href="mosaic2.html"><span class="title">Mosaic 2</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a href="about.html"><span class="title">About</span></a></li>
+						<li class="menu-item"><a href="private-dining.html"><span class="title">Private dining</span></a></li>
+						<li class="menu-item">
+							<a href="contact.html"><span class="title">Contact</span></a>
+						</li>
+					</ul>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a class="link-hover" href="mosaic2.html#">Elements</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item"><a href="elements-typo.html"><span class="title">Typography</span></a></li>
+						<li class="menu-item menu-item-has-children"><a href="mosaic2.html#"><span class="title">Block elements</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a href="elements-grid.html"><span class="title">Grid</span></a></li>
+								<li class="menu-item"><a href="elements-blocks.html"><span class="title">Elements</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a href="elements-buttons.html"><span class="title">Buttons</span></a></li>
+						<li class="menu-item"><a href="elements-images.html"><span class="title">Images</span></a></li>
+						<li class="menu-item menu-item-has-children"><a href="mosaic2.html#"><span class="title">Navigation</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a href="elements-nav-right-left.html"><span class="title">Right/Left items</span></a></li>
+								<li class="menu-item"><a href="elements-nav-center.html"><span class="title">Centered items</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a href="elements-intro.html"><span class="title">Intro</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		
+
+	<div class="loading-wrapper">
+		<div class="loading-progress"></div>
+	</div>
+
+	<div class="page-wrapper" style="width: 100%">
+		<!--
+		
+		Mosaic
+		
+		Mosaic settings: 
+		
+		-->
+		
+		<div class="mosaic page-padding-top mosaic-no-gutter">
+			<div class="row">
+				<div class="small-12 medium-6 large-3 columns">
+					<div class="mosaic-item" data-sm-height="200" data-lg-height="400">
+						<a href="blog.html">
+							<div class="mosaic-img" style="background-image: url('assets/img/restaurant10.jpg')"></div>
+							<div class="mosaic-info">
+								<div class="mosaic-text">We love food,<br/> and we write about it.</div>
+								<div class="mosaic-link">Blog</div>
+							</div>
+							<div class="mosaic-item-overlay"></div>
+						</a>
+					</div>
+					<div class="mosaic-item" data-sm-height="200" data-lg-height="420">
+						<a href="gallery.html">
+							<div class="mosaic-img" style="background-image: url('assets/img/restaurant3.jpg')"></div>
+							<div class="mosaic-info">
+								<div class="mosaic-text">Potato is the king.<br/> See where we get them?</div>
+								<div class="mosaic-link">Read more</div>
+							</div>
+							<div class="mosaic-item-overlay"></div>
+						</a>
+					</div>
+				</div>
+				<div class="small-12 medium-6 large-3 columns">
+					<div class="mosaic-item" data-sm-height="200" data-lg-height="440">
+						<a href="menu.html">
+							<div class="mosaic-img" style="background-image: url('assets/img/restaurant6.jpg')"></div>
+							<div class="mosaic-info">
+								<div class="mosaic-text">Our menu reflects<br/> seasons and winter<br/> is coming, brace yourself.</div>
+								<div class="mosaic-link">Menu</div>
+							</div>
+							<div class="mosaic-item-overlay"></div>
+						</a>
+					</div>
+					<div class="mosaic-item" data-sm-height="200" data-lg-height="380">
+						<a href="menu2.html">
+							<div class="mosaic-img" style="background-image: url('assets/img/restaurant4.jpg')"></div>
+							<div class="mosaic-info">
+								<div class="mosaic-text">Mashroom season is on</div>
+								<div class="mosaic-link">Special menu</div>
+							</div>
+							<div class="mosaic-item-overlay"></div>
+						</a>
+					</div>
+				</div>
+				<div class="small-12 medium-6 large-3 columns">
+					<div class="mosaic-item" data-sm-height="200" data-lg-height="300">
+						<a href="contact.html">
+							<div class="mosaic-img" style="background-image: url('assets/img/restaurant11.jpg')"></div>
+							<div class="mosaic-info">
+								<div class="mosaic-text">Today is Friday<br/> we are open 10am - 8pm</div>
+								<div class="mosaic-link">Opening hours</div>
+							</div>
+							<div class="mosaic-item-overlay"></div>
+						</a>
+					</div>
+					<div class="mosaic-item" data-sm-height="200" data-lg-height="520">
+						<a href="blog.html">
+							<div class="mosaic-img" style="background-image: url('assets/img/restaurant5.jpg')"></div>
+							<div class="mosaic-info">
+								<div class="mosaic-text">We love food<br/> and we write about it.</div>
+								<div class="mosaic-link">Blog</div>
+							</div>
+							<div class="mosaic-item-overlay"></div>
+						</a>
+					</div>
+				</div>
+				<div class="small-12 medium-6 large-3 columns">
+					<div class="mosaic-item" data-sm-height="400" data-lg-height="820">
+						<a href="http://marco.puruno.com/html/team.html">
+							<div class="mosaic-img" style="background-image: url('assets/img/restaurant12-1.jpg')"></div>
+							<div class="mosaic-info">
+								<div class="mosaic-text">Culinary prodigy:<br/> Chef Marco Peroni</div>
+								<div class="mosaic-link">Read more</div>
+							</div>
+							<div class="mosaic-item-overlay"></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--  -->
+			<div class="footer">
+				<div class="row footer-grid animate-text">
+					<div class="small-12 large-3 columns">
+						<div class="footer-content">
+							<h6>Marco Restaurant</h6>
+							<p>The Hoe, PL48RT<br/>
+								Plymouth, UK
+							</p>
+							<p><a href="" class="link-hover link-hover-text">Get direction</a></p>
+							<div class="footer-content">
+								<p><a class="link-hover" href="mosaic2.html#">Facebook</a><br/>
+									<a class="link-hover" href="mosaic2.html#">Twitter</a><br/>
+									<a class="link-hover" href="mosaic2.html#">Instagram</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="small-12 large-3 columns">
+						<div class="footer-content">
+							<h6>Reservation</h6>
+							<p><a href="mailto:book@marco.com" class="link-hover link-hover-text">book@marco.com</a><br/>
+								<span>+ 166 900 891</span>
+							</p>
+						</div>
+						<div class="footer-content">
+							<h6>Private dining</h6>
+							<p><a href="mailto:private@marco.com" class="link-hover link-hover-text">private@marco.com</a><br/>
+								<span>+ 166 900 891</span>
+							</p>
+						</div>
+					</div>
+					<div class="small-12 large-3 columns">
+						<div class="footer-content">
+							<h6>Newsletter</h6>
+							<p>Spam free, information in your<br/> mailbox once a week.</p>
+							<div class="forms-style newsletter-form">
+								<div class="newsletter-form-wrapper">
+									<form name="n-form" id="n-form" action="n-send.php" method="POST">
+										<input type="hidden" name="action" value="newsletter_request">
+										<fieldset class="newsletter-details">
+											<div class="n-text email n-input mf-input">
+												<label for="n_email">E-mail</label>
+												<input class="input-required" type="text" name="n[email]" id="n_email" value="">
+											</div>
+										</fieldset> 
+										<button type="submit" class="btn btn-xs btn-border-animate btn-newsletter">Submit
+											<span class="top button-border"></span>
+											<span class="left left-bottom button-border"></span>
+											<span class="left left-top button-border"></span>
+											<span class="bottom bottom-right button-border"></span>
+											<span class="bottom bottom-left button-border"></span>
+											<span class="right button-border"></span>
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="small-12 large-3 columns">
+						<div class="footer-content">
+							<div class="btn btn-border-animate" id="scroll-up">
+								<svg xmlns="http://www.w3.org/2000/svg" class="arrow-svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="40px" viewBox="0 0 50 100" preserveAspectRatio="xMidYMid meet" zoomAndPan="disable"><line class="arrow-svg-top" stroke="#171717" x1="15" y1="25" x2="25" y2="15" style="stroke-width: 1px; vector-effect: non-scaling-stroke; fill: none;"/><line class="arrow-svg-top" stroke="#171717" x1="25" y1="15" x2="35" y2="25" style="stroke-width: 1px; vector-effect: non-scaling-stroke; fill: none;"/><line class="arrow-svg-ver" stroke="#171717" style="stroke-width: 1px; vector-effect: non-scaling-stroke; fill: none;" shape-rendering="crispEdges" x1="25" y1="15" x2="25" y2="85"/></svg>
+								<span class="top button-border"></span>
+								<span class="left left-bottom button-border"></span>
+								<span class="left left-top button-border"></span>
+								<span class="bottom bottom-right button-border"></span>
+								<span class="bottom bottom-left button-border"></span>
+								<span class="right button-border"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--  -->
+	</div>
+	<script src="assets/js/vendor/jquery.swipebox.min.js"></script>
+	<script src="assets/js/vendor/jquery.waypoints.min.js"></script>
+	<script src="assets/js/vendor/jquery.mbYTPlayer.min.js"></script>
+	<script src="assets/js/vendor/masonry.pkgd.min.js"></script>
+	<script src="assets/js/vendor/smooth-scroll.js"></script>
+	<script src="assets/js/vendor/swiper.jquery.min.js"></script>
+	<script src="assets/js/vendor/vegas.min.js"></script>
+	<script src="assets/js/vendor/velocity.min.js"></script>
+	<script src="assets/js/app.js"></script>
+  </body>
+</html>

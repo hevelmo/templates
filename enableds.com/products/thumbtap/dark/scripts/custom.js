@@ -443,12 +443,16 @@ $(document).ready(function () {
         
         if (inside_header == true) {
             $('.back-to-top-badge').removeClass('back-to-top-badge-visible');
+            console.log('remove class');
         } else if (passed_header == true)  {
             $('.back-to-top-badge').addClass('back-to-top-badge-visible');
+            console.log('add class');
         } 
         if (footer_reached == true){            
             $('.back-to-top-badge').removeClass('back-to-top-badge-visible');
+            console.log('remove class');
         }
+        console.log('entra scroll');
     });
     
     //Back to top Badge

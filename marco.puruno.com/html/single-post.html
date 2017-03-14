@@ -1,0 +1,591 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Marco - Restaurant HTML5 Responsive Template</title>
+	<link rel="stylesheet" href="assets/css/app.css">
+	<script src="assets/js/vendor/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CLora:400,400i" rel="stylesheet">
+  </head>
+
+<!-- 
+Nav classes:
+1. Navigation position: nav-top, nav-bottom,
+2. Navigation opacity: nav-solid, nav-transparent,
+3. Navigation color: nav-light-text, nav-dark-text,
+4. Navigation items position: nav-left, nav-right, nav-left-all, nav-right-all
+
+-->
+
+
+
+
+
+
+
+	<body class="nav-classes nav-top nav-solid nav-dark-text nav-left" data-height-fixed-nav="80">
+		<section class="main-navigation nav-standard" id="nav-helper">
+			<div class="row">
+				<div class="col-sm-12 columns">
+					<div class="nav-wrapper">
+						<div class="nav-logo nav-logo-dark">
+							<a href="index.html" class="show-in-viewport">
+								<img src="assets/img/logo-dark.png" alt=""/>
+							</a>
+						</div>
+						<div class="nav-logo nav-logo-light">
+							<a href="index.html" class="show-in-viewport">
+								<img src="assets/img/logo-light.png" alt=""/>
+							</a>
+						</div>
+						<div id="reorder-mobile" class="hide-for-large btn-mobile-overlay" style="">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="34px" viewBox="0 0 120 60" preserveAspectRatio="xMidYMid meet" zoomAndPan="disable" >
+								<line id="line-top" x1="10" y1="59" x2="110" y2="59"  shape-rendering="crispEdges" stroke="#fff" style="stroke-width: 2px; vector-effect: non-scaling-stroke; fill: none;"/>
+								<line id="line-center" x1="10" y1="30" x2="110" y2="30"  shape-rendering="crispEdges" stroke="#fff" style="stroke-width: 2px; vector-effect: non-scaling-stroke; fill: none;"/>
+								<line id="line-bottom" x1="10" y1="1" x2="110" y2="1" shape-rendering="crispEdges" stroke="#fff" style="stroke-width: 2px; vector-effect: non-scaling-stroke; fill: none;"/>
+							</svg>
+						</div>
+		
+						<div class="show-for-large nav-items">
+							<ul class="dropdown menu desktop-menu menu-main-menu">
+								<li class="menu-item menu-item-has-children">
+									<a class="link-hover" href="single-post.html#">Home</a>
+									<ul class="dropdown menu vertical" data-toggle>
+										<li class="menu-item"><a href="index.html"><span class="title">Home 1</span></a></li>
+										<li class="menu-item"><a href="home2.html"><span class="title">Home 2</span></a></li>
+										<li class="menu-item"><a href="home3.html"><span class="title">Home 3</span></a></li>
+										<li class="menu-item"><a href="home4.html"><span class="title">Home 4</span></a></li>
+										<li class="menu-item"><a href="home5.html"><span class="title">Home 5</span></a></li>
+										<li class="menu-item"><a href="home6.html"><span class="title">Home 6</span></a></li>
+									</ul>
+								</li>				
+								<li class="menu-item menu-item-has-children">
+									<a class="link-hover" href="single-post.html#">Menu</a>
+									<ul class="dropdown menu vertical" data-toggle>
+										<li class="menu-item"><a href="menu.html"><span class="title">Food menu 1</span></a>
+										</li>
+										<li class="menu-item"><a href="menu2.html"><span class="title">Food menu 2</span></a></li>
+										<li class="menu-item"><a href="menu3.html"><span class="title">Food menu 3</span></a></li>
+									</ul>
+								</li>
+								<li class="menu-item">
+									<a class="link-hover" href="reservation.html">Reservation</a>
+								</li>
+								<li class="menu-item menu-item-has-children">
+									<a class="link-hover" href="single-post.html#">Pages</a>
+									<ul class="dropdown menu vertical" data-toggle>
+										<li class="menu-item menu-item-has-children">
+											<a href="single-post.html#"><span class="title">Blog</span></a>
+											<ul class="dropdown menu vertical" data-toggle>
+												<li class="menu-item"><a href="blog.html"><span class="title">Blog grid</span></a>
+												</li>
+												<li class="menu-item"><a href="blog2.html"><span class="title">Blog rows</span></a></li>
+											</ul>
+										</li>	
+										<li class="menu-item">
+											<a href="gallery.html"><span class="title">Gallery</span></a>
+										</li>	
+										<li class="menu-item menu-item-has-children"><a href="single-post.html#"><span class="title">Team</span></a>
+											<ul class="dropdown menu vertical" data-toggle>
+												<li class="menu-item"><a href="team1.html"><span class="title">Team 1</span></a></li>
+												<li class="menu-item"><a href="team2.html"><span class="title">Team 2</span></a></li>
+												<li class="menu-item"><a href="team3.html"><span class="title">Team 3</span></a></li>
+											</ul>
+										</li>
+										<li class="menu-item menu-item-has-children"><a href="single-post.html#"><span class="title">Mosaic</span></a>
+											<ul class="dropdown menu vertical" data-toggle>
+												<li class="menu-item"><a href="mosaic.html"><span class="title">Mosaic 1</span></a></li>
+												<li class="menu-item"><a href="mosaic2.html"><span class="title">Mosaic 2</span></a></li>
+											</ul>
+										</li>
+										<li class="menu-item"><a href="about.html"><span class="title">About</span></a></li>
+										<li class="menu-item"><a href="private-dining.html"><span class="title">Private dining</span></a></li>
+										<li class="menu-item">
+											<a href="contact.html"><span class="title">Contact</span></a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-has-children">
+									<a class="link-hover" href="single-post.html#">Elements</a>
+									<ul class="dropdown menu vertical" data-toggle>
+										<li class="menu-item"><a href="elements-typo.html"><span class="title">Typography</span></a></li>
+										<li class="menu-item menu-item-has-children"><a href="single-post.html#"><span class="title">Block elements</span></a>
+											<ul class="dropdown menu vertical" data-toggle>
+												<li class="menu-item"><a href="elements-grid.html"><span class="title">Grid</span></a></li>
+												<li class="menu-item"><a href="elements-blocks.html"><span class="title">Elements</span></a></li>
+											</ul>
+										</li>
+										<li class="menu-item"><a href="elements-buttons.html"><span class="title">Buttons</span></a></li>
+										<li class="menu-item"><a href="elements-images.html"><span class="title">Images</span></a></li>
+										<li class="menu-item menu-item-has-children"><a href="single-post.html#"><span class="title">Navigation</span></a>
+											<ul class="dropdown menu vertical" data-toggle>
+												<li class="menu-item"><a href="elements-nav-right-left.html"><span class="title">Right/Left items</span></a></li>
+												<li class="menu-item"><a href="elements-nav-center.html"><span class="title">Centered items</span></a></li>
+											</ul>
+										</li>
+										<li class="menu-item"><a href="elements-intro.html"><span class="title">Intro</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<div class="mobile-navbar-overlay nav-overlay-closed hide-for-large">
+			<div class="close-nav btn-mobile-overlay">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 width="40px" height="40px" viewBox="0 0 100 100" style=""
+				 xml:space="preserve">
+					<circle cx="50" cy="50" r="40" stroke="#fff" style="stroke-width: 2px; vector-effect: non-scaling-stroke; fill: none;"/>
+					<line id="e4_line" x1="35" y1="35" x2="65" y2="65" stroke="#fff" style="stroke-width: 2px; vector-effect: non-scaling-stroke; fill: none;"/><line x1="65" y1="35" x2="35" y2="65" stroke="#fff" style="stroke-width: 2px; vector-effect: non-scaling-stroke; fill: none;"/>
+				</svg>
+			</div>
+			<ul class="menu-mobile">
+				<li class="menu-item menu-item-has-children">
+					<a href="single-post.html#">Home</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item"><a class="link-hover" href="index.html"><span class="title">Home 1</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="home2.html"><span class="title">Home 2</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="home3.html"><span class="title">Home 3</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="home4.html"><span class="title">Home 4</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="home5.html"><span class="title">Home 5</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="home6.html"><span class="title">Home 6</span></a></li>
+					</ul>
+				</li>					
+				<li class="menu-item menu-item-has-children">
+					<a class="" href="single-post.html#">Menu</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item"><a class="link-hover" href="menu.html"><span class="title">Food menu 1</span></a>
+						</li>
+						<li class="menu-item"><a class="link-hover" href="menu2.html"><span class="title">Food menu 2</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="menu3.html"><span class="title">Food menu 3</span></a></li>
+					</ul>
+				</li>
+				<li class="menu-item">
+					<a class="link-hover" href="reservation.html">Reservation</a>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a class="" href="single-post.html#">Pages</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item menu-item-has-children">
+							<a class="" href="single-post.html#">Blog</a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a class="link-hover" href="blog.html"><span class="title">Blog grid</span></a>
+								</li>
+								<li class="menu-item"><a class="link-hover" href="blog2.html"><span class="title">Blog rows</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item">
+							<a class="link-hover" href="gallery.html">Gallery</a>
+						</li>	
+						<li class="menu-item menu-item-has-children"><a href="single-post.html#"><span class="title">Team</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a class="link-hover" href="team1.html"><span class="title">Team 1</span></a></li>
+								<li class="menu-item"><a class="link-hover" href="team2.html"><span class="title">Team 2</span></a></li>
+								<li class="menu-item"><a class="link-hover" href="team3.html"><span class="title">Team 3</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item menu-item-has-children"><a href="single-post.html#"><span class="title">Mosaic</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a class="link-hover" href="mosaic.html"><span class="title">Mosaic 1</span></a></li>
+								<li class="menu-item"><a class="link-hover" href="mosaic2.html"><span class="title">Mosaic 2</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a class="link-hover" href="about.html"><span class="title">About</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="private-dining.html"><span class="title">Private dining</span></a></li>
+						<li class="menu-item">
+							<a class="link-hover" href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a class="" href="single-post.html#">Elements</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item"><a href="elements-typo.html"><span class="title">Typography</span></a></li>
+						<li class="menu-item menu-item-has-children"><a href="single-post.html#"><span class="title">Block elements</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a class="link-hover" href="elements-grid.html"><span class="title">Grid</span></a></li>
+								<li class="menu-item"><a class="link-hover" href="elements-blocks.html"><span class="title">Elements</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a class="link-hover" href="elements-buttons.html"><span class="title">Buttons</span></a></li>
+						<li class="menu-item"><a class="link-hover" href="elements-images.html"><span class="title">Images</span></a></li>
+						<li class="menu-item menu-item-has-children"><a href="single-post.html#"><span class="title">Navigation</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a class="link-hover" href="elements-nav-right-left.html"><span class="title">Right/Left items</span></a></li>
+								<li class="menu-item"><a class="link-hover" href="elements-nav-center.html"><span class="title">Centered items</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a class="link-hover" href="elements-intro.html"><span class="title">Intro</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		</div> 
+		<div class="mobile-navbar-helper hide-for-large"></div>
+		
+		
+		<section id="fixed-nav" class="page-header-nav fixed-nav show-for-large">
+			<div class="nav-logo nav-logo-dark">
+				<a href="index.html" class="show-in-viewport">
+					<img src="assets/img/logo-dark.png" alt=""/>
+				</a>
+			</div>
+			<ul class="dropdown menu desktop-menu menu-main-menu">
+				<li class="menu-item menu-item-has-children">
+					<a class="link-hover" href="single-post.html#">Home</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item"><a href="index.html"><span class="title">Home 1</span></a></li>
+						<li class="menu-item"><a href="home2.html"><span class="title">Home 2</span></a></li>
+						<li class="menu-item"><a href="home3.html"><span class="title">Home 3</span></a></li>
+						<li class="menu-item"><a href="home4.html"><span class="title">Home 4</span></a></li>
+						<li class="menu-item"><a href="home5.html"><span class="title">Home 5</span></a></li>
+						<li class="menu-item"><a href="home6.html"><span class="title">Home 6</span></a></li>
+					</ul>
+				</li>				
+				<li class="menu-item menu-item-has-children">
+					<a class="link-hover" href="single-post.html#">Menu</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item"><a href="menu.html"><span class="title">Food menu 1</span></a>
+						</li>
+						<li class="menu-item"><a href="menu2.html"><span class="title">Food menu 2</span></a></li>
+						<li class="menu-item"><a href="menu3.html"><span class="title">Food menu 3</span></a></li>
+					</ul>
+				</li>
+				<li class="menu-item">
+					<a class="link-hover" href="reservation.html">Reservation</a>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a class="link-hover" href="single-post.html#">Pages</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item menu-item-has-children">
+							<a href="single-post.html#"><span class="title">Blog</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a href="blog.html"><span class="title">Blog grid</span></a>
+								</li>
+								<li class="menu-item"><a href="blog2.html"><span class="title">Blog rows</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item">
+							<a href="gallery.html"><span class="title">Gallery</span></a>
+						</li>		
+						<li class="menu-item menu-item-has-children"><a href="single-post.html#"><span class="title">Team</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a href="team1.html"><span class="title">Team 1</span></a></li>
+								<li class="menu-item"><a href="team2.html"><span class="title">Team 2</span></a></li>
+								<li class="menu-item"><a href="team3.html"><span class="title">Team 3</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item menu-item-has-children"><a href="single-post.html#"><span class="title">Mosaic</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a href="mosaic.html"><span class="title">Mosaic 1</span></a></li>
+								<li class="menu-item"><a href="mosaic2.html"><span class="title">Mosaic 2</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a href="about.html"><span class="title">About</span></a></li>
+						<li class="menu-item"><a href="private-dining.html"><span class="title">Private dining</span></a></li>
+						<li class="menu-item">
+							<a href="contact.html"><span class="title">Contact</span></a>
+						</li>
+					</ul>
+				</li>
+				<li class="menu-item menu-item-has-children">
+					<a class="link-hover" href="single-post.html#">Elements</a>
+					<ul class="dropdown menu vertical" data-toggle>
+						<li class="menu-item"><a href="elements-typo.html"><span class="title">Typography</span></a></li>
+						<li class="menu-item menu-item-has-children"><a href="single-post.html#"><span class="title">Block elements</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a href="elements-grid.html"><span class="title">Grid</span></a></li>
+								<li class="menu-item"><a href="elements-blocks.html"><span class="title">Elements</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a href="elements-buttons.html"><span class="title">Buttons</span></a></li>
+						<li class="menu-item"><a href="elements-images.html"><span class="title">Images</span></a></li>
+						<li class="menu-item menu-item-has-children"><a href="single-post.html#"><span class="title">Navigation</span></a>
+							<ul class="dropdown menu vertical" data-toggle>
+								<li class="menu-item"><a href="elements-nav-right-left.html"><span class="title">Right/Left items</span></a></li>
+								<li class="menu-item"><a href="elements-nav-center.html"><span class="title">Centered items</span></a></li>
+							</ul>
+						</li>
+						<li class="menu-item"><a href="elements-intro.html"><span class="title">Intro</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		
+
+	<div class="loading-wrapper">
+		<div class="loading-progress"></div>
+	</div>
+
+	<div class="page-wrapper" style="width: 100%">
+		<div class="single-post page-padding-top">
+			<div class="row">
+				<div class="small-12 large-8 columns large-centered">
+					<div class="single-post-nav animate-text">
+						<div class="previous-post arrow-prev">
+							<a href="single-post.html">
+								<svg xmlns="http://www.w3.org/2000/svg" class="arrow-svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90px" height="50px" viewBox="0 0 100 50" preserveAspectRatio="xMidYMid meet" zoomAndPan="disable"><line class="arrow-svg-hor" style="stroke-width: 1px; vector-effect: non-scaling-stroke; fill: none;" stroke="#171717" shape-rendering="crispEdges" x1="0" y1="25" x2="100" y2="25"/><line class="arrow-svg-ver" stroke="#171717" x1="0" y1="25" x2="10" y2="15"/><line stroke="#171717" class="arrow-svg-ver" x1="0" y1="25" x2="10" y2="35"/>
+								</svg>
+							</a>
+						</div>
+						<div class="back-to-blog icon-close">
+							<a href="blog.html">
+								<svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" viewBox="0 0 60 60" preserveAspectRatio="xMidYMid meet" zoomAndPan="disable" ><line id="e4_line" x1="0" y1="0" x2="60" y2="60" stroke="#171717" style="stroke-width: 1px; vector-effect: non-scaling-stroke; fill: none;"/><line x1="60" y1="0" x2="0" y2="60" stroke="#171717" style="stroke-width: 1px; vector-effect: non-scaling-stroke; fill: none;"/></svg>
+							</a>
+						</div>
+						<div class="next-post arrow-next">
+							<a href="single-post.html">
+								<svg xmlns="http://www.w3.org/2000/svg" class="arrow-svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90px" height="50px" viewBox="0 0 100 50" preserveAspectRatio="xMidYMid meet" zoomAndPan="disable"><line class="arrow-svg-hor" stroke="#171717" style="stroke-width: 1px; vector-effect: non-scaling-stroke; fill: none;" shape-rendering="crispEdges" x1="0" y1="25" x2="100" y2="25"/><line class="arrow-svg-ver" stroke="#171717" x1="90" y1="15" x2="100" y2="25"/><line class="arrow-svg-ver" stroke="#171717" x1="90" y1="35" x2="100" y2="25"/></svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 columns">
+					<div class="single-post-header">
+						<div class="post-header animate-text">
+							<div class="post-date"><a href="">October 22, 2016</a></div>
+							<h3>Mashroom season is on. Grab your baskets and off to the woods.</h3>
+							<div class="post-meta">
+								<ul>
+									<li>Share on:</li>
+									<li><a href="single-post.html#" class="link-hover">Facebook</a></li>
+									<li><a href="single-post.html#" class="link-hover">Twitter</a></li>
+									<li><a href="single-post.html#" class="link-hover">TripAdvisor</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="post-image img-wrapper">
+							<img src="assets/img/blog/14.jpg"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="small-12 large-8 large-centered columns">
+					<div class="post-content animate-text animate-second">
+						<p class="lead">Rudolf Steiner first proposed the idea of biodynamic farming to a group of concerned farmers back in 1924. His idea of treating the farm as a self-sufficient living entity still is as current as it was back then.</p>
+		
+						<p>I grew up in a similar background to the Steiner model, but not as concise as the philosophy of Steiner. I have strong feelings about these things. I lived for sometime with my mother in a commune; a short train ride from outside Copenhagen. There was no farming there, but the social aspect of multiple families living together in «harmony» was not far away from the ethos of Steiner. I also went to school where there was more focus in dancing samba and evolving with a creative mind rather than learning grammar and mathematics.</p>
+		
+						<p>It was my father, though, who introduced me to the differences between conventional versus organic and biodynamic produce at an early age. This was back in a time when you had to visit some dusted up cellar in the «bohemian» part of town to find organic flour. There was no Whole Foods. So from an early age, I have had to make up my own opinions about natural produce and as I made a career out of cooking dinners for people, these choices and opinions started to shine through more than any other part of my life.</p>
+		
+						<p>According to Steiner, everything on the farm should be co-dependant as though everything is connected to form an organism. Each facet of the farm should remain harmonious with the others to maintain a healthy growing environment; the plants, soil, animals, humans, and cosmos are all part of the whole. When everything is tuned correctly, the «terrestrial and cosmic energy» can then flow throughout the system.  </p>
+					</div>
+					<ul class="post-tags">
+						<li>Tags:</li>
+						<li><a href="single-post.html#" class="link-hover">Blog</a></li>
+						<li><a href="single-post.html#" class="link-hover">Food</a></li>
+						<li><a href="single-post.html#" class="link-hover">Restaurant</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="blog-comments row animate-text">
+				<div class="small-12 large-8 large-centered columns">
+					<div class="post-comments">
+						<h6>3 Comments</h6>
+						<ul id="recentcomments" class="comment-list">
+							<li class="comment recentcomments" id="">
+								<div class="comment-author-avatar">
+									<img src="assets/img/avatar3.jpg"/>
+								</div>
+								<div class="comment-header">
+									<div class="comment-author-link"><a href="" class="url">Agatha Wright</a></div>
+									<div class="comment-date">July 21, 2016</div>
+								</div>
+								<article id="comment-body-3" class="comment-body">
+									<section id="comment-content-3" class="comment">
+										<p>Sequi temporibus suscipit optio aliquid fugiat doloremque sed, saepe consequatur, praesentium quo repudiandae earum blanditiis repellendus.</p>
+									</section>
+								   <div class="reply">
+										<a rel="nofollow" class="comment-reply-link link-hover" href="">Reply</a>
+									</div>
+								</article>
+								<ul class="comment-list">
+									<li class="comment recentcomments" id="">
+										<div class="comment-author-avatar">
+											<img src="assets/img/avatar.jpg"/>
+										</div>
+										<div class="comment-header">
+											<div class="comment-author-link"><a href="" class="url">Paul Jones</a></div>
+											<div class="comment-date">July 22, 2016</div>
+										</div>
+										<article id="comment-body-3" class="comment-body">
+											<section id="comment-content-3" class="comment">
+												<p>To get started with moderating, editing, and deleting comments, please visit the Comments screen in the dashboard.</p>
+											</section>
+										   <div class="reply">
+												<a rel="nofollow" class="comment-reply-link link-hover" href="">Reply</a>
+											</div>
+										</article>
+									</li>
+								</ul>
+							</li>
+							<li class="comment recentcomments" id="">
+								<div class="comment-author-avatar">
+									<img src="assets/img/avatar2.jpg"/>
+								</div>
+								<div class="comment-header">
+									<div class="comment-author-link"><a href="" class="url">John Doe</a></div>
+									<div class="comment-date">July 21, 2016</div>
+								</div>
+								<article id="comment-body-2" class="comment-body">
+									<section id="comment-content-2" class="comment">
+										<p>Quam incidunt explicabo ipsa quod minus repellendus, consequatur molestiae obcaecati sequi quisquam earum suscipit esse repellat ea harum nihil ad modi.</p>
+									</section>
+									<div class="reply">
+										<a rel="nofollow" class="comment-reply-link link-hover" href="">Reply</a>
+									</div>
+								</article>
+							</li>
+							<li class="comment recentcomments" id="">
+								<div class="comment-author-avatar">
+									<img src="assets/img/avatar1.jpg"/>
+								</div>
+								<div class="comment-header">
+									<div class="comment-author-link"><a href="" class="url">Natalie Brown</a></div>
+									<div class="comment-date">July 21, 2016</div>
+								</div>
+								<article id="comment-body-1" class="comment-body">
+									<section id="comment-content-1" class="comment">
+										<p>Vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+									</section>
+									<div class="reply">
+										<a rel="nofollow" class="comment-reply-link link-hover" href="">Reply</a>
+									</div>
+								</article>
+							</li>
+						</ul>
+						<div class="paginate-comments numericomment-pagination"></div>            
+						<div id="respond" class="comment-respond forms-style comment-form">
+							<h3 id="reply-title" class="comment-reply-title"> <small><a rel="nofollow" id="cancel-comment-reply-link" href="" style="display:none;" class="dJAX_internal">Click here to cancel reply.</a></small></h3>   
+							<form role="form" name="comment-form" id="comment-form" action="comment-send.php" method="POST">
+								<input type="hidden" name="action" value="comment_request">
+								<fieldset class="comment-details">
+									<div class="comment-text name comment-input mf-input">
+										<label for="comment_name">Name</label>
+										<input class="input-required" type="text" name="comment[name]" id="comment_name" value="">
+									</div> 
+									<div class="comment-text email comment-input mf-input">
+										<label for="comment_email">Mail</label>
+										<input class="input-required" type="text" name="comment[email]" id="comment_email" value="">
+									</div>
+									<div class="comment-text url comment-input mf-input">
+										<label for="comment_url">Website</label>
+										<input type="text" name="comment[url]" id="comment_url" value="">
+									</div>  
+								</fieldset> 
+								<fieldset class="message">
+									<div class="comment-textarea message comment-input mf-input">
+										<label for="comment_message">Comment</label>
+										<textarea class="input-required" rows="1" name="comment[message]" id="comment_message"></textarea>
+										<div class="border-label"></div>
+									</div>
+								</fieldset> 
+								<button type="submit" class="btn btn-md btn-border-animate btn-comment">Submit
+									<span class="top button-border"></span>
+									<span class="left left-bottom button-border"></span>
+									<span class="left left-top button-border"></span>
+									<span class="bottom bottom-right button-border"></span>
+									<span class="bottom bottom-left button-border"></span>
+									<span class="right button-border"></span>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--  -->
+			<div class="footer">
+				<div class="row footer-grid animate-text">
+					<div class="small-12 large-3 columns">
+						<div class="footer-content">
+							<h6>Marco Restaurant</h6>
+							<p>The Hoe, PL48RT<br/>
+								Plymouth, UK
+							</p>
+							<p><a href="" class="link-hover link-hover-text">Get direction</a></p>
+							<div class="footer-content">
+								<p><a class="link-hover" href="single-post.html#">Facebook</a><br/>
+									<a class="link-hover" href="single-post.html#">Twitter</a><br/>
+									<a class="link-hover" href="single-post.html#">Instagram</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="small-12 large-3 columns">
+						<div class="footer-content">
+							<h6>Reservation</h6>
+							<p><a href="mailto:book@marco.com" class="link-hover link-hover-text">book@marco.com</a><br/>
+								<span>+ 166 900 891</span>
+							</p>
+						</div>
+						<div class="footer-content">
+							<h6>Private dining</h6>
+							<p><a href="mailto:private@marco.com" class="link-hover link-hover-text">private@marco.com</a><br/>
+								<span>+ 166 900 891</span>
+							</p>
+						</div>
+					</div>
+					<div class="small-12 large-3 columns">
+						<div class="footer-content">
+							<h6>Newsletter</h6>
+							<p>Spam free, information in your<br/> mailbox once a week.</p>
+							<div class="forms-style newsletter-form">
+								<div class="newsletter-form-wrapper">
+									<form name="n-form" id="n-form" action="n-send.php" method="POST">
+										<input type="hidden" name="action" value="newsletter_request">
+										<fieldset class="newsletter-details">
+											<div class="n-text email n-input mf-input">
+												<label for="n_email">E-mail</label>
+												<input class="input-required" type="text" name="n[email]" id="n_email" value="">
+											</div>
+										</fieldset> 
+										<button type="submit" class="btn btn-xs btn-border-animate btn-newsletter">Submit
+											<span class="top button-border"></span>
+											<span class="left left-bottom button-border"></span>
+											<span class="left left-top button-border"></span>
+											<span class="bottom bottom-right button-border"></span>
+											<span class="bottom bottom-left button-border"></span>
+											<span class="right button-border"></span>
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="small-12 large-3 columns">
+						<div class="footer-content">
+							<div class="btn btn-border-animate" id="scroll-up">
+								<svg xmlns="http://www.w3.org/2000/svg" class="arrow-svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="40px" viewBox="0 0 50 100" preserveAspectRatio="xMidYMid meet" zoomAndPan="disable"><line class="arrow-svg-top" stroke="#171717" x1="15" y1="25" x2="25" y2="15" style="stroke-width: 1px; vector-effect: non-scaling-stroke; fill: none;"/><line class="arrow-svg-top" stroke="#171717" x1="25" y1="15" x2="35" y2="25" style="stroke-width: 1px; vector-effect: non-scaling-stroke; fill: none;"/><line class="arrow-svg-ver" stroke="#171717" style="stroke-width: 1px; vector-effect: non-scaling-stroke; fill: none;" shape-rendering="crispEdges" x1="25" y1="15" x2="25" y2="85"/></svg>
+								<span class="top button-border"></span>
+								<span class="left left-bottom button-border"></span>
+								<span class="left left-top button-border"></span>
+								<span class="bottom bottom-right button-border"></span>
+								<span class="bottom bottom-left button-border"></span>
+								<span class="right button-border"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--  -->
+	</div>
+	<script src="assets/js/vendor/jquery.swipebox.min.js"></script>
+	<script src="assets/js/vendor/jquery.waypoints.min.js"></script>
+	<script src="assets/js/vendor/jquery.mbYTPlayer.min.js"></script>
+	<script src="assets/js/vendor/masonry.pkgd.min.js"></script>
+	<script src="assets/js/vendor/smooth-scroll.js"></script>
+	<script src="assets/js/vendor/swiper.jquery.min.js"></script>
+	<script src="assets/js/vendor/vegas.min.js"></script>
+	<script src="assets/js/vendor/velocity.min.js"></script>
+	<script src="assets/js/app.js"></script>
+  </body>
+</html>
