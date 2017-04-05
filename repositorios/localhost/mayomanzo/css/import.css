@@ -1,0 +1,55 @@
+/* ################################################################################################### *\
+
+	Project Name: Landings
+	Proyect Version: 2.0
+	Author: *******
+	Update: hevelmo
+
+	CONTENT STYLES LOGIN PAGE
+
+	[styles] bootstrap
+	[styles] webfonts
+	[styles] googlefonts
+	[styles] plugins
+	[styles] custom
+	[styles] main
+	[styles] responsive
+
+\* ################################################################################################### */
+	/* ------------------------------------------------------ *\
+		[styles] bootstrap
+	\* ------------------------------------------------------ */
+		@import url(styles/bootstrap.css);
+	/* ------------------------------------------------------ *\
+		[styles] webfonts
+	\* ------------------------------------------------------ */
+		@import url(webfonts/font-awesome.css);
+		@import url(webfonts/iconfont.css);
+		@import url(webfonts/ionicons.css);
+		@import url(webfonts/pe-icon-7-stroke.css);
+		@import url(webfonts/flexslider.css);
+		@import url(webfonts/material.css);
+	/* ------------------------------------------------------ *\
+		[styles] googlefonts
+	\* ------------------------------------------------------ */
+		@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900,900italic,700italic,400italic,300italic,100italic);
+		@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+	/* ------------------------------------------------------ *\
+		[styles] plugins
+	\* ------------------------------------------------------ */
+		@import url(styles/ripples.css);
+		@import url(styles/owl.carousel.css);
+		@import url(styles/owl.theme.css);
+		@import url(styles/margin.css);
+		@import url(styles/padding.css);
+	/* ------------------------------------------------------ *\
+		[styles] custom
+	\* ------------------------------------------------------ */
+		@import url(styles/style.css);
+	/* ------------------------------------------------------ *\
+		[styles] main
+	\* ------------------------------------------------------ */
+		@import url(styles/main.css);
+/* ################################################################################################### *\
+	END CONTENT
+\* ################################################################################################### */
