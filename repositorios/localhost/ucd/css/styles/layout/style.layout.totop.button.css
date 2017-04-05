@@ -1,0 +1,34 @@
+/* Totop button | #totop */
+#totop {
+  position: fixed;
+  bottom: 1%;
+  right: 1.5%;
+  display: none;
+  z-index: 9999;
+  background-color: rgb(0,136,240);
+  border-radius: 2px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  -webkit-transition: all .25s ease;
+     -moz-transition: all .25s ease;
+      -ms-transition: all .25s ease;
+       -o-transition: all .25s ease;
+          transition: all .25s ease;
+}
+#totop i {
+  color: #ffffff;
+  line-height: 30px;
+  font-size: 18px;
+}
+#totop:hover {
+  background-color: rgb(45,78,158);
+  -webkit-transition: all .25s ease;
+     -moz-transition: all .25s ease;
+      -ms-transition: all .25s ease;
+       -o-transition: all .25s ease;
+          transition: all .25s ease;
+}
+#totop:hover i {
+  color: #ffffff;
+}

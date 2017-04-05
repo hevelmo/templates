@@ -1,0 +1,86 @@
+.accordion .panel {
+  margin-bottom: 20px;
+  border: 0;
+  box-shadow: none;
+}
+.accordion .panel-heading {
+  padding: 0;
+  min-height: 36px;
+  border-radius: 9999px;
+  background-color: transparent;
+  border: 2px solid #43d9ad;
+  color: #43d9ad;
+}
+.accordion .panel-body {
+  padding: 25px 15px 0;
+}
+.accordion .panel-heading .panel-title {
+  display: block;
+  float: none;
+  padding: 0;
+}
+.accordion .panel-heading .accordion-toggle {
+  display: block;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  padding: 10px 10px 10px 15px;
+  border-radius: 9999px;
+}
+.accordion .panel-heading .accordion-toggle:hover,
+.accordion .panel-heading .accordion-toggle:focus {
+  text-decoration: none;
+  background-color: #43d9ad;
+  color: #ffffff;
+}
+.accordion .panel[class*="panel-"] .panel-heading .accordion-toggle.collapsed {
+  color: #43d9ad;
+  background-color: transparent;
+}
+.accordion .panel[class*="panel-"] .panel-heading .accordion-toggle.collapsed:hover {
+  text-decoration: none;
+  background-color: #43d9ad;
+  color: #ffffff;
+}
+.accordion .panel-heading .accordion-toggle.collapsed > .icon-arrow {
+  filter: alpha(opacity=75);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+  -moz-opacity: 0.75;
+  -khtml-opacity: 0.75;
+  opacity: 0.75;
+}
+.accordion .panel-heading .accordion-toggle.collapsed > .icon-arrow:before {
+  content: "\f067" !important;
+}
+.accordion .panel-heading .accordion-toggle > .icon-arrow {
+  font-size: 16px;
+  padding: 0 10px;
+  display: inline-block;
+  font-family: 'font-fontawesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+}
+.accordion .panel-heading .accordion-toggle > .icon-arrow:before {
+  content: "\f068";
+}
+.accordion .panel-body {
+  border: none !important;
+}
+.accordion.panel-group .panel + .panel {
+  margin-top: 1px;
+}
+.accordion.accordion-white .panel-heading .accordion-toggle {
+  background-color: white;
+}
+.accordion.accordion-white .panel-heading .accordion-toggle.collapsed {
+  background-color: white;
+}
+.accordion.accordion-white.panel-group .panel + .panel {
+  margin-top: 0;
+  border-top: 1px solid #a7acb7;
+}

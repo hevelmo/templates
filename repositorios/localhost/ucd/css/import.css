@@ -1,0 +1,269 @@
+/* WEBFONTS */
+@import url(styles/webfont/font.awesome.css);
+@import url(styles/webfont/font.glyphicons.css);
+@import url(styles/webfont/font.ionicons.css);
+@import url(styles/webfont/font.medical.icons.css);
+@import url(styles/webfont/font.walkway.css);
+@import url(styles/webfont/font.organ.humans.css);
+@import url(styles/webfont/font.medical.tools.css);
+/* BOOTSTRAP */
+@import url(bootstrap/bootstrap.css);
+/* CORE */
+@import url(styles/core/style.core.reset.css);
+@import url(styles/core/style.core.globals.margin.padding.css);
+@import url(styles/core/style.core.buttons.css);
+@import url(styles/core/style.core.forms.css);
+@import url(styles/core/style.core.delay.css);
+@import url(styles/core/style.core.progress.css);
+@import url(styles/core/style.core.globals.bg.alerts.css);
+@import url(styles/core/style.core.global.text.align.css);
+@import url(styles/core/style.core.accordion.css);
+@import url(styles/core/style.core.dropdown.css);
+/* LAYOUT */
+@import url(styles/layout/style.layout.header.navigation.css);
+@import url(styles/layout/style.layout.footer.css);
+@import url(styles/layout/style.layout.global.component.css);
+@import url(styles/layout/style.layout.totop.button.css);
+@import url(styles/layout/style.layout.header.scroll.css);
+@import url(styles/layout/style.layout.responsive.css);
+/* CALENDAR */
+@import url(styles/style.calendar.css);
+/* ANIMATE */
+@import url(styles/style.animate.css);
+/* PAGES */
+@import url(styles/pages/style.pages.banner.slider.css);
+@import url(styles/pages/style.pages.features.css);
+@import url(styles/pages/style.pages.waht.we.do.css);
+@import url(styles/pages/style.pages.meet.doctor.css);
+@import url(styles/pages/style.pages.patients.css);
+@import url(styles/pages/style.pages.latest.news.css);
+@import url(styles/pages/style.pages.about.us.css);
+@import url(styles/pages/style.pages.responsive.css);
+@import url(styles/style-appointment.css);
+@import url(styles/style-contact.css);
+/* MAIN */
+@import url(styles/main.css);
+
+/* EXTRAS */
+@import url(styles/extras/basscss.css);
+/* CORP MEDIGRAF */
+@import url(styles/style.medigraf.css);
+
+
+
+/*
+*/
+/*.list-unstyled li a i,*/
+.list-unstyled li a em.span-unstyled {
+	display: inline-block;
+	vertical-align: top;
+}
+.list-unstyled li a em.span-unstyled {
+	/*word-break: break-word;*/
+	/*width: 85%;*/
+}
+
+@media (max-width: 640px) {
+	.list-unstyled li a.address span.span-unstyled-address {
+	    word-break: break-word;
+		width: 100%;
+		display: block;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.list-unstyled-legend {
+		text-align: center;
+		font-weight: bold;
+		font-size: 18px;
+	}
+	.contact-info .list-unstyled li a.address > i {display: none;}
+	.contact-info .list-unstyled li a.address > span.span-unstyled-address {
+		display: block;
+		text-align: center;
+	}
+	/*.contact-info .list-unstyled li a > i,*/
+	.contact-info .list-unstyled li a > em.span-unstyled {
+		display: none;
+	}
+	ul.list-unstyled li > em.span-unstyled {
+		display: none;
+	}
+	.contact-info .list-unstyled li a.btn-responsive {
+		margin-bottom: 10px;
+	}
+	.contact-info .list-unstyled li a.btn-responsive > i {
+		display: inline-block;
+	}
+	.contact-info .list-unstyled li a a > i {
+		display: block;
+	}
+}
+@media (max-width: 480px) {
+	.list-unstyled li a.address span.span-unstyled-address {
+	    word-break: break-word;
+		width: 100%;
+		display: block;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.list-unstyled-legend {
+		text-align: center;
+		font-weight: bold;
+		font-size: 18px;
+	}
+	.contact-info .list-unstyled li a.address > i {display: none;}
+	.contact-info .list-unstyled li a.address > span.span-unstyled-address {
+		display: block;
+		text-align: center;
+	}
+	/*.contact-info .list-unstyled li a > i,*/
+	.contact-info .list-unstyled li a > em.span-unstyled {
+		display: none;
+	}
+	ul.list-unstyled li > em.span-unstyled {
+		display: none;
+	}
+	.contact-info .list-unstyled li a.btn-responsive {
+		margin-bottom: 10px;
+	}
+	.contact-info .list-unstyled li a.btn-responsive > i {
+		display: inline-block;
+	}
+	.contact-info .list-unstyled li a a > i {
+		display: block;
+	}
+	.legend-logo:before {
+		content: '';
+	}
+}
+@media screen and (max-width: 414px) {
+	.list-unstyled li a.address span.span-unstyled-address {
+	    word-break: break-word;
+		width: 100%;
+		display: block;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.list-unstyled-legend {
+		text-align: center;
+		font-weight: bold;
+		font-size: 18px;
+	}
+	.contact-info .list-unstyled li a.address > i {display: none;}
+	.contact-info .list-unstyled li a.address > span.span-unstyled-address {
+		display: block;
+		text-align: center;
+	}
+	/*.contact-info .list-unstyled li a > i,*/
+	.contact-info .list-unstyled li a > em.span-unstyled {
+		display: none;
+	}
+	ul.list-unstyled li > em.span-unstyled {
+		display: none;
+	}
+	.contact-info .list-unstyled li a.btn-responsive {
+		margin-bottom: 10px;
+	}
+	.contact-info .list-unstyled li a.btn-responsive > i {
+		display: inline-block;
+	}
+	.contact-info .list-unstyled li a a > i {
+		display: block;
+	}
+	.legend-logo:before {
+		content: '';
+	}
+}
+@media screen and (max-width: 375px) {
+	.list-unstyled li a.address span.span-unstyled-address {
+	    word-break: break-word;
+		width: 100%;
+		display: block;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.list-unstyled-legend {
+		text-align: center;
+		font-weight: bold;
+		font-size: 18px;
+	}
+	.contact-info .list-unstyled li a.address > i {display: none;}
+	.contact-info .list-unstyled li a.address > span.span-unstyled-address {
+		display: block;
+		text-align: center;
+	}
+	/*.contact-info .list-unstyled li a > i,*/
+	.contact-info .list-unstyled li a > em.span-unstyled {
+		display: none;
+	}
+	ul.list-unstyled li > em.span-unstyled {
+		display: none;
+	}
+	.contact-info .list-unstyled li a.btn-responsive > i {
+		display: inline-block;
+	}
+	.contact-info .list-unstyled li a a > i {
+		display: block;
+	}
+	.legend-logo:before {
+		content: '';
+	}
+}
+@media screen and (max-width: 320px) {
+	.list-unstyled li a span.span-unstyled {
+		width: 80%;
+	}
+
+	.list-unstyled li a.address span.span-unstyled-address {
+	    word-break: break-word;
+		width: 100%;
+		display: block;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.list-unstyled-legend {
+		text-align: center;
+		font-weight: bold;
+		font-size: 18px;
+	}
+	.contact-info .list-unstyled li a.address > i {display: none;}
+	.contact-info .list-unstyled li a.address > span.span-unstyled-address {
+		display: block;
+		text-align: center;
+	}
+	/*.contact-info .list-unstyled li a > i,*/
+	.contact-info .list-unstyled li a > em.span-unstyled {
+		display: none;
+	}
+	ul.list-unstyled li > em.span-unstyled {
+		display: none;
+	}
+	.contact-info .list-unstyled li a.btn-responsive {
+		margin-bottom: 10px;
+	}
+	.contact-info .list-unstyled li a.btn-responsive > i {
+		display: inline-block;
+	}
+	.contact-info .list-unstyled li a a > em {
+		display: block;
+	}
+	.legend-logo:before {
+		content: '';
+	}
+}
+em a {
+	color: #fff;
+}
+em a:hover,
+em a:focus,
+em a:active {
+	color: rgba(255,255,255,0.8);
+}
+em a > i,
+em > i {
+	margin-right: 15px;
+}
+em a > .space {
+	padding-left: 5px;
+	padding-right: 5px;
+}
