@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>redirect &#8211; Enabled</title>
+	<atom:link href="http://www.enableds.com/tag/redirect/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.enableds.com</link>
+	<description>Mobile Themes and Templates</description>
+	<lastBuildDate>Mon, 06 Feb 2017 03:41:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.7.2</generator>
+
+<image>
+	<url>http://www.enableds.com/wp-content/uploads/2016/10/cropped-enabled_logo_2016-32x32.png</url>
+	<title>redirect &#8211; Enabled</title>
+	<link>http://www.enableds.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Freebie: Redirect to Mobile or Tablet</title>
+		<link>http://www.enableds.com/freebie-redirect-to-mobile-or-tablet/</link>
+		<comments>http://www.enableds.com/freebie-redirect-to-mobile-or-tablet/#respond</comments>
+		<pubDate>Tue, 02 Aug 2016 18:03:15 +0000</pubDate>
+		<dc:creator><![CDATA[Enabled]]></dc:creator>
+				<category><![CDATA[Freebies & Resources]]></category>
+		<category><![CDATA[mobile]]></category>
+		<category><![CDATA[tablet]]></category>
+		<category><![CDATA[phone]]></category>
+		<category><![CDATA[freebie]]></category>
+		<category><![CDATA[tutorial]]></category>
+		<category><![CDATA[redirect]]></category>
+
+		<guid isPermaLink="false">http://www.enableds.com/?p=55821</guid>
+		<description><![CDATA[If you opted to make your page beautiful and elegant and use a separate mobile or/and tablet page for your site, then you made the right choice. Your mobile page is beautiful, the experience is better, and most likely, your users find it much more enjoyable than a responsive compressed page. But if you're like most other customers of ours, you're facing the problem of how to redirect users to your mobile page. Look no more! We have a freebie for you!]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-55822" src="http://www.enableds.com/wp-content/uploads/2016/10/blog_freebie_0.png" alt="blog_freebie_0" width="800" height="460" srcset="http://www.enableds.com/wp-content/uploads/2016/10/blog_freebie_0.png 800w, http://www.enableds.com/wp-content/uploads/2016/10/blog_freebie_0-300x173.png 300w, http://www.enableds.com/wp-content/uploads/2016/10/blog_freebie_0-768x442.png 768w" sizes="(max-width: 800px) 100vw, 800px" />If you opted to make your page beautiful and elegant and use a separate mobile or/and tablet page for your site, then you made the right choice. Your mobile page is beautiful, the experience is better, and most likely, your users find it much more enjoyable than a responsive compressed page. But if you&#8217;re like most other customers of ours, you&#8217;re facing the problem of how to redirect users to your mobile page. Look no more! We have a freebie for you!</p>
+<p>Believe it or not, there are services out there that charge you a monthly fee to redirect your users to your mobile or tablet. Of course, you can argue that you get great feedback on demographics and you find out what devices browse your mobile page, how long do they sit on it, and much more. Well, I can assure you that you can do all those things just by simply adding <a href="http://www.google.com/analytics/">Google Analytics</a> to your site. And yes, you will get all the demographic and device information you need about your mobile page.</p>
+<p>Getting back to the subject at hand, most services that ask you for a monthly subscription to redirect your users from desktops or laptops to mobiles or tablets don&#8217;t tell you that they actually use the Google Analytics API in your mobile and tablet page, and they just use a simple piece of code for your desktop page to redirect your mobile and tablet users to the specific pages. What the code does is amazingly simple.</p>
+<h4>The Code</h4>
+<p>Mobile and tablets leave a signature, called a user agent. When this user agent is detected by the script behind your desktop page, that script acts out and replaces the link at the top of your page with the link to your mobile or tablet page. Pretty simple, right? Let&#8217;s see the code!</p>
+<pre style="font-size: 12px;">function mobile_detect(mobile,tablet,mobile_redirect,tablet_redirect) {
+ var ismobile = (/iphone|ipod|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase()));
+ var istablet = (/ipad|android 3|sch-i800|playbook|tablet|kindle|gt-p1000|sgh-t849|shw-m180s|a510|a511|a100|dell streak|silk/i.test(navigator.userAgent.toLowerCase()));
+
+ if (ismobile &amp;&amp; mobile==true) {
+ window.location.href = 'http://www.m.page.com'
+ } else if (istablet &amp;&amp; tablet==true) {
+ window.location.href = 'http://www.t.page.com'
+ }
+}</pre>
+<p>We&#8217;ll explain how to install this to your page in just a moment, but let&#8217;s understand what&#8217;s behind the actual code.</p>
+<p>On line one we create the function, that will house what a mobile is and what a tablet is.  The second line of code defines what mobile devices should the code act on, and you can actually read the code and see the browsers it will fire for. Same applies for line three, but this is specific to tablets. Now, this is where the magic happens.</p>
+<p>On line five, if the user agent is detected as being mobile ( meaning, it fits the criteria in line two ) then the window url will be replaced with the address at the end of line six. On line 7, if the user agent is detected as being a tablet ( meaning it fits the criteria in line three ) then the window url will be replaced with the address at the end of line 8. Pretty simple, right?</p>
+<p>If you&#8217;re asking what happens if a desktop comes along and hits this code, the answer is nothing. Desktop user agents are excluded from the codes in lines two and three, which means browsing from a computer will not change anything. The page won&#8217;t even feel the extra load time from these humble 10 lines of code!</p>
+<h4>How to add it to your page</h4>
+<p>Adding this code to your page is easier than you can imagine. First, copy and paste the code shown above into an empty notepad. Once you&#8217;ve done that, replace the addresses for your mobile and tablet page location. Please keep in mind, that m.domain.com and t.domain.com are subdomains and these need to be setup.</p>
+<p>Once you&#8217;ve copied the code and edited the address, save this file as redirect.js and place it in the root of your <strong>desktop site.</strong> Edit your desktop&#8217;s index.html or index.php file, and import the code right above jquery.js. No problem if you&#8217;re not using jQuery. The main idea is that this script needs to be the first thing imported in your page, so it can load instantly and act accordingly. Adding it after all the JS of your page is loaded is just a waste of your bandwidth. Once you&#8217;ve done that, you&#8217;re all set and voila! Your page now redirects to mobiles and tablets!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.enableds.com/freebie-redirect-to-mobile-or-tablet/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using disk: enhanced
+Content Delivery Network via N/A
+Minified using disk
+
+ Served from: www.enableds.com @ 2017-02-15 17:18:24 by W3 Total Cache -->

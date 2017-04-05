@@ -1,0 +1,249 @@
+/*General*/
+header, footer{ position: relative; margin: 0; padding: 0; width: 100%; }
+section{ overflow: hidden; width: 100%; position: relative;}
+.cntnr{ position: relative; width: 100% ; margin: 0 auto; padding: 0; height: 100%; overflow: hidden; z-index: 10; }
+header{ background: #1f1f22; box-sizing: border-box; padding: 0px 0px 20px 0px; text-align: center; }
+header .logo{ position: relative; margin: 0 auto; padding: 0; }
+header .logo a{ text-decoration: none; }
+header .logo img{ width: 80px; height: 80px; }
+header .logo span{ display: inline-table; font-family: 'Volvo Sans Bold', 'Volvo Sans Medium', 'Volvo Sans Regular', 'Arial Narrow', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; color: #fff; margin: -45px 0 0 10px; font-size: 26px; line-height: 26px; text-align: left }
+.site-tagline .suecia { line-height: 20px; font-family: "Volvo Sans Bold", sans-serif !important; font-size: 16px; display: inline-block; color: #fff; letter-spacing: 0px; }
+span.logox{  display: inline-table; font-family: 'Volvo Sans Bold', 'Volvo Sans Medium', 'Volvo Sans Regular', 'Arial Narrow', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; color: #fff; margin: 0 0 0 10px; font-size: 26px; line-height: 26px; text-align: left; vertical-align: middle; }
+footer{ background: #003057; border-top: 6px #002b4e solid; padding: 25px 0;  }
+footer a{ display: block; margin: 0 auto; width: 194px; }
+footer a img{ width: 100%; height: 100%; }
+footer p{ color: #fff; width: 60%; margin: 0 auto; font-family: 'Volvo Sans Regular', 'Arial Narrow', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 12px; line-height: 16.8px; text-align: center;  }
+.nu-logo{ margin-top: 22px; }
+.center{text-align: center; }
+/*********/
+.highlight{ color: #52a54a!important; }
+.cotizador{font-family: 'volvo_sans_proregular', arial, helvetica, sans-serif; font-size:13px; display: table; max-width: 95%; box-sizing:border-box; -moz-box-sizing:border-box; margin: auto;line-height: 1;background: #fff;}
+.content-cotizador{/*box-shadow:2px 2px 3px rgba(77,77,77,0.5);*/border:1px solid #EBEBEB; overflow: hidden; margin-bottom:2px;}
+.version-v, .plazo, .enganche,.result-cotizador{display: table-cell; box-sizing:border-box; -moz-box-sizing:border-box;}
+.result-cotizador{width:100%; background:#f4f4f4; padding:18px; border:1px solid #EBEBEB;}
+.version-v{width:40%;}
+.plazo{width:30%;}
+.plazo h2:nth-of-type(2){margin-top:5px; }
+.plazo h3 {
+  margin-top: 5px;
+  float: left;
+}
+.enganche{width:30%;}
+.result-cotizador{display: table; float: left;}
+.version-v h2, .plazo h2, .enganche h2{background: #f6f6f6; color: #003057!important; font-family:arial, helvetica, sans-serif; font-size:14px; font-weight: 600; text-transform: uppercase; padding:15px; margin:initial; margin-bottom: 5px; width:100%; box-sizing:border-box; -moz-box-sizing:border-box;}
+
+
+.plazo h3{background: #ffffff; color: #878787!important; font-family:arial, helvetica, sans-serif; font-size:14px; font-weight: 600; text-transform: uppercase; padding:15px; margin:initial; margin-bottom: 5px; width:100%; box-sizing:border-box; -moz-box-sizing:border-box;}
+
+
+.version-v h2 span.back, .plazo h2 span.back, .enganche h2 span.back, .result-cotizador span.back{  display: none; }
+
+
+.version-v, .plazo{/*border-right:1px solid #989898;*/ position: relative;}
+.version-v:before, .plazo:before{content:""; position: absolute; top: 50%; right: -10px; margin-top: -5px; z-index:2; border-top:5px solid transparent; border-right:5px solid transparent; border-bottom:5px solid transparent; border-left:5px solid #989898;}
+.promocion{background: #e9e9e9; overflow: hidden; box-sizing:border-box; -moz-box-sizing:border-box; width: 100%; padding: 15px 25px 5px;}
+.promocion.disabled span{color:#333;}
+.promocion span{ font-weight: normal;
+    display: block;
+    margin-bottom: 15px;
+    white-space: pre-line;
+    line-height: 1.5em;
+    font-size: 11px;
+    color: #353535;}
+.promocion a{font-size: 14px; color: #282828; text-decoration: underline;}
+.plazo, .enganche{border-left:1px solid #989898; margin-left:-1px;}
+.version-v img{/*max-width: 265px;*/ width: 100%; height: auto;/* min-height:118px;*/}
+.version-v li span{display:none;}
+.version-v li.promo span{display: block; float: right; color: #5c92bb; padding-right:8px; font-size:12px; font-weight:bold;}
+.version-v li.promo{position:relative; padding-right:85px;}
+/*.version-v li.promo::before{font-family:FontAwesome;content:"\f013"; position: absolute; right:23px; color:#003057; top:43%; margin-top:-4px;}*/
+.version-v li.promo::before{font-family:Arial; content:"Promoción"; position: absolute; right:23px; color:#003057; top:43%; margin-top:-4px;}
+.version-v li.promo:hover::before { color: #ffffff; }
+.version-v li.config::before{ display: block; font-family:FontAwesome; content:"\f013"; position: absolute;  right: 28px;  color: #003057; top: 43%; margin-top: -4px; }
+.version-v li.config:hover::before{ color: #ffffff; }
+.version-v li.promo.config::before{ content:"\f013  \f005"; }
+
+.cotizador ul, .cotizador ol{margin:0px; padding: 0px; display: block; width: 100%;}
+.cotizador li{display:block; background: #f8f8f8; padding: 10px 17px; margin-top:2px; overflow: hidden;   cursor: pointer;  position: relative; }
+/*.cotizador li:hover, .cotizador li.active{display:block; background: #e9e9e9; position: relative;}*/
+
+
+.cotizador li:hover, .cotizador li.active {  display: block;  background: #003057;  position: relative;  color: #FFF;}
+
+.cotizador li:hover::before, .cotizador li.active::before { background: #003057; color: #FFF;}
+
+
+ol.enganches li{
+  text-align: center;
+  text-decoration: none;
+}
+
+ol.plazos li {
+  /* float: right; */
+  text-align: left;
+  padding-left: 20px;
+  text-decoration: none;
+}
+
+.cotizador .plazo > ol li.pm::before{
+  font-family:FontAwesome;
+  content:"\f005";
+  color: #003057;
+  float: right;
+}
+
+.cotizador .plazo > ol li:hover::before, .cotizador .plazo > ol li.active::before{
+  color: #ffffff;
+}
+
+.cotizador .plazo .ms ol li{
+  text-align: center;
+}
+
+.cotizador .plazo .ms ol.full, .enganche ol.full{
+  width: 100%;
+}
+
+.cotizador .plazo .ms ol.full li:hover, .enganche ol.full li:hover{
+  background: #f8f8f8;
+  color: #000000;
+  cursor: not-allowed;
+}
+
+.plazo ol li.pm::before{
+  margin-right: 5px;
+}
+/*.cotizador li.active::before, .cotizador li:hover::before{content:"Promoción"; position: absolute; right:23px; color:#003057; font-size:12px; font-weight:bold; top:43%; margin-top:-4px;}
+
+/*section.version-v.active, section.plazo.active{
+	opacity:.7;}*/
+	.plazo h2.active, .version-v h2,  .enganche h2.active {
+  /*background: #003057;*/
+  background: #333;
+  color: #FFF !important;
+}
+
+.version-v h2.active{
+	  background: #F6F6F6 !important;
+  color: #000!important;}
+
+/*.cotizador section:nth-of-type(-1n+2) li:hover::after, .cotizador  section:nth-of-type(-1n+2) li.active::after{content:" "; background:url("img/ico-chevron-left.png") no-repeat; position: absolute; right:10px; color: #5075b9; top:50%; margin-top:-8px; height:15px; width: 7px;}*/
+.cotizador section:nth-of-type(-1n+2) li:hover::after, .cotizador  section:nth-of-type(-1n+2) li.active::after{content:" "; background:url("img/ico-chevron-left-1.png") no-repeat; position: absolute; right:10px; color: #5075b9; top:50%; margin-top:-8px; height:15px; width: 7px;}
+
+.enganche ul, .enganche ol, .plazo .ms ul, .plazo .ms ol{width:49.2%; float: left; margin-right:2px; text-align: center;}
+.enganche ul:last-child, .enganche ol:last-child, .plazo .ms ul:last-child, .plazo .ms ol:last-child{margin-right:inherit;}
+p.right{font-family: arial,helvetica,sans-serif; font-size:10px; text-align: right; margin:10px 0px; display: block; float: left; width: 100%; padding: 20px;}
+.cotizador form fieldset{float: left; border:none; font-family: arial,helvetica,sans-serif; margin:0px; width:20%; padding:0px; padding-right:12px; box-sizing:border-box; -moz-box-sizing:border-box;}
+.cotizador form fieldset:nth-of-type(1){width:21%; padding-right:2px;}
+.cotizador form fieldset:nth-of-type(2){width:19%;}
+.cotizador form fieldset:nth-of-type(4){width:23%;}
+.cotizador form fieldset:last-of-type{width:17%; padding-right: 0px;}
+.cotizador form fieldset dl{background: white; padding:5px 5px; box-sizing:border-box; -moz-box-sizing:border-box; border:1px solid #eee; overflow:hidden; margin:0px; margin-bottom:5px;}
+.cotizador form fieldset dt{color:#5C92BB; float: left;/*white-space: pre-line; */font-weight:bold; font-size: 0.7em;}
+.cotizador form fieldset dd{color:black; float:left; margin-left:5px; font-size: 1.2em; font-weight:bold; font-size: 0.95em; }
+.cotizador button,.cotizador input[type="submit"],.cotizador input[type="button"]{font-family: "volvo_sans_promedium", Arial, sans-serif; background:#013660; padding:12px 22px; color: white; text-transform:uppercase; box-sizing:border-box; -moz-box-sizing:border-box; border:none; cursor:pointer; float: right; clear:left;}
+.cotizador button::before, .cotizador input[type="submit"]::before, .cotizador input[type="button"]::before{ content:""; width:32px; height:12px; background:url("img/ico-correo.png") no-repeat; float: left; margin-right:15px;}
+.mod-modelo,.mod-precio{background: transparent!important; border:none!important;}
+.mod-modelo dt,.mod-precio dt{color: black!important; width: 100%; box-sizing:border-box; -moz-box-sizing:border-box; }
+.mod-modelo{padding:0px 5px; margin:-5px 0px;}
+.mod-modelo dt{/*float: left;*/ font-size: 1.5em!important; white-space: inherit;}
+.mod-modelo dt span{font-weight:100; width: 40px; font-size:0.4em; display: inline-block; /*white-space: pre-line;*/}
+.mod-modelo dd{font-family: 'volvo_sans_proregular', arial, helvetica, sans-serif; font-size:10px; width: 100%; float: left; margin: 0px!important;}
+.mod-precio{}
+.mod-precio dd{font-size: 1.6em!important; padding:0px; margin:0px; text-align: left;}
+.mod-precio dd .desc { margin: 8px 0 0 0; font-size: 0.5em; color: #000000!important; }
+.mod-precio dd .desc span{ text-decoration: line-through; font-size: 1.5em; color: #c0c0c0!important; display: block; }
+.mod-precio dt{ padding-left: 6px; }
+.mod-enganche{ }
+.mod-enganche dt{ width: 48%; } 
+.mod-enganche dd{float: right;  width: 42%; text-align: right;}
+.mod-cat, .mod-enganche{ padding-top: 7px!important; padding-bottom: 6px!important; }
+.mod-cat dd{float: right; text-align: right; width: 30%;}
+.mod-financiamiento, .mod-comision{height:60px;}
+.mod-financiamiento dt, .mod-financiamiento dd, .mod-comision dt, .mod-comision dd{text-align:center; width:100%; margin:0px; padding:0px;}
+.mod-financiamiento dt, .mod-comision dt{margin:8px 0px;}
+/*.mod-comision{height:60px;}
+.mod-comision dt{width: 50%;}
+.mod-comision dd{float: right; margin-top:3px;   width: 40%;text-align: right;}*/
+.mod-plazo{}
+.mod-plazo dt{ width: 20%; }
+.mod-plazo dd{float: right;  width: 70%; text-align: right;}
+.mod-mensualidad{height:60px;}
+.mod-mensualidad dt, .mod-mensualidad dd{text-align:center; width:100%; margin:0px; padding:0px;}
+.mod-mensualidad dt{color: black!important; margin:3px 0px;}
+.mod-mensualidad dd{color:#52a54a!important; font-size: 1.6em!important; padding-right: 15px;}
+dt{ width: 60%; }
+span.big-type {
+  font-size: 16px;
+}
+.mod-financiamiento dd, .mod-comision dd {
+  font-size: 16px !important;
+}
+
+@media only screen and (max-width: 479px){
+	button.btn.btn-info {
+  font-size: 9px !important; }
+	.content.full { padding: 135px 0; }
+  .center{ padding: 20px 20px 0 20px; }
+    /*.version-v h2 span.back, .plazo h2 span.back, .enganche h2 span.back, .result-cotizador span.back{ display: block; margin: 0 0 5px 0; font-size: 0.7em; float: right; }*/
+	.version-v h2 span.back, .plazo h2 span.back, .enganche h2 span.back, .result-cotizador span.back{ display: block; margin: -7px 0 5px 0; font-size: 0.7em; float: right; }
+    .result-cotizador span.back{font-size: 0.8em;}
+    .version-v h2 span.back a, .plazo h2 span.back a, .enganche h2 span.back a, .result-cotizador span.back a{font-weight:lighter;color:#003057!important;text-transform: uppercase;}
+    .cotizador{overflow: hidden;}
+    .content-cotizador{width:300%;}
+    .content-cotizador,.content-cotizador.prePlazo,.content-cotizador.preEnganche{margin-left: 0%; transition: margin-left 0.5s; border-left:none;}
+    .content-cotizador.preVersion{margin-left: -99%;transition: margin-left 0.5s;}
+    .content-cotizador.preVersion.prePlazo{margin-left: -200%;transition: margin-left 0.5s;}
+    .content-cotizador.preVersion.prePlazo.preEnganche{display: none;}
+    .content-cotizador.preVersion.prePlazo.preEnganche + form{display: block;}
+    .content-cotizador{width:300%; margin-left: 0%;}
+    .version-v,.plazo,.enganche{width: 33.3%; float: left;}
+    .result-cotizador{display: none;}
+    .cotizador form fieldset, .cotizador form fieldset:nth-of-type(1), .cotizador form fieldset:nth-of-type(2), .cotizador form fieldset:nth-of-type(4), .cotizador form fieldset:last-of-type{width: 100%; padding: 0px; font-size:1.3em;}
+    .cotizador form fieldset dl{margin: 5px 0px 10px;}
+    .cotizador form fieldset dt{white-space: initial;}
+
+    .mod-modelo dt{text-align:center;  font-size: 1.3em;}
+    .mod-modelo dd{text-align:center;  font-size: 1.3em;}
+    .mod-precio dt{float: left; width:100%; font-size:0.9em; margin-top:5px;  text-align: center;}
+    .mod-precio dd{float: right; width:100%; text-align: center;}
+    .mod-financiamiento,.mod-mensualidad{height:inherit;}
+    .mod-financiamiento dt,.mod-mensualidad dt{margin:0px; text-align:left; width:50%; float: left;}
+    .mod-financiamiento dd,.mod-mensualidad dd{margin:0px; text-align:right; width:40%; float:right;  box-sizing:border-box; -moz-box-sizing:border-box;}
+    .mod-mensualidad dt{font-size: 1em; }
+    .mod-mensualidad dt:first-child{   margin-top: 15px; margin-left: 16px; }
+    .mod-mensualidad dt:last-child{ padding: 0 20px 0 0; margin: 0;text-align: right; width: 100%; }
+
+    .cotizador button,.cotizador input[type="submit"],.cotizador input[type="button"]{width:100%;}
+	section.version-v.active, section.plazo.active{
+	opacity:1;}
+	
+	.plazo h2.active, .plazo h2, .version-v h2, .version-v h2.active,  .enganche h2.active, .enganche h2 { color: #003057; }
+
+  .preVersion .plazo h2:first-child{ background: #333; color: #ffffff!important; }
+}
+
+
+@media only screen and (max-width: 991px){
+	
+.promocion span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 15px;
+  white-space: pre-line;
+  line-height: 15px;
+  font-size: 12px;
+}	
+.promocion {
+  background: #E9E9E9;
+  overflow: hidden;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  padding: 7px 15px 5px;
+}
+	
+	
+	
+	
+}

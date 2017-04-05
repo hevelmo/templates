@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>content &#8211; Enabled</title>
+	<atom:link href="http://www.enableds.com/tag/content/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.enableds.com</link>
+	<description>Mobile Themes and Templates</description>
+	<lastBuildDate>Mon, 06 Feb 2017 03:41:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.7.2</generator>
+
+<image>
+	<url>http://www.enableds.com/wp-content/uploads/2016/10/cropped-enabled_logo_2016-32x32.png</url>
+	<title>content &#8211; Enabled</title>
+	<link>http://www.enableds.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Freebie: Super Simple Content Toggle</title>
+		<link>http://www.enableds.com/freebie-super-simple-content-toggle/</link>
+		<comments>http://www.enableds.com/freebie-super-simple-content-toggle/#respond</comments>
+		<pubDate>Sat, 15 Oct 2016 17:32:27 +0000</pubDate>
+		<dc:creator><![CDATA[Enabled]]></dc:creator>
+				<category><![CDATA[Freebies & Resources]]></category>
+		<category><![CDATA[freebie]]></category>
+		<category><![CDATA[toggle]]></category>
+		<category><![CDATA[tutorial]]></category>
+		<category><![CDATA[content]]></category>
+
+		<guid isPermaLink="false">http://www.enableds.com/?p=55784</guid>
+		<description><![CDATA[Lately, we've seen plugins for everything but as usual, when we find one that's simple without purpose except making your page sluggish, we'll write our own version, using  4 lines of jQuery! There's no reason to use plugins for toggles, tabs or other simple elements when you can make yourself.]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-55785" src="http://www.enableds.com/wp-content/uploads/2016/10/blog_freebie_5.png" alt="blog_freebie_5" width="800" height="460" />Lately, we&#8217;ve seen plugins for everything but as usual, when we find one that&#8217;s simple without purpose except making your page sluggish, we&#8217;ll write our own version, using  4 lines of jQuery! There&#8217;s no reason to use plugins for toggles, tabs or other simple elements when you can make yourself.</p>
+<h4>Necessary resources:</h4>
+<p>For this one, you&#8217;ll need jQuery and a pack of icons, for our example we used <a href="http://ionicons.com/">IonIcons</a></p>
+<h4>Step 1: The HTML Markup</h4>
+<pre style="font-size: 12px;">&lt;div class="accordion-item"&gt;
+ &lt;a href="#" class="accordion-toggle"&gt;Is it super easy to build? &lt;i class="ion-android-add"&gt;&lt;/i&gt;&lt;/a&gt;
+ &lt;div class="accordion-content "&gt; Just 4 lines of JS and 4 Lines of HTML and a bit of CSS &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<p>The HTML markup is again simple and contains just the necessary elements to help us obtain the structure we&#8217;re looking for</p>
+<p>The first line will generate a wrapper to differentiate each individual accordion item for easier targeting using jS.</p>
+<p>The second line will be the actual title of the content and the icon used to show some effects for opening and closing</p>
+<p>The third line will be the content, you can add whatever you want here, we just added some text</p>
+<p>The last line will close the individual toggle item. If you wish to create another one, simply duplicate these 4 lines.</p>
+<pre style="font-size: 12px;">.accordion-toggle{
+ height:50px;
+ line-height:50px;
+ font-size:15px;
+ font-weight:600;
+ padding-left:20px;
+}
+
+.accordion-toggle i{
+ font-size:18px;
+ height:50px;
+ width:50px;
+ line-height:50px;
+ padding:0px;
+ text-align:center;
+ position:absolute;
+ right:10px;
+ transition: all 250ms ease;
+}
+
+.accordion-content{display:none; padding:0px 20px 10px 20px;}
+
+.rotate-135{
+ transform: rotate(135deg); 
+ transition:all 250ms ease;
+}</pre>
+<p>With the style we&#8217;re defining the toggle button and the icon to the right side. The content of the toggle will be set to hidden and the right, bottom and left paddings set.  We also use the rotate class to show the icon spinning when clicking it.</p>
+<p>Now, let&#8217;s get to the last step!</p>
+<h4>Step 4: The jQuery</h4>
+<pre style="font-size: 12px;">$('.accordion-item').click(function(){
+ $(this).find('.accordion-content').slideToggle(250);
+ $(this).find('i').toggleClass('rotate-135 color-red-dark');
+ return false;
+});
+
+</pre>
+<p>And this is the jQuery that will drive our toggle. And it&#8217;s function is extremely simple and to the point. The first line, targets the title, when that is clicked it will select it, and from it it will move to locate it&#8217;s accordion-content class and enable or disable it on a click and also, it will search for its icon and apply the rotation class to it to turn into an x.</p>
+<h4>Ending Words</h4>
+<p>Use it, abuse it, duplicate the markup and create however many items you wish. There&#8217;s no lag, no loading of extra plugins and no slowing down your page. It&#8217;s that easy!</p>
+<p>Thanks, and don&#8217;t forget to subscribe to get more items, discounts, freebies and new item releases!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.enableds.com/freebie-super-simple-content-toggle/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+		<item>
+		<title>Introducing News Mobile</title>
+		<link>http://www.enableds.com/meet-news-instant-content-feeding/</link>
+		<comments>http://www.enableds.com/meet-news-instant-content-feeding/#respond</comments>
+		<pubDate>Fri, 01 Apr 2016 16:28:20 +0000</pubDate>
+		<dc:creator><![CDATA[Enabled]]></dc:creator>
+				<category><![CDATA[Mobile Products]]></category>
+		<category><![CDATA[template]]></category>
+		<category><![CDATA[themeforest]]></category>
+		<category><![CDATA[mobile]]></category>
+		<category><![CDATA[phonegap]]></category>
+		<category><![CDATA[cordova]]></category>
+		<category><![CDATA[menu]]></category>
+		<category><![CDATA[app]]></category>
+		<category><![CDATA[css3]]></category>
+		<category><![CDATA[news]]></category>
+		<category><![CDATA[theme]]></category>
+		<category><![CDATA[css3 transform]]></category>
+		<category><![CDATA[apple menu]]></category>
+		<category><![CDATA[content]]></category>
+		<category><![CDATA[paper]]></category>
+		<category><![CDATA[fast]]></category>
+		<category><![CDATA[reading]]></category>
+
+		<guid isPermaLink="false">http://www.enableds.com/?p=55738</guid>
+		<description><![CDATA[Mobile news is specifically designed for your touch device, feeding you fast content with preloaded images and a design that feels alive. We’ve included all our typical pages for you to choose from the features you love or need!]]></description>
+				<content:encoded><![CDATA[<div data-parent="true" class="row-container boomapps_vcrow"><div class="row limit-width row-parent"><div class="row-inner"><div class="pos-top pos-center align_left column_parent col-lg-12 boomapps_vccolumn no-internal-gutter"><div class="uncol style-light"  ><div class="uncoltable"><div class="uncell  boomapps_vccolumn no-block-padding"><div class="uncont"><div class="uncode_text_column" ></p>
+<h3><span class="font-762333"><img class="aligncenter wp-image-55739 size-full" src="http://www.enableds.com/wp-content/uploads/2016/10/news_dribbble.png" width="800" height="600" srcset="http://www.enableds.com/wp-content/uploads/2016/10/news_dribbble.png 800w, http://www.enableds.com/wp-content/uploads/2016/10/news_dribbble-300x225.png 300w, http://www.enableds.com/wp-content/uploads/2016/10/news_dribbble-768x576.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></span></h3>
+<h3 style="text-align: center;"><span class="font-762333">Meet News: The Perfect Mobile News Experience</span></h3>
+<p style="text-align: center;"><span class="font-762333 font-180609 font-377884">Mobile news is specifically designed for your touch device, feeding you fast content with preloaded images and a design that feels alive. We’ve included all our typical pages for you to choose from the features you love or need!</span></p>
+<p>
+</div><div class="row-internal row-container boomapps_vcrow"><div class="row row-child"><div class="row-inner"><div class="pos-top pos-center align_center column_child col-lg-12 boomapps_vccolumn single-internal-gutter"><div class="uncol style-light" ><div class="uncoltable"><div class="uncell  boomapps_vccolumn single-block-padding"><div class="uncont"><span class="btn-container" ><a href="https://themeforest.net/item/news-mobile-tablet-responsive-template/15437702?ref=Enabled" class="custom-link btn btn-accent btn-icon-left" title="Purchase News Mobile" style="min-width:300px">Purchase News Mobile</a></span></div></div></div></div></div></div></div></div></div></div></div></div></div><script id="script-966527" type="text/javascript">UNCODE.initRow(document.getElementById("script-966527"));</script></div></div></div>
+]]></content:encoded>
+			<wfw:commentRss>http://www.enableds.com/meet-news-instant-content-feeding/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using disk: enhanced
+Content Delivery Network via N/A
+Minified using disk
+
+ Served from: www.enableds.com @ 2017-02-15 17:17:10 by W3 Total Cache -->

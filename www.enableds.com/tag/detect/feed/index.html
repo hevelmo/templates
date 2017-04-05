@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>detect &#8211; Enabled</title>
+	<atom:link href="http://www.enableds.com/tag/detect/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.enableds.com</link>
+	<description>Mobile Themes and Templates</description>
+	<lastBuildDate>Mon, 06 Feb 2017 03:41:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.7.2</generator>
+
+<image>
+	<url>http://www.enableds.com/wp-content/uploads/2016/10/cropped-enabled_logo_2016-32x32.png</url>
+	<title>detect &#8211; Enabled</title>
+	<link>http://www.enableds.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Freebie: Detecting Mobile Operating System</title>
+		<link>http://www.enableds.com/freebie-detecting-mobile-operating-system/</link>
+		<comments>http://www.enableds.com/freebie-detecting-mobile-operating-system/#respond</comments>
+		<pubDate>Mon, 26 Sep 2016 17:46:22 +0000</pubDate>
+		<dc:creator><![CDATA[Enabled]]></dc:creator>
+				<category><![CDATA[Freebies & Resources]]></category>
+		<category><![CDATA[mobile]]></category>
+		<category><![CDATA[tablet]]></category>
+		<category><![CDATA[ios]]></category>
+		<category><![CDATA[android]]></category>
+		<category><![CDATA[ipad]]></category>
+		<category><![CDATA[freebie]]></category>
+		<category><![CDATA[tutorial]]></category>
+		<category><![CDATA[detect]]></category>
+		<category><![CDATA[windows]]></category>
+		<category><![CDATA[blackberry]]></category>
+
+		<guid isPermaLink="false">http://www.enableds.com/?p=55792</guid>
+		<description><![CDATA[Everyone has an app that they discovered when browsing a website from their phone, but how do they always know what button to show you to take you to your application store? Well, it’s very easy actually! Let’s explain!]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-55796" src="http://www.enableds.com/wp-content/uploads/2016/10/blog_freebie_4.png" alt="blog_freebie_4" width="800" height="460" srcset="http://www.enableds.com/wp-content/uploads/2016/10/blog_freebie_4.png 800w, http://www.enableds.com/wp-content/uploads/2016/10/blog_freebie_4-300x173.png 300w, http://www.enableds.com/wp-content/uploads/2016/10/blog_freebie_4-768x442.png 768w" sizes="(max-width: 800px) 100vw, 800px" />Everyone has an app that they discovered when browsing a website from their phone, but how do they always know what button to show you to take you to your application store? Well, it’s very easy actually! Let’s explain!</p>
+<p>First thing we have to do is define the browsers of these common devices, and we’ll be using JavaScript for that!</p>
+<pre style="font-size: 12px;">var isMobile = {
+ Android: function() {return navigator.userAgent.match(/Android/i);},
+ BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},
+ iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},
+ Windows: function() {return navigator.userAgent.match(/IEMobile/i);},
+ any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
+};
+</pre>
+<p>Let&#8217;s explain. We&#8217;re defining a variable as &#8220;isMobile&#8221; and telling it to search for the user agent of the browser you&#8217;re using. Android, BlackBerry (they still exist? yes, yes they do) , iOS, Windows and of course the ability to target all of them if you want to show target for mobiles only. Now, after this, we&#8217;ll generate the code for each</p>
+<pre style="font-size: 12px;">if( !isMobile.any() ){
+ // Your code here 
+}</pre>
+<p>This statement applies code to every item that is NOT a mobile device. The not is actually the exclamation mark in front of isMobile.</p>
+<pre style="font-size: 12px;">if(isMobile.Android()) {
+ // Your Code Here
+}</pre>
+<p>This statement will apply code to Android only.</p>
+<pre style="font-size: 12px;">if(isMobile.BlackBerry()) {
+ //Your code here
+}</pre>
+<p>This statement will apply code to BlackBerry only.</p>
+<pre style="font-size: 12px;">if(isMobile.iOS()) {
+ //Your code here
+}</pre>
+<p>This statement will apply code to iOS devices only.</p>
+<pre style="font-size: 12px;">if(isMobile.Windows()) {
+ //Your code here.
+}</pre>
+<p>The final statement will apply code to any mobile device from the predefined list.</p>
+<h4>Applying code to devices.</h4>
+<p>Now that you have the codes, and each are ready to fire, what next? How do you target buttons? Well, it&#8217;s quite very simple! Presuming that you already have a HTML markup made with the buttons you want to use, it&#8217;s time to give each of them class. For example:</p>
+<pre style="font-size: 12px;">&lt;a href="#" class="button button-hidden SECONDARY_CLASS"&gt;Sample&lt;/a&gt;</pre>
+<p>The above code is a basic, HTML markup, the detection can be applied to basically any element.  Notice the markup has 3 classes,<strong> </strong><strong>button</strong> for the main styles of the class, <strong>button-hidden</strong> which we will use to hide the button and <strong>SECONDARY_CLASS</strong>.</p>
+<p>The secondary class we&#8217;ll use to target specific devices. The <strong>SECONDARY_CLASS</strong> will be replaced by show-button using JavaScript, or you can add it manually to show that box permanently.</p>
+<p>In your CSS, it&#8217;s time to add the magic.</p>
+<pre style="font-size: 12px;">.button-hidden{display:none;}
+.show-button{display:block!important;}</pre>
+<p>Notice that the hidden button is now set to display:none, which means the button will be hidden. All operating system show classes are set to display:block plus important to make sure they override your original style and show automatically on detection.</p>
+<h4>Activating a button on a specific operating system.</h4>
+<p>Now let&#8217;s say we want to show the button above only on iOS devices. We must add the show-button to it using JavaScript.</p>
+<pre style="font-size: 12px;">if(isMobile.Windows()) {
+ $('.button').addClass('show-button');
+}</pre>
+<p>Voila! Now, browsing from an iOS device, it will automatically show you the button!</p>
+<h4>Using it for multiple elements.</h4>
+<p>To add this to your project, for multiple buttons, you&#8217;ll have to give each button a unique name, and target it with JS. Replace (&#8216;.button&#8217;) with your unique class and target it for the operating system you want.</p>
+<h4>Why not use fade / hide / toggle in JS to show them?</h4>
+<p>This is the easiest way of doing things right? Well, right and wrong. Using these methods you&#8217;ll put a small strain on your Mobile Device&#8217;s CPU, which may not seem much, only combined with other elements it can lead to some laggy situations!</p>
+<p><strong>That&#8217;s it! </strong>Don&#8217;t forget to check our <a href="https://themeforest.net/user/enabled/portfolio?ref=Enabled">ThemeForest Portfolio</a>, all our items have this ability implemented in them! Use it and abuse it and don&#8217;t forget to subscribe for more Freebies!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.enableds.com/freebie-detecting-mobile-operating-system/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using disk: enhanced
+Content Delivery Network via N/A
+Minified using disk
+
+ Served from: www.enableds.com @ 2017-02-15 17:18:20 by W3 Total Cache -->

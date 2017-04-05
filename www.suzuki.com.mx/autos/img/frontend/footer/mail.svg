@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="96px" height="79px" viewBox="0 0 96 79" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: sketchtool 3.4 (381) - http://www.bohemiancoding.com/sketch -->
+    <title>mail</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="web/01_Exito" sketch:type="MSArtboardGroup" transform="translate(-90.000000, -1543.000000)" fill="#FFFFFF">
+            <path d="M167.037,1543 L108.094,1543 C98.116,1543 90,1551.118 90,1561.095 L90,1603.581 C90,1613.558 98.116,1621.678 108.094,1621.678 L167.036,1621.678 C177.015,1621.678 185.131,1613.558 185.131,1603.581 L185.131,1561.094 C185.131,1551.118 177.015,1543 167.037,1543 L167.037,1543 Z M108.094,1551.412 L167.036,1551.412 C172.376,1551.412 176.72,1555.755 176.72,1561.095 L176.72,1568.505 L137.569,1586.536 L98.412,1568.506 L98.412,1561.094 C98.412,1555.755 102.754,1551.412 108.094,1551.412 L108.094,1551.412 Z M167.037,1613.264 L108.094,1613.264 C102.754,1613.264 98.411,1608.92 98.411,1603.58 L98.411,1577.766 L135.81,1594.987 C136.366,1595.245 136.968,1595.374 137.568,1595.374 C138.168,1595.374 138.77,1595.245 139.329,1594.987 L176.72,1577.766 L176.72,1603.58 C176.72,1608.92 172.377,1613.264 167.037,1613.264 L167.037,1613.264 Z" id="mail" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

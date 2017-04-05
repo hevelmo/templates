@@ -1,0 +1,23 @@
+input.suscribeme{
+	
+	height: 29px !important;
+	margin-top:1px;
+}
+
+input.field-success{
+	background: #dff0d8 ! important;
+}
+
+input.field-wrong{
+	background: #f9f2f4 ! important;
+}
+
+input.suscribeme:focus{
+	background: #FFFFFF ! important;
+}
+
+button#emailsusbut{
+	margin:0px;
+	padding: 5px 5px 5px 5px;
+	background: #0C395E;
+}

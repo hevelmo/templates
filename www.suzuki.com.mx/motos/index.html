@@ -1,466 +1,2335 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="es-MX" class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="es-MX" class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="es-MX" class="no-js lt-ie10 lt-ie9"> <![endif]-->
-<!--[if IE 9]>         <html lang="es-MX" class="no-js lt-ie10"> <![endif]-->
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="es-MX"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="es-MX"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9" lang="es-MX"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10" lang="es-MX"> <![endif]-->
+<html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Suzuki Motos México</title>
-    <meta name="description" content="">
-    <meta name="google-site-verification" content="mDWbYRmHDLMYgEiuWafsKLkT_otGzD5oNHIuBUiiNes" />
-    
-    
-    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" />
-    <link type="text/css" rel="stylesheet" href="css/plugins/jquery.fancybox/jquery.fancybox.css" />
-    <link type="text/css" rel="stylesheet" href="css/plugins/jquery.fancybox/jquery.fancybox-thumbs.css" />
-    <link type="text/css" rel="stylesheet" href="css/plugins/jquery.fancybox/jquery.fancybox-buttons.css" />
-    <link type="text/css" rel="stylesheet" href="scripts/plugins/jquery.chosen/chosen.css" />
-    <link type="text/css" rel="stylesheet" href="css/libs/santiago.datepicker.css" />
-    <link type="text/css" rel="stylesheet" href="css/suzuki/main.css" />
-    <link type="text/css" rel="stylesheet" href="css/plugins/jquery.dummy-alert/main.css" />
-    <link type="text/css" rel="stylesheet" href="css/plugins/instantdrive.utils/main.css" />
-    <link type="text/css" rel="stylesheet" href="css/libs/font-awesome/font-awesome.css" />
-    <link type="text/css" rel="stylesheet" href="css/plugins/slick.slider/slick.css" />
-    <link type="text/css" rel="stylesheet" href="css/sections/home.css" />
-    <link rel="shortcut icon" href="favicon.ico">
-    <!-- Favicons
-     ==================================================
-    <link rel="apple-touch-icon" href="/motos/images/favicons/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/motos/images/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/motos/images/favicons/apple-touch-icon-114x114.png">
-    -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Suzuki Motos</title>
 
-    <!-- Google Analytics -->
-<!--<script>
+    <meta name="description"         content="">
+  <meta name="twitter:card"        content="summary">
+  <meta name="twitter:title"       content="Suzuki Motos">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image"       content=""/>
+
+  <meta property="og:type"         content="website">
+  <meta property="og:site_name"    content="Suzuki Motos">
+  <meta property="og:title"        content="Suzuki Motos">
+  <meta property="og:url"          content="www.suzuki.com.mx/motos">
+  <meta property="og:description"  content="">
+  <meta property="og:image"        content=""/>
+  <meta property="og:locale"       content="es_MX">
+
+  <meta name="robots"              content="index, follow">
+
+
+  <meta name="csrf-token" content="WMIwbgzbuJKlruJ02Qv8TJ4rFzldsrKkWrrVDjg5" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/pure/0.6.0/grids-responsive-min.css">
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/pure/0.6.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900"/>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript">
+    window.baseURL = "index.html";
+    window.baseAPIURL = "http://www.suzuki.com.mx/motos/";
+        window.env = 'production';
+  </script>
+</head>
+
+<body class="">
+
+    <div id="offcanvas" class="l-offcanvas js-offcanvas">
+    <nav class="l-nav js-nav">
+  <ul class="m-nav">
+
+    <li class="m-nav__item">
+      <a href="index.html#modelos" class="m-nav__item__link js-open-bigmenu" data-active="#modelos">Modelos</a>
+    </li>
+
+    <li class="m-nav__item">
+      <a href="agencias.html" class="m-nav__item__link">Agencias</a>
+    </li>
+
+    <li class="m-nav__item">
+      <a href="promociones.html" class="m-nav__item__link">Promociones</a>
+    </li>
+
+    <li class="m-nav__item">
+      <a href="noticias.html" class="m-nav__item__link">Noticias</a>
+    </li>
+
+    <li class="m-nav__item">
+      <a href="index.html#financiamiento" class="m-nav__item__link js-open-bigmenu" data-active="#modelos">Financiamiento</a>
+    </li>
+
+    <li class="m-nav__item">
+      <a href="index.html#mi-suzuki" class="m-nav__item__link js-open-bigmenu" data-active="#modelos">Mi Suzuki</a>
+    </li>
+
+    <li class="m-nav__item">
+      <a href="catalogos.html" class="m-nav__item__link">Catálogos</a>
+    </li>
+
+    <li class="m-nav__item">
+      <a href="refacciones.html" class="m-nav__item__link">Refacciones</a>
+    </li>
+
+    <li class="m-nav__item">
+      <a href="contacto.html" class="m-nav__item__link">Contacto</a>
+    </li>
+
+  </ul>
+</nav>
+    <div class="l-mobile-header">
+	<a href="index.html" class="l-mobile-header__logo">
+		<img src="img/header/suzuki_logo.png" alt="Suzuki" class="l-mobile-header__logo__image">
+	</a>
+	<a href="index.html#" class="l-mobile-header__menu-icon js-mobile-menu-icon">
+		<div class="l-mobile-header__menu-icon__bar"></div>
+		<div class="l-mobile-header__menu-icon__bar"></div>
+		<div class="l-mobile-header__menu-icon__bar"></div>
+	</a>
+</div>
+    <div class="l-desktop-header js-desktop-header">
+  <div class="l-wrapper">
+    <a href="index.html" class="l-desktop-header__logo">
+      <img src="img/header/suzuki_logo.png" alt="Suzuki" class="l-desktop-header__logo__image">
+    </a>
+  </div>
+  <div class="m-secondary-menu">
+    <div class="l-wrapper">
+      <div class="pure-g">
+        <div class="pure-u-sm-1-24 pure-u-lg-1-5"></div>
+        <div class="pure-u-sm-23-24 pure-u-lg-4-5">
+          <div class="pure-g">
+            <div class="pure-u-1 pure-u-md-6-24"></div>
+            <div class="pure-u-1 pure-u-md-6-24">
+              <a href="index.html#" class="m-secondary-menu__link js-footer-newsletter " data-active="">Suscríbete al newsletter</a>
+            </div>
+            <div class="pure-u-1 pure-u-md-4-24">
+              <a href="catalogos.html" class="m-secondary-menu__link " data-active="">Catálogos</a>
+            </div>
+            <div class="pure-u-1 pure-u-md-4-24">
+              <a href="refacciones.html" class="m-secondary-menu__link " data-active="">Refacciones</a>
+            </div>
+            <div class="pure-u-1 pure-u-md-4-24">
+              <a href="contacto.html" class="m-secondary-menu__link " data-active="">Contáctanos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="m-primary-menu">
+    <div class="l-wrapper">
+      <div class="pure-g">
+        <div class="pure-u-sm-4-24 pure-u-lg-4-24"></div>
+        <div class="pure-u-sm-20-24 pure-u-lg-20-24">
+          <div class="pure-g">
+
+            <div class="pure-u-1 pure-u-md-3-24">
+              <a href="index.html#modelos" class="m-primary-menu__link js-open-bigmenu" data-active="">
+                <span class="m-primary-menu__link__label">Motos</span>
+                <i class="fa fa-angle-down m-primary-menu__link__icon"></i>
+              </a>
+            </div>
+
+            <div class="pure-u-1 pure-u-md-5-24">
+              <a href="promociones.html" class="m-primary-menu__link" data-active="">
+                <span class="m-primary-menu__link__label">Promociones</span>
+              </a>
+            </div>
+
+            <div class="pure-u-1 pure-u-md-3-24">
+              <a href="noticias.html" class="m-primary-menu__link" data-active="">
+                <span class="m-primary-menu__link__label">Noticias</span>
+              </a>
+            </div>
+
+            <div class="pure-u-1 pure-u-md-5-24">
+              <a href="index.html#financiamiento" class="m-primary-menu__link js-open-bigmenu" data-active="">
+                <span class="m-primary-menu__link__label">Financiamiento</span>
+                <i class="fa fa-angle-down m-primary-menu__link__icon"></i>
+              </a>
+            </div>
+
+            <div class="pure-u-1 pure-u-md-4-24">
+              <a href="agencias.html" class="m-primary-menu__link" data-active="">
+                <span class="m-primary-menu__link__label">Agencias</span>
+              </a>
+            </div>
+
+            <div class="pure-u-1 pure-u-md-4-24">
+              <a href="index.html#mi-suzuki" class="m-primary-menu__link js-open-bigmenu" data-active="">
+                <span class="m-primary-menu__link__label">Mi Suzuki</span>
+                <i class="fa fa-angle-down m-primary-menu__link__icon"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div id="modelos" class="l-big-menu js-big-menu" data-open="false">
+  <div class="l-wrapper l-big-menu__content js-big-menu-content">
+    <div class="pure-g">
+      <div class="pure-u-1 pure-u-md-1-24 pure-u-lg-1"></div>
+      <div class="pure-u-1 pure-u-md-22-24 pure-u-lg-1 pos-relative">
+        <p class="l-big-menu__title">Elige un modelo</p>
+        <a href="index.html#modelos" class="l-big-menu__close js-close-bigmenu">Cerrar</a>
+          <div class="pure-g">
+                                        <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu m-category-menu--visible" data-category="true" data-category-id="1" >
+                <div class="m-category-menu__container">
+                  <div class="m-category-menu__link--bg js-category-menu--category" onclick="ga('send', 'event', 'Motos', 'clic_categoría', 'Scooter' )"></div>
+                  <div class="m-category-menu__thumbnail"
+                       style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/categories/eff7db86b74280dec3f44ca2ab0fbb7312f496ec.png');"></div>
+                  <div class="m-category-menu__info">
+                    <p class="m-category-menu__info_name">Scooter</p>
+                    <hr class="m-category-menu__info_separator">
+                    <ul class="m-category-menu__info_models">
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="lets-ur110-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'lets-ur110-15' )">Let&#039;s</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="an125-an125hk-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'an125-an125hk-15' )">AN125</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="burgman-an400a-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'burgman-an400a-15' )">BURGMAN</a>
+                        </li>
+                                          </ul>
+                  </div>
+                  <i class="fa fa-angle-right m-model-link__icon"></i>
+                </div>
+              </div>
+                                        <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu m-category-menu--visible" data-category="true" data-category-id="2" >
+                <div class="m-category-menu__container">
+                  <div class="m-category-menu__link--bg js-category-menu--category" onclick="ga('send', 'event', 'Motos', 'clic_categoría', 'Urbanas' )"></div>
+                  <div class="m-category-menu__thumbnail"
+                       style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/categories/f4c5cb4f89a9aacd250d5048fbb53d6a32c6c154.png');"></div>
+                  <div class="m-category-menu__info">
+                    <p class="m-category-menu__info_name">Urbanas</p>
+                    <hr class="m-category-menu__info_separator">
+                    <ul class="m-category-menu__info_models">
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="fd110-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'fd110-15' )">FD110</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="hayate-ge110.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'hayate-ge110' )">HAYATE</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="en125-2a-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'en125-2a-15' )">EN125-2A</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="gn125f-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'gn125f-15' )">GN125F</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="gz150-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'gz150-15' )">GZ150</a>
+                        </li>
+                                          </ul>
+                  </div>
+                  <i class="fa fa-angle-right m-model-link__icon"></i>
+                </div>
+              </div>
+                                        <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu m-category-menu--visible" data-category="true" data-category-id="3" >
+                <div class="m-category-menu__container">
+                  <div class="m-category-menu__link--bg js-category-menu--category" onclick="ga('send', 'event', 'Motos', 'clic_categoría', 'Trabajo' )"></div>
+                  <div class="m-category-menu__thumbnail"
+                       style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/categories/20dd94e32fe115e317551700860d1f448bb5559a.png');"></div>
+                  <div class="m-category-menu__info">
+                    <p class="m-category-menu__info_name">Trabajo</p>
+                    <hr class="m-category-menu__info_separator">
+                    <ul class="m-category-menu__info_models">
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="ax100-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'ax100-15' )">AX100</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="ax4-gd115-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'ax4-gd115-15' )">AX4</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="huracan-en125hu-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'huracan-en125hu-15' )">HURAC&Aacute;N</a>
+                        </li>
+                                          </ul>
+                  </div>
+                  <i class="fa fa-angle-right m-model-link__icon"></i>
+                </div>
+              </div>
+                                        <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu m-category-menu--visible" data-category="true" data-category-id="4" >
+                <div class="m-category-menu__container">
+                  <div class="m-category-menu__link--bg js-category-menu--category" onclick="ga('send', 'event', 'Motos', 'clic_categoría', 'Deportivas' )"></div>
+                  <div class="m-category-menu__thumbnail"
+                       style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/categories/2f3e23b27d7cad5d144c1bfccd37308c06dcceaa.png');"></div>
+                  <div class="m-category-menu__info">
+                    <p class="m-category-menu__info_name">Deportivas</p>
+                    <hr class="m-category-menu__info_separator">
+                    <ul class="m-category-menu__info_models">
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="gsx-r600.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'gsx-r600' )">GSX-R600</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="gsx-r600-30-anios.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'gsx-r600-30-anios' )">GSX-R600 30 A&Ntilde;OS</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="gsx-r750.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'gsx-r750' )">GSX-R750</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="gsx-r1000.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'gsx-r1000' )">GSX-R1000</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="hayabusa.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'hayabusa' )">HAYABUSA</a>
+                        </li>
+                                          </ul>
+                  </div>
+                  <i class="fa fa-angle-right m-model-link__icon"></i>
+                </div>
+              </div>
+                                        <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu m-category-menu--visible" data-category="true" data-category-id="5" >
+                <div class="m-category-menu__container">
+                  <div class="m-category-menu__link--bg js-category-menu--category" onclick="ga('send', 'event', 'Motos', 'clic_categoría', 'Ciudad' )"></div>
+                  <div class="m-category-menu__thumbnail"
+                       style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/categories/ccb45aaf57e72c3c684f81d7587474c76be07aa7.png');"></div>
+                  <div class="m-category-menu__info">
+                    <p class="m-category-menu__info_name">Ciudad</p>
+                    <hr class="m-category-menu__info_separator">
+                    <ul class="m-category-menu__info_models">
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="GS150R.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'GS150R' )">GS150R</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="gixxer-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'gixxer-15' )">GIXXER</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="gixxer-sf.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'gixxer-sf' )">GIXXER SF</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="inazuma-gw250-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'inazuma-gw250-15' )">INAZUMA</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="gsx-s750-abs.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'gsx-s750-abs' )">GSX S750 ABS</a>
+                        </li>
+                                          </ul>
+                  </div>
+                  <i class="fa fa-angle-right m-model-link__icon"></i>
+                </div>
+              </div>
+                                        <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu m-category-menu--visible" data-category="true" data-category-id="6" >
+                <div class="m-category-menu__container">
+                  <div class="m-category-menu__link--bg js-category-menu--category" onclick="ga('send', 'event', 'Motos', 'clic_categoría', 'Doble Prop&oacute;sito' )"></div>
+                  <div class="m-category-menu__thumbnail"
+                       style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/categories/260de0c7a6711e38f9782ccf6b67dcf0f44c23ba.png');"></div>
+                  <div class="m-category-menu__info">
+                    <p class="m-category-menu__info_name">Doble Prop&oacute;sito</p>
+                    <hr class="m-category-menu__info_separator">
+                    <ul class="m-category-menu__info_models">
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="dr200s.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'dr200s' )">DR200S</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="dr650.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'dr650' )">DR650</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="v-strom650XT.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'v-strom650XT' )">V-Strom 650XT</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="v-strom-650-dl650-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'v-strom-650-dl650-15' )">V-STROM 650 ABS</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="vstrom1000-dl1000a-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'vstrom1000-dl1000a-15' )">V-STROM 1000 ABS</a>
+                        </li>
+                                          </ul>
+                  </div>
+                  <i class="fa fa-angle-right m-model-link__icon"></i>
+                </div>
+              </div>
+                                        <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu m-category-menu--visible" data-category="true" data-category-id="7" >
+                <div class="m-category-menu__container">
+                  <div class="m-category-menu__link--bg js-category-menu--category" onclick="ga('send', 'event', 'Motos', 'clic_categoría', 'Boulevard' )"></div>
+                  <div class="m-category-menu__thumbnail"
+                       style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/categories/70d4914cc197f49ca2e17ba9498bee3bb9e6bb85.png');"></div>
+                  <div class="m-category-menu__info">
+                    <p class="m-category-menu__info_name">Boulevard</p>
+                    <hr class="m-category-menu__info_separator">
+                    <ul class="m-category-menu__info_models">
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="s40.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 's40' )">S40</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="c50.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'c50' )">C50</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="m109r.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'm109r' )">M109R</a>
+                        </li>
+                                          </ul>
+                  </div>
+                  <i class="fa fa-angle-right m-model-link__icon"></i>
+                </div>
+              </div>
+                                        <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu m-category-menu--visible" data-category="true" data-category-id="8" >
+                <div class="m-category-menu__container">
+                  <div class="m-category-menu__link--bg js-category-menu--category" onclick="ga('send', 'event', 'Motos', 'clic_categoría', 'Cross y Enduro' )"></div>
+                  <div class="m-category-menu__thumbnail"
+                       style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/categories/f4d01050bb9f395bc9220d9d91fa7909e8426ce8.png');"></div>
+                  <div class="m-category-menu__info">
+                    <p class="m-category-menu__info_name">Cross y Enduro</p>
+                    <hr class="m-category-menu__info_separator">
+                    <ul class="m-category-menu__info_models">
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="rm-z250-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'rm-z250-15' )">RM-Z250</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="rm-z450-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'rm-z450-15' )">RM-Z450</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="rmx-450z-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'rmx-450z-15' )">RMX-450Z</a>
+                        </li>
+                                          </ul>
+                  </div>
+                  <i class="fa fa-angle-right m-model-link__icon"></i>
+                </div>
+              </div>
+                                        <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu m-category-menu--visible" data-category="true" data-category-id="9" >
+                <div class="m-category-menu__container">
+                  <div class="m-category-menu__link--bg js-category-menu--category" onclick="ga('send', 'event', 'Motos', 'clic_categoría', 'Cuatrimotos' )"></div>
+                  <div class="m-category-menu__thumbnail"
+                       style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/categories/fe320c24e24bf5c8020a1557f441d07f0d9bd51c.png');"></div>
+                  <div class="m-category-menu__info">
+                    <p class="m-category-menu__info_name">Cuatrimotos</p>
+                    <hr class="m-category-menu__info_separator">
+                    <ul class="m-category-menu__info_models">
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="ozark-lt-f250-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'ozark-lt-f250-15' )">OZARK</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="kingquad400f-lt-f400f-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'kingquad400f-lt-f400f-15' )">Kingquad 400</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="kingquad500a-lt-f500f-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'kingquad500a-lt-f500f-15' )">Kingquad 500</a>
+                        </li>
+                                              <li class="m-category-menu__info_models_motorcicle">
+                          <a href="kingquad750-lt-a750x-15.html" onclick="ga('send', 'event', 'Motos', 'clic_modelo', 'kingquad750-lt-a750x-15' )">Kingquad 750</a>
+                        </li>
+                                          </ul>
+                  </div>
+                  <i class="fa fa-angle-right m-model-link__icon"></i>
+                </div>
+              </div>
+                                                                    <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="1">
+                  <a href="lets-ur110-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'lets-ur110-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/95acf7591108328233070dd218f3199030425c34.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">Let&#039;s</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $21,990.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 113cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> Autom&aacute;tica</p>
+                                                    <a href="lets-ur110-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'lets-ur110-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="1">
+                  <a href="an125-an125hk-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'an125-an125hk-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/6d1ff923409f5e6c0f2012dc46aa720ad4b397a6.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">AN125</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $25,890.00</p>
+
+                                                                      <p class="m-category-menu__info_value">Precio 2016: <br>$24,990.00</p>
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 124cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> Autom&aacute;tica</p>
+                                                    <a href="an125-an125hk-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'an125-an125hk-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="1">
+                  <a href="burgman-an400a-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'burgman-an400a-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/ee3e848f1895b28c0e59f1e98bfcf5dc367fc672.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">BURGMAN</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2016: <br> $149,990.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 400cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> Autom&aacute;tica</p>
+                                                    <a href="burgman-an400a-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'burgman-an400a-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                                                                      <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="2">
+                  <a href="fd110-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'fd110-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/8860f72fbaec97f5caf8e0b783f11f333ca87a13.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">FD110</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $21,490.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 110cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> Semi-autom&aacute;tica</p>
+                                                    <a href="fd110-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'fd110-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="2">
+                  <a href="hayate-ge110.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'hayate-ge110' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/918553059c3067574198e295234ff1e43b894b20.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">HAYATE</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $22,190.00</p>
+
+                                                                      <p class="m-category-menu__info_value">Precio 2016: <br>$21,990.00</p>
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 113cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 4 velocidades</p>
+                                                    <a href="hayate-ge110.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'hayate-ge110')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="2">
+                  <a href="en125-2a-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'en125-2a-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/c8a680ac682ee89b5eb8574cca18695a02040ae5.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">EN125-2A</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $27,490.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 125cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 5 velocidades</p>
+                                                    <a href="en125-2a-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'en125-2a-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="2">
+                  <a href="gn125f-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'gn125f-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/e7f1b2644289b126e954ef1dccc3798ccb1d10b0.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">GN125F</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $25,990.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 125cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 5 velocidades</p>
+                                                    <a href="gn125f-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'gn125f-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="2">
+                  <a href="gz150-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'gz150-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/d44b110eae98748daacbed6dde7f97a279a8f847.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">GZ150</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $38,990.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 150cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 5 velocidades</p>
+                                                    <a href="gz150-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'gz150-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                                                                      <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="3">
+                  <a href="ax100-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'ax100-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/f02dabff62f763d79ed59523fcb3bb32d6bbb075.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">AX100</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $15,690.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 100cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 4 velocidades</p>
+                                                    <a href="ax100-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'ax100-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="3">
+                  <a href="ax4-gd115-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'ax4-gd115-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/b4290beef42981ee8fa82c29abe7d5c6c6367ff6.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">AX4</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $19,490.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 113cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 4 velocidades</p>
+                                                    <a href="ax4-gd115-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'ax4-gd115-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="3">
+                  <a href="huracan-en125hu-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'huracan-en125hu-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/74cf397f97dab2a3fbe14446d952754fd5fdeddc.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">HURAC&Aacute;N</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $25,990.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 125cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 5 velocidades</p>
+                                                    <a href="huracan-en125hu-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'huracan-en125hu-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                                                                      <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="4">
+                  <a href="gsx-r600.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'gsx-r600' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/2fd08553b25e607900364ef5707da32b0b4eaa8e.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">GSX-R600</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $202,990.00</p>
+
+                                                                      <p class="m-category-menu__info_value">Precio 2016: <br>$197,990.00</p>
+                                  
+                              
+                          
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 600cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 6 velocidades</p>
+                                                    <a href="gsx-r600.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'gsx-r600')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="4">
+                  <a href="gsx-r600-30-anios.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'gsx-r600-30-anios' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/f28a33cde7a5e794eb43b86235b9271852605210.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">GSX-R600 30 A&Ntilde;OS</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2016: <br> $197,990.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 600cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 6 velocidades</p>
+                                                    <a href="gsx-r600-30-anios.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'gsx-r600-30-anios')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="4">
+                  <a href="gsx-r750.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'gsx-r750' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/e85cc5b3ae2b703c075a7cbc45b691f301697637.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">GSX-R750</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $212,990.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 750cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 6 velocidades</p>
+                                                    <a href="gsx-r750.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'gsx-r750')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="4">
+                  <a href="gsx-r1000.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'gsx-r1000' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/02e8fa95432d87fe1b71bcd2210ed560c057eaf3.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">GSX-R1000</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2016: <br> $229,990.00</p>
+
+                                  
+                              
+                          
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 1,000cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 6 velocidades</p>
+                                                    <a href="gsx-r1000.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'gsx-r1000')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="4">
+                  <a href="hayabusa.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'hayabusa' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/74c95545ec578e85d52151eb5dc51ec07f5d7482.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">HAYABUSA</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $229,990.00</p>
+
+                                                                      <p class="m-category-menu__info_value">Precio 2016: <br>$224,990.00</p>
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 1,300cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 6 velocidades</p>
+                                                    <a href="hayabusa.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'hayabusa')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                                                                      <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="5">
+                  <a href="GS150R.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'GS150R' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/1627410cc6077fcbc3b238b9ac0a40ecb8947be0.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">GS150R</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2015: <br> $34,290.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 150cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br>  6 velocidades</p>
+                                                    <a href="GS150R.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'GS150R')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="5">
+                  <a href="gixxer-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'gixxer-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/6a75a918488dcbebd512e96a546ce5de9d765693.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">GIXXER</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $35,490.00</p>
+
+                                  
+                              
+                          
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 155cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 5 velocidades</p>
+                                                    <a href="gixxer-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'gixxer-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="5">
+                  <a href="gixxer-sf.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'gixxer-sf' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/ab838f51ade2209330bca7e6c2c640dd8f2d1d0d.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">GIXXER SF</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $41,990.00</p>
+
+                                  
+                              
+                          
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 155cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 5 velocidades</p>
+                                                    <a href="gixxer-sf.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'gixxer-sf')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="5">
+                  <a href="inazuma-gw250-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'inazuma-gw250-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/f59439f0bf8990abe7d2b24fc153a0cde8b5d59b.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">INAZUMA</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2016: <br> $83,990.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 250cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 6 velocidades</p>
+                                                    <a href="inazuma-gw250-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'inazuma-gw250-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="5">
+                  <a href="gsx-s750-abs.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'gsx-s750-abs' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/1e6fc6749d11a081329d21064eb57ebcf851b9f1.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">GSX S750 ABS</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2016: <br> $160,990.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 750cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 6 velocidades</p>
+                                                    <a href="gsx-s750-abs.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'gsx-s750-abs')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                                                                      <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="6">
+                  <a href="dr200s.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'dr200s' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/13d1e8cb2f74994a36187cf305de65e96002155c.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">DR200S</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $65,990.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 200cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 5 velocidades</p>
+                                                    <a href="dr200s.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'dr200s')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="6">
+                  <a href="dr650.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'dr650' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/8e4f469ff5c7c7ea9419bfc84a953bdc968f2bdf.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">DR650</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $118,990.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 650cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 5 velocidades</p>
+                                                    <a href="dr650.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'dr650')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="6">
+                  <a href="v-strom650XT.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'v-strom650XT' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/4813f63602b01aa349e28d09c1c531315362f15c.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">V-Strom 650XT</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2016: <br> $160,990.00</p>
+
+                                  
+                              
+                          
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 650cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 6 velocidades</p>
+                                                    <a href="v-strom650XT.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'v-strom650XT')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="6">
+                  <a href="v-strom-650-dl650-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'v-strom-650-dl650-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/a574a8f919891751f7ca3090e5009da5299b3d92.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">V-STROM 650 ABS</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2016: <br> $154,990.00</p>
+
+                                  
+                              
+                          
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 650cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 6 velocidades</p>
+                                                    <a href="v-strom-650-dl650-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'v-strom-650-dl650-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="6">
+                  <a href="vstrom1000-dl1000a-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'vstrom1000-dl1000a-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/f4cbda0407412f97260fba9a0c8aa4f288573701.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">V-STROM 1000 ABS</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2016: <br> $222,990.00</p>
+
+                                  
+                              
+                          
+                              
+                          
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 1,000cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 6 velocidades</p>
+                                                    <a href="vstrom1000-dl1000a-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'vstrom1000-dl1000a-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                                                                      <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="7">
+                  <a href="s40.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 's40' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/5dea24b1b4cde4ea4a342bb2bc6006043e9ceed8.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">S40</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $99,990.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 650cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 5 velocidades</p>
+                                                    <a href="s40.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 's40')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="7">
+                  <a href="c50.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'c50' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/f92587ccc3269d3c56e378742aa93f6366d1ddf5.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">C50</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2016: <br> $144,490.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 800cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 5 velocidades</p>
+                                                    <a href="c50.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'c50')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="7">
+                  <a href="m109r.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'm109r' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/1485b5d3c79c0195ffe6415df3733aab4ba7200a.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">M109R</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2016: <br> $234,990.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 1,800cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 5 velocidades</p>
+                                                    <a href="m109r.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'm109r')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                                                                      <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="8">
+                  <a href="rm-z250-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'rm-z250-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/890ba1c1a832884aea4bcbbcc2dee3c12a58bdfc.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">RM-Z250</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $128,990.00</p>
+
+                                                                      <p class="m-category-menu__info_value">Precio 2016: <br>$124,790.00</p>
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 250cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 5 velocidades</p>
+                                                    <a href="rm-z250-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'rm-z250-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="8">
+                  <a href="rm-z450-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'rm-z450-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/547a676dbffa9ba031b663e64989a9a320acfdec.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">RM-Z450</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $138,990.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 450cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 5 velocidades</p>
+                                                    <a href="rm-z450-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'rm-z450-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="8">
+                  <a href="rmx-450z-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'rmx-450z-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/33d1a9ec06b7bb6d4164c14edf86ae4d9fc014d7.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">RMX-450Z</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $146,990.00</p>
+
+                                                                      <p class="m-category-menu__info_value">Precio 2016: <br>$142,990.00</p>
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 450cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 5 velocidades</p>
+                                                    <a href="rmx-450z-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'rmx-450z-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                                                                      <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="9">
+                  <a href="ozark-lt-f250-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'ozark-lt-f250-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/8404172048db9457d5086e8dbdd2b2ab320db1ee.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">OZARK</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $94,790.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 246cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> 5 velocidades</p>
+                                                    <a href="ozark-lt-f250-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'ozark-lt-f250-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="9">
+                  <a href="kingquad400f-lt-f400f-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'kingquad400f-lt-f400f-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/c9f339afc4cdd75b5cc1bd84fcd056d3eda29a62.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">Kingquad 400</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $133,990.00</p>
+
+                                                                      <p class="m-category-menu__info_value">Precio 2016: <br>$129,990.00</p>
+                                  
+                              
+                          
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 376cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> Semi-autom&aacute;tica</p>
+                                                    <a href="kingquad400f-lt-f400f-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'kingquad400f-lt-f400f-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="9">
+                  <a href="kingquad500a-lt-f500f-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'kingquad500a-lt-f500f-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/ac6988c93f1c5b5abfacfdcbe8f19e503ea2a9ca.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">Kingquad 500</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2016: <br> $154,990.00</p>
+
+                                  
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 500cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> V-belt autom&aacute;tica</p>
+                                                    <a href="kingquad500a-lt-f500f-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'kingquad500a-lt-f500f-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                              <div class="pure-u-1 pure-u-sm-12-24 pure-u-lg-8-24 m-category-menu js-category-menu--motor" data-category="false" data-category-id="9">
+                  <a href="kingquad750-lt-a750x-15.html" class="m-category-menu__link" onclick="ga('send', 'event', 'Motos', 'clic_categoria_modelo', 'kingquad750-lt-a750x-15' )">
+                    <div class="m-category-menu__container">
+                      <div class="m-category-menu__thumbnail" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/bikes/cd878a161dd57425273f5f585cbad2801338d836.png');"></div>
+                      <div class="m-category-menu__info">
+                        <p class="m-category-menu__info_name">Kingquad 750</p>
+                        <hr class="m-category-menu__info_separator">
+                        <div class="m-category-menu__info_models">
+                                                                                                                                      
+                              
+                                  
+                                  <p class="m-category-menu__info_value">Precio 2017: <br> $176,990.00</p>
+
+                                  
+                              
+                          
+                              
+                                                                              <p class="m-category-menu__info_value">Motor: 750cc</p>
+                                                    <p class="m-category-menu__info_value">Transmisión: <br> Autom&aacute;tica </p>
+                                                    <a href="kingquad750-lt-a750x-15.html" onclick="ga('send', 'event', 'Motos', 'clc_categoría_modelo', 'kingquad750-lt-a750x-15')" class="m-category-menu__info_link">Ver más</a>
+                        </div>
+                      </div>
+                      <i class="fa fa-angle-right m-model-link__icon"></i>
+                    </div>
+                  </a>
+                </div>
+                                    </div>
+      </div>
+    </div>
+    <a href="index.html#" class="m-category-menu__back js-category-menu__back">Regresar</a>
+  </div>
+</div>
+    <div id="financiamiento" class="l-big-menu js-big-menu" data-open="false">
+	<div class="l-wrapper l-big-menu__content js-big-menu-content">
+		<div class="pure-g">
+			<div class="pure-u-1 pure-u-sm-1-24"></div>
+			<div class="pure-u-1 pure-u-sm-22-24">
+				<h3 class="l-big-menu__title">Cotiza tu Suzuki</h3>
+				<a href="index.html#financiamiento" class="l-big-menu__close js-close-bigmenu">Cerrar</a>
+				<div class="js-financing-bnp-loading">
+					<p class="m-paragraph">Cargando servicio...</p>
+				</div>
+				<div class="js-financing-bnp-error hide">
+					<p class="m-paragraph">El servicio no está disponible en este momento. Por favor intenta más tarde.</p>
+				</div>
+				<form class="pure-form js-financing-step-1 hide">
+					<h4 class="m-form-section-title">Datos del vehículo.</h4>
+					<div class="pure-g">
+						<div class="pure-u-1 pure-u-md-1-3">
+							<fieldset class="m-fieldset m-fieldset--in-financing">
+								<select class="m-select js-select-financing-states" data-label="Estado" data-service="false" style="width: 100%;">
+									<option value="">Estado</option>
+								</select>
+							</fieldset>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3">
+							<fieldset class="m-fieldset m-fieldset--in-financing">
+								<select class="m-select js-select js-select-financing-dealers" data-label="Concesionaria" data-service="false" style="width: 100%;">
+									<option value="">Concesionaria</option>
+								</select>
+							</fieldset>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3">
+							<fieldset class="m-fieldset m-fieldset--in-financing">
+								<select class="m-select js-select js-select-financing-category" data-label="Categoria" data-service="false" style="width: 100%;">
+									<option value="">Categoría</option>
+								</select>
+							</fieldset>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3">
+							<fieldset class="m-fieldset m-fieldset--in-financing">
+								<select class="m-select js-select js-select-financing-model" data-label="Modelo" data-service="false" style="width: 100%;">
+									<option value="">Modelo</option>
+								</select>
+							</fieldset>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3">
+							<fieldset class="m-fieldset m-fieldset--in-financing">
+								<select class="m-select js-select js-select-financing-year" data-label="Año" data-service="false" style="width: 100%;">
+									<option value="">Año</option>
+								</select>
+							</fieldset>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3">
+							<fieldset class="m-fieldset m-fieldset--in-financing">
+								<input type="text" value="" placeholder="Precio del auto con IVA" class="m-input js-financing-price-formated" disabled>
+							</fieldset>
+						</div>
+					</div>
+					<br>
+					<h4 class="m-form-section-title">Enganche <span class="js-financing-percent">20</span>%</h4>
+					<div class="pure-g">
+						<div class="pure-u-1 pure-u-md-1-3">
+							<fieldset class="m-fieldset m-fieldset--in-financing">
+								<span class="slider__value slider__value--left">20%</span>
+								<span class="slider__value slider__value--right">90%</span>
+								<input type="text" value="" class="js-range-financing" data-slider="true" data-slider-range="20,90" data-slider-step="1">
+							</fieldset>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3">
+							<fieldset class="m-fieldset m-fieldset--in-financing">
+								<input type="text" value="" placeholder="" class="m-input js-financing-price-deposit" disabled>
+							</fieldset>
+						</div>
+					</div>
+					<div class="pure-g">
+						<div class="pure-u-1 pure-u-sm-18-24 pure-u-md-21-24">
+													</div>
+						<div class="pure-u-1 pure-u-sm-6-24 pure-u-md-3-24">
+							<a href="index.html#" class="m-button m-button--blue m-button--disabled m-financing-form__button js-financing-do-step-one">Continuar</a>
+						</div>
+					</div>
+				</form>
+				<div class="hide js-financing-step-2">
+					<div class="pure-g">
+						<div class="pure-u-1 pure-u-sm-1-3 l-whole-section">
+							<h4 class="m-form-section-title">Condiciones del crédito</h4>
+							<div class="m-summary-info m-summary-info--in-financing-header">
+								<p class="m-summary-info__item">
+									<span class="m-summary-info__item__label">Categoría: </span>
+									<span class="m-summary-info__item__value js-financing-category-label"></span>
+								</p>
+								<p class="m-summary-info__item">
+									<span class="m-summary-info__item__label">Modelo: </span>
+									<span class="m-summary-info__item__value js-financing-model-label"></span>
+								</p>
+								<p class="m-summary-info__item">
+									<span class="m-summary-info__item__label">Año: </span>
+									<span class="m-summary-info__item__value js-financing-year-label"></span>
+								</p>
+								<p class="m-summary-info__item">
+									<span class="m-summary-info__item__label">Precio: </span>
+									<span class="m-summary-info__item__value js-financing-price-label"></span>
+								</p>
+								<p class="m-summary-info__item">
+									<span class="m-summary-info__item__label">Enganche: </span>
+									<span class="m-summary-info__item__value js-financing-deposit-label"></span>
+								</p>
+								<p class="m-summary-info__item">
+									<span class="m-summary-info__item__label">Crédito: </span>
+									<span class="m-summary-info__item__value js-financing-credit-label"></span>
+								</p>
+							</div>
+														<a href="index.html#" class="m-back-link m-back-link--in-financing-summary js-financing-back-to-one">Regresar</a>
+						</div>
+						<div class="pure-u-1 pure-u-sm-2-3 l-whole-section">
+							<h4 class="m-form-section-title">Registro</h4>
+							<form id="form-financing-step-2" class="pure-form js-financing-form-step-2">
+								<div class="pure-g">
+									<div class="pure-u-1 pure-u-md-1-2">
+										<fieldset class="m-fieldset m-fieldset--in-financing">
+											<label class="m-label">Nombre</label>
+											<input type="text" placeholder="Nombre" class="m-input js-financing-name" value="" data-parsley-required="true" data-parsley-pattern="^[a-zA-Z ñáéíóúÁÉÍÓÚ]+$">
+											<p class="m-error js-error">Campo requerido</p>
+										</fieldset>
+									</div>
+									<div class="pure-u-1 pure-u-md-1-2">
+										<fieldset class="m-fieldset m-fieldset--in-financing">
+											<label class="m-label">Apellido</label>
+											<input type="text" placeholder="Apellido" class="m-input js-financing-lastname" value="" data-parsley-required="true" data-parsley-pattern="^[a-zA-Z ñáéíóúÁÉÍÓÚ]+$">
+											<p class="m-error js-error">Campo requerido</p>
+										</fieldset>
+									</div>
+									<div class="pure-u-1 pure-u-md-1-2">
+										<fieldset class="m-fieldset m-fieldset--in-financing">
+											<label class="m-label">Teléfono (10 dígitos)</label>
+											<input type="number" placeholder="Móvil o fijo" class="m-input js-financing-phone" value="" data-parsley-required="true" data-parsley-type="number" data-parsley-minlength="10" data-parsley-maxlength="10">
+											<p class="m-error js-error">Campo requerido</p>
+										</fieldset>
+									</div>
+									<div class="pure-u-1 pure-u-md-1-2">
+										<fieldset class="m-fieldset m-fieldset--in-financing">
+											<label class="m-label">Correo electrónico</label>
+											<input type="email" placeholder="Correo electrónico" class="m-input js-financing-email" value="" data-parsley-required="true" data-parsley-type="email">
+											<p class="m-error js-error">Campo requerido</p>
+										</fieldset>
+									</div>
+								</div>
+								<p class="m-paragraph">Tus datos están a salvo. Para mayor información revisa nuestro <a href="https://www.suzuki.com.mx/motos/aviso_privacidad" target="_blank" class="m-link">Aviso de privacidad</a></p>
+								<div class="pure-g">
+									<div class="pure-u-1 pure-u-md-4-5">
+										<fieldset class="m-fieldset m-fieldset--in-financing m-fieldset--header-financing-date hide js-financing-date-fieldset">
+											<label class="m-label">Selecciona fecha</label>
+											<input id="picker-financing-header" type="text" placeholder="YYYY-MM-DD" class="m-input js-financing-date" val="" data-parsley-pattern="^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$">
+											<p class="m-error js-error">Campo requerido</p>
+										</fieldset>
+										<fieldset class="m-fieldset m-fieldset--check">
+											<div class="m-checkbox">
+												<input type="checkbox" name="financing-want-news" class="m-checkbox__input js-financing-want-news">
+												<div class="m-checkbox__square">
+													<i class="fa fa-check m-checkbox__icon"></i>
+												</div>
+												<label class="m-checkbox__label">Deseo recibir noticias y promociones</label>
+											</div>
+										</fieldset>
+									</div>
+									<div class="pure-u-1 pure-u-md-1-5 pos-relative">
+										<a href="index.html#" class="m-button m-button--blue m-button--in-header-financing-step-2 js-financing-submit" data-label="Cotizar">Cotizar</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="hide js-financing-step-3">
+					<p class="m-paragraph">
+						Conoce el desglose de planes de financiamiento de acuerdo con el número de meses cotizados y el tipo de seguro según la empresa que desees contratar (seguro para auto y seguro de vida).
+					</p>
+					<p class="m-paragraph">
+						Para tu comodidad, te hemos enviado esta tabla a tu correo electrónico.
+					</p>
+					<table class="pure-table pure-table-bordered m-table m-table--in-financing js-financing-table">
+						<thead>
+							<tr></tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+					<div class="pure-g">
+						<div class="pure-u-1 pure-u-sm-18-24 pure-u-md-21-24">
+													</div>
+						<div class="pure-u-1 pure-u-sm-6-24 pure-u-md-3-24">
+							<a href="index.html#" class="m-back-link m-back-link--in-financing-table js-financing-back-to-two">Regresar</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pure-u-1 pure-u-sm-1-24"></div>
+		</div>
+	</div>
+</div>
+    <div id="mi-suzuki" class="l-big-menu js-big-menu" data-open="false">
+  <div class="l-wrapper l-big-menu__content js-big-menu-content">
+    <div class="pure-g">
+      <div class="pure-u-1 pure-u-sm-2-24"></div>
+      <div class="pure-u-1 pure-u-sm-22-24">
+        <h3 class="l-big-menu__title">Mi Suzuki</h3>
+        <a href="index.html#mi-suzuki" class="l-big-menu__close js-close-bigmenu">Cerrar</a>
+        <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-4">
+            <div class="m-submenu-group js-submenu-group">
+              <div class="js-submenu-action">
+                <h4 class="m-submenu-group__title js-submenu-group-title">Mantenimiento</h4>
+                <p class="m-submenu-group__description">Conoce los precios y beneficios del servicio Suzuki.</p>
+              </div>
+              <ul class="m-border-list m-border-list--in-header js-submenu-links">
+                                    <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="4">Scooter<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="4">
+                      Scooter
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="4">
+                      <a href="lets-ur110-15.html#mantenimiento" class="m-border-list__link"> Let&#039;s <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="4">
+                      <a href="an125-an125hk-15.html#mantenimiento" class="m-border-list__link"> AN125 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="4">
+                      <a href="burgman-an400a-15.html#mantenimiento" class="m-border-list__link"> BURGMAN <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="5">Urbanas<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="5">
+                      Urbanas
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="5">
+                      <a href="fd110-15.html#mantenimiento" class="m-border-list__link"> FD110 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="5">
+                      <a href="hayate-ge110.html#mantenimiento" class="m-border-list__link"> HAYATE <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="5">
+                      <a href="en125-2a-15.html#mantenimiento" class="m-border-list__link"> EN125-2A <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="5">
+                      <a href="gn125f-15.html#mantenimiento" class="m-border-list__link"> GN125F <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="5">
+                      <a href="gz150-15.html#mantenimiento" class="m-border-list__link"> GZ150 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="6">Trabajo<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="6">
+                      Trabajo
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="6">
+                      <a href="ax100-15.html#mantenimiento" class="m-border-list__link"> AX100 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="6">
+                      <a href="ax4-gd115-15.html#mantenimiento" class="m-border-list__link"> AX4 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="6">
+                      <a href="huracan-en125hu-15.html#mantenimiento" class="m-border-list__link"> HURAC&Aacute;N <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="3">Deportivas<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="3">
+                      Deportivas
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="3">
+                      <a href="gsx-r600.html#mantenimiento" class="m-border-list__link"> GSX-R600 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="3">
+                      <a href="gsx-r600-30-anios.html#mantenimiento" class="m-border-list__link"> GSX-R600 30 A&Ntilde;OS <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="3">
+                      <a href="gsx-r750.html#mantenimiento" class="m-border-list__link"> GSX-R750 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="3">
+                      <a href="gsx-r1000.html#mantenimiento" class="m-border-list__link"> GSX-R1000 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="3">
+                      <a href="hayabusa.html#mantenimiento" class="m-border-list__link"> HAYABUSA <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="7">Ciudad<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="7">
+                      Ciudad
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="7">
+                      <a href="GS150R.html#mantenimiento" class="m-border-list__link"> GS150R <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="7">
+                      <a href="gixxer-15.html#mantenimiento" class="m-border-list__link"> GIXXER <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="7">
+                      <a href="gixxer-sf.html#mantenimiento" class="m-border-list__link"> GIXXER SF <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="7">
+                      <a href="inazuma-gw250-15.html#mantenimiento" class="m-border-list__link"> INAZUMA <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="7">
+                      <a href="gsx-s750-abs.html#mantenimiento" class="m-border-list__link"> GSX S750 ABS <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="8">Doble Prop&oacute;sito<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="8">
+                      Doble Prop&oacute;sito
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="8">
+                      <a href="dr200s.html#mantenimiento" class="m-border-list__link"> DR200S <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="8">
+                      <a href="dr650.html#mantenimiento" class="m-border-list__link"> DR650 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="8">
+                      <a href="v-strom650XT.html#mantenimiento" class="m-border-list__link"> V-Strom 650XT <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="8">
+                      <a href="v-strom-650-dl650-15.html#mantenimiento" class="m-border-list__link"> V-STROM 650 ABS <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="8">
+                      <a href="vstrom1000-dl1000a-15.html#mantenimiento" class="m-border-list__link"> V-STROM 1000 ABS <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="9">Boulevard<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="9">
+                      Boulevard
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="9">
+                      <a href="s40.html#mantenimiento" class="m-border-list__link"> S40 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="9">
+                      <a href="c50.html#mantenimiento" class="m-border-list__link"> C50 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="9">
+                      <a href="m109r.html#mantenimiento" class="m-border-list__link"> M109R <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="10">Cross y Enduro<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="10">
+                      Cross y Enduro
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="10">
+                      <a href="rm-z250-15.html#mantenimiento" class="m-border-list__link"> RM-Z250 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="10">
+                      <a href="rm-z450-15.html#mantenimiento" class="m-border-list__link"> RM-Z450 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="10">
+                      <a href="rmx-450z-15.html#mantenimiento" class="m-border-list__link"> RMX-450Z <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="11">Cuatrimotos<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="11">
+                      Cuatrimotos
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="11">
+                      <a href="ozark-lt-f250-15.html#mantenimiento" class="m-border-list__link"> OZARK <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="11">
+                      <a href="kingquad400f-lt-f400f-15.html#mantenimiento" class="m-border-list__link"> Kingquad 400 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="11">
+                      <a href="kingquad500a-lt-f500f-15.html#mantenimiento" class="m-border-list__link"> Kingquad 500 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="11">
+                      <a href="kingquad750-lt-a750x-15.html#mantenimiento" class="m-border-list__link"> Kingquad 750 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                   <li class="m-border-list__item m-border-list__item--back m-border-list__item--hidden js-submenu-go-back">
+                   <a href="index.html#" class="m-border-list__link">Cambiar de categoría</a>
+                 </li>
+              </ul>
+            </div>
+          </div>
+                    <div class="pure-u-1 pure-u-md-1-4">
+            <div class="m-submenu-group js-submenu-group">
+              <div class="js-submenu-action">
+                <h4 class="m-submenu-group__title js-submenu-group-title">Accesorios y refacciones</h4>
+                <p class="m-submenu-group__description">Personaliza tu Suzuki con accesorios originales.</p>
+              </div>
+              <ul class="m-border-list m-border-list--in-header js-submenu-links">
+                                    <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="4">Scooter<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="4">
+                      Scooter
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="4">
+                      <a href="lets-ur110-15.html#accesorios" class="m-border-list__link"> Let&#039;s <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="4">
+                      <a href="an125-an125hk-15.html#accesorios" class="m-border-list__link"> AN125 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="4">
+                      <a href="burgman-an400a-15.html#accesorios" class="m-border-list__link"> BURGMAN <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="5">Urbanas<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="5">
+                      Urbanas
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="5">
+                      <a href="fd110-15.html#accesorios" class="m-border-list__link"> FD110 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="5">
+                      <a href="hayate-ge110.html#accesorios" class="m-border-list__link"> HAYATE <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="5">
+                      <a href="en125-2a-15.html#accesorios" class="m-border-list__link"> EN125-2A <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="5">
+                      <a href="gn125f-15.html#accesorios" class="m-border-list__link"> GN125F <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="5">
+                      <a href="gz150-15.html#accesorios" class="m-border-list__link"> GZ150 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="6">Trabajo<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="6">
+                      Trabajo
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="6">
+                      <a href="ax100-15.html#accesorios" class="m-border-list__link"> AX100 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="6">
+                      <a href="ax4-gd115-15.html#accesorios" class="m-border-list__link"> AX4 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="6">
+                      <a href="huracan-en125hu-15.html#accesorios" class="m-border-list__link"> HURAC&Aacute;N <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="3">Deportivas<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="3">
+                      Deportivas
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="3">
+                      <a href="gsx-r600.html#accesorios" class="m-border-list__link"> GSX-R600 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="3">
+                      <a href="gsx-r600-30-anios.html#accesorios" class="m-border-list__link"> GSX-R600 30 A&Ntilde;OS <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="3">
+                      <a href="gsx-r750.html#accesorios" class="m-border-list__link"> GSX-R750 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="3">
+                      <a href="gsx-r1000.html#accesorios" class="m-border-list__link"> GSX-R1000 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="3">
+                      <a href="hayabusa.html#accesorios" class="m-border-list__link"> HAYABUSA <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="7">Ciudad<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="7">
+                      Ciudad
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="7">
+                      <a href="GS150R.html#accesorios" class="m-border-list__link"> GS150R <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="7">
+                      <a href="gixxer-15.html#accesorios" class="m-border-list__link"> GIXXER <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="7">
+                      <a href="gixxer-sf.html#accesorios" class="m-border-list__link"> GIXXER SF <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="7">
+                      <a href="inazuma-gw250-15.html#accesorios" class="m-border-list__link"> INAZUMA <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="7">
+                      <a href="gsx-s750-abs.html#accesorios" class="m-border-list__link"> GSX S750 ABS <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="8">Doble Prop&oacute;sito<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="8">
+                      Doble Prop&oacute;sito
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="8">
+                      <a href="dr200s.html#accesorios" class="m-border-list__link"> DR200S <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="8">
+                      <a href="dr650.html#accesorios" class="m-border-list__link"> DR650 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="8">
+                      <a href="v-strom650XT.html#accesorios" class="m-border-list__link"> V-Strom 650XT <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="8">
+                      <a href="v-strom-650-dl650-15.html#accesorios" class="m-border-list__link"> V-STROM 650 ABS <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="8">
+                      <a href="vstrom1000-dl1000a-15.html#accesorios" class="m-border-list__link"> V-STROM 1000 ABS <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="9">Boulevard<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="9">
+                      Boulevard
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="9">
+                      <a href="s40.html#accesorios" class="m-border-list__link"> S40 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="9">
+                      <a href="c50.html#accesorios" class="m-border-list__link"> C50 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="9">
+                      <a href="m109r.html#accesorios" class="m-border-list__link"> M109R <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="10">Cross y Enduro<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="10">
+                      Cross y Enduro
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="10">
+                      <a href="rm-z250-15.html#accesorios" class="m-border-list__link"> RM-Z250 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="10">
+                      <a href="rm-z450-15.html#accesorios" class="m-border-list__link"> RM-Z450 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="10">
+                      <a href="rmx-450z-15.html#accesorios" class="m-border-list__link"> RMX-450Z <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                      <li class="m-border-list__item">
+                      <a href="index.html#" class="m-border-list__link js-submenu-item" data-id="11">Cuatrimotos<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                    <li class="m-border-list__item m-border-list__item--title m-border-list__item--hidden js-submenu-subitem" data-id="11">
+                      Cuatrimotos
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="11">
+                      <a href="ozark-lt-f250-15.html#accesorios" class="m-border-list__link"> OZARK <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="11">
+                      <a href="kingquad400f-lt-f400f-15.html#accesorios" class="m-border-list__link"> Kingquad 400 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="11">
+                      <a href="kingquad500a-lt-f500f-15.html#accesorios" class="m-border-list__link"> Kingquad 500 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                      <li class="m-border-list__item m-border-list__item--hidden js-submenu-subitem" data-id="11">
+                      <a href="kingquad750-lt-a750x-15.html#accesorios" class="m-border-list__link"> Kingquad 750 <i class="fa fa-angle-right m-border-list__icon"></i></a>
+                    </li>
+                                                   <li class="m-border-list__item m-border-list__item--back m-border-list__item--hidden js-submenu-go-back">
+                   <a href="index.html#" class="m-border-list__link">Cambiar de categoría</a>
+                 </li>
+                </ul>
+            </div>
+          </div>
+                                        <div class="pure-u-1 pure-u-md-1-4">
+            <div class="m-submenu-group js-submenu-group">
+              <div class="js-submenu-action">
+                <h4 class="m-submenu-group__title js-submenu-group-title">¿Por qué Suzuki?</h4>
+                <p class="m-submenu-group__description">Personaliza tu Suzuki con accesorios originales.</p>
+              </div>
+              <ul class="m-border-list m-border-list--in-header js-submenu-links">
+                <li class="m-border-list__item">
+                  <a href="razones.html" class="m-border-list__link">10 Razones<i class="fa fa-angle-right m-border-list__icon"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+                    <div class="pure-u-1 pure-u-md-1-4">
+            <div class="m-submenu-group js-submenu-group">
+              <div class="js-submenu-action">
+                <h4 class="m-submenu-group__title js-submenu-group-title"><i class="m-submenu-group__back-icon fa fa-angle-left"></i> Social</h4>
+                <p class="m-submenu-group__description">Descúbrenos en nuestras redes sociales.</p>
+              </div>
+              <ul class="m-border-list m-border-list--in-header js-submenu-links">
+                                  <li class="m-border-list__item">
+                    <a href="https://www.facebook.com/SuzukiMotosMexico/?fref=ts" target="_blank" class="m-border-list__link m-border-list__link--social" onclick="ga('send', 'event', 'Social', 'Liga_externa', 'Mi_Suzuki_Facebook' )">
+                      <i class="fa fa-facebook m-border-list__link--social__icon"></i>
+                      <span>Facebook</span>
+                      <i class="fa fa-angle-right m-border-list__icon"></i>
+                    </a>
+                  </li>
+                                  <li class="m-border-list__item">
+                    <a href="https://www.instagram.com/suzukimotos_mex/" target="_blank" class="m-border-list__link m-border-list__link--social" onclick="ga('send', 'event', 'Social', 'Liga_externa', 'Mi_Suzuki_Instagram' )">
+                      <i class="fa fa-instagram m-border-list__link--social__icon"></i>
+                      <span>Instagram</span>
+                      <i class="fa fa-angle-right m-border-list__icon"></i>
+                    </a>
+                  </li>
+                                  <li class="m-border-list__item">
+                    <a href="https://www.youtube.com/channel/UCD05ic2-wyIk2TyhQ7YAOQQ" target="_blank" class="m-border-list__link m-border-list__link--social" onclick="ga('send', 'event', 'Social', 'Liga_externa', 'Mi_Suzuki_Youtube' )">
+                      <i class="fa fa-youtube m-border-list__link--social__icon"></i>
+                      <span>Youtube</span>
+                      <i class="fa fa-angle-right m-border-list__icon"></i>
+                    </a>
+                  </li>
+                              </ul>
+              <i class="fa fa-angle-right m-submenu-group__icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <div class="m-home-slider">
+    <div class="l-wrapper l-wrapper--max">
+      <div class="m-home-slider__slick js-home-slider__slick">
+                          <a href="https://youtu.be/2ZWL-h-UeCI" class="m-home-slider__slide">
+            <img class="m-home-slider__slide_background" src="https://s3.amazonaws.com/suzuki-motos/home/slider/540f5e234451c1e04cb495f9e41ebcf251ec12c3.jpg">
+          </a>
+                  <a href="promociones.html" class="m-home-slider__slide">
+            <img class="m-home-slider__slide_background" src="https://s3.amazonaws.com/suzuki-motos/home/slider/4cb48c97c7fc7050668a107a18a9670b903c3724.jpg">
+          </a>
+                  <a href="https://www.facebook.com/teamsuzukiracingcolors/?fref=ts" class="m-home-slider__slide">
+            <img class="m-home-slider__slide_background" src="https://s3.amazonaws.com/suzuki-motos/home/slider/60c59f87379561145d4ab74e2e9fa1e213c83b6b.jpg">
+          </a>
+                  <a href="contacto.html" class="m-home-slider__slide">
+            <img class="m-home-slider__slide_background" src="https://s3.amazonaws.com/suzuki-motos/home/slider/4b6ba5884fcc769e27198ea80abf637eaae67bca.jpg">
+          </a>
+                  <a href="gixxer-sf.html" class="m-home-slider__slide">
+            <img class="m-home-slider__slide_background" src="https://s3.amazonaws.com/suzuki-motos/home/slider/8b773674ebb30b23fa121603e48b13f218d78bdb.jpg">
+          </a>
+                      </div>
+    </div>
+  </div>
+
+        <div class="m-home-tips">
+      <div class="l-wrapper l-wrapper--air_m">
+        <div class="pure-g">
+          <div class="pure-u-1 pure-u-md-1-24"></div>
+          <div class="pure-u-1 pure-u-md-4-24">
+            <div class="m-home-tips__image">
+              <img class="m-home-tips__image__picture" src="img/home/moto-tips.png">
+              <p class="m-home-tips__image__title">Seguridad y tips</p>
+            </div>
+          </div>
+          <div class="pure-u-1 pure-u-md-18-24">
+            <p class="m-home-tips__title">Seguridad y tips</p>
+            <hr class="m-home-tips__separator">
+            <p class="m-home-tips__text js-tip-container">
+              <span class="js-tip-first-line">LIMPIA EL MOTOR CON</span>
+              <span class="m-home-tips__text--light js-tip-second-line">UN TRAPO HÚMEDO</span>
+            </p>
+            <a href="index.html#" class="m-home-tips__refresh js-get-random-tip" onclick="ga('send', 'event', 'Tips', 'clic', 'siguiente_tip')"><img src="img/home/icon_refresh.png" alt=""> Más tips</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+        <div class="m-home-video" style="background-image: url('https://s3.amazonaws.com/suzuki-motos/home/videos/50d6bb258ba86397f80c8efe1e86c544e68bb18b.jpg');">
+        <a href="https://www.youtube.com/embed/B3L1woDhVu0" class="js-home-video">
+          <div class="m-home-video__content">
+            <div class="l-wrapper">
+              <p class="m-home-video__content__title">Suzuki, un estilo de vida</p>
+              <p class="m-home-video__content__subtitle">Suzuki, un estilo de vida</p>
+              <p class="m-home-video__content__play">
+                <span class="m-home-video__content__play_icon">▸</span>
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  
+    <div class="m-instagram">
+    <div class="l-wrapper">
+      <div class="pure-g">
+        <div class="pure-u-1">
+          <h3 class="m-home__title">WAY OF LIFE</h3>
+          <p class="m-home__subtitle">No es sólo una marca, es un estilo de vida</p>
+        </div>
+      </div>
+      <div id="instafeed" class="m-instagram__mosaic">
+        <div class="l-wrapper l-wrapper--air_m">
+          <div class="pure-g js-instagram__mosaic"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <footer class="l-footer js-footer">
+  <div class="l-wrapper">
+    <div class="l-footer__list">
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-4">
+          <div class="l-footer__column">
+            <div class="m-footer-toggle">
+              <h4 class="m-footer__title m-footer__title--toggle js-footer-toggle-button">Equipo Suzuki</h4>
+              <ul class="m-footer-toggle__list js-footer-toggle-list">
+                <li class="m-footer-toggle__item">
+                  <a class="m-footer-toggle__link" href="http://www.suzuki-racing.com/" target="_blank" onclick="ga('send', 'event', 'Footer', 'liga_externa', 'conoce_equipo')">
+                    Conoce nuestro team Suzuki
+                  </a>
+                </li>
+                <li class="m-footer-toggle__item">
+                  <a class="m-footer-toggle__link" href="http://www.aguilarracing.mx/" target="_blank" onclick="ga('send', 'event', 'Footer', 'liga_externa', 'racing_team')">
+                    Suzuki Aguilar Racing Team (motocross)
+                  </a>
+                </li>
+                <li class="m-footer-toggle__item">
+                  <a class="m-footer-toggle__link" href="https://www.facebook.com/teamsuzukiracingcolors/?fref=ts" target="_blank" onclick="ga('send', 'event', 'Footer', 'liga_externa', 'facebook_team_racing_colors')">
+                    Team Racing Colors
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-4-24">
+          <div class="l-footer__column">
+            <div class="m-footer-toggle">
+              <h4 class="m-footer__title m-footer__title--toggle js-footer-toggle-button">Redes Sociales</h4>
+              <ul class="m-footer-toggle__list js-footer-toggle-list">
+                                  <li class="m-footer-toggle__item">
+                    <a class="m-footer-toggle__link" target="_blank" href="https://www.facebook.com/SuzukiMotosMexico/?fref=ts" onclick="ga('send', 'event', 'Social', 'Liga_externa', 'Footer_Facebook')">Facebook</a>
+                  </li>
+                                  <li class="m-footer-toggle__item">
+                    <a class="m-footer-toggle__link" target="_blank" href="https://www.instagram.com/suzukimotos_mex/" onclick="ga('send', 'event', 'Social', 'Liga_externa', 'Footer_Instagram')">Instagram</a>
+                  </li>
+                                  <li class="m-footer-toggle__item">
+                    <a class="m-footer-toggle__link" target="_blank" href="https://www.youtube.com/channel/UCD05ic2-wyIk2TyhQ7YAOQQ" onclick="ga('send', 'event', 'Social', 'Liga_externa', 'Footer_Youtube')">Youtube</a>
+                  </li>
+                              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-8-24">
+          <div class="l-footer__column">
+            <div class="m-footer-toggle">
+              <h4 class="m-footer__title m-footer__title--toggle js-footer-toggle-button">Catálogos</h4>
+              <div class="pure-g">
+                                                                  <div class="pure-u-1 pure-u-md-1-2">
+                    <ul class="m-footer-toggle__list js-footer-toggle-list">
+                                              <li class="m-footer-toggle__item">
+                          <a class="m-footer-toggle__link"
+                             href="catalogos/scooter.html" onclick="ga('send', 'event', 'Footer', 'Clic', 'Scooter' )">
+                            Scooter
+                          </a>
+                        </li>
+                                              <li class="m-footer-toggle__item">
+                          <a class="m-footer-toggle__link"
+                             href="catalogos/urbanas.html" onclick="ga('send', 'event', 'Footer', 'Clic', 'Urbanas' )">
+                            Urbanas
+                          </a>
+                        </li>
+                                              <li class="m-footer-toggle__item">
+                          <a class="m-footer-toggle__link"
+                             href="catalogos/trabajo.html" onclick="ga('send', 'event', 'Footer', 'Clic', 'Trabajo' )">
+                            Trabajo
+                          </a>
+                        </li>
+                                              <li class="m-footer-toggle__item">
+                          <a class="m-footer-toggle__link"
+                             href="catalogos/deportivas.html" onclick="ga('send', 'event', 'Footer', 'Clic', 'Deportivas' )">
+                            Deportivas
+                          </a>
+                        </li>
+                                              <li class="m-footer-toggle__item">
+                          <a class="m-footer-toggle__link"
+                             href="catalogos/ciudad.html" onclick="ga('send', 'event', 'Footer', 'Clic', 'Ciudad' )">
+                            Ciudad
+                          </a>
+                        </li>
+                                          </ul>
+                  </div>
+                                  <div class="pure-u-1 pure-u-md-1-2">
+                    <ul class="m-footer-toggle__list js-footer-toggle-list">
+                                              <li class="m-footer-toggle__item">
+                          <a class="m-footer-toggle__link"
+                             href="catalogos/doble-proposito.html" onclick="ga('send', 'event', 'Footer', 'Clic', 'Doble Prop&oacute;sito' )">
+                            Doble Prop&oacute;sito
+                          </a>
+                        </li>
+                                              <li class="m-footer-toggle__item">
+                          <a class="m-footer-toggle__link"
+                             href="catalogos/boulevard.html" onclick="ga('send', 'event', 'Footer', 'Clic', 'Boulevard' )">
+                            Boulevard
+                          </a>
+                        </li>
+                                              <li class="m-footer-toggle__item">
+                          <a class="m-footer-toggle__link"
+                             href="catalogos/cross-y-enduro.html" onclick="ga('send', 'event', 'Footer', 'Clic', 'Cross y Enduro' )">
+                            Cross y Enduro
+                          </a>
+                        </li>
+                                              <li class="m-footer-toggle__item">
+                          <a class="m-footer-toggle__link"
+                             href="catalogos/cuatrimotos.html" onclick="ga('send', 'event', 'Footer', 'Clic', 'Cuatrimotos' )">
+                            Cuatrimotos
+                          </a>
+                        </li>
+                                          </ul>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-4">
+          <div class="l-footer__column">
+            <div class="m-footer-toggle">
+              <h4 class="m-footer__title m-footer__title--toggle js-footer-toggle-button">Promociones</h4>
+              <ul class="m-footer-toggle__list js-footer-toggle-list">
+                <li class="m-footer-toggle__item">
+                  <a class="m-footer-toggle__link" href="promociones.html">
+                    Conoce nuestras promociones y estrena un Suzuki
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="l-footer__list-apps">
+      <div class="pure-g">
+        <div class="pure-u-1">
+          <h4 class="m-footer__title">Apps Suzuki</h4>
+          <p class="m-footer-news__subtitle">
+            Descarga nuestras apps y descubre la nueva manera de sumergirte en el mundo de las motos Suzuki.
+          </p>
+          <div class="pure-g">
+            <div class="pure-u-1 pure-u-md-10-24">
+              <div class="m-footer-app">
+                <div class="pure-g">
+                  <div class="pure-u-1 pure-u-lg-1-3">
+                    <p class="m-footer-app__title">APP GSX-R 1000</p>
+                  </div>
+                  <div class="pure-u-1-3 pure-u-md-1-3">
+                    <a target="_blank" href="https://itunes.apple.com/us/app/suzuki-gsx-r1000/id479508558" class="m-footer-app__link m-footer-app__link--with-separator">
+                      <img class="app-item app-image" src="img/footer/app-store.png">
+                    </a>
+                  </div>
+                  <div class="pure-u-1-3 pure-u-md-1-3">
+                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.globalsuzuki.gsxr1000" class="m-footer-app__link" onclick="ga('send', 'event', 'Footer', 'Liga_externa', 'Suzuki_Global)">
+                      <img class="app-item app-image" src="img/footer/android-market.png">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pure-u-1 pure-u-md-2-24"></div>
+            <div class="pure-u-1 pure-u-md-10-24">
+              <div class="m-footer-app">
+                <div class="pure-g">
+                  <div class="pure-u-1 pure-u-lg-10-24">
+                    <p class="m-footer-app__title">APP V-Strom 650 ABS</p>
+                  </div>
+                  <div class="pure-u-1-3 pure-u-md-1-3 pure-u-lg-7-24">
+                    <a target="_blank" href="https://itunes.apple.com/us/app/v-strom-650-abs/id452668248?ls=1&mt=8" class="m-footer-app__link m-footer-app__link--with-separator">
+                      <img class="app-item app-image" src="img/footer/app-store.png">
+                    </a>
+                  </div>
+                  <div class="pure-u-1-3 pure-u-md-1-3 pure-u-lg-7-24">
+                    <a target="_blank" href="https://play.google.com/store/apps/details?id=jp.ariori.android.suzuki" class="m-footer-app__link">
+                      <img class="app-item app-image" src="img/footer/android-market.png">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="l-footer__links">
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-4">
+          <ul class="m-footer-links">
+            <li class="m-footer-links__item">
+              <a href="">
+                Sitio V-Strom 1000 Special
+              </a>
+            </li>
+            <li class="m-footer-links__item">
+              <a href="">
+                Sitio V-Strom 650
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="l-footer__news">
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-13-24">
+          <div id="newsletter" class="m-footer-news js-footer-news">
+            <h4 class="m-footer__title">Noticias Suzuki</h4>
+            <p class="m-footer-news__subtitle">Experimenta el estilo de vida Suzuki. Ingresa tus datos:</p>
+            <form id="form-footer-newsletter" class="m-footer-news__form pure-form js-form-footer-newsletter">
+              <div class="pure-g">
+                <div class="pure-u-1 pure-u-md-2-5">
+                  <fieldset class="m-fieldset m-fieldset--in-footer">
+                    <label class="m-label m-label--in-footer">Nombre completo:</label>
+                    <input type="text" class="m-input m-input--in-footer pure-u-23-24 js-footer-name" value="" placeholder="Nombre completo" required data-parsley-pattern="^[a-zA-Z ñáéíóúÁÉÍÓÚ]+$">
+                    <p class="m-error js-error">Campo requerido</p>
+                  </fieldset>
+                </div>
+                <div class="pure-u-1 pure-u-md-2-5">
+                  <fieldset class="m-fieldset m-fieldset--in-footer">
+                    <label class="m-label m-label--in-footer">Correo electrónico:</label>
+                    <input type="email" class="m-input m-input--in-footer pure-u-23-24 js-footer-email" value="" placeholder="Correo electrónico" required data-parsley-type="email">
+                    <p class="m-error js-error">Campo requerido</p>
+                  </fieldset>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-5">
+                  <a href="index.html#" class="m-button m-button--red m-button--in-footer pure-button js-footer-submit" data-disabled="false" data-label="Registrarse">Registrarse</a>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="m-footer-news-message js-footer-news-message">
+            <h3 class="m-footer-news-message__title">¡Listo, tu correo fue registrado exitósamente!</h3>
+            <p class="m-footer-news-message__text">De ahora en adelante recibirás noticias, contenido y anuncios exclusivos en tu correo.</p>
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-11-24">
+          <ul class="m-footer-logos">
+                                      <li class="m-footer-logos__item">
+                                <a href="index.html#" class="m-footer-logos__link">
+                  
+                  <img src="https://s3.amazonaws.com/suzuki-motos/footer/badges/74661745fd34d28e24e3e111d05d8fe4cd1d5441.png" alt=""
+                       class="m-footer-logos__logo "
+                       data-arrow="false"
+                       data-content='<h3 class="tooltipster-title"></h3><p class="tooltipster-text"></p>'
+                       data-maxwidth="200" data-position="left"
+                  >
+                </a>
+              </li>
+                          <li class="m-footer-logos__item">
+                                <a href="index.html#" class="m-footer-logos__link">
+                  
+                  <img src="https://s3.amazonaws.com/suzuki-motos/footer/badges/3ff7d6ddf192120985747d13c1596c70a450159a.png" alt=""
+                       class="m-footer-logos__logo js-tooltip"
+                       data-arrow="false"
+                       data-content='<h3 class="tooltipster-title">SUPERBRANDS</h3><p class="tooltipster-text">Suzuki fue nombrado como una &quot;Gran marca de M&eacute;xico&quot;  en base a los siguientes criterios: longevidad, presencia en el mercado y lealtad de sus consumidores.</p>'
+                       data-maxwidth="200" data-position="left"
+                  >
+                </a>
+              </li>
+                          <li class="m-footer-logos__item">
+                                <a href="index.html#" class="m-footer-logos__link">
+                  
+                  <img src="https://s3.amazonaws.com/suzuki-motos/footer/badges/108a2ce1f295802c7ee23912c0b3f00e03eee84d.png" alt=""
+                       class="m-footer-logos__logo "
+                       data-arrow="false"
+                       data-content='<h3 class="tooltipster-title"></h3><p class="tooltipster-text"></p>'
+                       data-maxwidth="200" data-position="left"
+                  >
+                </a>
+              </li>
+                      </ul>
+        </div>
+      </div>
+    </div>
+    <div class="l-footer__legals">
+      <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-3">
+          <p class="l-footer__legals__year">© 2017 Suzuki Motor de México / Motos</p>
+        </div>
+        <div class="pure-u-1 pure-u-md-2-3">
+          <ul class="m-footer-privacy">
+            <li class="m-footer-privacy__item">
+              <a href="legales.html" class="m-footer-privacy__link">Términos legales</a>
+            </li>
+            <li class="m-footer-privacy__item">
+              <a href="aviso-privacidad.html" class="m-footer-privacy__link">Aviso de privacidad</a>
+            </li>
+            <li class="m-footer-privacy__item">
+              <a href="http://www.globalsuzuki.com/" target="_blank" class="m-footer-privacy__link" onclick="ga('send', 'event', 'Footer', 'Liga_externa', 'Suzuki_Global')">Suzuki Global</a>
+            </li>
+            <li class="m-footer-privacy__item">
+              <a href="http://suzuki.com.mx/docs/Formato-solicitud-derechos-ARCO.pdf" target="_blank" class="m-footer-privacy__link">Formato Arco</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&v=3&key=AIzaSyBEgnY9I0nGgK82KGo05ABjMyMJQRCoKr4"></script>
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script src="js/lib/require.min.js" data-main="https://www.suzuki.com.mx/motos/js/app"></script>
+
+      <script>
+    window.JSON_TIPS = [{"first_line":"limpia el motor con","second_line":"un trapo h\u00famedo","icon":"https:\/\/s3.amazonaws.com\/suzuki-motos\/tips\/default.png"},{"first_line":"revisa que toda la torniller\u00eda","second_line":"est\u00e9 en su lugar","icon":"https:\/\/s3.amazonaws.com\/suzuki-motos\/tips\/default.png"},{"first_line":"revisa si tiene fugas","second_line":"de cualquier tipo","icon":"https:\/\/s3.amazonaws.com\/suzuki-motos\/tips\/default.png"},{"first_line":"revisa la presi\u00f3n de","second_line":"las llantas","icon":"https:\/\/s3.amazonaws.com\/suzuki-motos\/tips\/default.png"},{"first_line":"ajusta los mandos","second_line":"y espejos","icon":"https:\/\/s3.amazonaws.com\/suzuki-motos\/tips\/default.png"},{"first_line":"haz ejercicios ligeros de calentamiento","second_line":"para no tener tirones","icon":"https:\/\/s3.amazonaws.com\/suzuki-motos\/tips\/default.png"},{"first_line":"usa el equipo adecuado de acuerdo al","second_line":"uso que le vas a dar a la moto","icon":"https:\/\/s3.amazonaws.com\/suzuki-motos\/tips\/default.png"},{"first_line":"siempre usa un buen casco","second_line":"y una buena chamarra","icon":"https:\/\/s3.amazonaws.com\/suzuki-motos\/tips\/default.png"},{"first_line":"si vas a salir a carretera lleva","second_line":"todo tu equipo de protecci\u00f3n","icon":"https:\/\/s3.amazonaws.com\/suzuki-motos\/tips\/default.png"},{"first_line":"siempre verificar que se est\u00e1 en el rango","second_line":"visual de los conductores de autos","icon":"https:\/\/s3.amazonaws.com\/suzuki-motos\/tips\/default.png"}];
+  </script>
+  <script>
+    require(['common'], function (common) {
+      require(['app/home/home'], function (script) {
+        script.init();
+      });
+    });
+  </script>
+
+    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-22472924-4', 'auto');
+    ga('create', 'UA-60558504-1', 'auto');
     ga('send', 'pageview');
-
-</script>-->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-60558504-1', 'auto');
-  ga('require', 'linkid', 'linkid.js');
-  ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics --><script type='text/javascript'>
-function trackOutboundLink( url ) {
-	ga('send', 'event', 'outbound', 'click', url, {'hitCallback': function () { document.location = url; } });
-}
-//Usage :
-//<a href="http://www.example.com" onclick=”trackOutboundLink(‘http://www.example.com’); return false;">Check out example.com</a>
-</script>
-    
-
-    <!--[if IE]>
-    <link type="text/css" rel="stylesheet" href="css/suzuki/iefix.css" />
-    <![endif]-->
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-
-    <script>(function() {
-      var _fbq = window._fbq || (window._fbq = []);
-      if (!_fbq.loaded) {
-        var fbds = document.createElement('script');
-        fbds.async = true;
-        fbds.src = '//connect.facebook.net/en_US/fbds.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(fbds, s);
-        _fbq.loaded = true;
-      }
-      _fbq.push(['addPixelId', '724516287668888']);
-    })();
-    window._fbq = window._fbq || [];
-    window._fbq.push(['track', 'PixelInitialized', {}]);
-    </script>
-
-    <script src="http://platform.twitter.com/oct.js" type="text/javascript"></script>
-
-    <!-- Suzuki v2.0.2 ( 2014-03-13 ) -->
-</head>
-<body>
-<!-- Begin: Header -->
-<section id="header-wrapper">
-    <section id="header-content">
-        <div class="header-wrapper" id="header-spacer">
-    <header id="header-zone">
-        <div id="logo-wrapper">
-            <div id="logo">
-                <a href="index.html" title="Suzuki Motos México">
-                    <span>Suzuki &copy;</span>
-                </a>
-            </div>
-        </div>
-        <div id="regular-header">
-            <div class="content-no_wrapper">
-                <div id="top-bar">
-                    <nav>
-                        <ul>
-                            <!--
-                            <li>
-                                <a href="#prueba-de-manejo" onclick="ga('send', 'event', 'Prueba de Manejo', 'Paso_1', 'Header_Selecciona_Suzuki');" title="Prueba de Manejo" class="expand-header" id="header-test-drive-button">
-                                    <span>Prueba de manejo</span>
-                                </a>
-                            </li>
-                            -->
-                            <li>
-                                <a href="index.html#newsletter-join-form" onclick="enviar_newsletter(); return false;" title="Suscribete al Newsletter">Suscríbete al newsletter</a>
-                            </li>
-                            <li>
-                                <a href="catalogo.html" title="Catalogos">
-                                    <span>Catálogos</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="refacciones.html" title="Refacciones">
-                                    <span>Refacciones</span>
-                                </a>
-                            </li>
-                            <li class="last">
-                                <a href="contacto.html" title="Contactános">
-                                    <span>Contáctanos</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div id="main-nav">
-                    <nav>
-                        <ul>
-                            <!-- <li class="last">
-                                <a href="#antes-de-comprar" title="Antes de comprar" class="expand-header" id="header-before-buy-button">
-                                    <span>Comprar un Suzuki</span>
-                                </a>
-                            </li> -->
-                            <li>
-                                <a href="index.html#propietarios" title="Propietarios" class="expand-header" id="header-owners-button">
-                                    <span>Mi Suzuki</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="concesionarias.html" title="Agencias">
-                                    <span>Agencias</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#cotizar" title="Cotizar" class="expand-header" id="quote-button">
-                                    <span>Financiamiento</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="noticias.html" title="Noticias">
-                                    <span>Noticias</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="promociones.html" title="Promociones">
-                                    <span>Promociones</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="index.html#modelos" title="Motos" class="expand-header" id="header-models-button">
-                                    <span>Motos</span>
-                                </a>
-                            </li>
-
-
-                            <div class="clearfix"></div>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <div id="models-header">
-            <div class="content">
-                <ul class="models-menu">
-    <li class="home"><a class="home" href="index.html"><span></span></a></li> <!-- http://www.suzuki.com.mx/motos/ -->
-    <li class="first"><a class="scroll-in-site " href="index.html#top">Let&#39;s</a></li>
-    <li class="features current"><a class="scroll-in-site" href="index.html#caracteristicas">Características</a></li>
-    <li class="gallery"><a class="scroll-in-site" href="index.html#galeria">Galería</a></li>
-    <li class="video"><a class="scroll-in-site" href="index.html#video">Video</a></li>
-    <li class="prices"><a class="scroll-in-site" href="index.html#precios">Versiones y precios</a></li>
-    <li class="accessories"><a class="scroll-in-site" href="index.html#accesorios">Accesorios</a></li>
-    <!-- <li class="top" id="back-to-top-button"><a class="scroll-in-site" href="#top"><span>Top</span></a></li> -->
-    <li class="clearfix"></li>
-</ul>
-
-            </div>
-        </div>
-    </header>
-    <div id="header-mobile">
-        <a href="index.html"><img src="images/template/common/header/horizontal_logo.png" alt="Logo Suzuki"></a>
-        <i class="header-mobile-icon" id="menu_icon">&#9776;</i>
-        <i class="header-mobile-icon" id="close_icon">&#10005;</i>
-    </div>
-    <div id="header-panel">
-        <div id="header-sections-wrapper"></div>
-    </div>
-</div>
-
-
-    </section>
-</section>
-<!-- End: Header -->
-<!-- Begin: Content -->
-<div id="content-wrapper">
-    <div id="content-content">
-        <div class="l-home-slider">
-    <div class="m-home-slider js-home-slider">
-            <a class="m-home-slider__link m-home-slider__link--device" href="gsx-r750-15.html">
-                <img src="http://cdn.ktcagency.com/motos/images/sliders/home/1452812448-0.png" class="m-home-slider__slide" />
-            </a>
-            <a class="m-home-slider__link m-home-slider__link--device" href="gsx-s750-abs.html">
-                <img src="http://cdn.ktcagency.com/motos/images/sliders/home/1450979864-4.png" class="m-home-slider__slide" />
-            </a>
-            <a class="m-home-slider__link m-home-slider__link--device" href="gixxer-15.html">
-                <img src="http://cdn.ktcagency.com/motos/images/sliders/home/1450975888-7.jpg" class="m-home-slider__slide" />
-            </a>
-    </div>
-    <!-- <div class="m-home-slider-gradient"></div> -->
-</div><div class="home-tips-container">
-    <div class="home-tips-wrapper">
-        <!-- <div class="home-tips-image"></div> -->
-        <img src="images/sections/home/tips/moto-tips.png" class="home-tips-image"/>
-        <div class="home-tips-content">        
-            <p class="home-tip-title">Seguridad y tips </p>
-            <img class="home-tip-line" src="images/sections/home/tips/linea-tips.png" />                
-            <div class="home-tip-text-content"><p class="home-tip-text"> </p></div>
-            <div class="more-tips">
-                <img src="images/sections/home/tips/mas-tips.png" class="more-tips-image" />
-                <p class="more-tips-text"><u>M&aacute;s tips</u></p>
-            </div>
-        </div>
-    </div>    
-</div>    <div class="home-video-container video play-video-fancybox" data-fancybox-type='iframe' href='http://www.youtube.com/v/B3L1woDhVu0?autoplay=1'>
-        <div class="home-video-wrapper" style="background-image: url('images/sections/bikes/galleries/home_video_bckg.jpg')">
-            <div class="home-video-info">                                            
-                <div class='video_icon'>
-                    <span class='icon_entypo'>&#9656;</span>
-                </div>
-            </div>
-            <div class="home-video-mask"> 
-                <div class="home-video-info"> 
-                    <p class="video_title"> Suzuki, un estilo de vida </p>  
-                    <p class="video_subtitle"> Calidad e innovación que hacen de cada día una aventura </p>                                    
-                    <div class='video_icon'>
-                        <span class='icon_entypo'>&#9656;</span>
-                    </div>
-                </div>
-            </div>        
-        </div>
-    </div>
-
-<div class="home-gallery-container">
-    <div class="home-gallery-wrapper">
-
-    	<p class="home-gallery-title"> WAY OF LIFE</p>
-    	<p class="home-gallery-subtitle"> No es sólo una marca, es un estilo de vida</p>
-    	<!--<div class="home-grid-instagram">
-    		<div class='see-more-button'>
-			    <div>
-			    	<img src='images/sections/home/gallery/see-more-image.png' />
-			        <p class='see-more-label'>Ver más</p>
-			    </div>
-			</div>
-    	</div>-->
-    </div>
-</div>
-<div id="instafeed"></div><div clas='hidden-gallery' style='display: none;'>  <br />  </div>
-    </div>
-</div>
-<!-- End: Content -->
-<!-- Begin: Footer -->
-<div id="footer-wrapper">
-    <div id="footer-content">
-        <div class="footer-row first row-1">
-    <div class="footer-column column-a">
-        <div class="footer-title">Equipo Suzuki <i>+</i></div>
-        <ul class="links">
-            <li><a onclick="ga('send', 'event', 'Footer', 'Liga_externa', 'Conoce_Equipo');"  href="http://www.suzuki-racing.com/" target="_blank"><span>Conoce nuestro team Suzuki</span></a></li>
-
-            <li><a onclick="ga('send', 'event', 'Footer', 'Liga_externa', 'Motocross');"  href="http://www.aguilarracing.mx/" target="_blank"><span>Suzuki Aguilar Racing Team (motocross)</span></a></li>
-
-            <li><a onclick="ga('send', 'event', 'Footer', 'Liga_externa', 'Velocidad');"  href="http://www.naracing.com/" target="_blank"><span>NaRacing Nahún Álvarez (velocidad)</span></a></li>
-        </ul>
-        <div class="clearfix"></div>
-    </div>
-    <div class="footer-column column-b">
-        <div class="footer-title">Redes sociales <i>+</i></div>
-        <ul class="links social">
-            <li><a onclick="ga('send', 'event', 'Social', 'Liga_externa', 'Footer_Facebook');"  target="_blank" href="https://www.facebook.com/SuzukiMotosMexico"><span>Facebook</span></a></li>
-            <li><a onclick="ga('send', 'event', 'Social', 'Liga_externa', 'Footer_Instagram');" target="_blank" href="http://instagram.com/suzukimotos_mex"><span>Instagram</span></a></li>
-            <li><a onclick="ga('send', 'event', 'Social', 'Liga_externa', 'Footer_Youtube');"   target="_blank" href="https://www.youtube.com/channel/UCD05ic2-wyIk2TyhQ7YAOQQ"><span>Youtube</span></a></li>
-        </ul>
-        <div class="clearfix"></div>
-    </div>
-    <div class="footer-column column-c">
-        <div class="footer-title">Catálogos <i>+</i></div>
-        <ul class="links links-s-1">
-                    <li><a class="category_link" href="catalogo.html#2" onclick="ga('send', 'event', 'Footer', 'Clic', Deportivas);"><span>Deportivas</span></a></li>
-                    <li><a class="category_link" href="catalogo.html#3" onclick="ga('send', 'event', 'Footer', 'Clic', Ciudad);"><span>Ciudad</span></a></li>
-                    <li><a class="category_link" href="catalogo.html#4" onclick="ga('send', 'event', 'Footer', 'Clic', Scooter);"><span>Scooter</span></a></li>
-                    <li><a class="category_link" href="catalogo.html#5" onclick="ga('send', 'event', 'Footer', 'Clic', Urbanas);"><span>Urbanas</span></a></li>
-                    <li><a class="category_link" href="catalogo.html#6" onclick="ga('send', 'event', 'Footer', 'Clic', Trabajo);"><span>Trabajo</span></a></li>
-        </ul>
-        <ul class="links links-s-2">
-                    <li><a class="category_link" href="catalogo.html#7" onclick="ga('send', 'event', 'Footer', 'Clic', Doble Propósito);"><span>Doble Propósito</span></a></li>
-                    <li><a class="category_link" href="catalogo.html#8" onclick="ga('send', 'event', 'Footer', 'Clic', Boulevard);"><span>Boulevard</span></a></li>
-                    <li><a class="category_link" href="catalogo.html#9" onclick="ga('send', 'event', 'Footer', 'Clic', Cross y Enduro);"><span>Cross y Enduro</span></a></li>
-                    <li><a class="category_link" href="catalogo.html#10" onclick="ga('send', 'event', 'Footer', 'Clic', Cuatrimotos);"><span>Cuatrimotos</span></a></li>
-        </ul>
-        <div class="clearfix"></div>
-    </div>
-    <div class="footer-column column-d">
-        <div class="footer-title">Promociones <i>+</i></div>
-        <ul class="links">
-            <li><a href="promociones.html" onclick="ga('send', 'event', 'Footer', 'Clic', 'Promociones');"><span>Conoce nuestras promociones y estrena un Suzuki</span></a></li>
-        </ul>
-        <div class="clearfix"></div>
-    </div>
-    <!--<div class="footer-column column-e">
-        <div class="footer-title">Financiamiento<i>+</i></div>
-        <ul class="links">
-            <li><a href="index.html#financiamiento" onclick="$.openPanel( 'financing' );return false;">
-                <a id="cotizar_link"><span>Obtener una cotización hoy mismo</span></a>
-            </li>
-        </ul>
-        <div class="clearfix"></div>
-    </div>-->
-    <div class="clearfix"></div>
-</div>
-
-<div class="footer-row row-2">
-    <div class="footer-column column-g footer-app">
-        <div class="footer-title">Apps Suzuki</div>
-            <p>Descarga nuestras apps y descubre la nueva manera de sumergirte en el mundo de las motos Suzuki.</p>
-                <div class="app-group">
-                    <p class="app-item app-text at-title">APP GSX-R 1000</p>
-                    <a target="_blank" href="https://itunes.apple.com/us/app/suzuki-gsx-r1000/id479508558" class="app-item app-image first">
-                        <img class="app-item app-image" src="images/template/common/footer/app-store.png" />
-                    </a>
-                    <p class="app-item app-text separator"> | </p>
-                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.globalsuzuki.gsxr1000" class="app-item app-image">
-                        <img class="app-item app-image" src="images/template/common/footer/android-market.png" />
-                    </a>
-                </div>
-                <div class="app-group">
-                    <p class="app-item app-text at-title"> APP V-Strom 650 ABS </p>
-                    <a target="_blank" href="https://itunes.apple.com/us/app/v-strom-650-abs/id452668248?ls=1&mt=8" class="app-item app-image first">
-                        <img class="app-item app-image" src="images/template/common/footer/app-store.png" />
-                    </a>
-                    <p class="app-item app-text separator"> | </p>
-                    <a target="_blank" href="https://play.google.com/store/apps/details?id=jp.ariori.android.suzuki" class="app-item app-image">
-                        <img class="app-item app-image" src="images/template/common/footer/android-market.png" />
-                    </a>
-                </div>
-    </div>
-    <div class="clearfix"></div>
-</div>
-
-
-<div class="footer-row row-2">
-    <a class="footer-link" target="_blank" href="http://www.globalsuzuki.com/motorcycle/products/vstrom1000/"><span>Sitio V-Strom 1000 Special</span></a>
-</div>
-
-<div class="footer-row row-2">
-    <div class="footer-column column-g">
-        <div class="footer-title" id="ft-noticias">Noticias Suzuki</div>
-        <div class="footer-form">
-            <p>Experimenta el estilo de vida Suzuki. Ingresa tus datos:</p>
-            <form action="/" id="newsletter-join-form" onsubmit="$.newsletter_join_form(); return false;" novalidate>
-                <fieldset>
-                    <label for="newsletter_name">Nombre completo:</label>
-                    <input type="text" id="newsletter_name" name="newsletter_name" placeholder="Nombre completo"  data-validation-data="required|name"/>
-                    <p class="invalid-message">Escribe tu nombre<span>&nbsp;</span></p>
-                </fieldset>
-                <fieldset>
-                    <label for="newsletter_email">Correo electrónico:</label>
-                    <input type="email" id="newsletter_email" name="newsletter_email" placeholder="Correo electrónico"  data-validation-data="required|email" novalidate>
-                    <p class="invalid-message">Escribe tu email<span>&nbsp;</span></p>
-                </fieldset>
-                <div class="submit">
-                    <input type="submit" class="button red" value="Registrarse">
-                </div>
-                <div class="clearfix"></div>
-            </form>
-            <div class="footer-brands">
-                <img src="images/template/common/footer/logo2anios.png" alt="Garantía 2 años">
-                <img src="images/template/common/footer/logogratis.png" alt="Mano de obra gratis">
-                <div id="sello_image" class="footer-row footer-brand">
-                    <a class="popoverbox" href="index.html#" data-target="#super_brands">
-                        <img src="images/template/common/footer/sello2014_2015.png" class="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-</div>
-<div class="footer-row last">
-    <div class="footer-copyright">
-        <p>&copy; 2015 Suzuki Motor de México / Motos</p>
-    </div>
-    <div class="footer-legals">
-        <ul class="links">
-            <li><a href="legales.html"><span>Términos legales</span></a></li>
-            <li><a href="aviso-privacidad.html"><span>Aviso de privacidad</span></a></li>
-            <li><a target="_blank" href="http://www.globalsuzuki.com/" onclick="ga('send', 'event', 'Footer', 'Liga_externa', 'Suzuki_Global');"><span>Suzuki Global</span></a></li>
-            <li class="last"><a target="_blank" href="http://suzuki.com.mx/docs/Formato-solicitud-derechos-ARCO.pdf"><span>Formato Arco</span></a></li>
-        </ul>
-    </div>
-    <div class="clearfix"></div>
-</div>
-
-
-    </div>
-</div>
-<!-- End: Footer -->
-<script type="text/javascript">var IS_MOBILE = parseInt( 0 );</script>
-
-
-
-<script src="http://maps.google.com/maps/api/js?libraries=places,geometry&sensor=true&_nc=20140313A"></script>
-<script src="scripts/libs/jquery-1.10.2.min-_nc=20140313A.js"></script>
-<script src="scripts/libs/jquery-ui-1.10.3.custom.min-_nc=20140313A.js"></script>
-<script src="scripts/libs/jquery-ui-1.10.3.custom.extends.min-_nc=20140313A.js"></script>
-<script src="scripts/libs/jquery.ui.touch-punch.min-_nc=20140313A.js"></script>
-<script src="scripts/libs/modernizr-2.6.2.min-_nc=20140313A.js"></script>
-<script src="scripts/libs/mustache-_nc=20140313A.js"></script>
-<script src="scripts/libs/he-_nc=20140313A.js"></script>
-<script src="scripts/libs/instafeed.min-_nc=20140313A.js"></script>
-<script src="plugins/amplify-1.1.0/amplify.min-_nc=20140313A.js"></script>
-<script src="scripts/plugins/jquery.easing.1.3-_nc=20140313A.js"></script>
-<script src="scripts/plugins/jquery.fancybox/jquery.fancybox.pack-_nc=20140313A.js"></script>
-<script src="scripts/plugins/jquery.fancybox/jquery.fancybox.pack-_nc=20140313A.js"></script>
-<script src="scripts/plugins/jquery.chosen/chosen.jquery-_nc=20140313A.js"></script>
-<script src="plugins/resizeevent/jquery.resize-_nc=20140313A.js"></script>
-<script src="scripts/plugins/jquery.dummy-alert/jquery.dummy-alert-_nc=20140313A.js"></script>
-<script src="scripts/plugins/slick.slider/slick-_nc=20140313A.js"></script>
-<script src="plugins/placeholder/jquery.placeholder-_nc=20140313A.js"></script>
-<script src="plugins/browserdetect/broswedetect-_nc=20140313A.js"></script>
-<script src="scripts/suzuki/jquery.concessionaire_selector-_nc=20140313A.js"></script>
-<script src="scripts/suzuki/ui-_nc=20140313A.js"></script>
-<script src="scripts/libs/plugins-_nc=20140313A.js"></script>
-<script src="scripts/suzuki/templates-_nc=20140313A.js"></script>
-<script src="scripts/suzuki/shoping_cart-_nc=20140313A.js"></script>
-<script src="scripts/suzuki/suzuki-_nc=20140313A.js"></script>
-<script src="instantdrive/scripts/utils.js-_nc=20140313A.html"></script>
-<script src="scripts/plugins/jquery.dummy-alert/jquery.dummy-alert.phrases-_nc=20140313A.js"></script>
-<script src="scripts/plugins/jquery.fancybox/jquery.fancybox-thumbs-_nc=20140313A.js"></script>
-<script src="scripts/sections/home/home-_nc=20140313A.js"></script>
-<script src="scripts/plugins/jquery.fancybox/jquery.fancybox-thumbs-_nc=20140313A.js"></script>
-
-</body>
+  </script>
+      
+                          </body>
 </html>

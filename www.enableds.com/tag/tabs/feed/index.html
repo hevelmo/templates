@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>tabs &#8211; Enabled</title>
+	<atom:link href="http://www.enableds.com/tag/tabs/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.enableds.com</link>
+	<description>Mobile Themes and Templates</description>
+	<lastBuildDate>Mon, 06 Feb 2017 03:41:40 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.7.2</generator>
+
+<image>
+	<url>http://www.enableds.com/wp-content/uploads/2016/10/cropped-enabled_logo_2016-32x32.png</url>
+	<title>tabs &#8211; Enabled</title>
+	<link>http://www.enableds.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Freebie: Ultra Simple CSS3 + jQuery Tabs</title>
+		<link>http://www.enableds.com/freebie-ultra-simple-css3-jquery-tabs/</link>
+		<comments>http://www.enableds.com/freebie-ultra-simple-css3-jquery-tabs/#respond</comments>
+		<pubDate>Tue, 06 Sep 2016 17:46:39 +0000</pubDate>
+		<dc:creator><![CDATA[Enabled]]></dc:creator>
+				<category><![CDATA[Freebies & Resources]]></category>
+		<category><![CDATA[css3]]></category>
+		<category><![CDATA[freebie]]></category>
+		<category><![CDATA[jquery]]></category>
+		<category><![CDATA[tabs]]></category>
+
+		<guid isPermaLink="false">http://www.enableds.com/?p=55802</guid>
+		<description><![CDATA[When it comes to tabs, the internet is full of them but most do the same thing, they switch from one tab to another and for this reason most of them use a lot of useless code. Here's the simplest way of getting a functioning tab system, using only jQuery and CSS3. It doesn't get any lighter than this!]]></description>
+				<content:encoded><![CDATA[<p><img class="aligncenter size-full wp-image-55803" src="http://www.enableds.com/wp-content/uploads/2016/10/blog_freebie_3.png" alt="blog_freebie_3" width="800" height="460" srcset="http://www.enableds.com/wp-content/uploads/2016/10/blog_freebie_3.png 800w, http://www.enableds.com/wp-content/uploads/2016/10/blog_freebie_3-300x173.png 300w, http://www.enableds.com/wp-content/uploads/2016/10/blog_freebie_3-768x442.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></p>
+<p>When it comes to tabs, the internet is full of them but most do the same thing, they switch from one tab to another and for this reason most of them use a lot of useless code. Here&#8217;s the simplest way of getting a functioning tab system, using only jQuery and CSS3. It doesn&#8217;t get any lighter than this!</p>
+<h4>First off, we&#8217;ll begin with the HTML.</h4>
+<pre style="font-size: 12px;">&lt;div class="content"&gt;
+ &lt;ul class="tabs"&gt;
+    &lt;li class="tab-link current" data-tab="tabs-1"&gt;Tab 1&lt;/li&gt;
+    &lt;li class="tab-link" data-tab="tabs-2"&gt;Tab 2&lt;/li&gt;
+ &lt;/ul&gt;
+
+ &lt;div id="tabs-1" class="tab-content current"&gt;
+    &lt;div class="tab-elements"&gt;
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+       incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+       nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div id="tabs-2" class="tab-content"&gt;
+    &lt;div class="tab-elements"&gt;
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+       incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+       nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>We&#8217;ll be wrapping the tabs inside a content tag, you can do it in whatever tag you wish. The purpose of this being so you can use multiple variations on one page. We&#8217;ll be targeting the tab contents with JS</p>
+<p>Each list has a data-tab. The tab itself which points to will have the id identical to the data-tab.</p>
+<h4>Let&#8217;s add the JS</h4>
+<pre style="font-size: 12px;">$('ul.tabs li').click(function(){
+ var tab_id = $(this).attr('data-tab');
+ //Removing Activation of Tab
+ $(this).parent().parent().find('ul.tabs li').removeClass('current');
+ $(this).parent().parent().find('.tab-content').removeClass('current');
+ //Adding Activation to Tab
+ $(this).addClass('current');
+ $("#"+tab_id).addClass('current');
+})</pre>
+<p>The JS targets the lists on click, then gets the data-tab number. After doing so, the current class gets removed off the active tab and gets added to the one you clicked. So what is the current class? The current class animates everything, using CSS3. It would be easier to use slideToggle() or toggleFade()? Yes it would, but then we wouldn&#8217;t have access to Hardware accelerated animations, which make a huge difference on mobile devices.</p>
+<pre style="font-size: 12px;"> $(this).parent().parent().find('.tab-content').removeClass('current');
+ //Adding Activation to Tab
+ $(this).addClass('current');
+ $("#"+tab_id).addClass('current');
+})</pre>
+<h4>Let&#8217;s add the CSS</h4>
+<pre style="font-size: 12px;">ul.tabs{
+ margin: 0px;
+ padding: 0px;
+ list-style: none;
+ margin-bottom:-5px;
+}
+ul.tabs li{
+ background: none;
+ display: inline-block;
+ padding: 10px 15px;
+ cursor: pointer;
+ transition: all 250ms ease-out;
+}
+
+ul.tabs li.current{
+ transition: all 250ms ease-out;
+}
+
+.tab-elements{
+ overflow:hidden; 
+ padding:15px;
+}
+
+.tab-content{
+ max-height:0px;
+ overflow:hidden;
+ transition: all 250ms ease-out;
+}
+
+.tab-link em{ 
+ font-style:normal; 
+ padding-left:10px;
+}
+
+.tab-content.current{
+ max-height:500px;
+ display: inherit;
+ transition: all 250ms ease-in;
+ transition-delay: 250ms;
+}</pre>
+<p>The most important aspect is the tab-elements. This is set to overflow:hidden so when the height gets switched by the current class it will increase the height without showing the content in. The current class also has a delay set to it, in order for a nifty little animation to occur!</p>
+<p>Now, all you have to do is use it and abuse it to your likes! We won&#8217;t be adding a download button, since you can copy and paste the code and also get to read it and understand it. We&#8217;re coding with the simplest of words for classes just to not overly complicate things!</p>
+<p>If you&#8217;re looking for a Mobile and Tablet website that has this feature already implemented together with another few thousands, we have a <a href="https://themeforest.net/user/enabled/portfolio?ref=Enabled">portfolio full of them</a> and also, a <a href="https://themeforest.net/user/enabled/portfolio?ref=Enabled">live store</a> where you can easily browse through things!</p>
+]]></content:encoded>
+			<wfw:commentRss>http://www.enableds.com/freebie-ultra-simple-css3-jquery-tabs/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		</item>
+	</channel>
+</rss>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Page Caching using disk: enhanced
+Content Delivery Network via N/A
+Minified using disk
+
+ Served from: www.enableds.com @ 2017-02-15 17:18:19 by W3 Total Cache -->

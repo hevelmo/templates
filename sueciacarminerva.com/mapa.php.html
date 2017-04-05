@@ -1,0 +1,193 @@
+
+<div class="dealer-search-map">
+        		<div id="gmap" style="height:300px; width:550px;"></div>
+</div>
+
+
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&output=embed&iwloc"></script>
+<script type="text/javascript">
+        function AgentsMap() {
+
+            /* Properties Array */
+            var Agents = [
+                { 
+                  title:"Agencia",  
+                  lat:20.67460823059,  
+                  lng:-103.38642120361,  
+                  address:"Av. Vallarta No. 2750,Col. Arcos Sur, Guadalajara,Jalisco, CP 44150<p style='font-weight:bold;'>\r\r<a href='https://maps.google.com/maps?q=20.67460823059,-103.38642120361(Suecia+Car+Minerva,Av.+Vallarta+No.+2750%2C%0ACol.+Arcos+Sur%2C+Guadalajara%2C%0AJalisco%2C+CP+44150)&output=classic' >Ver en Maps</a></p>" 
+
+
+                },        ];
+
+            /* Map Center Location - From Theme Options */
+            var location_center = new google.maps.LatLng(Agents[0].lat,Agents[0].lng);
+    
+      // Create an array of styles.
+var styles = [
+            {
+              "featureType": "landscape",
+              "elementType": "geometry.fill",
+              "stylers": [{ "color": "#f0efef" }]
+            },
+            {
+              "featureType": "landscape.natural.terrain",
+              "elementType": "geometry.fill",
+              "stylers": [{ "color": "#cbe0bc" }]
+            },
+            {
+              "featureType": "poi",
+              "elementType": "geometry.fill",
+              "stylers": [{ "color": "#cae0af" }]
+            },
+            {
+              "featureType": "administrative",
+              "elementType": "labels.text.fill",
+              "stylers": [{ "color": "#9a917b" }]
+            },
+            {
+              "featureType": "road.arterial",
+              "elementType": "geometry.fill",
+              "stylers": [{ "color": "#ffffff" }]
+            },
+            {
+              "featureType": "road.arterial",
+              "elementType": "geometry.stroke",
+              "stylers": [{ "color": "#cccccc" }]
+            },
+            {
+              "featureType": "road",
+              "elementType": "labels.text.fill",
+              "stylers": [{ "color": "#666666" }]
+            },
+            {
+              "featureType": "road",
+              "elementType": "labels.text.stroke",
+              "stylers": [{ "color": "#ffffff" }]
+            },
+            {
+              "featureType": "road.highway",
+              "elementType": "geometry.fill",
+              "stylers": [{ "color": "#6eb6ea" }]
+            },
+            {
+              "featureType": "road.highway",
+              "elementType": "geometry.stroke",
+              "stylers": [{ "color": "#dddddd" }]
+            },
+            {
+              "featureType": "road.local",
+              "elementType": "geometry.fill",
+              "stylers": [{ "color": "#ffffff" }]
+            },
+            {
+              "featureType": "water",
+              "elementType": "geometry.fill",
+              "stylers": [{ "visibility": "on" }]
+            },
+      
+      {
+              "featureType": "poi.school",
+              "elementType": "geometry",
+              "stylers": [{ "color": "#e9debe" }]
+            },
+      
+      {
+              "featureType": "poi.business",
+              "elementType": "geometry",
+              "stylers": [{ "color": "#dfdbd3" }]
+            },
+      
+      
+      {
+              "featureType": "poi.park",
+              "elementType": "geometry",
+              "stylers": [{ "color": "#b2e0af" }]
+            },
+      
+      
+      {
+        featureType: "poi.business",
+        elementType: "labels.icon",
+        stylers: [
+          { visibility: "on" }
+        ]
+        },{
+        featureType: "poi.school",
+        elementType: "labels.icon",
+        stylers: [
+          { visibility: "on" }
+        ]
+        },{
+        featureType: "poi.park",
+        elementType: "labels.icon",
+        stylers: [
+          { visibility: "on" }
+        ]
+        }
+          ];
+      
+      // Create a new StyledMapType object, passing it the array of styles,
+      // as well as the name to be displayed on the map type control.
+  var styledMap = new google.maps.StyledMapType(styles,
+  {name: "Suecia Car Minerva"});
+        
+      
+            var mapOptions = {
+                zoom: 10,
+                center: new google.maps.LatLng(Agents[0].lat,Agents[0].lng),
+                scrollwheel: false,
+                mapTypeControlOptions: {
+                   mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+                } 
+            }
+
+        var map = new google.maps.Map(document.getElementById("gmap"), mapOptions);
+    
+        map.mapTypes.set('map_style', styledMap);
+        map.setMapTypeId('map_style');
+        
+
+            var markers = new Array();
+            var bounds = new google.maps.LatLngBounds();
+            var info_windows = new Array();
+      
+            /* Properties Array */
+            for (var i=0; i < Agents.length; i++) {
+
+                markers[i] = new google.maps.Marker({
+                    position: new google.maps.LatLng(Agents[i].lat,Agents[i].lng),
+                    map: map,
+                    icon: 'images/icons/SmallVolvoBlue/mappin_filled@2x.png',
+                    title: Agents[i].title,
+                    animation: google.maps.Animation.DROP
+                });
+
+                bounds.extend(markers[i].getPosition());
+
+                info_windows[i] = new google.maps.InfoWindow({
+                    content:'<div class="map-agent">'+
+                        '<h4 class="agent-title"><a href="#">'+Agents[i].title+'</a></h4>'+
+                        '<p><span class="address">'+Agents[i].address+'</span></p>'+
+                        '</div>'
+                });
+
+                attachInfoWindowToMarker(map, markers[i], info_windows[i]);
+            }
+
+            map.fitBounds(bounds);
+
+            /* function to attach infowindow with marker */
+            function attachInfoWindowToMarker( map, marker, infoWindow ){
+                google.maps.event.addListener( marker, 'click', function(){
+                    infoWindow.open( map, marker );
+                });
+            }
+
+
+        }
+
+        google.maps.event.addDomListener(window, 'load', AgentsMap);
+        //attach a click event to the marker to display the info window.
+
+
+</script>  

@@ -1,0 +1,223 @@
+html { font-size: 14px; font-family: sans-serif; text-rendering: optimizeLegibility; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+html, body { height: 100%; position: relative; width: 100%;}
+
+body{ margin: 0px; padding: 0px; position: relative; display: block; width: 100%; height: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; background: #e5e5e5; }
+
+input:focus, select:focus, textarea:focus, button:focus { outline: none; appearance: none; -moz-appearance: none; -ms-appearance: none; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+
+header, footer{ position: relative; margin: 0; padding: 0; width: 100%; }
+section{ overflow: hidden; width: 100%; position: relative;}
+.container{ position: relative; width: 1080px ; margin: 0 auto; padding: 0; height: 100%; overflow: hidden; z-index: 10; }
+
+header{ background: #1f1f22; box-sizing: border-box; padding: 0px 0px 20px 0px; text-align: center; }
+header .logo{ position: relative; margin: 0 auto; padding: 0; }
+header .logo a{ text-decoration: none; }
+header .logo img{ width: 80px; height: 80px; }
+
+header .logo span{ display: inline-table; font-family: 'Volvo Sans Bold', 'Volvo Sans Medium', 'Volvo Sans Regular', 'Arial Narrow', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; color: #fff; margin: -45px 0 0 10px; font-size: 26px; line-height: 26px; text-align: left }
+
+
+
+footer{ background: #003057; border-top: 6px #002b4e solid; padding: 25px 0;  }
+footer a{ display: block; margin: 0 auto; width: 194px; }
+footer a img{ width: 100%; height: 100%; }
+footer p{ color: #fff; width: 80%; margin: 0 auto; font-family: 'Volvo Sans Regular', 'Arial Narrow', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 12px; height: 67px; line-height: 16.8px; text-align: center;  }
+
+a{transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out;}
+
+hr{ width: 100%; height: 1px; margin: 0; border: none; background: #fff;  -webkit-box-shadow: 0px 1px 0px 0px rgba(223,223,223,1); -moz-box-shadow: 0px 1px 0px 0px rgba(223,223,223,1); box-shadow: 0px 1px 0px 0px rgba(223,223,223,1); }
+
+.wrap{ position: relative; width: 100%; padding: 0 20px; box-sizing: border-box; margin: 20px 0; }
+.cols{ position: relative; margin: 0 auto; padding: 0; display: table; width: 100%; box-sizing: border-box; }
+.cols .col{ position: relative; margin: 0; padding: 0; display: table-cell; box-sizing: border-box; }
+
+.side{ width: 235px; border: 1px #dfdfdf solid; background: rgba(255, 255, 255, 0.8); font-family: 'Volvo Sans Regular', 'Arial Narrow', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; margin: 10px 0 0 0; position: relative; }
+
+.hidden{ display: none; }
+.disabled{ opacity: 0.4; filter: alpha(opacity=40);}
+
+.gray{ background: #eeeeee; }
+.nomargin{ margin: 0 auto!important; }
+.nopadding{ padding: 0!important; }
+.content{ padding: 20px; }
+.top{ vertical-align: top; }
+.middle{ vertical-align: middle; }
+.bottom{ vertical-align: bottom; }
+
+.side h1{ font-family: 'Volvo Broad', 'Volvo Sans Medium', 'Volvo Sans Regular', 'Arial Narrow', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 48px; background: #eeeeee; color: #003057; text-align: center; -webkit-box-shadow: 0px 1px 0px 0px rgba(223,223,223,1); -moz-box-shadow: 0px 1px 0px 0px rgba(223,223,223,1); box-shadow: 0px 1px 0px 0px rgba(223,223,223,1); padding: 10px 0; }
+
+.side h2{ color: #003057; font-family: 'Volvo Sans Bold', 'Volvo Sans Medium', 'Volvo Sans Regular', 'Arial Narrow', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 14px; padding: 20px 0 0 0; width: 100%; margin: 0 auto; font-weight: bold; }
+
+.side h2 span{ display: block; font-size: 24px; }
+
+.side h3{ color: #003057; font-family: 'Volvo Sans Bold', 'Volvo Sans Medium', 'Volvo Sans Regular', 'Arial Narrow', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 18px; padding: 0; width: 100%; margin: 0 auto; }
+
+.side h3 span{ display: block; font-family: 'Volvo Sans Regular', 'Arial Narrow', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;  }
+
+.side h4{ color: #003057; font-family: 'Volvo Sans Bold', 'Volvo Sans Medium', 'Volvo Sans Regular', 'Arial Narrow', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 14px; padding: 0; width: 100%; margin: 0 auto; }
+
+.side ul{ list-style: none; margin: 0 auto; padding: 0; width: 100%; position: relative; }
+.side ul li{ margin: 20px 0; font-size: 14px; color: #003057; line-height: normal; font-family: 'Volvo Sans Regular', 'Arial Narrow', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; }
+.side ul li a, .side ul li a:visited, .side ul li a:active{ color: #888888; list-style: none; text-decoration: none; }
+.side ul li.active a, .side ul li a:hover{ color: #003057; text-decoration: underline; }
+.side ul li span{ display: block; font-size: 12px; }
+
+ul.tabs{ list-style: none; margin: 0; padding: 0; display: table; width: 85%; position: absolute; right: 0; bottom: 0; }
+ul.tabs li{ display: table-cell; position: relative; margin: 0; padding: 20px 10px; background: #e9e9e9; border: 1px #dbdbdb solid; border-bottom: 0; border-left: 0; box-sizing: border-box;  }
+ul.tabs li:first-child{  border-left: 1px #dbdbdb solid; }
+ul.tabs li:hover, ul.tabs li.active{ border-top: 2px #003057 solid; background: #ffffff; cursor: pointer;  }
+ul.tabs li img{ width: 50px; height: 50px; float: left; }
+ul.tabs li h5{ font-family: 'Volvo Sans Regular', 'Arial Narrow', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; font-size: 16px; float: left; padding: 0; margin: 0 0 0 10px; }
+ul.tabs li h5 span{ display: block; font-size: 10px; }
+
+.showcase{ position: relative; margin: 0 auto; padding: 0; overflow: hidden; width: 100%; }
+.showcase img{ width: 100%; height: 100%; }
+
+/*.content{ overflow: hidden; width: 845px; }*/
+
+.grids{ box-sizing: border-box; padding: 0; background: #ffffff; border: 1px #eeeeee solid; }
+.grids .col{ border-right: 1px #eeeeee solid; padding: 20px; width: 30%; }
+.grids .col:last-child{ border: 0; }
+.grids h5{ font-size: 12px; margin: 0 0 10px 18px; color: #343434 }
+
+ul.grid{ position: relative; margin: 0 auto; padding: 0; list-style: none; width: 92%; }
+ul.grid li{ position: relative; display: inline-block; margin: 5px; width: 60px; vertical-align: top; }
+ul.grid li img{ width: 60px; height: 60px; margin: 0; padding: 0; }
+ul.grid li span{ display: block; margin: 0; padding: 0; font-size: 12px; text-align: center; color: #003057; }
+ul.grid li span.fa-stack{ color: #8ea76d; font-size: 18px; position: absolute; right: 0; cursor: pointer; }
+
+ul.grid li a, ul.grid li a:active, ul.grid li a:visited{ color: #003057; text-decoration: none; }
+ul.grid li a:hover{ text-decoration: underline; }
+
+ul.grid.expand li{ width: 120px; }
+ul.grid.expand li img{ width: 100%; }
+#image-reel .reel{ width: 100%!important; height: 100%!important; }
+
+.interior{ position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0; display: none; }
+.interior div{ position: relative; width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; margin: 0; padding: 0; display: none; }
+
+.controls{ position: absolute; bottom: 120px; right: 0; display: none; }
+.controls span{ display: inline-block; padding: 20px; cursor: pointer; font-size: 60px; color: rgba(255, 255, 255, 0.6); }
+
+a.button, a.button:active, a.button:visited{ display: block; width: 100%; margin: 20px auto; padding: 15px 0; background: #003057; color: #fff; text-align: center; text-transform: uppercase; text-decoration: none; font-size: 12px; box-sizing: border-box; }
+a.button:hover{ background: #5a7f96; }
+a.button.invert{ background: #fff; border: 1px #003057 solid; color: #003057; }
+a.button.invert:hover{ background: #003057; color: #fff; }
+a.button:after, a.button:before { font-family: FontAwesome; display: inline-block; vertical-align: middle; margin: 0; position: relative;}
+a.button.financiamiento:after{ content: "\f105"; top: -1px; margin-left: 10px; }
+a.button.mail:before{ content: "\f003"; top: -1px; margin-right: 5px; }
+
+a.button.change{  width: 83%; background: #ffffff; color: #003057; height: 48px; padding: 14px 0; border: 1px solid #003057; }
+a.button.change:before{ content: "\f104"; top: -1px; margin-right: 10px; }
+
+.sidebar{ position: fixed; left: 0; top: 0; margin: 0; padding: 30px; background: #eeeeee; height: 100%; z-index: 999; overflow: auto; display: none; }
+.sidebar .rows{ position: relative; padding: 0; margin: 0 0 50px 0; display: table; }
+.sidebar .row{ position: relative; padding: 0; margin: 0; display: table-row; }
+.sidebar .row .cel{ position: relative; margin: 0; padding: 0 0 30px 0; display: table-cell; vertical-align: middle; font-family: 'Volvo Sans Regular', 'Arial Narrow', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; }
+.sidebar h3{ font-size: 24px; text-transform: uppercase; color: #003057; padding: 0; margin: 0 0 50px 0; }
+.sidebar h5{ font-size: 26px; text-transform: uppercase; color: #003057; font-weight: bold; }
+.sidebar img{ width: 210px; height: auto; }
+.sidebar p{ font-size: 12px; line-height: 20px; color: #003057; width: 160px; margin-bottom: 10px; }
+.sidebar a.btn, .sidebar a.btn:visited, .sidebar a.btn:active{ display: block; border: 1px #003057 solid; color: #003057; background: #eeeeee; padding: 8px 15px; text-align: center; text-transform: uppercase; text-decoration: none; font-size: 10px; letter-spacing: 2px; }
+.sidebar a.btn:hover{ background: #003057; color: #ffffff; }
+.sidebar span{ display: block; padding: 10px; color: #003057; cursor: pointer; position: absolute; right: 20px; top: 20px; font-size: 24px; }
+
+@media only screen and (max-width : 1080px){
+	.container{ width: 100%; }
+	/*ul.tabs{ list-style: none; margin: 0; padding: 0; display: table; width: 85%; position: absolute; right: 0; bottom: 0; }
+	ul.tabs li{ display: table-cell; position: relative; margin: 0; padding: 20px 10px; background: #e9e9e9; border: 1px #dbdbdb solid; border-bottom: 0; border-left: 0; box-sizing: border-box;  }
+	ul.tabs li:first-child{  border-left: 1px #dbdbdb solid; }
+	ul.tabs li:hover, ul.tabs li.active{ border-top: 2px #003057 solid; background: #ffffff; cursor: pointer;  }
+	ul.tabs li img{ width: 50px; height: 50px; float: left; }*/
+	ul.tabs li{ text-align: center; padding: 10px 0; width: 20%; }
+	ul.tabs li img{ float: initial; width: 30px; height: 30px; }
+	ul.tabs li h5{ float: initial; padding: 0; margin: 10px 0 0 0; font-size: 14px; }
+	ul.tabs li h5 span{ display: block; font-size: 10px; }
+	ul.grid{ width: 100%; }
+	ul.grid li{ width: 27.3%; text-align: center; }
+	.grids h5{ margin: 0 auto 10px auto; text-align: center; }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+	ul.grid li{ width: 29.3%; }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	
+	header .logo a span{ display: none; }
+	header .logo img { width: 44px; height: 44px; }
+	footer{ padding: 10px 0; }
+	footer p{ width: 90%; height: auto; }
+	footer a{ margin: 20px auto; }
+	.cols, .cols .col{ display: block; }
+	.side{ width: 100%; }
+	.wrap ul.versions{ display: none; }
+	.wrap .button{ width: 45.5%; display: inline-block!important; font-size: 10px; }
+	.wrap .button:before, .wrap .button:after{ display: none!important; margin-right: 10px!important; }
+	.wrap .button.financiamiento{ margin-right: 20px!important;}
+	.wrap .button.mail{ margin-right: 0!important;}
+	.wrap h4{ position: relative; font-size: 16px; }
+	.wrap h4:after{ font-family: FontAwesome; display: inline-block; vertical-align: middle; position: absolute; content: "\f107"; font-size: 28px; right: 20px; top: -8px;	 }
+	ul.tabs { width: 100%; position: relative; }
+	ul.tabs li h5{ display: none; }
+	ul.tabs li img{ width: 60px; height: 60px; }
+	.grids .col{ width: 100%; }
+	.grids h5{ font-size: 16px; }
+	ul.grid{ width: 100%; }
+	ul.grid li{ margin: 8px; }
+	ul.grid li img { width: 100%; height: auto; }
+	footer p{ font-size: 14px; }
+	.hidden{ display: none!important; }
+	.interior{ height: 155px; position: relative; }
+	.interior div{ position: relative; background-size: 100%; }
+	.controls{ z-index: 10; bottom: 100px; }
+	ul.versions li{ font-size: 15px; width: 50%; float: left; }
+	ul.versions li span{ font-size: 15px; }
+	ul.versions li a{ color: #333333; }
+	ul.versions li a:before{ font-family: FontAwesome; display: inline-block; vertical-align: middle; position: relative; content: "\f105"; font-size: 20px; top: -2px; margin-right: 6px;  }
+	a.button.change { font-size: 14px; }
+	.sidebar{ width: 100%; box-sizing: border-box; padding: 20px; }
+	.sidebar .row{ position: relative; padding: 10px; display: inline-block; width: 50%; box-sizing: border-box; }
+	.sidebar .row .cel { display: block; padding: 0 0 10px 0; }
+	.sidebar h3{ font-size: 22px; }
+	.sidebar img { width: 100%; height: auto; }
+	.sidebar a.btn{ width: 100%; display: block; box-sizing: border-box; }
+	.sidebar span{ right: 10px; top: 6px; }
+	.sidebar h5 { text-align: center; }
+	.sidebar p{ display: none; }
+	.showcase{ margin: 50px auto; }
+}
+
+@media only screen and (max-device-width : 320px) {
+	ul.grid li { width: 27.3%; }
+	.wrap .button{ width: 100%!important; }
+}
+
+
+
+/* ADL MOD */
+
+.site-tagline .suecia {
+    line-height: 20px;
+    font-family: "Volvo Sans Bold", sans-serif !important;
+    font-size: 16px;
+    display: inline-block;
+    color: #fff;
+    letter-spacing: 0px;
+}
+
+
+span.logox{  display: inline-table; font-family: 'Volvo Sans Bold', 'Volvo Sans Medium', 'Volvo Sans Regular', 'Arial Narrow', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; color: #fff; margin: 0 0 0 10px; font-size: 26px; line-height: 26px; text-align: left }
+.nu-logo{
+	margin-top: 22px;
+}
+
+
+.altura-desktop{
+	height: 580px;
+}
+
+@media only screen and (max-device-width : 900px) {
+	.altura-desktop{ height: 400px;}
+}
