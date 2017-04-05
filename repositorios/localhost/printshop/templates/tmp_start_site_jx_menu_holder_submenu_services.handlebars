@@ -1,0 +1,10 @@
+{{#each pripa}}
+    {{#servicios}}
+        <li class="deactivated" id="submenu-service-{{ser_key}}" data-serv-id="{{ser_id}}">
+            <a class="white get-submenu-service cur-hover"
+                id="get-submenu-service-{{ser_key}}"
+                data-serv-key="{{ser_key}}" 
+                data-serv-name="{{ser_name}}">{{ser_name}}</a>
+        </li>
+    {{/servicios}}
+{{/each}}

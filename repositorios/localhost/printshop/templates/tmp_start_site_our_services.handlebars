@@ -1,0 +1,33 @@
+<!-- BDF OUR TEAM -->
+<div class="container">
+    <div class="row"></div>
+    {{#each pripa}}
+        {{#servicios}}
+            <div class="jx-team-member-1" data-serv-id="{{ser_id}}">
+                <div class="four columns">
+                    <div class="image">
+                        <a href="#">
+                            <img src="{{ser_thumb}}" alt="{{ser_key}}">
+                        </a>
+                        <!-- Image -->
+                        <div class="team-content-box">
+                            <div class="plus-icon">+</div>
+                            <!-- Icon -->
+                            <div class="content-position">
+                                <div class="name">{{ser_name}}</div>
+                                <div class="post get-our-service hvr-underline-from-center" 
+                                    id="get-our-service-{{ser_key}}"
+                                    data-serv-key="{{ser_key}}" 
+                                    data-serv-name="{{ser_name}}">Ver más...</div>
+                            </div>
+                            <!-- Name -->
+                        </div>
+                    </div>
+                    <!-- info -->
+                </div>
+            </div>
+            <!-- Teammember 01 -->
+        {{/servicios}}
+    {{/each}}
+</div>
+<!-- EDF OUR TEAM-->

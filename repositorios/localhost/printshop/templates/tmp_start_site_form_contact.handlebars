@@ -1,0 +1,122 @@
+<div id="form-wrapper" class="contact_main">
+    <div class="contact_content">
+        <form id="contactFrom">
+        {{!<form id="contactFrom" onsubmit="$.submit_contact_form(); return false;">}}
+            <div class="contact_elements">
+                <div class="contact_element a">
+                    <fieldset>
+                        <input type="text" 
+                            id="full-name-contact" 
+                            name="fullname" 
+                            placeholder="Nombre completo..." 
+                            class="jx-form-text validate-required"
+                            data-validation-data="required|name">
+                        <p class="invalid-message" 
+                            id="error_full_name">
+                            Este campo es obligatorio
+                            <span>&nbsp;</span>
+                        </p>
+                        <!-- First Name Textbox -->
+                    </fieldset>
+                </div>
+                <div class="contact_element b">
+                    <fieldset>
+                        <input type="text" 
+                            id="email-contact" 
+                            name="email" 
+                            placeholder="Correo..." 
+                            class="jx-form-text validate-required" 
+                            data-validation-data="required|email"/>
+                        <p class="invalid-message" 
+                            id="error_email">
+                            Este campo es obligatorio
+                            <span>&nbsp;</span>
+                        </p>
+                        <!-- Email Name Textbox -->
+                    </fieldset>
+                </div>
+            </div>
+            <div class="contact_elements">
+                <div class="contact_element a">
+                    <fieldset>
+                        <input type="text" 
+                            id="phone-contact" 
+                            name="phone" 
+                            placeholder="Teléfono..." 
+                            class="jx-form-text validate-required" 
+                            data-validation-data="required|phone"/>
+                        <p class="invalid-message" 
+                            id="error_subject">
+                            Este campo es obligatorio
+                            <span>&nbsp;</span>
+                        </p>
+                    </fieldset>
+                    <!-- Phone Textbox -->
+                </div>
+                <div class="contact_element b">
+                    <fieldset>
+                        <input type="text" 
+                            id="subject-contact" 
+                            name="subject" 
+                            placeholder="Asunto..." 
+                            class="jx-form-text validate-required" 
+                            data-validation-data="required|address"/>
+                        <p class="invalid-message" 
+                            id="error_subject">
+                            Este campo es obligatorio
+                            <span>&nbsp;</span>
+                        </p>
+                    </fieldset>
+                    <!-- Subject Textbox -->
+                </div>
+            </div>
+            <div class="contact_elements">
+                <div class="contact_element ab">
+                    <fieldset>
+                        <textarea rows="5" cols="30" 
+                            id="message-contact" 
+                            name="message" 
+                            class="jx-form-textarea validate-required"
+                            placeholder="Agrega tu mensaje..."
+                            data-validation-data="required|address"></textarea>
+                        <p class="invalid-message" 
+                            id="error_mensaje">
+                            Este campo es obligatorio
+                            <span>&nbsp;</span>
+                        </p>
+                        <!-- Message Box -->
+                    </fieldset>
+                </div>
+            </div>
+        </form>
+        <div class="contact_elements">
+            <div class="contact_element a">
+                <fieldset>
+                    <div id="loader_send_icon" class="form-loader" style="display: none;">
+                        <div class="loader">
+                            <div class="loader-wrap">
+                                <div class="loader-item"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Loader Box -->
+                </fieldset>
+            </div>
+            <div class="contact_element b">
+                <fieldset>
+                    <div class="contact-submit">
+                        <button type="submit" class="send_contact_form" id="send_submit"><i class="fa icon-paper-plane"></i> SEND</button>
+                        <!-- Submit Box -->
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="form-thanks" style="display: none;">
+    <p class="agradecimiento_titulo2">
+        En breve responderemos tu mensaje al siguiente correo:
+        <br>
+        <span id="email-from">-</span>
+    </p>
+</div>

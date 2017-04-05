@@ -1,0 +1,15 @@
+ <ul>
+    <li id="return-section-services" class="inverse active arrow-left">
+        <a>Regresar</a>
+    </li>
+    {{#each pripa}}
+        {{#servicios}}
+            <li class="deactivated get-sidebarmenu-service sidebar-menu-{{ser_key}}" data-serv-id="{{ser_id}}" data-serv-key="{{ser_key}}" data-serv-name="{{ser_name}}">
+                <a class="get-sidebarmenu-service cur-hover"
+                    id="service-{{ser_key}}"
+                    data-serv-key="{{ser_key}}" 
+                    data-serv-name="{{ser_name}}">{{ser_name}}</a>
+            </li>
+        {{/servicios}}
+    {{/each}}
+</ul>
