@@ -1,0 +1,75 @@
+/* ################################################################################################### *\
+
+	Project Name: Landings
+	Proyect Version: 2.0
+	Author: *******
+	Update: hevelmo
+
+	CONTENT STYLES LOGIN PAGE
+
+	[styles] bootstrap
+	[styles] webfonts
+	[styles] googlefonts
+	[styles] plugins
+	[styles] custom
+	[styles] main
+	[styles] responsive
+
+\* ################################################################################################### */
+	/* ------------------------------------------------------ *\
+		[styles] bootstrap
+	\* ------------------------------------------------------ */
+		@import url('styles/bootstrap.css');
+		@import url('styles/bootstrap.modal.css');
+	/* ------------------------------------------------------ *\
+		[styles] webfonts
+	\* ------------------------------------------------------ */
+		@import url('webfonts/antipasto.css');
+		@import url('webfonts/flexslider.css');
+		@import url('webfonts/font-awesome.css');
+		@import url('webfonts/helper.css');
+		@import url('webfonts/iconfont.css');
+		@import url('webfonts/lineicons.css');
+		@import url('webfonts/pe-icon-7-stroke.css');
+		@import url('webfonts/streamline.css');
+		@import url('webfonts/revicons.css');
+	/* ------------------------------------------------------ *\
+		[styles] googlefonts
+	\* ------------------------------------------------------ */
+		@import url('https://fonts.googleapis.com/css?family=Lato:400,300,700,900,900italic,700italic,400italic,300italic,100italic');
+		@import url('http://fonts.googleapis.com/css?family=Roboto:400,300');
+		@import url('http://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300');
+		@import url('http://fonts.googleapis.com/css?family=Oswald:400,700,300');
+		@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,500,300');
+	/* ------------------------------------------------------ *\
+		[styles] plugins
+	\* ------------------------------------------------------ */
+		@import url('styles/ie.css');
+		@import url('styles/plugins.css');
+		@import url('styles/skeleton.css');
+		@import url('styles/isotope.css');
+		@import url('styles/owl.carousel.css');
+		@import url('styles/prettyPhoto.css');
+		@import url('styles/rs_settings.css');
+	/* ------------------------------------------------------ *\
+		[styles] custom
+	\* ------------------------------------------------------ */
+		@import url('styles/theme.css');
+		@import url('styles/theme-animate.css');
+		@import url('styles/theme-elements.css');
+	/* ------------------------------------------------------ *\
+		[styles] main
+	\* ------------------------------------------------------ */
+		@import url('styles/main.css');
+		@import url('styles/hover.css');
+		@import url('styles/margin.css');
+		@import url('styles/padding.css');
+		@import url('styles/orange.css');
+		@import url('styles/forms-contact.css');
+	/* ------------------------------------------------------ *\
+		[styles] responsive
+	\* ------------------------------------------------------ */
+		@import url('styles/theme-responsive.css');
+/* ################################################################################################### *\
+	END CONTENT
+\* ################################################################################################### */

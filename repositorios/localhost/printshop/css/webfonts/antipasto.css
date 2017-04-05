@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Antipasto_extrabold';
+    src: url('../../fonts/antipasto_extrabold/Antipasto_extrabold.eot');
+    src: url('../../fonts/antipasto_extrabold/Antipasto_extrabold.eot') format('embedded-opentype'),
+         url('../../fonts/antipasto_extrabold/Antipasto_extrabold.woff2') format('woff2'),
+         url('../../fonts/antipasto_extrabold/Antipasto_extrabold.woff') format('woff'),
+         url('../../fonts/antipasto_extrabold/Antipasto_extrabold.ttf') format('truetype'),
+         url('../../fonts/antipasto_extrabold/Antipasto_extrabold.svg#Antipasto_extrabold') format('svg');
+}
+@font-face {
+    font-family: 'Antipasto_extralight';
+    src: url('../../fonts/antipasto_extralight/Antipasto_extralight.eot');
+    src: url('../../fonts/antipasto_extralight/Antipasto_extralight.eot') format('embedded-opentype'),
+         url('../../fonts/antipasto_extralight/Antipasto_extralight.woff2') format('woff2'),
+         url('../../fonts/antipasto_extralight/Antipasto_extralight.woff') format('woff'),
+         url('../../fonts/antipasto_extralight/Antipasto_extralight.ttf') format('truetype'),
+         url('../../fonts/antipasto_extralight/Antipasto_extralight.svg#Antipasto_extralight') format('svg');
+}
+@font-face {
+    font-family: 'Antipasto_regular';
+    src: url('../../fonts/antipasto_regular/Antipasto_regular.eot');
+    src: url('../../fonts/antipasto_regular/Antipasto_regular.eot') format('embedded-opentype'),
+         url('../../fonts/antipasto_regular/Antipasto_regular.woff2') format('woff2'),
+         url('../../fonts/antipasto_regular/Antipasto_regular.woff') format('woff'),
+         url('../../fonts/antipasto_regular/Antipasto_regular.ttf') format('truetype'),
+         url('../../fonts/antipasto_regular/Antipasto_regular.svg#Antipasto_regular') format('svg');
+}

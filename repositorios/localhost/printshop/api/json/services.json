@@ -1,0 +1,44 @@
+{
+	"pripa": [
+		{
+			"servicios": [
+				{
+					"ser_id": "1",
+					"ser_key": "promocionales",
+					"ser_name": "Promocionales",
+					"ser_thumb": "img/servicios/servicio-promocionales.jpg"
+				},
+				{
+					"ser_id": "2",
+					"ser_key": "todo-en-vinil",
+					"ser_name": "Todo en Vinyl",
+					"ser_thumb": "img/servicios/servicio-todoenvinyl.jpg"	
+				},
+				{
+					"ser_id": "3",
+					"ser_key": "pop",
+					"ser_name": "P.O.P",
+					"ser_thumb": "img/servicios/servicio-pop.jpg"	
+				},
+				{
+					"ser_id": "4",
+					"ser_key": "impresos",
+					"ser_name": "Impresos",
+					"ser_thumb": "img/servicios/servicio-impresos.jpg"	
+				},
+				{
+					"ser_id": "5",
+					"ser_key": "proyectos-especiales",
+					"ser_name": "Proyectos Especiales",
+					"ser_thumb": "img/servicios/servicio-proyectosespeciales.jpg"	
+				},
+				{
+					"ser_id": "6",
+					"ser_key": "instalaciones",
+					"ser_name": "Instalaciones",
+					"ser_thumb": "img/servicios/servicio-instalaciones.jpg"	
+				}
+			]
+		}
+	]
+}
