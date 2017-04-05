@@ -1,0 +1,27 @@
+/* What we do Section | #what-we-do */
+#section-what-we-do {
+  background: url("../../../img/backgrounds/bg_1.jpg") no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+.list-departments a {
+  color: #ffffff;
+}
+.list-departments a img {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.list-departments a p {
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+}
+.btn-our-departments {
+  margin-top: 15px;
+  padding: 15px 30px;
+  border-color: #ffffff !important;
+}
+.btn-our-departments:hover {
+  background-color: rgba(0, 136, 240, 1) !important;
+  border-color: rgba(0, 136, 240, 1) !important;
+}

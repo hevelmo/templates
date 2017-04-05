@@ -1,0 +1,45 @@
+.form-control {
+  box-shadow: none;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+.input-icon {
+  position: relative;
+}
+.input-icon input,
+.input-icon textarea {
+  padding-left: 33px !important;
+  color: #999999;
+}
+.input-icon i {
+  color: #999999;
+  display: block;
+  position: absolute;
+  margin: 10px 2px 4px 10px;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  text-align: center;
+}
+.input-icon.right input,
+.input-icon.right textarea {
+  padding-left: 12px !important;
+  padding-right: 33px !important;
+}
+.input-icon.right i {
+  right: 8px;
+  float: right;
+}
+.has-success .input-icon i {
+  color: #43d9ad;
+}
+.has-warning .input-icon i {
+  color: #f0ad4e;
+}
+.has-error .input-icon i {
+  color: #f85b5b;
+}
+.input-icon i[class*="icon"] {
+  margin-top: 8px;
+}

@@ -1,0 +1,35 @@
+.log-medigraf {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin-right: 12px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #ffffff;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+	display: inline-block;
+	vertical-align: top;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.log-medigraf:hover {
+	background-color: #2069a3;
+	border-color: #2069a3;
+}
+/*.log-medigraf a*/ .medigraf
+	{
+		width:18px;height:11px;
+		background-image:url('../../img/corp/sprite-logo.png');
+		background-position: 0px 0px;
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+
+/*.log-medigraf a*/ .medigraf:hover
+	{
+		background-position: 0px -11px;
+	}

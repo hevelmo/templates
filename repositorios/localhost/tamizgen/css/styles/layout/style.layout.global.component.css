@@ -1,0 +1,94 @@
+/* Global component for all section | #section-component */
+.section {
+  padding-top: 70px;
+  padding-bottom: 80px;
+  position: relative;
+}
+.section .section-heading .info {
+  font-size: 32px;
+  color: #062045;
+  width: 70%;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.section .section-heading .info.white {
+  font-size: 32px;
+  color: #fff;
+  width: 70%;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.section .section-heading .title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 300;
+  color: #062045;
+  width: 80%;
+  display: inline-block;
+}
+.section .section-heading .sub-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(90,90,90);
+  width: 80%;
+  display: inline-block;
+  margin-top: 0;
+}
+.section .section-content {
+  position: relative;
+}
+.section.section-background .section-heading .title {
+  font-weight: 300;
+  color: #ffffff;
+}
+.section.section-background .section-heading .sub-title {
+  color: #ffffff;
+}
+.line {
+  width: 70px;
+  height: 1px;
+  position: relative;
+  background: transparent;
+  border-bottom: 1px solid rgb(0,136,240);
+  margin: 0 auto 45px;
+  padding: 5px;
+}
+.line:after,
+.line:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.line:before {
+  border-top-color: rgb(0,136,240);
+  border-width: 6px;
+  margin-left: -6px;
+}
+.line:after {
+  border-top-color: #ffffff;
+  border-width: 5px;
+  margin-left: -5px;
+}
+.section-background .line {
+  border-bottom: 1px solid #ffffff;
+}
+.section-background .line:before {
+  border-top-color: #ffffff;
+}
+.section-background .line:after {
+  border-top-color: #4fbae6;
+}
+.btn-14 {
+  font-size: 14px !important;
+}
+.btn-18 {
+  font-size: 18px !important;
+}
+.btn-22 {
+  font-size: 22px !important;
+}

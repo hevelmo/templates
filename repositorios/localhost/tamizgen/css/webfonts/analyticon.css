@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "analyticon";
+  src:url("analyticon/analyticon.eot");
+  src:url("analyticon/analyticon.eot?#iefix") format("embedded-opentype"),
+    url("analyticon/analyticon.woff") format("woff"),
+    url("analyticon/analyticon.ttf") format("truetype"),
+    url("analyticon/analyticon.svg#analyticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "analyticon" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="ai-"]:before,
+[class*=" ai-"]:before {
+  font-family: "analyticon" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ai-analyticon-analytic:before {
+  content: "\e000";
+}
+.ai-analyticon-medical-samples:before {
+  content: "\e001";
+}
+.ai-analyticon-patients:before {
+  content: "\e002";
+}
+.ai-analyticon-post-analytic:before {
+  content: "\e003";
+}
+.ai-analyticon-preanalytic-process:before {
+  content: "\e004";
+}
+.ai-analyticon-tracing:before {
+  content: "\e005";
+}

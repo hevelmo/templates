@@ -1,0 +1,97 @@
+/* ################################################################################################### *\
+
+	Template Name: Tamizgen
+	Template Version: 1.0
+	Author: hevelmo
+
+	CONTENT
+
+		[styles] 'WEBFONTS'
+		[styles] 'BOOTSTRAP'
+		[styles] 'CORE'
+		[styles] 'LAYOUT'
+		[styles] 'CALENDAR'
+		[styles] 'ANIMATE'
+		[styles] 'PAGES'
+		[styles] 'MAIN'
+		[styles] 'EXTRAS'
+		[styles] 'CORP MEDIGRAF'
+
+\* ################################################################################################### */
+	/* ------------------------------------------------------ *\
+		[styles] 'WEBFONTS'
+	\* ------------------------------------------------------ */
+		@import url(webfonts/fontawesome.css);
+		@import url(webfonts/glyphicons.css);
+		@import url(webfonts/ionicons.css);
+		@import url(webfonts/medical-icons.css);
+		@import url(webfonts/walkway.css);
+		@import url(webfonts/organ-humans.css);
+		@import url(webfonts/medical-tools.css);
+		@import url(webfonts/ionicons.css);
+		@import url(webfonts/analyticon.css);
+	/* ------------------------------------------------------ *\
+		[styles] 'BOOTSTRAP'
+	\* ------------------------------------------------------ */
+		@import url(bootstrap/bootstrap.css);
+	/* ------------------------------------------------------ *\
+		[styles] 'CORE'
+	\* ------------------------------------------------------ */
+		@import url(styles/core/style.core.reset.css);
+		@import url(styles/core/style.core.globals.margin.padding.css);
+		@import url(styles/core/style.core.buttons.css);
+		@import url(styles/core/style.core.forms.css);
+		@import url(styles/core/style.core.delay.css);
+		@import url(styles/core/style.core.progress.css);
+		@import url(styles/core/style.core.globals.bg.alerts.css);
+		@import url(styles/core/style.core.global.text.align.css);
+		@import url(styles/core/style.core.accordion.css);
+		@import url(styles/core/style.core.dropdown.css);
+	/* ------------------------------------------------------ *\
+		[styles] 'LAYOUT'
+	\* ------------------------------------------------------ */
+		@import url(styles/layout/style.layout.header.navigation.css);
+		@import url(styles/layout/style.layout.footer.css);
+		@import url(styles/layout/style.layout.global.component.css);
+		@import url(styles/layout/style.layout.totop.button.css);
+		@import url(styles/layout/style.layout.header.scroll.css);
+		@import url(styles/layout/style.layout.responsive.css);
+	/* ------------------------------------------------------ *\
+		[styles] 'CALENDAR'
+	\* ------------------------------------------------------ */
+		@import url(styles/style.calendar.css);
+	/* ------------------------------------------------------ *\
+		[styles] 'ANIMATE'
+	\* ------------------------------------------------------ */
+		@import url(styles/style.animate.css);
+	/* ------------------------------------------------------ *\
+		[styles] 'PAGES'
+	\* ------------------------------------------------------ */
+		@import url(styles/pages/style.pages.banner.slider.css);
+		@import url(styles/pages/style.pages.features.css);
+		@import url(styles/pages/style.pages.waht.we.do.css);
+		@import url(styles/pages/style.pages.meet.doctor.css);
+		@import url(styles/pages/style.pages.patients.css);
+		@import url(styles/pages/style.pages.latest.news.css);
+		@import url(styles/pages/style.pages.about.us.css);
+		@import url(styles/pages/style.pages.responsive.css);
+		/*@import url(styles/pages/style.pages.gallery.css);*/
+		/*@import url(styles/pages/style.pages.venobox.css);*/
+		@import url(styles/style-appointment.css);
+		@import url(styles/style-contact.css);
+		@import url(styles/list-unstyled.css);
+	/* ------------------------------------------------------ *\
+		[styles] 'MAIN'
+	\* ------------------------------------------------------ */
+		@import url(styles/main.css);
+	/* ------------------------------------------------------ *\
+		[styles] 'EXTRAS'
+	\* ------------------------------------------------------ */
+		@import url(styles/extras/basscss.css);
+	/* ------------------------------------------------------ *\
+		[styles] 'CORP MEDIGRAF'
+	\* ------------------------------------------------------ */
+		@import url(styles/style.medigraf.css);
+/* ################################################################################################### *\
+	END CONTENT
+\* ################################################################################################### */

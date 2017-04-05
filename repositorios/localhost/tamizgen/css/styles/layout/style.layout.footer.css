@@ -1,0 +1,156 @@
+/* Footer | #footer */
+#footer #section-footer {
+  background-color: #325097;
+  color: #ffffff;
+  padding: 50px 0px 35px;
+}
+#footer #section-footer .logo {
+  margin-bottom: 0px;
+}
+#footer #section-footer .about-us {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+#footer #section-footer .contact-info > ul > li > a {
+  padding: 5px 0;
+  display: block;
+  color: #ffffff;
+  font-size: 13px;
+}
+#footer #section-footer .contact-info > ul > li > a:hover {
+  color: rgba(255,255,255,0.8);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#footer #section-footer .contact-info > ul > li > a > i {
+  font-size: 15px;
+  color: #fff;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-right: 15px;
+}
+#footer #section-footer .recent-twitter .heading {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+#footer #section-footer .recent-twitter .heading i.fa-twitter {
+  color: #00eaff;
+  margin-right: 10px;
+}
+#footer #section-footer .recent-twitter .content ul > li > a {
+  display: block;
+}
+#footer #section-footer .recent-twitter .content ul > li > a:hover {
+  color: #fff;
+}
+#footer #section-footer .recent-twitter .content a {
+  color: #ffffff;
+  font-size: 13px;
+}
+#footer #section-footer .recent-twitter .content small {
+  color: #00eaff;
+}
+#footer #section-footer .newsletter .heading {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+#footer #section-footer .newsletter .heading i.fa-twitter {
+  color: #00eaff;
+  margin-right: 10px;
+}
+#footer #section-footer .newsletter .content p {
+  font-size: 13px;
+  color: #ffffff;
+}
+#footer #section-footer .newsletter .content .input-newsletter .input-group-addon {
+  background-color: transparent;
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  font-size: 15px;
+}
+#footer #section-footer .newsletter .content .input-newsletter input {
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+  border: 0;
+  color: #ffffff;
+  height: 40px;
+  outline: 0 !important;
+}
+#footer #section-footer .newsletter .content .input-newsletter input:focus {
+  outline: 0 !important;
+}
+#footer #section-footer .newsletter .content .input-newsletter input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+#footer #section-footer .newsletter .content .input-newsletter input:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+#footer #section-footer .newsletter .content .input-newsletter input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+#footer #section-footer .newsletter .content .input-newsletter input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+#footer #section-footer .newsletter .content .input-newsletter .btn-subscribe {
+  padding: 0;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#footer #section-footer .newsletter .content .input-newsletter .btn-subscribe .btn {
+  min-width: 100px;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #2069a3;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 9999px;
+}
+#footer #section-footer .newsletter .content .input-newsletter .btn-subscribe .btn:hover {
+  background-color: #ffffff;
+}
+#footer #section-footer .newsletter .content .icons {
+  font-size: 20px;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  margin-right: 12px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #0093D7;
+  border: 2px solid #0093D7;
+  color: #ffffff;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#footer #section-footer .newsletter .content .icons:hover {
+  background-color: #D47AAA;
+  border: 2px solid #D47AAA;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#footer #section-copyright {
+  background-color: #ffffff;
+  padding: 15px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #062045;
+}

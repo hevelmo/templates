@@ -1,0 +1,32 @@
+.progress {
+  border-radius: 9999px;
+  box-shadow: none;
+  background-color: #e6e6e6;
+  margin-bottom: 30px;
+}
+.progress .progress-bar {
+  box-shadow: none;
+  text-align: left;
+  background-color: rgb(0,136,240);
+}
+.progress .progress-bar > span {
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+.progress > span {
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  float: right;
+  margin-right: 20px;
+}
+.progress.progress-bar-lg {
+  height: 40px;
+}
+.progress.progress-bar-lg .progress-bar {
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+}

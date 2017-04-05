@@ -1,0 +1,54 @@
+<div class="box-body form-contact" id="send_form_wrapper">
+    <form class="form-contact" id="send_ucd_form_contact">
+        <div class="form-group">
+            <label class="control-label mll">
+                <span class="required">
+                    <i class="fa fa-asterisk"></i>
+                </span>
+                Nombre
+            </label>
+            <input type="text" name="send_ucd_contact_get_name" id="contact-get-name" class="form-control"></div>
+        <div class="form-group">
+            <label class="control-label mll">
+                <span class="required">
+                    <i class="fa fa-asterisk"></i>
+                </span>
+                Correo
+            </label>
+            <input type="text" name="send_ucd_contact_get_email" id="contact-get-email" class="form-control"></div>
+        <div class="form-group">
+            <label class="control-label mll">
+                Asunto
+            </label>
+            <input type="text" name="send_ucd_contact_get_subject" id="contact-get-subject" class="form-control"></div>
+        <div class="form-group">
+            <label class="control-label mll">
+                Mensaje
+            </label>
+            <textarea rows="8" name="send_ucd_contact_get_message" id="contact-get-message" class="form-control"></textarea>
+        </div>
+    </form>
+    <div class="form-group mtxxl text-center mbn">
+        <input type="button" value="Enviar Mensaje" name="send_contact" id="ucd_send_contact_submit" class="btn btn-outlined btn-primary">
+    </div>
+</div>
+<div id="send_message_form_thanks" class="form-thanks" style="display: none;">
+    <p class="agradecimiento_titulo">Mensaje enviado</p>
+    <!--<hr>-->
+    <p class="agradecimiento_titulo2">En breve responderemos tu mensaje al siguiente correo
+        <br>
+        <span id="email-from">-</span>
+    </p>
+</div>
+<div id="send_message_form_error" class="form-error" style="display: none;">
+    <p class="agradecimiento_titulo">Hubo un error</p>
+    <!--<hr>-->
+    <p class="agradecimiento_titulo2">Intentalo nuevamente</p>
+</div>
+<div id="send_message_form_loader" class="form-loader" style="display: none;">
+    <div class="loader">
+        <div class="loader-wrap">
+            <div class="loader-item"></div>
+        </div>
+    </div>
+</div>

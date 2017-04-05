@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'WalkwayBlack';
+    src: url('walkway/Walkway_Black/WalkwayBlack.eot');
+    src: url('walkway/Walkway_Black/WalkwayBlack.eot') format('embedded-opentype'),
+         url('walkway/Walkway_Black/WalkwayBlack.woff2') format('woff2'),
+         url('walkway/Walkway_Black/WalkwayBlack.woff') format('woff'),
+         url('walkway/Walkway_Black/WalkwayBlack.ttf') format('truetype'),
+         url('walkway/Walkway_Black/WalkwayBlack.svg#WalkwayBlack') format('svg');
+}
+@font-face {
+    font-family: 'WalkwayBlackRevOblique';
+    src: url('walkway/Walkway_Black_RevOblique/WalkwayBlackRevOblique.eot');
+    src: url('walkway/Walkway_Black_RevOblique/WalkwayBlackRevOblique.eot') format('embedded-opentype'),
+         url('walkway/Walkway_Black_RevOblique/WalkwayBlackRevOblique.woff2') format('woff2'),
+         url('walkway/Walkway_Black_RevOblique/WalkwayBlackRevOblique.woff') format('woff'),
+         url('walkway/Walkway_Black_RevOblique/WalkwayBlackRevOblique.ttf') format('truetype'),
+         url('walkway/Walkway_Black_RevOblique/WalkwayBlackRevOblique.svg#WalkwayBlackRevOblique') format('svg');
+}
+@font-face {
+    font-family: 'WalkwayBold';
+    src: url('walkway/Walkway_Bold/WalkwayBold.eot');
+    src: url('walkway/Walkway_Bold/WalkwayBold.eot') format('embedded-opentype'),
+         url('walkway/Walkway_Bold/WalkwayBold.woff2') format('woff2'),
+         url('walkway/Walkway_Bold/WalkwayBold.woff') format('woff'),
+         url('walkway/Walkway_Bold/WalkwayBold.ttf') format('truetype'),
+         url('walkway/Walkway_Bold/WalkwayBold.svg#WalkwayBold') format('svg');
+}
+@font-face {
+    font-family: 'WalkwayBoldRevOblique';
+    src: url('walkway/Walkway_Bold_RevOblique/WalkwayBoldRevOblique.eot');
+    src: url('walkway/Walkway_Bold_RevOblique/WalkwayBoldRevOblique.eot') format('embedded-opentype'),
+         url('walkway/Walkway_Bold_RevOblique/WalkwayBoldRevOblique.woff2') format('woff2'),
+         url('walkway/Walkway_Bold_RevOblique/WalkwayBoldRevOblique.woff') format('woff'),
+         url('walkway/Walkway_Bold_RevOblique/WalkwayBoldRevOblique.ttf') format('truetype'),
+         url('walkway/Walkway_Bold_RevOblique/WalkwayBoldRevOblique.svg#WalkwayBoldRevOblique') format('svg');
+}
+@font-face {
+    font-family: 'WalkwayCondensed';
+    src: url('walkway/Walkway_Condensed/WalkwayCondensed.eot');
+    src: url('walkway/Walkway_Condensed/WalkwayCondensed.eot') format('embedded-opentype'),
+         url('walkway/Walkway_Condensed/WalkwayCondensed.woff2') format('woff2'),
+         url('walkway/Walkway_Condensed/WalkwayCondensed.woff') format('woff'),
+         url('walkway/Walkway_Condensed/WalkwayCondensed.ttf') format('truetype'),
+         url('walkway/Walkway_Condensed/WalkwayCondensed.svg#WalkwayCondensed') format('svg');
+}
+@font-face {
+    font-family: 'WalkwayCondensedBold';
+    src: url('walkway/Walkway_Condensed_Bold/WalkwayCondensedBold.eot');
+    src: url('walkway/Walkway_Condensed_Bold/WalkwayCondensedBold.eot') format('embedded-opentype'),
+         url('walkway/Walkway_Condensed_Bold/WalkwayCondensedBold.woff2') format('woff2'),
+         url('walkway/Walkway_Condensed_Bold/WalkwayCondensedBold.woff') format('woff'),
+         url('walkway/Walkway_Condensed_Bold/WalkwayCondensedBold.ttf') format('truetype'),
+         url('walkway/Walkway_Condensed_Bold/WalkwayCondensedBold.svg#WalkwayCondensedBold') format('svg');
+}
+@font-face {
+    font-family: 'WalkwayCondensedSemiBold';
+    src: url('walkway/Walkway_Condensed_SemiBold/WalkwayCondensedSemiBold.eot');
+    src: url('walkway/Walkway_Condensed_SemiBold/WalkwayCondensedSemiBold.eot') format('embedded-opentype'),
+         url('walkway/Walkway_Condensed_SemiBold/WalkwayCondensedSemiBold.woff2') format('woff2'),
+         url('walkway/Walkway_Condensed_SemiBold/WalkwayCondensedSemiBold.woff') format('woff'),
+         url('walkway/Walkway_Condensed_SemiBold/WalkwayCondensedSemiBold.ttf') format('truetype'),
+         url('walkway/Walkway_Condensed_SemiBold/WalkwayCondensedSemiBold.svg#WalkwayCondensedSemiBold') format('svg');
+}
+@font-face {
+    font-family: 'WalkwayExpandBlack';
+    src: url('walkway/Walkway_Expand_Black/WalkwayExpandBlack.eot');
+    src: url('walkway/Walkway_Expand_Black/WalkwayExpandBlack.eot') format('embedded-opentype'),
+         url('walkway/Walkway_Expand_Black/WalkwayExpandBlack.woff2') format('woff2'),
+         url('walkway/Walkway_Expand_Black/WalkwayExpandBlack.woff') format('woff'),
+         url('walkway/Walkway_Expand_Black/WalkwayExpandBlack.ttf') format('truetype'),
+         url('walkway/Walkway_Expand_Black/WalkwayExpandBlack.svg#WalkwayExpandBlack') format('svg');
+}

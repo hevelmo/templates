@@ -1,0 +1,20 @@
+/* Page Header when scroll | #header-scroll */
+body.page-header-scroll #wrapper .header-wrapper #header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #325097;
+}
+body.page-header-scroll #wrapper .header-wrapper #header .logo {
+  height: 60px;
+}
+body.page-header-scroll #wrapper .header-wrapper #header .menu > ul > li {
+  height: 60px;
+  line-height: 60px;
+}
+body.page-header-scroll #wrapper .header-wrapper #header .menu > ul > li > a span.arrow {
+  bottom: 0;
+  color: #ffffff;
+}

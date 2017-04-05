@@ -1,0 +1,76 @@
+/* Banner Slider | #banner */
+#banner-sliders .carousel-inner .item .carousel-caption {
+  top: 30%;
+  left: 14%;
+  right: 14%;
+  bottom: auto;
+  text-align: left;
+  width: 575px;
+  text-shadow: none;
+}
+#banner-sliders .carousel-inner .item .carousel-caption .heading {
+  font-size: 45px;
+  color: rgb(0,136,240);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+#banner-sliders .carousel-inner .item .carousel-caption .heading span {
+  color: rgb(45,78,158);
+  font-weight: bold;
+}
+#banner-sliders .carousel-inner .item .carousel-caption .sub-heading {
+  font-size: 18px;
+  color: rgb(0,136,240);
+  margin-bottom: 30px;
+}
+#banner-sliders .carousel-inner .item .carousel-caption .sub-heading span {
+  font-weight: bold;
+  color: rgb(45,78,158);
+}
+#banner-sliders .carousel-inner .item .carousel-caption .btn-more {
+  border: 2px solid rgb(0,136,240);
+  color: rgb(0,136,240);
+}
+#banner-sliders .carousel-inner .item .carousel-caption .btn-more i {
+  margin-left: 10px;
+}
+#banner-sliders .carousel-inner .item .carousel-caption .btn-more:hover,
+#banner-sliders .carousel-inner .item .carousel-caption .btn-more:focus {
+  background-color: rgb(0,136,240);
+  color: #ffffff;
+}
+#banner-sliders .carousel-control {
+  top: 50%;
+  margin-top: -30px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-shadow: none;
+  color: rgb(45,78,158);
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s;
+}
+#banner-sliders .carousel-control:hover.left,
+#banner-sliders .carousel-control:focus.left {
+  color: #ffffff;
+  background-color: rgb(45,78,158);
+}
+#banner-sliders .carousel-control:hover.right,
+#banner-sliders .carousel-control:focus.right {
+  color: #ffffff;
+  background-color: rgb(45,78,158);
+}
+#banner-sliders .carousel-control.left {
+  background-image: none;
+  /*filter: progid:none !important;*/
+  left: 5%;
+  right: auto;
+}
+#banner-sliders .carousel-control.right {
+  background-image: none;
+  /*filter: progid:none !important;*/
+  left: auto;
+  right: 5%;
+}

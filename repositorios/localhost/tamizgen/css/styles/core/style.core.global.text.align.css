@@ -1,0 +1,24 @@
+.text-left {
+  text-align: left !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-primary {
+  color: rgb(0,136,240) !important;
+}
+.text-success {
+  color: #43d9ad !important;
+}
+.text-warning {
+  color: #f0ad4e !important;
+}
+.text-info {
+  color: #5bc0de !important;
+}
+.text-danger {
+  color: #f85b5b !important;
+}

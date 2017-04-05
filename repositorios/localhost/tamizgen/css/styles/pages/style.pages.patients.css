@@ -1,0 +1,68 @@
+/* Patients Saying | #patients */
+#section-patients-saying {
+  background: url("../../../img/backgrounds/bg_2.jpg") no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+#section-patients-saying .carousel-control {
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-shadow: none;
+  color: rgb(45,78,158);
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s;
+}
+#section-patients-saying .carousel-control:hover.left,
+#section-patients-saying .carousel-control:focus.left {
+  color: rgb(0,136,240);
+}
+#section-patients-saying .carousel-control:hover.right,
+#section-patients-saying .carousel-control:focus.right {
+  color: rgb(0,136,240);
+}
+#section-patients-saying .carousel-control.left {
+  background-image: none;
+  /*filter: progid:none !important;*/
+  left: 5%;
+  right: auto;
+}
+#section-patients-saying .carousel-control.right {
+  background-image: none;
+  /*filter: progid:none !important;*/
+  left: auto;
+  right: 5%;
+}
+#patient-sliders .avatar {
+  margin-bottom: 20px;
+}
+#patient-sliders .avatar img {
+  display: inline-block;
+}
+#patient-sliders .name {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+#patient-sliders .pos {
+  color: #98ead2;
+  margin-bottom: 30px;
+}
+#patient-sliders .desc {
+  font-size: 16px;
+  font-style: italic;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+}
+#patient-sliders .desc:after {
+  font-family: "font-fontawesome";
+  content: "\f10e";
+  font-style: normal;
+  position: absolute;
+  top: -40px;
+  right: -60px;
+  font-size: 50px;
+}

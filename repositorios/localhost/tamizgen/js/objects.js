@@ -1,0 +1,51 @@
+var domEl, tempsNames, urlsApi;
+domEl = {
+	"_start_header_bg_wrapper":"content-start-header-bg-wrapper",
+	"_start_header_bg_wrapper_name":"#content-start-header-bg-wrapper",
+	"_start_header_wrapper":"content-start-header-wrapper",
+	"_start_header_wrapper_name":"#content-start-header-wrapper",
+	"_start_section_about_us_features":"content-start-section-about-us-features",
+	"_start_section_about_us_features_name":"#content-start-section-about-us-features",
+	"_start_section_contact_features":"content-start-section-contact-features",
+	"_start_section_contact_features_name":"#content-start-section-contact-features",
+	"_start_section_home_features":"content-start-section-home-features",
+	"_start_section_home_features_name":"#content-start-section-home-features",
+	"_start_section_objectives_features":"content-start-section-objectives-features",
+	"_start_section_objectives_features_name":"#content-start-section-objectives-features",
+	"_start_section_services_features":"content-start-section-services-features",
+	"_start_section_services_features_name":"#content-start-section-services-features",
+	"_start_slider_wrapper":"content-start-slider-wrapper",
+	"_start_slider_wrapper_name":"#content-start-slider-wrapper",
+	"body_recurrent":"body",
+	"div_header_bg_recurrent":"div#content-temporal-header-bg-wrapper",
+	"div_header_nav_recurrent":"div#content-temporal-header-nav-wrapper",
+	"div_hidden_inputs_session":"div#hidden-inputs-session",
+	"div_hidden_inputs_temporal":"div#hidden-inputs-temporal",
+	"div_recurrent":"div#content-temporal-interactive",
+	"div_recurrent_form_contact_wrapper":"#content-temporal-form-wrapper",
+	"div_slider_recurrent":"div#content-temporal-slider-wrapper",
+	"finch_return_footer_index":"#go-index-logo-footer",
+	"finch_return_logo_index":"#go-index-logo",
+	"goSection_about_us":"#go-about-us",
+	"goSection_contact":"#go-contact",
+	"goSection_featuresServices":"#go-features-services",
+	"goSection_index":"#go-index",
+	"goSection_objectives":"#go-objectives",
+	"goSection_services":"#go-services",
+	"head_recurrent":"head",
+	"nav_recurrent":".menu"
+};
+tempsNames = {
+	"recurrent_about_us_start_features":"tmp_section_about_us_start_features",
+	"recurrent_contact_start_features":"tmp_section_contact_features",
+	"recurrent_contact_start_form_wrapper":"tmp_section_contact_form_wrapper",
+	"recurrent_home_start_features":"tmp_section_home_start_features",
+	"recurrent_objectives_start_features":"tmp_section_objectives_start_features",
+	"recurrent_services_start_features":"tmp_section_services_start_features",
+	"recurrent_start_banner_slider":"tmp_start_banner_slider",
+	"recurrent_start_header_bg":"tmp_start_header_bg",
+	"recurrent_start_header_nav":"tmp_start_header_nav"
+};
+urlsApi = {
+	"send_form_contact":"api/v1/post/contacto"
+};
