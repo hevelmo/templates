@@ -1,0 +1,191 @@
+<div id="form-wrapper">
+    <form id="form_leads">
+        <p>Nos gustaría enviarte una cotización por correo electrónico</p>
+        <p><span style="color: red; font-size: 12px;">Los campos marcados con <span style="color: red;" class="fa fa-asterisk"></span> son requeridos</span></p>
+        <!-- financing -->
+        <div class="financing_elements">
+            <div class="financing_element a">
+                <fieldset>
+                    <label for="leads_name">
+                        <span style="color: red;" class="fa fa-asterisk"></span> Nombre
+                    </label>
+                    <input
+                        type="text"
+                        id="leads_name"
+                        name="nombre"
+                        class="validate-required"
+                        placeholder="Nombre"
+                        data-validation-data="required|name">
+                    <p class="invalid-message" id="error_name">Este campo es obligatorio<span>&nbsp;</span></p>
+                </fieldset>
+            </div>
+            <div class="financing_element b">
+                <fieldset>
+                    <label for="leads_lastname">
+                        <span style="color: red;" class="fa fa-asterisk"></span> Apellido
+                    </label>
+                    <input
+                        type="text"
+                        id="leads_lastname"
+                        name="apellidos"
+                        class="validate-required"
+                        placeholder="Apellidos Paterno y Materno"
+                        data-validation-data="required|name">
+                    <p class="invalid-message" id="error_lastname">Este campo es obligatorio<span>&nbsp;</span></p>
+                </fieldset>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="financing_elements">
+            <div class="financing_element a">
+                <fieldset>
+                    <label for="leads_email">
+                        <span style="color: red;" class="fa fa-asterisk"></span> Correo electrónico
+                    </label>
+                   <input
+                        type="email"
+                        id="leads_email"
+                        name="correo"
+                        class="validate-required input icon email"
+                        placeholder="Correo electrónico"
+                        data-validation-data="required|email">
+                   <p class="invalid-message" id="error_mail">Este campo es obligatorio<span>&nbsp;</span></p>
+                </fieldset>
+            </div>
+            <div class="financing_element b">
+                <fieldset>
+                    <label for="leads_phone">
+                        <span style="color: red;" class="fa fa-asterisk"></span> Número de celular
+                    </label>
+                    <input
+                        type="tel"
+                        id="leads_phone"
+                        name="telefono"
+                        class="validate-required"
+                        maxlength="13"
+                        placeholder="Número de celular"
+                        data-validation-data="required|phone">
+                    <p class="invalid-message" id="error_phone">Este campo es obligatorio<span>&nbsp;</span></p>
+                </fieldset>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <p class="border-bottom mt10 pb10">
+            Comentarios <br>
+            <span style="font-size: 12px;">Escribe tus necesidades, tenemos un plan para tí.</span>
+        </p>
+        <p></p>
+        <div class="financing_elements">
+            <div class="financing_element ab">
+                <fieldset>
+                    <label for="leads_message">
+                        <span style="color: red;" class="fa fa-asterisk"></span> Mensaje
+                    </label>
+                    <textarea
+                        name="mensaje"
+                        class="escribir2 validate-required"
+                        id="leads_message"
+                        data-validation-data="required|address"></textarea>
+                    <p class="invalid-message" id="error_mensaje">Este campo es obligatorio<span>&nbsp;</span></p>
+                </fieldset>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        {{!--
+        <div class="financing_elements">
+            <div class="financing_element ab">
+                <p>¿Te gustaría manejarlo?</p>
+                <fieldset class="fieldset-radio-checkbox" id="fieldset-radio-checkbox-yes">
+                    <label for="leads_test_drive_yes" class="label-radio">Sí
+                        <input
+                            type="radio"
+                            id="leads_test_drive_yes"
+                            name="test_drive"
+                            class="validate-required"
+                            value="1">
+                    </label>
+                </fieldset>
+                <fieldset class="fieldset-radio-checkbox" id="fieldset-radio-checkbox-no">
+                    <label for="leads_test_drive_no" class="label-radio radio-checked">No
+                        <input
+                            type="radio"
+                            id="leads_test_drive_no"
+                            name="test_drive"
+                            class="validate-required"
+                            value="0"
+                            checked="checked">
+                    </label>
+                </fieldset>
+            </div>
+        </div>
+        <div class="financing_elements">
+            <div class="financing_element ab">
+                <fieldset class="fieldset-radio-checkbox" id="checkbox-news">
+                    <label for="leads_newsletter" class="label-checkbox">
+                        <input
+                            type="checkbox"
+                            id="leads_newsletter"
+                            name="newsletter"
+                            class="validate-required"
+                            value=""> Deseo recibir noticias y promociones.
+                    </label>
+                </fieldset>
+                <fieldset id="funding_fields_hidden"></fieldset>
+            </div>
+        </div>--}}
+        <div class="clearfix"></div>
+    </form>
+    <div class="financing_elements">
+        <div class="financing_element a">
+            <fieldset>
+                <div id="loader_send_icon" class="form-loader" style="display: none;">
+                    <div class="loader">
+                        <div class="loader-wrap">
+                            <div class="loader-item"></div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="financing_element b">
+            <fieldset>
+                <div class="pl0" id="button_leads_form_financing">
+                    <button class="primaryLinkWithStyle plwsLight TargetLinks financing_by_model is_empty_email send_contact_form" id="leads_api_save">
+                        <span>ENVIAR</span>
+                    </button>
+                </div>
+                <div class="pl0" id="button-return">
+                    <a class="primaryLinkWithStyle plwsLight TargetLinks resp-button" id="primaryLinkWithStyle">
+                        <span><i class="fa fa-arrow-left fa-2x fa-fw fa-lg"></i> REGRESAR</span>
+                    </a>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="financing_elements">
+        <div class="financing_element ab">
+            <fieldset>
+                <p id="revisa_aviso">
+                    Tus datos están a salvo.<br>
+                    Para mayor información revisa nuestro <a href="http://www.audi.com.mx/mx/brand/es2.html#tab/tabpage_1" target="_blank">Aviso de privacidad</a>
+                </p>
+            </fieldset>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    {{!--<button id="send_leads_financing_by_model_submit" class="enviar button red financing_by_model is_empty_email">Enviar</button>--}}
+</div>
+<div class="form-thanks" style="display: none;">
+    <h4 class="secondary-title">Gracias</h4>
+    <p>
+        Tu cotización ha sido enviada a tu correo electrónico:
+        <span id="email-from"></span>
+    </p>
+    <div class="funding-hidden-inputs">
+        Te hemos asignado un asesor de la concesionaria
+        <span id="concessionaire-from"></span>
+        quien se pondrá en contacto contigo para confirmar tus datos y resolver cualquier duda
+        que puedas tener.
+    </div>
+</div>

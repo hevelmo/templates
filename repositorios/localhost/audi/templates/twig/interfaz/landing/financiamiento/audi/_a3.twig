@@ -1,0 +1,33 @@
+{% extends "super.twig" %}
+{% block title %}{{ title }}{% endblock %}
+{% block navbar_recurrent %}
+    {% embed "landing/_navbar.twig" %}{% endembed %}
+{% endblock %}
+{% block content_recurrent %}
+<header class="page-header parallax overlay-light-gradient-slider" id="set-banner">
+    {#<div class="container">
+        <h1 class="page-title text-center uppercase" id="content-title"></h1>
+    </div>#}
+</header>
+<div id="content-financing-newform" class="content content-main full pt0i pb0i clearfix">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="financing_main">
+                <div class="financing_content">
+                    <div class="col-md-8 col-md-offset-2 borderleft plr30 no-plr">
+                        <div id="content-leads-financing-form">
+                            <input id="master-product" type="hidden" value="Familia Audi A3 2017">
+                            {% embed "landing/financiamiento/contacto/contact_form.twig" %}{% endembed %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block load_scripts %}
+$('header#set-banner').attr('style','background-image: url({{ _host }}img/financing/banner/a3_cotizacion.jpg); padding: 0 0;');
+set_data.set_product();
+{% endblock %}
+

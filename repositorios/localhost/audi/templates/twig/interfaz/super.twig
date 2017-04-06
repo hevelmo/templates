@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="es" class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="es" class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="es" class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html lang="es" class="no-js lt-ie10"> <![endif]-->
+<html class="no-js" lang="es">
+    <head>
+	    {% block head %}
+	    	{% block metas %}
+		    	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+		        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		        <meta http-equiv="cache-control" content="no-cache">
+		        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		        <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0">
+		        <meta class="temp" name="description" content="">
+		        <meta class="temp" name="copyright" content="© Copyright 2016 MAN Camiones y Autobuses.">
+		        <meta class="temp" name="robots" content="index, follow">
+		        {% block facebook_tag %}
+                    {# sample fb meta #}
+                    <meta property="og:title" content="{{ tag_name_default }}" />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:image:type" content=" {{ tag_content_type }}" />
+                    <meta property="og:image" content="{{ tag_image_default }}" />
+                    <meta property="og:description" content="{{ tag_description }}"/>
+                    <meta property="og:site_name" content="{{ tag_site_name }}" />
+                {% endblock %}
+	        {% endblock %}
+	        <title>
+	        	{% block title %}Audi.{% endblock %}
+	        </title>
+	        {% block links %}
+	        	<link class="temp" rel="alternate" hreflang="es-MX" href="http://" />
+	        	{# stylesheet #}
+	            {#
+	            <link rel="stylesheet" href="{{ _host }}css/styles.min.css">
+	            #}
+	            <link rel="stylesheet" href="{{ _host }}css/styles.css">
+	            {# google fonts #}
+	            <link href="http://fonts.googleapis.com/css?family=Roboto:100,400,300,700,400italic,500%7CMontserrat:400,700" rel="stylesheet" type="text/css">
+	            {# favicon #}
+	            <link type="image/x-icon" rel="shortcut icon" href="{{ _host }}img/ico/favicon.ico">
+	            {#
+	            <link rel="apple-touch-icon" href="{{ _host }}img/ico/apple-touch-icon.png">
+	            #}
+	        {% endblock %}
+	        {% block head_scripts %}
+		        <!--[if lt IE 9]>
+					<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+				<![endif]-->
+				<script>
+					(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+					})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+					ga('create', 'UA-88259451-1', 'auto');
+					ga('send', 'pageview');
+				</script>
+	            <script>
+	                var nav = navigator.appName;
+	                if(nav == "Microsoft Internet Explorer") {
+	                    //Detectamos si nos visitan desde IE
+	                    if(nav == "Microsoft Internet Explorer") {
+	                        //Convertimos en minusculas la cadena que devuelve userAgent
+	                        var ie = navigator.userAgent.toLowerCase();
+	                        //Extraemos de la cadena la version de IE
+	                        var version = parseInt(ie.split('msie')[1]);
+	                        //Dependiendo de la version mostramos un resultado
+	                        switch(version) {
+	                            case 6:
+	                                alert("El sitio no es compatible con Internet Explorer, te recomendamos usar Chrome o Firefox.");
+	                                break;
+	                            case 7:
+	                                alert("El sitio no es compatible con Internet Explorer, te recomendamos usar Chrome o Firefox.");
+	                                break;
+	                            case 8:
+	                                alert("El sitio no es compatible con Internet Explorer, te recomendamos usar Chrome o Firefox.");
+	                                break;
+	                            /*
+	                            case 9:
+	                                alert("El sitio no es compatible con Internet Explorer, te recomendamos usar Chrome o Firefox.");
+	                                break;
+	                            */
+	                        }
+	                    }
+	                }
+	            </script>
+	        {% endblock %}
+	    {% endblock %}
+	    <!-- Facebook Pixel Code -->
+		<script>
+			!function(f,b,e,v,n,t,s)
+			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window,document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		 	fbq('init', '388345931302119'); 
+			fbq('track', 'PageView');
+		</script>
+		<noscript>
+	 		<img height="1" width="1" src="https://www.facebook.com/tr?id=388345931302119&ev=PageView &noscript=1"/>
+		</noscript>
+		<!-- End Facebook Pixel Code -->
+	</head>
+	<body id="index" style="padding-top: 0px !important;">
+		<div id="inicio"></div>
+		{# Root Project URL#}
+        <input id="master-host" type="hidden" value="{{ _host }}">
+		{# Auxiliar Temporal Inputs's DIV #}
+        <div id="hidden-inputs-session"></div>
+        {# Auxiliar Temporal Inputs's DIV #}
+        <div id="hidden-inputs-temporal"></div>
+
+        {# super navbar #}
+        <header id="header" class="navbar navigation-bar-header _content">
+        	{% block navbar_recurrent %}{% endblock %}
+		</header>
+		
+        {# Templates's DIV #}
+        <div class="wrapper_content_interactive _content" id='content-temporal-interactive'>
+            {% block content_recurrent %}{% endblock %}
+        </div>
+       	
+       	{# super footer #}
+       	{% embed "super_footer.twig" %}{% endembed %}
+
+       	{# back to top #}
+       	<a href="#0" class="back-to-top cd-top no-print">top</a>
+
+       	{% block body_scripts %}
+   			{# core libs #}
+   			<script src="{{ _host }}lib/min/lib.core.min.js"></script>
+
+   			{# google api #}
+   			{#
+   			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=geometry&libraries=places&key=AIzaSyCCqo-F2TnMAABZvfV5yTQLlWvUCJlJViU&amp;sensor=false"></script>
+   			#}
+
+			{# TEMPLATES 
+            <script src="{{ _sitio }}templates/handlebars/min/templates.min.js"></script>
+			#}
+
+   			{# core js #}
+   			<script src="{{ _host }}js/min/core.min.js"></script>
+   			{#
+   			<script src="{{ _host }}js/objects.js"></script>
+   			<script src="{{ _host }}js/method.js"></script>
+   			<script src="{{ _host }}js/model.js"></script>
+   			<script src="{{ _host }}js/main.js"></script>
+   			<script src="{{ _host }}js/required.js"></script>
+   			#}
+       	{% endblock %}
+       	{% spaceless %}
+	        <script>{% block load_scripts %}{% endblock %}</script>
+	    {% endspaceless %}
+	</body>
+</html>

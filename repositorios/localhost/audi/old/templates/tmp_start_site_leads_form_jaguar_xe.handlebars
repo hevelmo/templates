@@ -1,0 +1,149 @@
+<form id="leads-jag-ldr-country-financing-by-model" class="form-leads-financing">
+    <p>Nos gustaría enviarte una cotización por correo electrónico</p>
+    <p><span style="color: red; font-size: 12px;">Los campos marcados con <span style="color: red;" class="fa fa-asterisk"></span> son requeridos</span></p>
+    <!-- financing -->
+    <div class="financing_elements">
+        <div class="financing_element a">
+            <fieldset>
+                <label for="leads_jag_ldr_country_financing_by_model_name">
+                    <span style="color: red;" class="fa fa-asterisk"></span> Nombre
+                </label>
+                <input
+                    type="text"
+                    id="financing_by_model_name"
+                    name="leads_jag_ldr_country_financing_by_model_name"
+                    class="fbm_validate_input"
+                    placeholder="Nombre"
+                    data-validation-data="required|name">
+                <p class="invalid-message" id="error_name">Este campo es obligatorio<span>&nbsp;</span></p>                                            
+            </fieldset>
+        </div>
+        <div class="financing_element b">
+            <fieldset>
+                <label for="leads_jag_ldr_country_financing_by_model_lastname">
+                    <span style="color: red;" class="fa fa-asterisk"></span> Apellido
+                </label>
+                <input
+                    type="text"
+                    id="financing_by_model_lastname"
+                    name="leads_jag_ldr_country_financing_by_model_lastname"
+                    class="fbm_validate_input"
+                    placeholder="Apellidos Paterno y Materno"
+                    data-validation-data="required|name">
+                <p class="invalid-message" id="error_lastname">Este campo es obligatorio<span>&nbsp;</span></p>
+            </fieldset>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="financing_elements">
+        <div class="financing_element a">
+            <fieldset>
+                <label for="leads_jag_ldr_country_financing_by_model_email">
+                    <span style="color: red;" class="fa fa-asterisk"></span> Correo electrónico
+                </label>
+               <input
+                    type="email"
+                    id="financing_by_model_email"
+                    name="leads_jag_ldr_country_financing_by_model_email"
+                    class="fbm_validate_input input icon email"
+                    placeholder="Correo electrónico"
+                    data-validation-data="required|email">
+               <p class="invalid-message" id="error_mail">Este campo es obligatorio<span>&nbsp;</span></p>
+            </fieldset>
+        </div>
+        <div class="financing_element b">
+            <fieldset>
+                <label for="leads_jag_ldr_country_financing_by_model_tel">
+                    <span style="color: red;" class="fa fa-asterisk"></span> Número de celular
+                </label>
+                <input
+                    type="tel"
+                    id="financing_by_model_tel"
+                    name="leads_jag_ldr_country_financing_by_model_tel"
+                    class="fbm_validate_input"
+                    maxlength="13"
+                    placeholder="Número de celular"
+                    data-validation-data="required|phone">
+                <p class="invalid-message" id="error_phone">Este campo es obligatorio<span>&nbsp;</span></p>
+            </fieldset>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <p class="border-bottom mt10 pb10">
+        Comentarios <br>
+        <span style="font-size: 12px;">Escribe tus necesidades, tenemos un plan para tí.</span>
+    </p>
+    <p></p>
+    <div class="financing_elements">
+        <div class="financing_element ab">
+            <fieldset>
+                <label for="leads_jag_ldr_country_financing_by_model_message">
+                    <span style="color: red;" class="fa fa-asterisk"></span> Mensaje
+                </label>
+                <textarea
+                    name="leads_jag_ldr_country_financing_by_model_message"
+                    class="escribir2 fbm_validate_input"
+                    id="financing_by_model_message"
+                    data-validation-data="required|address"></textarea>
+                <p class="invalid-message" id="error_mensaje">Este campo es obligatorio<span>&nbsp;</span></p>
+            </fieldset>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="financing_elements">
+        <div class="financing_element ab">
+            <p>¿Te gustaría manejarlo?</p>
+            <fieldset class="fieldset-radio-checkbox fieldset-checkbox" id="fieldset-radio-checkbox-yes">
+                <label for="financing_by_model_test_drive_yes" class="label-radio">Sí
+                    <input
+                        type="radio"
+                        id="financing_by_model_test_drive_yes"
+                        name="leads_jag_ldr_country_financing_by_model_test_drive"
+                        class="fbm_validate_radio"
+                        value="Sí deseas manejarlo">
+                </label>
+            </fieldset>
+            <fieldset class="fieldset-radio-checkbox fieldset-checkbox" id="fieldset-radio-checkbox-no">
+                <label for="financing_by_model_test_drive_no" class="label-radio radio-checked">No
+                    <input
+                        type="radio"
+                        id="financing_by_model_test_drive_no"
+                        name="leads_jag_ldr_country_financing_by_model_test_drive"
+                        class="fbm_validate_radio"
+                        value="No deseas manejarlo"
+                        checked="checked">
+                </label>
+            </fieldset>
+        </div>
+    </div>
+    <div class="financing_elements">
+        <div class="financing_element ab">
+            <fieldset class="fieldset-radio-checkbox" id="checkbox-news">
+                <label for="financing_by_model_newsletter" class="label-checkbox">
+                    <input
+                        type="checkbox"
+                        id="financing_by_model_newsletter"
+                        name="leads_jag_ldr_country_financing_by_model_newsletter"
+                        class="fbm_validate_checkbox"
+                        value=""> Deseo recibir noticias y promociones.
+                </label>
+            </fieldset>
+            <fieldset id="funding_fields_hidden"></fieldset>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</form>
+<div class="pl0" id="button_leads_form_financing">
+    <button class="primaryLinkWithStyle plwsLight TargetLinks financing_by_model" id="send_leads_financing_by_model_submit">
+        <span>ENVIAR</span>
+    </button>
+</div>
+<div class="pl0" id="button-return">
+    <a class="primaryLinkWithStyle plwsLight TargetLinks resp-button" id="primaryLinkWithStyle">
+        <span><i class="fa fa-arrow-left fa-2x fa-fw fa-lg"></i> REGRESAR</span>
+    </a>
+</div>
+<p id="revisa_aviso">
+    Tus datos están a salvo.<br>
+    Para mayor información revisa nuestro <a href="http://eurocavsa.com.mx/aviso_de_privacidad.html" target="_blank">Aviso de privacidad</a>
+</p>

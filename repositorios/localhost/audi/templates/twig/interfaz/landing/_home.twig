@@ -1,0 +1,55 @@
+{% extends "super.twig" %}
+{% block title %}{{ title }}{% endblock %}
+{% block navbar_recurrent %}
+	{% embed "super_navbar.twig" %}{% endembed %}
+{% endblock %}
+{% block content_recurrent %}
+	<a id="audi-a3-sedan" class="section-separator"></a>
+	<div id="conten-page-banner-audi-a3-sedan" class="_content">
+		{% embed "landing/promos/audiA3Sedan.twig" %}{% endembed %}		
+	</div>
+	<a id="audi-a6" class="section-separator"></a>
+	<div id="conten-page-banner-audi-a6" class="_content">
+		{% embed "landing/promos/audiA6.twig" %}{% endembed %}		
+	</div>
+	<a id="audi-a7" class="section-separator"></a>
+	<div id="conten-page-banner-audi-a7" class="_content">
+		{% embed "landing/promos/audiA7.twig" %}{% endembed %}		
+	</div>
+	<a id="audi-a8" class="section-separator"></a>
+	<div id="conten-page-banner-audi-a8" class="_content">
+		{% embed "landing/promos/audiA8.twig" %}{% endembed %}		
+	</div>
+	<div id="audi-accesorios"></div>
+	<div id="content-page-banner-audi-accesorios" class="_content">
+		{% embed "landing/promos/promo_audi_accesorios.twig" %}{% endembed %}
+	</div>
+	<a id="audi-modelos" class="section-separator"></a>
+	<div id="content-page-modelos" class="_content">
+		{% embed "landing/financiamiento/modelos/_modelos.twig" %}{% endembed %}
+	</div>
+	<a id="audi-contacto" class="section-separator"></a>
+	<div id="content-page-agencias" class="_content">
+		{% embed "landing/agencias/_agencias.twig" %}{% endembed %}
+	</div>
+	{#
+	{% embed "landing/herocarousel_lab.twig" %}{% endembed %}
+	#}
+{% endblock %}
+{% block load_scripts %}
+windowWidthMethod.windowWidth();
+backToTopMethod.init_window_scroll_top();
+$(".paner-card-body").hide();
+/* default settings */
+$('.venobox').venobox({
+    framewidth: '',        // default: ''
+    frameheight: '',       // default: ''
+    border: '5px',             // default: '0'
+    bgcolor: '#fff',            // default: '#fff'
+    titleattr: 'data-title',    // default: 'title'
+    numeratio: true,            // default: false
+    infinigall: true            // default: false
+});
+owl_team.init();
+smoothScroll.init();
+{% endblock %}

@@ -1,0 +1,134 @@
+{{!--<div id="discovery-sport"></div>--}}
+<!--googleon: all-->
+<div class="HeroCarousel inner fontSmooth" data-total="1" id="295-83457">
+    <div class="carousel royalSlider">
+    {{#each ljldr}}
+        <div class="heroItem alignedText left" data-audio="false" data-slideid="{{banId}}">
+            <span data-align="right center" data-alt="{{agnNombre}}" data-background-image="" data-picture="">
+                <span data-src="img/banner/{{banSrc650}}?v=1"></span>
+                <span data-default="true" data-media="(min-width: 651px)" data-src="img/banner/{{banSrc900}}?v=1"></span>
+                <span data-media="(min-width: 901px)" data-src="img/banner/{{banSrc1600}}?v=1"></span>
+                <noscript>
+                    <div style="background-image:url('img/banner/{{banSrc1600}}');width:100%;height:100%;"></div>
+                </noscript>
+            </span>
+            <div class="heroContent">
+                <h1 class="heading headingFocus headingThick">
+                    <span class="headingWrapper">
+                        <span class="headingTextMain">
+                            <!-- Start Component Field: {"XPath":"tcm:Content/custom:heroCarousel2/custom:slides[1]/custom:title"} -->
+                            {{banTitle}}
+                        </span>
+                        <span class="headingTextSub uppercase">
+
+                            {{#if headingTextSub.subtitle01}}
+                            <span class="subtitle">
+                                <!-- Start Component Field: {"XPath":"tcm:Content/custom:heroCarousel2/custom:slides[1]/custom:subtitle"} -->
+                                {{headingTextSub.subtitle01}}
+                            </span>
+                            {{/if}}
+                            {{#if headingTextSub.subtitle02}}
+                            <span class="subtitle">
+                                <!-- Start Component Field: {"XPath":"tcm:Content/custom:heroCarousel2/custom:slides[1]/custom:subtitle"} -->
+                                {{headingTextSub.subtitle02}}
+                            </span>
+                            {{/if}}
+                            {{#if headingTextSub.subtitle03}}
+                            <span class="subtitle">
+                                <!-- Start Component Field: {"XPath":"tcm:Content/custom:heroCarousel2/custom:slides[1]/custom:subtitle"} -->
+                                {{headingTextSub.subtitle03}}
+                            </span>
+                            {{/if}}
+                            {{#if headingTextSub.subtitle04}}
+                            <span class="subtitle">
+                                <!-- Start Component Field: {"XPath":"tcm:Content/custom:heroCarousel2/custom:slides[1]/custom:subtitle"} -->
+                                {{headingTextSub.subtitle04}}
+                            </span>
+                            {{/if}}
+                        </span>
+                    </span>
+                </h1>
+                <div class="linkContainer">
+                    <span class="primaryLinkContainer">
+                        {{!--{{#if target_noticia}}
+                        <a class="primaryLinkWithStyle plwsLight TargetLinks"
+                            href="{{primaryLinkurl}}"
+                            data-link-desktop="{{primaryLinkurl}}"
+                            data-target="current"
+                            target="{{target_noticia}}">
+                            <span>{{primaryLinkTitle}}</span>
+                        </a>
+                        {{/if}}
+                        {{#if target_sitio}}
+                        <a class="primaryLinkWithStyle plwsLight TargetLinks"
+                            href="{{primaryLinkurl}}"
+                            data-link-desktop="{{primaryLinkurl}}"
+                            data-target="current"
+                            target="{{target_sitio}}">
+                            <span>{{primaryLinkTitle}}</span>
+                        </a>
+                        {{/if}}
+                        {{#if target_agencia}}
+                        <a class="primaryLinkWithStyle plwsLight TargetLinks"
+                            href="{{primaryLinkurl}}"
+                            data-link-desktop="{{primaryLinkurl}}"
+                            data-target="current"
+                            target="{{target_agencia}}">
+                            <span>{{primaryLinkTitle}}</span>
+                        </a>
+                        {{/if}}
+                        {{#if target_agencias}}
+                        <a class="primaryLinkWithStyle plwsLight TargetLinks"
+                            href="{{primaryLinkurl}}"
+                            data-link-desktop="{{primaryLinkurl}}"
+                            data-target="current"
+                            target="{{target_agencias}}">
+                            <span>{{primaryLinkTitle}}</span>
+                        </a>
+                        {{/if}}
+                        {{#if target_promo}}
+                        <a class="primaryLinkWithStyle plwsLight TargetLinks"
+                            href="{{primaryLinkurl}}"
+                            data-link-desktop="{{primaryLinkurl}}"
+                            data-target="current"
+                            target="{{target_promo}}">
+                            <span>{{primaryLinkTitle}}</span>
+                        </a>
+                        {{/if}}
+                        {{#if target_visitanos}}
+                        <a class="primaryLinkWithStyle plwsLight TargetLinks"
+                            href="{{primaryLinkLandingCountryId}}"
+                            data-link-desktop="{{primaryLinkLandingCountryId}}"
+                            data-target="current"
+                            target="{{target_visitanos}}">
+                            <span>{{primaryLinkLandingCountryTitle}}</span>
+                        </a>
+                        {{/if}}
+                        --}}
+                        {{#if target_cotizar}}
+                        <span class="primaryLinkWithStyle plwsLight TargetLinks go-financing go-financing-{{data_model_key}} {{target_cotizar}}"
+                            id="{{primaryLinkLeadsId}}"
+                            data-link-desktop="{{primaryLinkLeadsId}}"
+                            data-model-key="{{data_model_key}}"
+                            data-model-name="{{data_model_name}}"
+                            data-agencie-key="{{data_agencie_key}}"
+                            data-agencie-name="{{data_agencie_name}}">
+                            <span>{{primaryLinkLeadsTitle}}</span>
+                        </span>
+                        {{/if}}
+                    </span>
+                    <span class="secondaryLinkContainer"></span>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+    </div>
+    {{!--
+    <!-- Copy this HTML where ever you need a scroll down button -->
+    <a class="ScrollDown" href="#ScrollDown" id="ScrollDown">
+        <i class="fa fa-angle-double-down fa-5x animation-pulse" style="margin: 7px;"></i>
+    </a>
+    --}}
+</div>
+<!--googleoff: all-->
+<script src="lib/herocarousel/lab.js"></script>
