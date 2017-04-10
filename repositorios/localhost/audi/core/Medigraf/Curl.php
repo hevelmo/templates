@@ -1,16 +1,33 @@
 <?php
-
 //namespace Medigraf;
 
-class Curl {
-    
+/**
+ * This class 
+ * 
+ * @author Francisco Javier Corona Sánchez <javier@medigraf.com.mx>
+ * @copyright 2017
+ */
+class Curl
+{
     private $apiUrl;
-    
-    function __construct($apiUrl) {
+ 
+    /**
+     * Description
+     * @param type $apiUrl 
+     * @return type
+     */ 
+    function __construct($apiUrl)
+    {
         $this->apiUrl = $apiUrl;
     }
-    
-    public function routeGet($url) {
+
+    /**
+     * Description
+     * @param type $url 
+     * @return type
+     */
+    public function routeGet($url)
+    {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $this->apiUrl . $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -20,7 +37,14 @@ class Curl {
         return $jsonResponse;
     }
     
-    public function routePost($url, $data) {
+    /**
+     * Description
+     * @param type $url 
+     * @param type $data 
+     * @return type
+     */
+    public function routePost($url, $data)
+    {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $this->apiUrl . $url);
         curl_setopt($ch, CURLOPT_POST, true);
@@ -30,6 +54,5 @@ class Curl {
         $jsonResponse   = json_decode($stringResponse);
         curl_close($ch);
         return $jsonResponse;
-    }
-    
+    } 
 }

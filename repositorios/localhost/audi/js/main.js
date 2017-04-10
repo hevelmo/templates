@@ -58,9 +58,9 @@ $(document).ready(function() {
 
     //
     $(domEl.div_recurrent).on('focusout', '.validate-required', function() { $.validate_input( $(this) ) });
-    $(domEl.div_recurrent).on("click", '#financing-send', financingForm.clickSend);
-    $(domEl.div_recurrent).on("click", '#registry-send', registryForm.clickSend);
-    $(domEl.div_recurrent).on("click", '#financing-accesories-send', financingAccesoriesForm.clickSend);
+    $(domEl.div_recurrent).on("click", '.financing-form-send', financingForm.clickSend);
+    $(domEl.div_recurrent).on("click", '.registry-form-send', registryForm.clickSend);
+    $(domEl.div_recurrent).on("click", '.financing-accesories-form-send', financingAccesoriesForm.clickSend);
     //
     $(domEl.div_recurrent).on('click', '#scroll-aud-a3-sedan', scrollContact.initA3Sedan);
     $(domEl.div_recurrent).on('click', '#scroll-aud-a6', scrollContact.initA6);

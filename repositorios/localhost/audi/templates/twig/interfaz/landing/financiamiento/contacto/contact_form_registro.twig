@@ -2,12 +2,12 @@
     <form class="email-form visible" id="registry">
         <p>Audi Center López Mateos y Audi Center Guadalajara te invitan a conocer el nuevo Audi Q5 2018 el día 9 de febrero a las 20:30 h.</p>
         <p>Llena el siguiente formulario y un asesor se comunicara contigo para enviarte tu invitación al evento.</p>
-        <p><span style="color: red; font-size: 12px;">Los campos marcados con <span style="color: red;" class="fa fa-asterisk"></span> son requeridos</span></p>
+        {#<p><span style="color: red; font-size: 12px;">Los campos marcados con <span style="color: red;" class="fa fa-asterisk"></span> son requeridos</span></p>#}
         <!-- financing -->
         <div class="financing_elements">
             <div class="financing_element a">
                 <fieldset>
-                    <label for="aud_name">
+                    <label for="aud_name" style="display: none;">
                         <span style="color: red;" class="fa fa-asterisk"></span> Nombre
                     </label>
                     <input
@@ -22,7 +22,7 @@
             </div>
             <div class="financing_element b">
                 <fieldset>
-                    <label for="aud_lastname">
+                    <label for="aud_lastname" style="display: none;">
                         <span style="color: red;" class="fa fa-asterisk"></span> Apellido
                     </label>
                     <input
@@ -40,7 +40,7 @@
         <div class="financing_elements">
             <div class="financing_element a">
                 <fieldset>
-                    <label for="aud_email">
+                    <label for="aud_email" style="display: none;">
                         <span style="color: red;" class="fa fa-asterisk"></span> Correo electrónico
                     </label>
                    <input
@@ -55,7 +55,7 @@
             </div>
             <div class="financing_element b">
                 <fieldset>
-                    <label for="aud_phone">
+                    <label for="aud_phone" style="display: none;">
                         <span style="color: red;" class="fa fa-asterisk"></span> Número de celular
                     </label>
                     <input
@@ -78,7 +78,7 @@
         <div class="financing_elements">
             <div class="financing_element ab">
                 <fieldset>
-                    <label for="aud_message">
+                    <label for="aud_message" style="display: none;">
                         Mensaje
                     </label>
                     <textarea
@@ -108,7 +108,7 @@
         <div class="financing_element b">
             <fieldset>
                 <div class="pl0" id="button_leads_form_financing">
-                    <button class="primaryLinkWithStyle plwsLight TargetLinks financing_by_model is_empty_email send_contact_form" id="registry-send">
+                    <button class="primaryLinkWithStyle plwsLight TargetLinks financing_by_model is_empty_email send_contact_form registry-form-send" id="registry-send">
                         <span>ENVIAR</span>
                     </button>
                 </div>

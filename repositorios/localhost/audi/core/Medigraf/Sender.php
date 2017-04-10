@@ -1,21 +1,24 @@
 <?php
-
 //namespace Medigraf;
 
-class Sender {
-    
-    //---------------------------------------------------------------------------------------------
-    //---------------------------------------- PROPERTIES -----------------------------------------
-    //---------------------------------------------------------------------------------------------
-    
+/**
+ * This class 
+ * 
+ * @author Francisco Javier Corona Sánchez <javier@medigraf.com.mx>
+ * @copyright 2017
+ */
+class Sender
+{
     private $mandrill;
     private $message;
-    
-    //---------------------------------------------------------------------------------------------
-    //---------------------------------------- CONSTRUCT ------------------------------------------
-    //---------------------------------------------------------------------------------------------
-    
-    function __construct($mandrill) {
+
+    /**
+     * Description
+     * @param type $mandrill 
+     * @return type
+     */
+    function __construct($mandrill)
+    {
         $this->mandrill = $mandrill;
         $this->message  = array(
             "important" => false,
@@ -35,7 +38,13 @@ class Sender {
         );
     }
 
-    public function __send($data) {
+    /**
+     * Description
+     * @param type $data 
+     * @return type
+     */
+    public function __send($data)
+    {
         foreach ($data as $key => $value) {
             if (!empty($value)) {
                 $this->message[$key] = $value;
@@ -54,5 +63,4 @@ class Sender {
             throw $e;
         }
     }
-    
 }

@@ -8,6 +8,11 @@
     offset = 300;
     offset_opacity = 1200;
     scroll_top_duration = 700;
+    //Masters
+    var GLOBALMasterMax = $("input#master-max").val();
+    //var GLOBALRootApi = $("input#master-root-api").val();
+    //var GLOBALMasterMax = "http://clicktolead.com.mx/api/v1/remote/action"; //Production
+    //var GLOBALMasterMax = "http://localhost/maxleads/api/v1/remote/action"; //Development
 /* ------------------------------------------------------ *\
     [functions] scroll_to
 \* ------------------------------------------------------ */
@@ -319,57 +324,12 @@
     [Methods] financingForm
 \* ------------------------------------------------------ */
     var financingForm = {
-        handlerPromiseLeads: function(data) {
-            var financingAddPromise;
-            financingAddPromise = financingForm.addFinanciamiento();
-            financingAddPromise.success(financingForm.handlesPromiseAddFinancing);
-            financingAddPromise.success(financingForm.handlerPromiseAddFinancing);
-        },
-        handlerPromiseAddFinancing: function (data1) {
-            var financingSendPromise, aud_agn, rootApi;
-
-            rootApi = AUD.getValue('#master-host');
-            url_location = rootApi;
-            
-            aud_agn = AUD.getValue('#aud_agn');
-            aud_product = AUD.getValue('#aud_producto');
-            console.log(aud_agn, aud_product);
-
-            resetAlert();
-            alertify.set({
-                labels: {
-                    ok: 'Aceptar',
-                    cancel: 'Cancelar'
-                }
-            });
-            financingSendPromise = financingForm.sendFinanciamiento();
-            financingSendPromise.success( function (data2) {
-                ga('send', 'event', 'button-send-form-financing-contact', 'Promo Audi '+ aud_product, 'form-financing-contact');
-                setTimeout(function () {
-                    setTimeout(function () {
-                        //$('#form-wrapper').fadeOut(1000);
-                        $('.form-thanks').fadeIn(1000);
-                        setTimeout(function() {
-                            financingForm.resetFinanciamiento();
-                            alertify.alert("¡Muchas gracias!<br>" + 
-                                           "Hemos enviado su formulario exitosamente a un representante de la concesionaria " + aud_agn + ", " +
-                                           "pronto se pondrá en contacto con usted para enviarle su cotización.", function(e) {
-                                                $(location).attr('href', url_location); 
-                                           });
-                            alertify.success("Datos enviados.");
-                        }, 1800);
-                    }, 1800);
-                }, 1400);
-            });
-            financingSendPromise.error( function (data2) {
-                financingForm.resetFinanciamiento();
-                alertify.error("No se han podido enviar los datos <br /> Inténtelo más tarde.");
-            });
-        },
-        makeLeads: function () {
-            var data, dataRenamed, bigMessage, get_data;
-            data = $('#financing').serializeFormJSON();
-
+        sendButtons: "",
+        contactForm: "",
+        loaderIcon: "",
+        sendLeads: function() {
+            var data, dataRenamed;
+            data = $(financingForm.contactForm).serializeFormJSON();
             dataRenamed = AUD.renameArrayObjKeys([data], {
                 "name": "nombre",
                 "lastname": "apellidos",
@@ -386,92 +346,9 @@
             dataRenamed["campaign_max"] = "Promo Audi";
             dataRenamed["web_max"] = window.location.href;
             dataRenamed["exit_web"] = window.location.href;
-            return dataRenamed;
+            return AUD.postalService(GLOBALMasterMax, dataRenamed);
         },
-        sendLeads: function () {
-            var data, postApi;
-            data = financingForm.makeLeads();
-
-            postApi = AUD.postalService("http://clicktolead.com.mx/api/v1/remote/action", data);
-            return postApi;
-        },
-        addFinanciamiento: function () {
-            var rootApi, postApi, data;
-            data = $('#financing').serializeFormJSON();
-            rootApi = AUD.getValue('#master-host');
-            return AUD.postalService(rootApi + urlsApi.add_fin, data);
-        },
-        sendFinanciamiento: function () {
-            var rootApi, postApi, data;
-            data = $('#financing').serializeFormJSON();
-            rootApi = AUD.getValue('#master-host');
-            return AUD.postalService(rootApi + urlsApi.snd_fin, data);
-        },
-        resetFinanciamiento: function () {
-            var $btnSend, get_data;
-            $btnSend = $('.send_contact_form');
-
-            AUD.resetForm('#financing');
-            
-            $('#loader_send_icon').css('display', 'none');
-            $btnSend.removeAttr('disabled');
-        },
-        fillingControl: function() {
-            var validFieldName, dataFinancing, isFull, $btnSend;
-
-            $btnSend = $('.send_contact_form');
-            $("#loader_send_icon").css("display", "none");
-
-            validFieldName = [
-                'nombre', 'apellidos', 'correo', 'telefono', 'agencia', 'mensaje'
-            ];
-
-            dataFinancing = $('#financing').serializeFormJSON();
-
-            $btnSend.removeAttr('disabled');
-        },
-        clickSend: function (event) {
-            var leadsPromise;
-            formErrors = financingForm.niceValidation('.validate-required', '#financing-send');
-            if (formErrors === 0) {
-                leadsPromise = financingForm.sendLeads();
-                leadsPromise.success(financingForm.handlerPromiseLeads);
-                leadsPromise.error(financingForm.handlerPromiseLeads);
-                /*
-                financingForm.sendLeads();
-                financingForm.addFinanciamiento();
-                financingForm.sendFinanciamiento();
-                */
-            }
-        },
-        niceValidation: function (validateElement, btnSend) {
-            var formErrors;
-            $(btnSend).removeAttr("disabled");
-            formErrors = 0;
-            $(validateElement).each( function (idx) {
-                if ( !$.validate_input( $(this) )) {
-                    formErrors++;
-                    $(this).focus();
-                }
-            });
-            if ( formErrors === 0 ) {
-                $(btnSend).css("cursor", "auto").prop("disabled", true);
-                $("#loader_send_icon").css("display", "block");
-            }
-            return formErrors;
-        }
-    }
-/* ------------------------------------------------------ *\
-    [Methods] registryForm
-\* ------------------------------------------------------ */
-    var registryForm = {
-        handlerPromiseLeads: function(data) {
-            var financingAddPromise;
-            financingAddPromise = registryForm.addFinanciamiento();
-            financingAddPromise.success(registryForm.handlesPromiseAddFinancing);
-            financingAddPromise.success(registryForm.handlerPromiseAddFinancing);
-        },
-        handlerPromiseAddFinancing: function (data1) {
+        handlerPromiseSend: function (data1) {
             var financingSendPromise, aud_agn, rootApi;
 
             rootApi = AUD.getValue('#master-host');
@@ -488,19 +365,20 @@
                     cancel: 'Cancelar'
                 }
             });
-            financingSendPromise = registryForm.sendFinanciamiento();
+            data = $(financingForm.contactForm).serializeFormJSON();
+            financingSendPromise = financingForm.sendContacto();
             financingSendPromise.success( function (data2) {
-                ga('send', 'event', 'button-send-form-registry-contact', aud_product, 'form-registry-contact');
+                ga('send', 'event', 'button-send-form-financing-contact', 'Promo Audi '+ aud_product, 'form-financing-contact');
                 setTimeout(function () {
                     setTimeout(function () {
                         //$('#form-wrapper').fadeOut(1000);
                         $('.form-thanks').fadeIn(1000);
                         setTimeout(function() {
-                            registryForm.resetFinanciamiento();
+                            financingForm.resetContact();
                             alertify.alert("¡Muchas gracias!<br>" + 
                                            "Hemos enviado su formulario exitosamente a un representante de la concesionaria " + aud_agn + ", " +
-                                           "un asesor se comunicara contigo para enviarte tu invitación al evento.", function(e) {
-                                                //$(location).attr('href', url_location); 
+                                           "pronto se pondrá en contacto con usted para enviarle su cotización.", function(e) {
+                                                $(location).attr('href', url_location); 
                                            });
                             alertify.success("Datos enviados.");
                         }, 1800);
@@ -508,14 +386,62 @@
                 }, 1400);
             });
             financingSendPromise.error( function (data2) {
-                registryForm.resetFinanciamiento();
+                financingForm.resetContact();
                 alertify.error("No se han podido enviar los datos <br /> Inténtelo más tarde.");
             });
         },
-        makeLeads: function () {
-            var data, dataRenamed, bigMessage, get_data;
-            data = $('#registry').serializeFormJSON();
+        handlerPromiseLeads: function (data) {
+            var contactSndPromise;
+            contactSndPromise = financingForm.sendContacto();
+            contactSndPromise.success(financingForm.handlerPromiseSend);
+            contactSndPromise.error(financingForm.handlerPromiseSend);
+        },
+        sendContacto: function () {
+            var rootApi, data;
+            data = $(financingForm.contactForm).serializeFormJSON();
+            rootApi = AUD.getValue('#master-host');
+            return AUD.postalService(rootApi + urlsApi.snd_fin, data);
+        },
+        resetContact: function () {
+            var $btnSend;
+            $btnSend = $(".send_contact_form");
+            AUD.resetForm(financingForm.contactForm);
+            $(financingForm.loaderIcon).css("display", "none");
+            $btnSend.removeAttr("disabled");
+        },
+        clickSend: function(event) {
+            // Loader Icon
+            financingForm.loaderIcon = "#loader_send_icon";
+            // Get and save current button id
+            financingForm.sendButton = "#" + $(this).attr('id');
+            // Get the current form id, find the form with the same data-scope value
+            financingForm.contactForm = "form#" + $(domEl.div_recurrent).find("form").attr("id");
 
+            formErrors = formValidation.required(financingForm.contactForm, '.validate-required', financingForm.sendButton);
+            if (formErrors) {
+                $(financingForm.contactForm).css("cursor", "auto").prop("disabled", true);
+                $(financingForm.loaderIcon).css("display", "block");
+                leadsPromise = financingForm.sendLeads();
+                leadsPromise.success(financingForm.handlerPromiseLeads);
+                leadsPromise.error(financingForm.handlerPromiseLeads);
+                /*
+                financingForm.sendLeads();
+                financingForm.sendContacto();
+                financingForm.addContacto();
+                */
+            }
+        }
+    }
+/* ------------------------------------------------------ *\
+    [Methods] registryForm
+\* ------------------------------------------------------ */
+    var registryForm = {
+        sendButtons: "",
+        contactForm: "",
+        loaderIcon: "",
+        sendLeads: function() {
+            var data, dataRenamed;
+            data = $(registryForm.contactForm).serializeFormJSON();
             dataRenamed = AUD.renameArrayObjKeys([data], {
                 "name": "nombre",
                 "lastname": "apellidos",
@@ -526,98 +452,128 @@
                 "comment": "mensaje"
             });
             dataRenamed = dataRenamed[0];
-            dataRenamed["business_max"] = "11"; //Max Id;            
+            dataRenamed["business_max"] = $('#aud_agn').find(":selected").data("max-id"); //Max Id;            
             dataRenamed["news"] = "0";
             dataRenamed["origen_type"] = "2";
             dataRenamed["campaign_max"] = "Invitación Audi";
             dataRenamed["web_max"] = window.location.href;
             dataRenamed["exit_web"] = window.location.href;
-            return dataRenamed;
+            return AUD.postalService(GLOBALMasterMax, dataRenamed);
         },
-        sendLeads: function () {
-            var data, postApi;
-            data = registryForm.makeLeads();
+        handlerPromiseSend: function (data1) {
+            var financingSendPromise, aud_agn, rootApi;
 
-            postApi = AUD.postalService("http://clicktolead.com.mx/api/v1/remote/action", data);
-            return postApi;
-        },
-        addFinanciamiento: function () {
-            var rootApi, postApi, data;
-            data = $('#registry').serializeFormJSON();
             rootApi = AUD.getValue('#master-host');
-            return AUD.postalService(rootApi + urlsApi.add_fin, data);
+            url_location = rootApi;
+            
+            aud_agn = AUD.getValue('#aud_agn');
+            aud_product = AUD.getValue('#aud_producto');
+            console.log(aud_agn, aud_product);
+
+            resetAlert();
+            alertify.set({
+                labels: {
+                    ok: 'Aceptar',
+                    cancel: 'Cancelar'
+                }
+            });
+            data = $(registryForm.contactForm).serializeFormJSON();
+            financingSendPromise = registryForm.sendContacto();
+            financingSendPromise.success( function (data2) {
+                ga('send', 'event', 'button-send-form-registry-contact', aud_product, 'form-registry-contact');
+                setTimeout(function () {
+                    setTimeout(function () {
+                        //$('#form-wrapper').fadeOut(1000);
+                        $('.form-thanks').fadeIn(1000);
+                        setTimeout(function() {
+                            registryForm.resetContact();
+                            alertify.alert("¡Muchas gracias!<br>" + 
+                                           "Hemos enviado su formulario exitosamente a un representante de la concesionaria " + aud_agn + ", " +
+                                           "un asesor se comunicara contigo para enviarte tu invitación al evento.", function(e) {
+                                                $(location).attr('href', url_location); 
+                                           });
+                            alertify.success("Datos enviados.");
+                        }, 1800);
+                    }, 1800);
+                }, 1400);
+            });
+            financingSendPromise.error( function (data2) {
+                registryForm.resetContact();
+                alertify.error("No se han podido enviar los datos <br /> Inténtelo más tarde.");
+            });
         },
-        sendFinanciamiento: function () {
-            var rootApi, postApi, data;
-            data = $('#registry').serializeFormJSON();
+        handlerPromiseLeads: function (data) {
+            var contactSndPromise;
+            contactSndPromise = registryForm.sendContacto();
+            contactSndPromise.success(registryForm.handlerPromiseSend);
+            contactSndPromise.error(registryForm.handlerPromiseSend);
+        },
+        sendContacto: function () {
+            var rootApi, data;
+            data = $(registryForm.contactForm).serializeFormJSON();
             rootApi = AUD.getValue('#master-host');
             return AUD.postalService(rootApi + urlsApi.snd_reg, data);
         },
-        resetFinanciamiento: function () {
-            var $btnSend, get_data;
-            $btnSend = $('.send_contact_form');
-
-            AUD.resetForm('#registry');
-            
-            $('#loader_send_icon').css('display', 'none');
-            $btnSend.removeAttr('disabled');
+        resetContact: function () {
+            var $btnSend;
+            $btnSend = $(".send_contact_form");
+            AUD.resetForm(registryForm.contactForm);
+            $(registryForm.loaderIcon).css("display", "none");
+            $btnSend.removeAttr("disabled");
         },
-        fillingControl: function() {
-            var validFieldName, dataFinancing, isFull, $btnSend;
+        clickSend: function(event) {
+            // Loader Icon
+            registryForm.loaderIcon = "#loader_send_icon";
+            // Get and save current button id
+            registryForm.sendButton = "#" + $(this).attr('id');
+            // Get the current form id, find the form with the same data-scope value
+            registryForm.contactForm = "form#" + $(domEl.div_recurrent).find("form").attr("id");
 
-            $btnSend = $('.send_contact_form');
-            $("#loader_send_icon").css("display", "none");
-
-            validFieldName = [
-                'nombre', 'apellidos', 'correo', 'telefono'
-            ];
-
-            dataFinancing = $('#registry').serializeFormJSON();
-
-            $btnSend.removeAttr('disabled');
-        },
-        clickSend: function (event) {
-            var leadsPromise;
-            formErrors = registryForm.niceValidation('.validate-required', '#registry-send');
-            if (formErrors === 0) {
+            formErrors = formValidation.required(registryForm.contactForm, '.validate-required', registryForm.sendButton);
+            if (formErrors) {
+                $(registryForm.contactForm).css("cursor", "auto").prop("disabled", true);
+                $(registryForm.loaderIcon).css("display", "block");
                 leadsPromise = registryForm.sendLeads();
                 leadsPromise.success(registryForm.handlerPromiseLeads);
                 leadsPromise.error(registryForm.handlerPromiseLeads);
                 /*
                 registryForm.sendLeads();
-                registryForm.addFinanciamiento();
-                registryForm.sendFinanciamiento();
+                registryForm.sendContacto();
+                registryForm.addContacto();
                 */
             }
-        },
-        niceValidation: function (validateElement, btnSend) {
-            var formErrors;
-            $(btnSend).removeAttr("disabled");
-            formErrors = 0;
-            $(validateElement).each( function (idx) {
-                if ( !$.validate_input( $(this) )) {
-                    formErrors++;
-                    $(this).focus();
-                }
-            });
-            if ( formErrors === 0 ) {
-                $(btnSend).css("cursor", "auto").prop("disabled", true);
-                $("#loader_send_icon").css("display", "block");
-            }
-            return formErrors;
         }
     }
 /* ------------------------------------------------------ *\
     [Methods] financingAccesoriesForm
 \* ------------------------------------------------------ */
     var financingAccesoriesForm = {
-        handlerPromiseLeads: function(data) {
-            var financingAddPromise;
-            financingAddPromise = financingAccesoriesForm.addFinanciamiento();
-            financingAddPromise.success(financingAccesoriesForm.handlesPromiseAddFinancing);
-            financingAddPromise.success(financingAccesoriesForm.handlerPromiseAddFinancing);
+        sendButtons: "",
+        contactForm: "",
+        loaderIcon: "",
+        sendLeads: function() {
+            var data, dataRenamed;
+            data = $(financingAccesoriesForm.contactForm).serializeFormJSON();
+            dataRenamed = AUD.renameArrayObjKeys([data], {
+                "name": "nombre",
+                "lastname": "apellidos",
+                "email": "correo",
+                "phone": "telefono",
+                "agencie": "agencia",
+                "comment": "mensaje"
+            });
+            dataRenamed = dataRenamed[0];
+            dataRenamed["business_max"] = "11"; //Max Id;
+            dataRenamed["news"] = "0";
+            dataRenamed["origen_type"] = "2";
+            dataRenamed["campaign_max"] = "Accesorios Audi";
+            dataRenamed["web_max"] = window.location.href;
+            dataRenamed["exit_web"] = window.location.href;
+            dataRenamed["product"] = $('#aud_producto').find(":selected").val() + " - " + $('#aud_accesories').find(":selected").val();
+            dataRenamed["comment"] = AUD.linealString(dataRenamed["comment"]);
+            return AUD.postalService(GLOBALMasterMax, dataRenamed);
         },
-        handlerPromiseAddFinancing: function (data1) {
+        handlerPromiseSend: function (data1) {
             var financingSendPromise, aud_agn, aud_product, aud_accesories, rootApi;
 
             rootApi = AUD.getValue('#master-host');
@@ -634,7 +590,8 @@
                     cancel: 'Cancelar'
                 }
             });
-            financingSendPromise = financingAccesoriesForm.sendFinanciamiento();
+            data = $(financingAccesoriesForm.contactForm).serializeFormJSON();
+            financingSendPromise = financingAccesoriesForm.sendContacto();
             financingSendPromise.success( function (data2) {
                 ga('send', 'event', 'button-send-form-financing-accesories-contact', 'Accesorios Originales Audi '+ aud_product + ' - ' + aud_accesories, 'form-financing-accesories-contact');
                 setTimeout(function () {
@@ -642,7 +599,7 @@
                         //$('#form-wrapper').fadeOut(1000);
                         $('.form-thanks').fadeIn(1000);
                         setTimeout(function() {
-                            financingAccesoriesForm.resetFinanciamiento();
+                            financingAccesoriesForm.resetContact();
                             alertify.alert("¡Muchas gracias!<br>" + 
                                            "Hemos enviado su formulario exitosamente a un representante de la concesionaria " + aud_agn + ", " +
                                            "pronto se pondrá en contacto con usted para enviarle su cotización.", function(e) {
@@ -654,104 +611,49 @@
                 }, 1400);
             });
             financingSendPromise.error( function (data2) {
-                financingAccesoriesForm.resetFinanciamiento();
+                financingAccesoriesForm.resetContact();
                 alertify.error("No se han podido enviar los datos <br /> Inténtelo más tarde.");
             });
         },
-        makeLeads: function () {
-            var data, dataRenamed, bigMessage, get_data;
-            data = $('#financing').serializeFormJSON();
-
-            dataRenamed = AUD.renameArrayObjKeys([data], {
-                "name": "nombre",
-                "lastname": "apellidos",
-                "email": "correo",
-                "phone": "telefono",
-                "agencie": "agencia",
-                "comment": "mensaje"
-            });
-            dataRenamed = dataRenamed[0];
-            dataRenamed["business_max"] = $('#aud_agn').find(":selected").data("max-id"); //Max Id;            
-            dataRenamed["news"] = "0";
-            dataRenamed["origen_type"] = "2";
-            dataRenamed["campaign_max"] = "Promo Audi";
-            dataRenamed["web_max"] = window.location.href;
-            dataRenamed["exit_web"] = window.location.href;
-            dataRenamed["product"] = $('#aud_producto').find(":selected").val() + " - " + $('#aud_accesories').find(":selected").val();
-            dataRenamed["comment"] = AUD.linealString(dataRenamed["comment"]);
-            console.log(dataRenamed);
-            return dataRenamed;
+        handlerPromiseLeads: function (data) {
+            var contactSndPromise;
+            contactSndPromise = financingAccesoriesForm.sendContacto();
+            contactSndPromise.success(financingAccesoriesForm.handlerPromiseSend);
+            contactSndPromise.error(financingAccesoriesForm.handlerPromiseSend);
         },
-        sendLeads: function () {
-            var data, postApi;
-            data = financingAccesoriesForm.makeLeads();
-            postApi = AUD.postalService("http://clicktolead.com.mx/api/v1/remote/action", data);
-            return postApi;
-        },
-        addFinanciamiento: function () {
-            var rootApi, postApi, data, product;
-            data = $('#financing').serializeFormJSON();
-            rootApi = AUD.getValue('#master-host');
-            
-            return AUD.postalService(rootApi + urlsApi.add_fin, data);
-        },
-        sendFinanciamiento: function () {
-            var rootApi, postApi, data;
-            data = $('#financing').serializeFormJSON();
+        sendContacto: function () {
+            var rootApi, data;
+            data = $(financingAccesoriesForm.contactForm).serializeFormJSON();
             rootApi = AUD.getValue('#master-host');
             return AUD.postalService(rootApi + urlsApi.snd_fin_acs, data);
         },
-        resetFinanciamiento: function () {
-            var $btnSend, get_data;
-            $btnSend = $('.send_contact_form');
-
-            AUD.resetForm('#financing');
-            
-            $('#loader_send_icon').css('display', 'none');
-            $btnSend.removeAttr('disabled');
+        resetContact: function () {
+            var $btnSend;
+            $btnSend = $(".send_contact_form");
+            AUD.resetForm(financingAccesoriesForm.contactForm);
+            $(financingAccesoriesForm.loaderIcon).css("display", "none");
+            $btnSend.removeAttr("disabled");
         },
-        fillingControl: function() {
-            var validFieldName, dataFinancing, isFull, $btnSend;
+        clickSend: function(event) {
+            // Loader Icon
+            financingAccesoriesForm.loaderIcon = "#loader_send_icon";
+            // Get and save current button id
+            financingAccesoriesForm.sendButton = "#" + $(this).attr('id');
+            // Get the current form id, find the form with the same data-scope value
+            financingAccesoriesForm.contactForm = "form#" + $(domEl.div_recurrent).find("form").attr("id");
 
-            $btnSend = $('.send_contact_form');
-            $("#loader_send_icon").css("display", "none");
-
-            validFieldName = [
-                'nombre', 'apellidos', 'correo', 'telefono', 'agencia', 'mensaje'
-            ];
-
-            dataFinancing = $('#financing').serializeFormJSON();
-
-            $btnSend.removeAttr('disabled');
-        },
-        clickSend: function (event) {
-            var leadsPromise;
-            formErrors = financingAccesoriesForm.niceValidation('.validate-required', '#financing-accesories-send');
-            if (formErrors === 0) {
+            formErrors = formValidation.required(financingAccesoriesForm.contactForm, '.validate-required', financingAccesoriesForm.sendButton);
+            if (formErrors) {
+                $(financingAccesoriesForm.contactForm).css("cursor", "auto").prop("disabled", true);
+                $(financingAccesoriesForm.loaderIcon).css("display", "block");
                 leadsPromise = financingAccesoriesForm.sendLeads();
                 leadsPromise.success(financingAccesoriesForm.handlerPromiseLeads);
                 leadsPromise.error(financingAccesoriesForm.handlerPromiseLeads);
                 /*
                 financingAccesoriesForm.sendLeads();
-                financingAccesoriesForm.addFinanciamiento();
-                financingAccesoriesForm.sendFinanciamiento();
+                financingAccesoriesForm.sendContacto();
+                financingAccesoriesForm.addContacto();
                 */
             }
-        },
-        niceValidation: function (validateElement, btnSend) {
-            var formErrors;
-            $(btnSend).removeAttr("disabled");
-            formErrors = 0;
-            $(validateElement).each( function (idx) {
-                if ( !$.validate_input( $(this) )) {
-                    formErrors++;
-                    $(this).focus();
-                }
-            });
-            if ( formErrors === 0 ) {
-                $(btnSend).css("cursor", "auto").prop("disabled", true);
-                $("#loader_send_icon").css("display", "block");
-            }
-            return formErrors;
         }
     }

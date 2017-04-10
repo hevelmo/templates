@@ -5,7 +5,7 @@
  * This class 
  * 
  * @author Francisco Javier Corona Sánchez <javier@medigraf.com.mx>
- * @copyright 2016
+ * @copyright 2017
  */
 class Template
 {
@@ -136,13 +136,17 @@ class Template
      */
     public function makeFacebookTags($siteName, $nameDefault, $description, $imageDefault)
     {
-        $imageInfo = getimagesize($imageDefault);
+        $mime = "";
+        if (file_exists($imageDefault)) {    
+            $imageInfo = getimagesize($imageDefault);
+            $mime = $imageInfo["mime"];
+        }
         $this->addToMasterConfigArray(array(
             "tag_site_name" => $siteName,
             "tag_name_default" => $nameDefault,
             "tag_description" => $description,
             "tag_image_default" => $imageDefault,
-            "tag_content_type" => $imageInfo["mime"]
+            "tag_content_type" => $mime
         ));
     }
 
@@ -217,6 +221,7 @@ class Template
      */
     private function addToMasterConfigArray1($masterConfigArray)
     {
+        $masterConfigArray = (gettype($masterConfigArray) == "array") ? $masterConfigArray : array();
         $this->masterConfigArray = array_merge($this->masterConfigArray, $masterConfigArray);
     }
 

@@ -1,22 +1,24 @@
 <?php
-
 //namespace Medigraf;
 
-class Router {
-    
-    //---------------------------------------------------------------------------------------------
-    //---------------------------------------- PROPERTIES -----------------------------------------
-    //---------------------------------------------------------------------------------------------
-    
+/**
+ * This class 
+ * 
+ * @author Francisco Javier Corona Sánchez <javier@medigraf.com.mx>
+ * @copyright 2017
+ */
+class Router
+{
     private $request;
     private $response;
     private $args;
     
-    //---------------------------------------------------------------------------------------------
-    //---------------------------------------- CONSTRUCT ------------------------------------------
-    //---------------------------------------------------------------------------------------------
-
-    function __construct() {
+    /**
+     * Description
+     * @return type
+     */    
+    function __construct()
+    {
         $this->resultArray = array();
         //Get an array arguments to the method
         $args              = func_get_args();
@@ -26,34 +28,61 @@ class Router {
         $methodName        = "construct" . $numArgs;
         //If the method exists called it 
         if (method_exists($this, $methodName)) {
-            call_user_func_array(array($this, $methodName), $args);
-        //Otherwise
+            call_user_func_array(array(
+                $this,
+                $methodName
+            ), $args);
+            //Otherwise
         } else {
         }
     }
     
-    function construct0() {
+    /**
+     * Description
+     * @return type
+     */
+    function construct0()
+    {
     }
     
-    function construct3($request, $response, $args) {
+    /**
+     * Description
+     * @param type $request 
+     * @param type $response 
+     * @param type $args 
+     * @return type
+     */
+    function construct3($request, $response, $args)
+    {
         $this->request  = $request;
         $this->response = $response;
         $this->args     = $args;
     }
     
-    //---------------------------------------------------------------------------------------------
-    //----------------------------------------- GETTERS -------------------------------------------
-    //---------------------------------------------------------------------------------------------
-    
-    public function getRequest() {
+    /**
+     * Description
+     * @return type
+     */
+    public function getRequest()
+    {
         return $this->request;
     }
     
-    public function getResponse() {
+    /**
+     * Description
+     * @return type
+     */
+    public function getResponse()
+    {
         return $this->response;
     }
     
-    public function getArgs() {
+    /**
+     * Description
+     * @return type
+     */
+    public function getArgs()
+    {
         //Get an array arguments to the method
         $args       = func_get_args();
         //Get number of arguments
@@ -62,27 +91,51 @@ class Router {
         $methodName = __FUNCTION__ . $numArgs;
         //If the method exists called it 
         if (method_exists($this, $methodName)) {
-            return call_user_func_array(array($this, $methodName), $args);
-        //Otherwise
+            return call_user_func_array(array(
+                $this,
+                $methodName
+            ), $args);
+            //Otherwise
         } else {
         }
     }
     
-    private function getArgs1($keys) {
-        return (gettype($keys) === "array") 
-            ? $this->getArgsArray($keys) 
-            : $this->getArgsValue($keys);
+    /**
+     * Description
+     * @param type $keys 
+     * @return type
+     */
+    private function getArgs1($keys)
+    {
+        return (gettype($keys) === "array") ? $this->getArgsArray($keys) : $this->getArgsValue($keys);
     }
     
-    private function getArgs0() {
+    /**
+     * Description
+     * @return type
+     */
+    private function getArgs0()
+    {
         return $this->args;
     }
     
-    private function getArgsValue($key) {
+    /**
+     * Description
+     * @param type $key 
+     * @return type
+     */
+    private function getArgsValue($key)
+    {
         return (array_key_exists($key, $this->args)) ? $this->args[$key] : false;
     }
     
-    private function getArgsArray($keys) {
+    /**
+     * Description
+     * @param type $keys 
+     * @return type
+     */
+    private function getArgsArray($keys)
+    {
         $foundArgs = array();
         foreach ($keys as $key) {
             $foundArgs[$key] = $this->getArgsValue($key);
@@ -90,29 +143,68 @@ class Router {
         return $foundArgs;
     }
     
-    public function getProperty() {
+    /**
+     * Description
+     * @return type
+     */
+    public function getProperty()
+    {
         return (object) $this->request->getParsedBody();
     }
+
+    /**
+     * Description
+     * @return type
+     */
+    public function getCurrentUrl() {
+        $currentUrl =  $this->request->getUri()->getBaseUrl();
+        $currentUrl .= ($this->request->getUri()->getPath() !== "" && $this->request->getUri()->getPath() !== NULL) 
+            ? "/" . $this->request->getUri()->getPath() 
+            : "";
+        return $currentUrl;
+    }
     
-    //---------------------------------------------------------------------------------------------
-    //----------------------------------------- SETTERS -------------------------------------------
-    //---------------------------------------------------------------------------------------------
-    
-    public function setRouteParams($request, $response, $args) {
+    /**
+     * Description
+     * @param type $request 
+     * @param type $response 
+     * @param type $args 
+     * @return type
+     */
+    public function setRouteParams($request, $response, $args)
+    {
         $this->setRequest($request);
         $this->setResponse($response);
         $this->setArgs($args);
     }
     
-    public function setRequest($request) {
+    /**
+     * Description
+     * @param type $request 
+     * @return type
+     */
+    public function setRequest($request)
+    {
         $this->request = $request;
     }
     
-    public function setResponse($response) {
+    /**
+     * Description
+     * @param type $response 
+     * @return type
+     */
+    public function setResponse($response)
+    {
         $this->response = $response;
     }
     
-    public function setArgs($args) {
+    /**
+     * Description
+     * @param type $args 
+     * @return type
+     */
+    public function setArgs($args)
+    {
         foreach ($args as $key => $value) {
             $args[$key] = (gettype($value) === "string") ? trim($value) : $value;
             if ($args[$key] === "") {
@@ -121,5 +213,4 @@ class Router {
         }
         $this->args = $args;
     }
-    
 }

@@ -62,54 +62,59 @@ class __TwigTemplate_c248157a572d30c78f897b5e0b2630ea90646946adf236c1f0c25e98d9d
         echo "        <input id=\"master-host\" type=\"hidden\" value=\"";
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "\">
-\t\t";
+        ";
         // line 113
+        echo "\t\t<input id=\"master-max\" type=\"hidden\" value=\"";
+        echo twig_escape_filter($this->env, (isset($context["_max"]) ? $context["_max"] : null), "html", null, true);
+        echo "\">
+\t\t";
+        // line 115
         echo "        <div id=\"hidden-inputs-session\"></div>
         ";
-        // line 115
+        // line 117
         echo "        <div id=\"hidden-inputs-temporal\"></div>
 
         ";
-        // line 118
+        // line 120
         echo "        <header id=\"header\" class=\"navbar navigation-bar-header _content\">
         \t";
-        // line 119
+        // line 121
         $this->displayBlock('navbar_recurrent', $context, $blocks);
-        // line 120
+        // line 122
         echo "\t\t</header>
 \t\t
         ";
-        // line 123
+        // line 125
         echo "        <div class=\"wrapper_content_interactive _content\" id='content-temporal-interactive'>
             ";
-        // line 124
+        // line 126
         $this->displayBlock('content_recurrent', $context, $blocks);
-        // line 125
+        // line 127
         echo "        </div>
        \t
        \t";
-        // line 128
+        // line 130
         echo "       \t";
-        $this->loadTemplate("super.twig", "super.twig", 128, "1181803844")->display($context);
-        // line 129
+        $this->loadTemplate("super.twig", "super.twig", 130, "630266657")->display($context);
+        // line 131
         echo "
        \t";
-        // line 131
+        // line 133
         echo "       \t<a href=\"#0\" class=\"back-to-top cd-top no-print\">top</a>
 
        \t";
-        // line 133
+        // line 135
         $this->displayBlock('body_scripts', $context, $blocks);
-        // line 156
+        // line 158
         echo "       \t";
         ob_start();
-        // line 157
+        // line 159
         echo "\t        <script>";
         $this->displayBlock('load_scripts', $context, $blocks);
         echo "</script>
 \t    ";
         echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
-        // line 159
+        // line 161
         echo "\t</body>
 </html>";
     }
@@ -264,45 +269,45 @@ class __TwigTemplate_c248157a572d30c78f897b5e0b2630ea90646946adf236c1f0c25e98d9d
 \t        ";
     }
 
-    // line 119
+    // line 121
     public function block_navbar_recurrent($context, array $blocks = array())
     {
     }
 
-    // line 124
+    // line 126
     public function block_content_recurrent($context, array $blocks = array())
     {
     }
 
-    // line 133
+    // line 135
     public function block_body_scripts($context, array $blocks = array())
     {
-        // line 134
+        // line 136
         echo "   \t\t\t";
-        // line 135
+        // line 137
         echo "   \t\t\t<script src=\"";
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "lib/min/lib.core.min.js\"></script>
 
    \t\t\t";
-        // line 138
+        // line 140
         echo "   \t\t\t";
-        // line 141
+        // line 143
         echo "
 \t\t\t";
-        // line 145
+        // line 147
         echo "
    \t\t\t";
-        // line 147
+        // line 149
         echo "   \t\t\t<script src=\"";
         echo twig_escape_filter($this->env, (isset($context["_host"]) ? $context["_host"] : null), "html", null, true);
         echo "js/min/core.min.js\"></script>
    \t\t\t";
-        // line 155
+        // line 157
         echo "       \t";
     }
 
-    // line 157
+    // line 159
     public function block_load_scripts($context, array $blocks = array())
     {
     }
@@ -319,20 +324,20 @@ class __TwigTemplate_c248157a572d30c78f897b5e0b2630ea90646946adf236c1f0c25e98d9d
 
     public function getDebugInfo()
     {
-        return array (  306 => 157,  302 => 155,  297 => 147,  294 => 145,  291 => 141,  289 => 138,  283 => 135,  281 => 134,  278 => 133,  273 => 124,  268 => 119,  223 => 47,  220 => 46,  216 => 45,  211 => 41,  208 => 39,  203 => 37,  201 => 34,  198 => 32,  195 => 31,  189 => 29,  183 => 25,  179 => 24,  175 => 23,  171 => 22,  165 => 20,  163 => 19,  160 => 18,  156 => 27,  154 => 18,  144 => 10,  141 => 9,  137 => 89,  134 => 46,  132 => 31,  129 => 30,  127 => 29,  124 => 28,  121 => 9,  118 => 8,  113 => 159,  107 => 157,  104 => 156,  102 => 133,  98 => 131,  95 => 129,  92 => 128,  88 => 125,  86 => 124,  83 => 123,  79 => 120,  77 => 119,  74 => 118,  70 => 115,  67 => 113,  62 => 111,  40 => 90,  38 => 8,  29 => 1,);
+        return array (  311 => 159,  307 => 157,  302 => 149,  299 => 147,  296 => 143,  294 => 140,  288 => 137,  286 => 136,  283 => 135,  278 => 126,  273 => 121,  228 => 47,  225 => 46,  221 => 45,  216 => 41,  213 => 39,  208 => 37,  206 => 34,  203 => 32,  200 => 31,  194 => 29,  188 => 25,  184 => 24,  180 => 23,  176 => 22,  170 => 20,  168 => 19,  165 => 18,  161 => 27,  159 => 18,  149 => 10,  146 => 9,  142 => 89,  139 => 46,  137 => 31,  134 => 30,  132 => 29,  129 => 28,  126 => 9,  123 => 8,  118 => 161,  112 => 159,  109 => 158,  107 => 135,  103 => 133,  100 => 131,  97 => 130,  93 => 127,  91 => 126,  88 => 125,  84 => 122,  82 => 121,  79 => 120,  75 => 117,  72 => 115,  67 => 113,  62 => 111,  40 => 90,  38 => 8,  29 => 1,);
     }
 }
 
 
 /* super.twig */
-class __TwigTemplate_c248157a572d30c78f897b5e0b2630ea90646946adf236c1f0c25e98d9d949d5_1181803844 extends Twig_Template
+class __TwigTemplate_c248157a572d30c78f897b5e0b2630ea90646946adf236c1f0c25e98d9d949d5_630266657 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
         parent::__construct($env);
 
-        // line 128
-        $this->parent = $this->loadTemplate("super_footer.twig", "super.twig", 128);
+        // line 130
+        $this->parent = $this->loadTemplate("super_footer.twig", "super.twig", 130);
         $this->blocks = array(
         );
     }
@@ -359,7 +364,7 @@ class __TwigTemplate_c248157a572d30c78f897b5e0b2630ea90646946adf236c1f0c25e98d9d
 
     public function getDebugInfo()
     {
-        return array (  335 => 128,  306 => 157,  302 => 155,  297 => 147,  294 => 145,  291 => 141,  289 => 138,  283 => 135,  281 => 134,  278 => 133,  273 => 124,  268 => 119,  223 => 47,  220 => 46,  216 => 45,  211 => 41,  208 => 39,  203 => 37,  201 => 34,  198 => 32,  195 => 31,  189 => 29,  183 => 25,  179 => 24,  175 => 23,  171 => 22,  165 => 20,  163 => 19,  160 => 18,  156 => 27,  154 => 18,  144 => 10,  141 => 9,  137 => 89,  134 => 46,  132 => 31,  129 => 30,  127 => 29,  124 => 28,  121 => 9,  118 => 8,  113 => 159,  107 => 157,  104 => 156,  102 => 133,  98 => 131,  95 => 129,  92 => 128,  88 => 125,  86 => 124,  83 => 123,  79 => 120,  77 => 119,  74 => 118,  70 => 115,  67 => 113,  62 => 111,  40 => 90,  38 => 8,  29 => 1,);
+        return array (  340 => 130,  311 => 159,  307 => 157,  302 => 149,  299 => 147,  296 => 143,  294 => 140,  288 => 137,  286 => 136,  283 => 135,  278 => 126,  273 => 121,  228 => 47,  225 => 46,  221 => 45,  216 => 41,  213 => 39,  208 => 37,  206 => 34,  203 => 32,  200 => 31,  194 => 29,  188 => 25,  184 => 24,  180 => 23,  176 => 22,  170 => 20,  168 => 19,  165 => 18,  161 => 27,  159 => 18,  149 => 10,  146 => 9,  142 => 89,  139 => 46,  137 => 31,  134 => 30,  132 => 29,  129 => 28,  126 => 9,  123 => 8,  118 => 161,  112 => 159,  109 => 158,  107 => 135,  103 => 133,  100 => 131,  97 => 130,  93 => 127,  91 => 126,  88 => 125,  84 => 122,  82 => 121,  79 => 120,  75 => 117,  72 => 115,  67 => 113,  62 => 111,  40 => 90,  38 => 8,  29 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -473,6 +478,8 @@ class __TwigTemplate_c248157a572d30c78f897b5e0b2630ea90646946adf236c1f0c25e98d9d
 /* 		<div id="inicio"></div>*/
 /* 		{# Root Project URL#}*/
 /*         <input id="master-host" type="hidden" value="{{ _host }}">*/
+/*         {# Auxiliar Master Max Leads #}*/
+/* 		<input id="master-max" type="hidden" value="{{ _max }}">*/
 /* 		{# Auxiliar Temporal Inputs's DIV #}*/
 /*         <div id="hidden-inputs-session"></div>*/
 /*         {# Auxiliar Temporal Inputs's DIV #}*/

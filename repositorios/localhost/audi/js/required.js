@@ -194,3 +194,20 @@
             $p.hide();
         }
     }
+/* ------------------------------------------------------ *\
+    [metodos] formValidation
+\* ------------------------------------------------------ */
+    var formValidation = {
+        required: function (form, element, btnSend) {
+            var formErrors;
+            $(form + " " + btnSend).removeAttr("disabled");
+            formErrors = 0;
+            $(form + " " + element).each( function (idx) {
+                if ( !$.validate_input( $(this) )) {
+                    formErrors++;
+                    $(this).focus();
+                }
+            });
+            return (formErrors === 0);
+        }
+    }
